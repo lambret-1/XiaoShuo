@@ -1,11 +1,11 @@
-"""反 AI 味检测：模板句式、空洞修饰、总结词、翻译腔、陈词滥调。输出 log/反AI味检测.txt（覆盖）。"""
+"""反 AI 味检测：模板句式、空洞修饰、总结词、翻译腔、陈词滥调。仅扫描 影笔代理人/正文/。输出 log/反AI味检测.txt（覆盖）。"""
 import pathlib
 import re
 import os
 import datetime
 
 CST = datetime.timezone(datetime.timedelta(hours=8))
-ROOT = pathlib.Path('影笔代理人')
+ROOT = pathlib.Path('影笔代理人/正文')
 LOG_DIR = pathlib.Path('log')
 ISSUES = []
 
