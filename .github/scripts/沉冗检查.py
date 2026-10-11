@@ -1,11 +1,11 @@
-"""沉冗检查：段落过长、重复表达。输出 log/沉冗检查.txt（覆盖）。"""
+"""沉冗检查：段落过长、重复表达。仅扫描 影笔代理人/正文/。输出 log/沉冗检查.txt（覆盖）。"""
 import pathlib
 import re
 import os
 import datetime
 
 CST = datetime.timezone(datetime.timedelta(hours=8))
-ROOT = pathlib.Path('影笔代理人')
+ROOT = pathlib.Path('影笔代理人/正文')
 LOG_DIR = pathlib.Path('log')
 MAX_LEN = 200
 ISSUES = []
