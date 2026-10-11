@@ -4,14 +4,10 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/**'
-      - '影笔代理人/**'
-      - 'scripts/*.py'
+      - '影笔代理人/正文/**'
   pull_request:
     paths:
-      - '.github/**'
-      - '影笔代理人/**'
-      - 'scripts/*.py'
+      - '影笔代理人/正文/**'
   schedule:
     - cron: '0 2 * * *'
 
@@ -43,7 +39,7 @@ jobs:
             echo "检查时间: $TS"
             echo "----------------------------------------"
             if [ -s /tmp/words.txt ]; then
-              if grep -r -n -F -f /tmp/words.txt "影笔代理人" --include='*.md'; then
+              if grep -r -n -F -f /tmp/words.txt "影笔代理人/正文" --include='*.md'; then
                 echo "HAS_SENSITIVE=1" >> $GITHUB_ENV
               else
                 echo "未发现敏感词。"
