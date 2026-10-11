@@ -1,11 +1,12 @@
-"""标点滥用检查：单字/双字后紧接标点。输出目录由 BUG_DIR 指定。"""
+"""标点滥用检查：单字/双字后紧接标点。报告写入 bug/punctuation_abuse.txt（覆盖）。"""
 import pathlib
 import re
 import os
 import datetime
 
+CST = datetime.timezone(datetime.timedelta(hours=8))
 ROOT = pathlib.Path('影笔代理人')
-BUG_DIR = pathlib.Path(os.environ.get('BUG_DIR', 'bug'))
+BUG_DIR = pathlib.Path('bug')
 ISSUES = []
 
 PATTERN = re.compile(r'[\u4e00-\u9fa5](?:[\u4e00-\u9fa5])?[。！？；：，、]')
@@ -17,10 +18,10 @@ for p in sorted(ROOT.rglob('*.md')):
     if count > 10:
         ISSUES.append(f"{p}: 本章共发现 {count} 处单字/双字后紧接标点")
 
-BUG_DIR.mkdir(parents=True, exist_ok=True)
+BUG_DIR.mkdir(exist_ok=True)
 report_file = BUG_DIR / 'punctuation_abuse.txt'
 
-now = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
+now = datetime.datetime.now(CST).strftime('%Y-%m-%d %H:%M:%S CST')
 content = f"检查时间: {now}\n----------------------------------------\n"
 
 if ISSUES:
