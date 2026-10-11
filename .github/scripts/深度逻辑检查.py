@@ -30,6 +30,10 @@ def err(msg): errors.append(msg)
 def warn(msg): warnings.append(msg)
 def info(msg): info_logs.append(msg)
 
+def load_yaml(path):
+    with open(path, encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
 chapters = {}
 if BODY.exists():
     for p in BODY.glob("第*.md"):
@@ -61,7 +65,7 @@ for num, d in chapters.items():
 
 fs_file = CONTINUITY / "伏笔.yaml"
 if fs_file.exists():
-    fs_data = yaml.safe_load(fs_file)
+    fs_data = load_yaml(fs_file)
     def chk_fs(obj, path=""):
         if isinstance(obj, dict):
             if "status" in obj and "chapter" in obj:
@@ -84,7 +88,7 @@ if fs_file.exists():
 
 char_file = CONTINUITY / "人物.yaml"
 if char_file.exists() and chapters:
-    char_data = yaml.safe_load(char_file)
+    char_data = load_yaml(char_file)
     names = set()
     def ext(o):
         if isinstance(o, dict):
@@ -104,7 +108,7 @@ if char_file.exists() and chapters:
 
 tl_file = CONTINUITY / "时间线.yaml"
 if tl_file.exists():
-    tl = yaml.safe_load(tl_file)
+    tl = load_yaml(tl_file)
     def chk_tl(obj, path=""):
         if isinstance(obj, dict):
             if "start" in obj and "end" in obj:
@@ -121,7 +125,8 @@ if tl_file.exists():
 wsc = LOG / "WSC风格报告.json"
 if wsc.exists():
     try:
-        d = json.load(open(wsc, encoding="utf-8"))
+        with open(wsc, encoding="utf-8") as f:
+            d = json.load(f)
         n = d.get("summary", {}).get("warnings", 0) if isinstance(d, dict) else len(d)
         if n > 20:
             warn(f"WSC 发现 {n} 个风格问题")
