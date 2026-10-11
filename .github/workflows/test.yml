@@ -1,0 +1,68 @@
+name: 深度质量检查流水线
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deep-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安装 Python 依赖
+        run: pip install pyyaml jieba
+
+      # 1. 尝试本地运行 story-cli (如果它不识别中文目录，日志会记录，但我们有自己的 Python 兜底)
+      - name: 尝试运行 story-cli
+        run: |
+          npm install -g @yuelinghuashu/story-cli
+          echo "尝试 story-cli 扫描..." > log/story_stats.txt
+          story stats >> log/story_stats.txt || true
+          story validate >> log/story_validate.txt || true
+        continue-on-error: true
+
+      # 2. 运行 WSC 并生成 JSON
+      - name: 运行 WSC 生成 JSON 报告
+        run: |
+          npx @theserverlessdev/wsc --format json --out wsc-report.json '《影笔代理人》/正文/**/*.md' || true
+        continue-on-error: true
+
+      # 3. 运行 novel-bug-checker
+      - name: 克隆并运行 novel-bug-checker
+        run: |
+          git clone https://github.com/bbroot/novel-bug-checker.git /tmp/nbc || true
+          if [ -d "/tmp/nbc" ]; then
+            find "《影笔代理人》/正文" -name "第*.md" -exec cat {} \; > /tmp/novel_full.txt
+            python /tmp/nbc/scripts/logic-analyzer.py /tmp/novel_full.txt -o log/novel_bug_report.txt || true
+          fi
+        continue-on-error: true
+
+      # 4. 运行核心 Python 深度检查（强制生成所有日志）
+      - name: 运行深度逻辑检查
+        run: python scripts/deep_check.py
+        continue-on-error: true
+
+      # 5. 将日志推送到仓库
+      - name: 将日志推送到仓库
+        if: always()
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          mkdir -p log
+          git add log/ -f
+          git diff --quiet && git diff --staged --quiet || git commit -m "自动更新墨线检查日志 [skip ci]"
+          git push
+        continue-on-error: true
