@@ -5,10 +5,12 @@ on:
   push:
     paths:
       - '.github/workflows/build-fix.yml'
+      - '.github/scripts/*.py'
       - '影笔代理人/**'
   pull_request:
     paths:
       - '.github/workflows/build-fix.yml'
+      - '.github/scripts/*.py'
       - '影笔代理人/**'
   schedule:
     - cron: '0 2 * * *'
@@ -23,223 +25,37 @@ jobs:
     steps:
       - name: 检出本仓库
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      # ---------- 1. 敏感词检查（政治类型） ----------
       - name: 敏感词检查
         run: |
           mkdir -p bug
-
           curl -sSL -o /tmp/words.txt "https://raw.githubusercontent.com/konsheng/Sensitive-lexicon/refs/heads/main/Vocabulary/政治类型.txt"
           if [ ! -s /tmp/words.txt ]; then
             echo "::error::敏感词库下载失败或为空"
             exit 1
           fi
-
           echo "检查时间: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > bug/sensitive_words.txt
           echo "----------------------------------------" >> bug/sensitive_words.txt
-
           if grep -r -n -F -f /tmp/words.txt "影笔代理人" --include='*.md' >> bug/sensitive_words.txt; then
             echo "发现敏感词，已写入 bug/sensitive_words.txt"
             echo "HAS_SENSITIVE=1" >> $GITHUB_ENV
           else
             echo "未发现敏感词。" >> bug/sensitive_words.txt
           fi
-          exit 0
 
-      # ---------- 2. 沉冗内容检查 ----------
       - name: 沉冗内容检查
-        run: |
-          python3 - <<'PY'
-          import pathlib, re, sys, os, datetime
+        run: python3 .github/scripts/redundancy.py
 
-          ROOT = pathlib.Path('影笔代理人')
-          MAX_LEN = 200
-          issues = []
-
-          for p in sorted(ROOT.rglob('*.md')):
-              text = p.read_text(encoding='utf-8', errors='ignore')
-              for i, line in enumerate(text.splitlines(), 1):
-                  s = line.strip()
-                  if not s:
-                      continue
-                  if len(s) > MAX_LEN:
-                      issues.append(f"{p}:{i}: 段落过长（{len(s)} 字）")
-                  match = re.search(r'(.{2,6})\1{2,}', s)
-                  if match:
-                      issues.append(f"{p}:{i}: 疑似重复表达（重复内容：'{match.group(0)}'）")
-
-          bug_dir = pathlib.Path('bug')
-          bug_dir.mkdir(exist_ok=True)
-          report_file = bug_dir / 'redundancy.txt'
-
-          current_time = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
-          content = f"检查时间: {current_time}\n----------------------------------------\n"
-
-          if issues:
-              content += "\n".join(issues)
-              print("发现沉冗或重复内容，已写入 bug/redundancy.txt")
-              with open(os.environ['GITHUB_ENV'], 'a') as f:
-                  f.write("HAS_REDUNDANCY=1\n")
-          else:
-              content += "未发现沉冗问题"
-              print("沉冗检查通过。")
-
-          report_file.write_text(content, encoding='utf-8')
-          PY
-          exit 0
-
-      # ---------- 3. 破折号检测 ----------
       - name: 破折号检测
-        run: |
-          python3 - <<'PY'
-          import pathlib, re, os, datetime
+        run: python3 .github/scripts/dash.py
 
-          ROOT = pathlib.Path('影笔代理人')
-          issues = []
-
-          for p in sorted(ROOT.rglob('*.md')):
-              text = p.read_text(encoding='utf-8', errors='ignore')
-              dashes = re.findall(r'—+', text)
-              if len(dashes) > 2:
-                  issues.append(f"{p}: 本章共发现 {len(dashes)} 个破折号")
-
-          bug_dir = pathlib.Path('bug')
-          bug_dir.mkdir(exist_ok=True)
-          report_file = bug_dir / 'dash.txt'
-
-          current_time = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
-          content = f"检查时间: {current_time}\n----------------------------------------\n"
-
-          if issues:
-              content += "\n".join(issues)
-              print(f"发现 {len(issues)} 个文件破折号过多")
-              with open(os.environ['GITHUB_ENV'], 'a') as f:
-                  f.write("HAS_DASH=1\n")
-          else:
-              content += "未发现破折号过多的问题"
-              print("破折号检测通过")
-
-          report_file.write_text(content, encoding='utf-8')
-          PY
-          exit 0
-
-      # ---------- 4. 标点滥用检查 ----------
       - name: 标点滥用检查
-        run: |
-          python3 - <<'PY'
-          import pathlib, re, os, datetime
+        run: python3 .github/scripts/punctuation.py
 
-          ROOT = pathlib.Path('影笔代理人')
-          issues = []
-
-          pattern = re.compile(r'[\u4e00-\u9fa5](?:[\u4e00-\u9fa5])?[。！？；：，、]')
-
-          for p in sorted(ROOT.rglob('*.md')):
-              text = p.read_text(encoding='utf-8', errors='ignore')
-              matches = pattern.findall(text)
-              count = len(matches)
-              if count > 10:
-                  issues.append(f"{p}: 本章共发现 {count} 处单字/双字后紧接标点")
-
-          bug_dir = pathlib.Path('bug')
-          bug_dir.mkdir(exist_ok=True)
-          report_file = bug_dir / 'punctuation_abuse.txt'
-
-          current_time = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
-          content = f"检查时间: {current_time}\n----------------------------------------\n"
-
-          if issues:
-              total_chapters = len(issues)
-              content += f"总共发现了 {total_chapters} 章滥用内容，以下是具体章节：\n\n"
-              content += "\n".join(issues)
-              print(f"发现 {total_chapters} 章滥用标点符号")
-              with open(os.environ['GITHUB_ENV'], 'a') as f:
-                  f.write("HAS_PUNCTUATION_ABUSE=1\n")
-          else:
-              content += "未发现标点滥用问题"
-              print("标点滥用检查通过")
-
-          report_file.write_text(content, encoding='utf-8')
-          PY
-          exit 0
-
-      # ---------- 5. 反 AI 味的检测 ----------
       - name: 反 AI 味检测
-        run: |
-          python3 - <<'PY'
-          import pathlib, re, os, datetime
+        run: python3 .github/scripts/ai_slop.py
 
-          ROOT = pathlib.Path('影笔代理人')
-          issues = []
-
-          rules = [
-              ("模板句式-不是而是", r'不是.{1,20}，?而是', "AI 常见对比句式"),
-              ("模板句式-与其不如", r'与其说.{1,20}，?不如说', "AI 常见对比句式"),
-              ("模板句式-不仅更是", r'不仅.{1,20}，?更是', "AI 常见递进句式"),
-              ("模板句式-既又", r'既.{1,15}，?又.{1,15}，?', "AI 常见并列句式"),
-              ("模板句式-既是也是", r'既是.{1,15}，?也是', "AI 常见并列句式"),
-              ("空洞修饰-某种程度", r'在?某种(程度|意义|角度)上', "AI 常用的模糊修饰"),
-              ("空洞修饰-某种意义", r'从某种(程度|意义|角度)(来|上)(说|讲)', "AI 常用的模糊修饰"),
-              ("空洞修饰-可以说", r'可以说[，,]', "AI 常用的空话开头"),
-              ("空洞修饰-不得不说是", r'不得不说是', "AI 常用的评述句"),
-              ("总结词-总而言之", r'总而言之[，,]', "AI 常用的总结句"),
-              ("总结词-综上所述", r'综上所述[，,]', "AI 常用的总结句"),
-              ("总结词-总的来说", r'总的来说[，,]', "AI 常用的总结句"),
-              ("总结词-值得注意的是", r'值得注意的是[，,]', "AI 常用的提示句"),
-              ("总结词-需要指出的是", r'需要指出的是[，,]', "AI 常用的提示句"),
-              ("总结词-换句话说", r'换句话(来)?说[，,]', "AI 常用的重复解释"),
-              ("总结词-也就是说", r'也就是说[，,]', "AI 常用的重复解释"),
-              ("翻译腔-作为一个", r'作为一个.{1,15}[，,]', "AI 常见的翻译腔句式"),
-              ("翻译腔-对于而言", r'对于.{1,15}(来)?(说|讲)[，,]', "AI 常见的翻译腔句式"),
-              ("翻译腔-关于这个问题", r'关于这个问题[，,]', "AI 常见的翻译腔句式"),
-              ("翻译腔-在某种程度上", r'在某种程度上[，,]', "AI 常见的翻译腔句式"),
-              ("过度连接-然而", r'^然而[，,]', "AI 常用的连接词开头"),
-              ("过度连接-因此", r'^因此[，,]', "AI 常用的连接词开头"),
-              ("过度连接-此外", r'^此外[，,]', "AI 常用的连接词开头"),
-              ("过度连接-另外", r'^另外[，,]', "AI 常用的连接词开头"),
-              ("陈词滥调-不禁", r'不禁.{1,10}起来', "AI 常见的套路句"),
-              ("陈词滥调-油然而生", r'油然而生', "AI 常见的套路句"),
-              ("陈词滥调-涌上心头", r'涌上心头', "AI 常见的套路句"),
-              ("陈词滥调-五味杂陈", r'五味杂陈', "AI 常见的套路句"),
-              ("陈词滥调-心潮澎湃", r'心潮澎湃', "AI 常见的套路句"),
-          ]
-
-          for p in sorted(ROOT.rglob('*.md')):
-              text = p.read_text(encoding='utf-8', errors='ignore')
-              for i, line in enumerate(text.splitlines(), 1):
-                  s = line.strip()
-                  if not s:
-                      continue
-                  for rule_name, pattern, desc in rules:
-                      match = re.search(pattern, s)
-                      if match:
-                          issues.append(f"{p}:{i}: [{rule_name}] {desc}（命中：'{match.group(0)}'）")
-
-          bug_dir = pathlib.Path('bug')
-          bug_dir.mkdir(exist_ok=True)
-          report_file = bug_dir / 'ai_slop.txt'
-
-          current_time = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
-          content = f"检查时间: {current_time}\n----------------------------------------\n"
-
-          if issues:
-              content += f"共发现 {len(issues)} 处 AI 写作特征：\n\n"
-              content += "\n".join(issues)
-              print(f"发现 {len(issues)} 处 AI 写作特征")
-              with open(os.environ['GITHUB_ENV'], 'a') as f:
-                  f.write("HAS_AISLOP=1\n")
-          else:
-              content += "未检测到 AI 写作特征"
-              print("反 AI 味检测通过")
-
-          report_file.write_text(content, encoding='utf-8')
-          PY
-          exit 0
-
-      # ---------- 6. 提交并推送 bug 报告 ----------
-      - name: 提交并推送 bug 报告到本仓库
+      - name: 提交并推送 bug 报告
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -247,7 +63,6 @@ jobs:
           git diff --cached --quiet || git commit -m "chore: 自动更新检查报告 [skip ci]"
           git push
 
-      # ---------- 7. 最终状态检查 ----------
       - name: 最终状态检查
         run: |
           HAS_ISSUE=0
@@ -256,7 +71,6 @@ jobs:
           [ "$HAS_DASH" = "1" ] && HAS_ISSUE=1 && echo "::warning::发现破折号过多"
           [ "$HAS_PUNCTUATION_ABUSE" = "1" ] && HAS_ISSUE=1 && echo "::warning::发现标点滥用"
           [ "$HAS_AISLOP" = "1" ] && HAS_ISSUE=1 && echo "::warning::发现 AI 写作特征"
-
           if [ "$HAS_ISSUE" = "1" ]; then
             echo "::error::检查发现内容问题，请查看 bug/ 目录。"
             exit 1
