@@ -1,10 +1,11 @@
-"""破折号检测：单章破折号超过 2 个即报。"""
+"""破折号检测：单章破折号超过 2 个即报。输出目录由 BUG_DIR 指定。"""
 import pathlib
 import re
 import os
 import datetime
 
 ROOT = pathlib.Path('影笔代理人')
+BUG_DIR = pathlib.Path(os.environ.get('BUG_DIR', 'bug'))
 ISSUES = []
 
 for p in sorted(ROOT.rglob('*.md')):
@@ -13,9 +14,8 @@ for p in sorted(ROOT.rglob('*.md')):
     if len(dashes) > 2:
         ISSUES.append(f"{p}: 本章共发现 {len(dashes)} 个破折号")
 
-bug_dir = pathlib.Path('bug')
-bug_dir.mkdir(exist_ok=True)
-report_file = bug_dir / 'dash.txt'
+BUG_DIR.mkdir(parents=True, exist_ok=True)
+report_file = BUG_DIR / 'dash.txt'
 
 now = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
 content = f"检查时间: {now}\n----------------------------------------\n"
