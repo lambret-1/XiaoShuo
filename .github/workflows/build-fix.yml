@@ -4,31 +4,31 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/novel-check.yml'
       - '.github/workflows/build-fix.yml'
+      - '影笔代理人/**'
   pull_request:
     paths:
-      - '.github/workflows/novel-check.yml'
       - '.github/workflows/build-fix.yml'
+      - '影笔代理人/**'
   schedule:
     - cron: '0 2 * * *'
+
+permissions:
+  contents: write
 
 jobs:
   check:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 拉取私密小说仓库
+      - name: 检出本仓库
         uses: actions/checkout@v4
         with:
-          repository: lambret-1/MyNovels
-          token: ${{ secrets.NOVEL_REPO_PAT }}
-          path: novel-repo
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       # ---------- 1. 敏感词检查（政治类型） ----------
       - name: 敏感词检查
         run: |
-          cd novel-repo
           mkdir -p bug
 
           curl -sSL -o /tmp/words.txt "https://raw.githubusercontent.com/konsheng/Sensitive-lexicon/refs/heads/main/Vocabulary/政治类型.txt"
@@ -40,7 +40,7 @@ jobs:
           echo "检查时间: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > bug/sensitive_words.txt
           echo "----------------------------------------" >> bug/sensitive_words.txt
 
-          if grep -r -n -F -f /tmp/words.txt "《影笔代理人》" --include='*.md' >> bug/sensitive_words.txt; then
+          if grep -r -n -F -f /tmp/words.txt "影笔代理人" --include='*.md' >> bug/sensitive_words.txt; then
             echo "发现敏感词，已写入 bug/sensitive_words.txt"
             echo "HAS_SENSITIVE=1" >> $GITHUB_ENV
           else
@@ -51,11 +51,10 @@ jobs:
       # ---------- 2. 沉冗内容检查 ----------
       - name: 沉冗内容检查
         run: |
-          cd novel-repo
           python3 - <<'PY'
           import pathlib, re, sys, os, datetime
 
-          ROOT = pathlib.Path('《影笔代理人》')
+          ROOT = pathlib.Path('影笔代理人')
           MAX_LEN = 200
           issues = []
 
@@ -94,11 +93,10 @@ jobs:
       # ---------- 3. 破折号检测 ----------
       - name: 破折号检测
         run: |
-          cd novel-repo
           python3 - <<'PY'
           import pathlib, re, os, datetime
 
-          ROOT = pathlib.Path('《影笔代理人》')
+          ROOT = pathlib.Path('影笔代理人')
           issues = []
 
           for p in sorted(ROOT.rglob('*.md')):
@@ -127,18 +125,15 @@ jobs:
           PY
           exit 0
 
-      # ---------- 4. 标点滥用检查（新增） ----------
+      # ---------- 4. 标点滥用检查 ----------
       - name: 标点滥用检查
         run: |
-          cd novel-repo
           python3 - <<'PY'
           import pathlib, re, os, datetime
 
-          ROOT = pathlib.Path('《影笔代理人》')
+          ROOT = pathlib.Path('影笔代理人')
           issues = []
 
-          # 匹配：一个汉字 + 一个标点，或者两个汉字 + 一个标点
-          # 标点集合：。！？；：，、
           pattern = re.compile(r'[\u4e00-\u9fa5](?:[\u4e00-\u9fa5])?[。！？；：，、]')
 
           for p in sorted(ROOT.rglob('*.md')):
@@ -173,11 +168,10 @@ jobs:
       # ---------- 5. 反 AI 味的检测 ----------
       - name: 反 AI 味检测
         run: |
-          cd novel-repo
           python3 - <<'PY'
           import pathlib, re, os, datetime
 
-          ROOT = pathlib.Path('《影笔代理人》')
+          ROOT = pathlib.Path('影笔代理人')
           issues = []
 
           rules = [
@@ -245,13 +239,12 @@ jobs:
           exit 0
 
       # ---------- 6. 提交并推送 bug 报告 ----------
-      - name: 提交并推送 bug 报告到私有仓库
+      - name: 提交并推送 bug 报告到本仓库
         run: |
-          cd novel-repo
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add bug/
-          git commit -m "chore: 自动更新检查报告 [skip ci]"
+          git diff --cached --quiet || git commit -m "chore: 自动更新检查报告 [skip ci]"
           git push
 
       # ---------- 7. 最终状态检查 ----------
@@ -265,7 +258,7 @@ jobs:
           [ "$HAS_AISLOP" = "1" ] && HAS_ISSUE=1 && echo "::warning::发现 AI 写作特征"
 
           if [ "$HAS_ISSUE" = "1" ]; then
-            echo "::error::检查发现内容问题，请查看 novel-repo/bug/ 目录。"
+            echo "::error::检查发现内容问题，请查看 bug/ 目录。"
             exit 1
           fi
           echo "全部检查通过。"
