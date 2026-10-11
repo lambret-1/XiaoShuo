@@ -1,11 +1,11 @@
-"""破折号检测：单章破折号超过 2 个即报。输出 log/破折号检测.txt（覆盖）。"""
+"""破折号检测：单章破折号超过 2 个即报。仅扫描 影笔代理人/正文/。输出 log/破折号检测.txt（覆盖）。"""
 import pathlib
 import re
 import os
 import datetime
 
 CST = datetime.timezone(datetime.timedelta(hours=8))
-ROOT = pathlib.Path('影笔代理人')
+ROOT = pathlib.Path('影笔代理人/正文')
 LOG_DIR = pathlib.Path('log')
 ISSUES = []
 
