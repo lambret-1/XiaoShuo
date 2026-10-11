@@ -1,11 +1,12 @@
-"""反 AI 味检测：模板句式、空洞修饰、总结词、翻译腔、陈词滥调。输出目录由 BUG_DIR 指定。"""
+"""反 AI 味检测：模板句式、空洞修饰、总结词、翻译腔、陈词滥调。报告写入 bug/ai_slop.txt（覆盖）。"""
 import pathlib
 import re
 import os
 import datetime
 
+CST = datetime.timezone(datetime.timedelta(hours=8))
 ROOT = pathlib.Path('影笔代理人')
-BUG_DIR = pathlib.Path(os.environ.get('BUG_DIR', 'bug'))
+BUG_DIR = pathlib.Path('bug')
 ISSUES = []
 
 RULES = [
@@ -51,10 +52,10 @@ for p in sorted(ROOT.rglob('*.md')):
             if match:
                 ISSUES.append(f"{p}:{i}: [{rule_name}] {desc}（命中：'{match.group(0)}'）")
 
-BUG_DIR.mkdir(parents=True, exist_ok=True)
+BUG_DIR.mkdir(exist_ok=True)
 report_file = BUG_DIR / 'ai_slop.txt'
 
-now = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
+now = datetime.datetime.now(CST).strftime('%Y-%m-%d %H:%M:%S CST')
 content = f"检查时间: {now}\n----------------------------------------\n"
 
 if ISSUES:
