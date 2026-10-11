@@ -1,11 +1,12 @@
-"""沉冗内容检查：段落过长、重复表达。输出目录由 BUG_DIR 指定。"""
+"""沉冗内容检查：段落过长、重复表达。报告写入 bug/redundancy.txt（覆盖）。"""
 import pathlib
 import re
 import os
 import datetime
 
+CST = datetime.timezone(datetime.timedelta(hours=8))
 ROOT = pathlib.Path('影笔代理人')
-BUG_DIR = pathlib.Path(os.environ.get('BUG_DIR', 'bug'))
+BUG_DIR = pathlib.Path('bug')
 MAX_LEN = 200
 ISSUES = []
 
@@ -21,10 +22,10 @@ for p in sorted(ROOT.rglob('*.md')):
         if match:
             ISSUES.append(f"{p}:{i}: 疑似重复表达（重复内容：'{match.group(0)}'）")
 
-BUG_DIR.mkdir(parents=True, exist_ok=True)
+BUG_DIR.mkdir(exist_ok=True)
 report_file = BUG_DIR / 'redundancy.txt'
 
-now = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
+now = datetime.datetime.now(CST).strftime('%Y-%m-%d %H:%M:%S CST')
 content = f"检查时间: {now}\n----------------------------------------\n"
 
 if ISSUES:
