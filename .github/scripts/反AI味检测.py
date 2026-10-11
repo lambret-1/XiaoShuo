@@ -55,7 +55,7 @@ RULES = [
     ("结构套话-这个时代", r'在这个.{0,10}的时代', "AI 常见大背景开头"),
     ("结构套话-当今社会", r'在当今社会', "AI 常见大背景开头"),
 
-    # ========== 新增：描写套话（拆成多行，避免复制出错） ==========
+    # ========== 新增：描写套话 ==========
     (
         "描写套话-嘴角勾起",
         r'嘴角(?:微微)?勾起(?:了)?一抹(?:淡淡)?的?(?:笑意|弧度|微笑)',
@@ -153,33 +153,31 @@ for p in sorted(ROOT.rglob('*.md')):
                     f"{p}:{i}: [{rule_name}] {desc}（命中：'{match.group(0)}'）"
                 )
 
-    # ---- 2. 对话标签密度检查（按文件统计） ----
-    count = len(re.findall(r'他(?:说|道)|她(?:说|道)', text))
-    per_k = count / (len(text) / 1000) if text else 0
-    if per_k > 6:
+    # ---- 2. 对话标签合计检查：他说 / 她说 / 它说 合计 >= 3 次 ----
+    tag_count = len(re.findall(r'(?:他|她|它)(?:说|道)', text))
+    if tag_count >= 3:
         ISSUES.append(
-            f"{p}: [对话标签频繁] 他说/她说共 {count} 次，"
-            f"密度 {per_k:.1f} 次/千字（阈值 6），"
-            f"建议穿插动作或换用 道/问/答/低声/冷笑"
+            f"{p}: [对话标签过多] “他说/她说/它说”合计 {tag_count} 次"
+            f"（阈值 3），建议改用动作、神态或直接引语替代"
         )
 
-    # ---- 3. 连续对话标签交替检查 ----
+    # ---- 3. 连续对话标签交替使用检查 ----
     streak = 0
     max_streak = 0
     for line in text.splitlines():
-        if re.match(r'^\s*(他|她)(?:说|道)', line.strip()):
+        if re.match(r'^\s*(他|她|它)(?:说|道)', line.strip()):
             streak += 1
             max_streak = max(max_streak, streak)
         else:
             streak = 0
     if max_streak >= 3:
         ISSUES.append(
-            f"{p}: [对话标签连续] 连续 {max_streak} 行以'他说/她说'开头，"
+            f"{p}: [对话标签连续] 连续 {max_streak} 行以'他说/她说/它说'开头，"
             f"节奏机械，建议打散"
         )
 
 # ============================================================
-# 写日志的
+# 写日志
 # ============================================================
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 report_file = LOG_DIR / '反AI味检测.txt'
