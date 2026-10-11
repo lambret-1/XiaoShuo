@@ -1,11 +1,12 @@
-"""破折号检测：单章破折号超过 2 个即报。输出目录由 BUG_DIR 指定。"""
+"""破折号检测：单章破折号超过 2 个即报。报告写入 bug/dash.txt（覆盖）。"""
 import pathlib
 import re
 import os
 import datetime
 
+CST = datetime.timezone(datetime.timedelta(hours=8))
 ROOT = pathlib.Path('影笔代理人')
-BUG_DIR = pathlib.Path(os.environ.get('BUG_DIR', 'bug'))
+BUG_DIR = pathlib.Path('bug')
 ISSUES = []
 
 for p in sorted(ROOT.rglob('*.md')):
@@ -14,10 +15,10 @@ for p in sorted(ROOT.rglob('*.md')):
     if len(dashes) > 2:
         ISSUES.append(f"{p}: 本章共发现 {len(dashes)} 个破折号")
 
-BUG_DIR.mkdir(parents=True, exist_ok=True)
+BUG_DIR.mkdir(exist_ok=True)
 report_file = BUG_DIR / 'dash.txt'
 
-now = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
+now = datetime.datetime.now(CST).strftime('%Y-%m-%d %H:%M:%S CST')
 content = f"检查时间: {now}\n----------------------------------------\n"
 
 if ISSUES:
