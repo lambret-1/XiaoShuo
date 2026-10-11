@@ -34,7 +34,7 @@ jobs:
       - name: 安装依赖
         run: pip install pyyaml jieba || true
 
-      # ---------- A. 快速内容检查 ----------
+      # ---------- A. 快速内容检查（自带北京时间头） ----------
       - name: 敏感词检查
         run: |
           mkdir -p bug
@@ -67,12 +67,12 @@ jobs:
       - name: 反 AI 味检测
         run: python3 .github/scripts/ai_slop.py || true
 
-      # ---------- B. 深度质量检查 ----------
+      # ---------- B. 深度质量检查（工具自身输出，稍后统一盖时间戳） ----------
       - name: 尝试 story-cli
         run: |
           mkdir -p log
           npm install -g @yuelinghuashu/story-cli || true
-          echo "尝试 story-cli 扫描..." > log/story_stats.txt
+          echo "(story-cli 原始输出)" > log/story_stats.txt
           story stats >> log/story_stats.txt 2>&1 || true
           story validate > log/story_validate.txt 2>&1 || true
           true
@@ -98,12 +98,27 @@ jobs:
       - name: 墨线检查
         run: python scripts/ink_check.py || true
 
-      # ---------- D. 写入运行元信息（保证 log/ 每次都有变化） ----------
-      - name: 写入运行元信息
+      # ---------- D. 统一给 log/ 下所有文本文件盖北京时间戳 ----------
+      - name: 给日志加北京时间头
         run: |
           mkdir -p log
-          TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S CST' > log/last_run.txt
+          TS=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S CST')
+          for f in log/*.txt; do
+            [ -f "$f" ] || continue
+            # 跳过 last_run.txt（单独写）
+            [ "$(basename "$f")" = "last_run.txt" ] && continue
+            body=$(cat "$f")
+            {
+              echo "检查时间: $TS"
+              echo "----------------------------------------"
+              printf '%s\n' "$body"
+            } > "$f.tmp"
+            mv "$f.tmp" "$f"
+          done
+          echo "$TS" > log/last_run.txt
           echo "workflow: qa.yml" >> log/last_run.txt
+          echo "已盖章日志:"
+          ls -la log/
           true
 
       # ---------- E. 提交报告（覆盖写） ----------
