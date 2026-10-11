@@ -34,10 +34,9 @@ jobs:
       - name: 安装依赖
         run: pip install pyyaml jieba || true
 
-      # ---------- A. 快速内容检查（自带北京时间头） ----------
       - name: 敏感词检查
         run: |
-          mkdir -p bug
+          mkdir -p log
           TS=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S CST')
           curl -sSL -o /tmp/words.txt "https://raw.githubusercontent.com/konsheng/Sensitive-lexicon/refs/heads/main/Vocabulary/政治类型.txt"
           {
@@ -52,26 +51,25 @@ jobs:
             else
               echo "敏感词库下载失败，跳过。"
             fi
-          } > bug/sensitive_words.txt
+          } > log/敏感词检查.txt
           true
 
-      - name: 沉冗内容检查
-        run: python3 .github/scripts/redundancy.py || true
+      - name: 沉冗检查
+        run: python3 .github/scripts/沉冗检查.py || true
 
       - name: 破折号检测
-        run: python3 .github/scripts/dash.py || true
+        run: python3 .github/scripts/破折号检测.py || true
 
       - name: 标点滥用检查
-        run: python3 .github/scripts/punctuation.py || true
+        run: python3 .github/scripts/标点滥用检查.py || true
 
-      - name: 反 AI 味检测
-        run: python3 .github/scripts/ai_slop.py || true
+      - name: 反AI味检测
+        run: python3 .github/scripts/反AI味检测.py || true
 
-      # ---------- B. 深度质量检查 ----------
       - name: WSC 风格统计
         run: |
           mkdir -p log
-          npx @theserverlessdev/wsc --format json --out log/wsc-report.json '影笔代理人/正文/**/*.md' || true
+          npx @theserverlessdev/wsc --format json --out log/WSC风格报告.json '影笔代理人/正文/**/*.md' || true
           true
 
       - name: novel-bug-checker 逻辑分析
@@ -79,21 +77,21 @@ jobs:
           git clone https://github.com/bbroot/novel-bug-checker.git /tmp/nbc || true
           if [ -d "/tmp/nbc" ]; then
             find "影笔代理人/正文" -name "第*.md" -exec cat {} \; > /tmp/novel_full.txt
-            python /tmp/nbc/scripts/logic-analyzer.py /tmp/novel_full.txt -o log/novel_bug_report.txt || true
+            python /tmp/nbc/scripts/logic-analyzer.py /tmp/novel_full.txt -o log/逻辑分析报告.txt || true
           fi
           true
 
       - name: 深度逻辑检查
-        run: python3 .github/scripts/deep_check.py || true
+        run: python3 .github/scripts/深度逻辑检查.py || true
 
-      # ---------- C. 给 log/ 下所有文本文件盖北京时间头 ----------
       - name: 给日志加北京时间头
         run: |
           mkdir -p log
           TS=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S CST')
           for f in log/*.txt; do
             [ -f "$f" ] || continue
-            [ "$(basename "$f")" = "last_run.txt" ] && continue
+            [ "$(basename "$f")" = "运行时间.txt" ] && continue
+            if head -1 "$f" | grep -q "检查时间:"; then continue; fi
             body=$(cat "$f")
             {
               echo "检查时间: $TS"
@@ -102,18 +100,17 @@ jobs:
             } > "$f.tmp"
             mv "$f.tmp" "$f"
           done
-          echo "$TS" > log/last_run.txt
-          echo "workflow: qa.yml" >> log/last_run.txt
+          echo "$TS" > log/运行时间.txt
+          echo "workflow: qa.yml" >> log/运行时间.txt
           ls -la log/
           true
 
-      # ---------- D. 提交报告（覆盖写） ----------
       - name: 推送报告到仓库
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add bug/ log/ 2>/dev/null || true
+          git add log/ 2>/dev/null || true
           git diff --cached --quiet || git commit -m "chore: 质量检查报告 [skip ci]" || true
           git push || true
           true
