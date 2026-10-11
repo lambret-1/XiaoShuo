@@ -1,0 +1,105 @@
+# 伏笔体系（对齐 README 千层金字塔）
+
+layers:
+  浅层:
+    range: 埋设1-160 / 回收1-320
+    items:
+      - id: S01
+        title: 右手墨痕
+        planted: 第1章
+        payoff: 每缔约加深蔓延；终局人影合一后褪去
+        status: 进行中
+      - id: S02
+        title: 沈砚不会做梦
+        planted: 第16章
+        payoff: 结局他做了人生第一个完整的梦
+        status: 待回收
+      - id: S03
+        title: 影子同源墨息
+        planted: 第1章末影屑
+        payoff: 第319章万影同源
+        status: 已回收
+      - id: S04
+        title: 空洞化卷宗"不明衰竭"
+        planted: 第6章1982笔录
+        payoff: 林叙携37份尸检报告登门（163章）
+        status: 已回收
+      - id: S05
+        title: 苏听晚纯白静止影 + 残缺怪梦
+        planted: 第3章
+        payoff: 卷四末揭露她是千年善意聚合体
+        status: 进行中
+      - id: S06
+        title: 怀表停在十七
+        planted: 第51章
+        payoff: 17岁少年沈砚剥离影子的创伤回忆（卷四幻境解锁）
+        status: 待回收
+
+  中层:
+    range: 埋设161-480 / 回收481-640
+    items:
+      - id: M01
+        title: 黑市跨城网络
+        planted: 第168章
+        payoff: 第317章十七城黑讯
+        status: 已回收
+      - id: M02
+        title: 陈婆婆木匣残契
+        planted: 第5章焦黑残契
+        payoff: 第466章打开，终末预言
+        status: 已回收
+      - id: M03
+        title: 历代无影代理人遗迹
+        planted: 第338章民国影册
+        payoff: 宋书生/明女人/清渔民手记（364/403/423章）
+        status: 进行中
+      - id: M04
+        title: 九影执事各自幻境
+        planted: 第482章九门九影
+        payoff: 卷四逐门认领
+        status: 进行中
+
+  深层:
+    range: 埋设481-800 / 回收641-920
+    items:
+      - id: D01
+        title: 苏听晚是千年善意聚合体
+        planted: 卷四
+        payoff: 卷四末揭露
+        status: 待回收
+      - id: D02
+        title: 始祖影是千年黑暗总和
+        planted: 第467章预言
+        payoff: 卷六完整揭露
+        status: 待回收
+      - id: D03
+        title: 无影代理人轮回机制
+        planted: 第365章手记真相
+        payoff: 卷五逐代揭开
+        status: 待回收
+      - id: D04
+        title: 沈砚从出生就被选定为终末容器
+        planted: 第467章
+        payoff: 卷六摊牌
+        status: 待回收
+
+  终极:
+    range: 埋设641-800 / 回收921-1000
+    items:
+      - id: U01
+        title: 世界底层规则刻意制造割裂自我的轮回
+        payoff: 卷七打破规则
+      - id: U02
+        title: 影子本就不该被剥离交易
+        payoff: 卷七人影归一
+      - id: U03
+        title: 人影归一后影子规则被改写
+        payoff: 第1000章大结局
+
+red_herrings:
+  - id: R01
+    fake: 影墨来自外来异界魔物
+    truth: 影墨全部源自人类内心人格
+  - id: R02
+    fake: 始祖影目标毁灭人类
+    truth: 始祖影只求本体接纳黑暗，无毁灭意图
