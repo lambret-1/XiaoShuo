@@ -62,6 +62,10 @@ jobs:
       - name: 反AI味检测
         run: python3 .github/scripts/反AI味检测.py || true
 
+
+      - name: 英文标点修正
+        run: python3 .github/scripts/英文标点修正.py || true
+
       - name: WSC 风格统计
         run: |
           mkdir -p log
@@ -106,7 +110,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add log/ 2>/dev/null || true
+          git add log/ 影笔代理人/正文/ 2>/dev/null || true
           git diff --cached --quiet || git commit -m "chore: 质量检查报告 [skip ci]" || true
           git push || true
           true
