@@ -2,224 +2,359 @@
 
 ## E01
 
-> 5 段 15 切 · 共 60 秒 / 目标 60 秒
+> 4 段 15 切 · 共 60 秒 / 目标 60 秒
 
-### undefined · ? · 14 秒 · 3 个分镜
+### E01-01 · S01（黄昏） · 14 秒 · 3 个分镜
 
-> 走位：沈砚站在画架前左三分之一处，周明从右侧门进入，两人相距三米
+> 走位：沈砚站在画架前左三分之一处，周明从右侧门进入，两人相距三米。
 
 | 切 | 起点 | 秒 | 景别 | 运镜 | 配方 | 画面 | 人物 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| #1 | 0.00s | 4 |  | undefined（?） | — |  |  |
-| #2 | 4.00s | 5 |  | undefined（?） | — |  |  |
-| #3 | 9.00s | 5 |  | undefined（?） | — |  |  |
+| #1 | 0.00s | 4 | 全景 | Tilt Down（俯摇） | — |  | 沈砚 |
+| #2 | 4.00s | 5 | 中景 | Static Shot（固定） | — | 黄昏画室，沈砚站在画架前执笔，镜头缓缓下移——他脚下的地板干干净净，没有影子。 门被推开，周明缩着肩膀走进来，目光落在沈砚背上。 | 沈砚、周明 |
+| #3 | 9.00s | 5 | 特写 | Static Shot（固定） | — | 周明：「这里是……能画画的地方？」 | 周明 |
 
 **H3 视频提示词**
 
 ```text
-Cinematic urban fantasy short drama, dusk setting. [Shot 0] Wide shot of old Chinese artist studio interior, warm orange dusk light through wooden lattice window. A thin pale man in dark grey shirt stands at easel on the left. Camera slowly tilts down to reveal the old wooden floor beneath him — empty, no shadow. [Shot 1] Medium shot from behind the pale man. Door on the right opens inward, a hunched man in washed grey work uniform enters slowly. [Shot 2] Close-up on the entering man's nervous face, then his eyes move downward. No music, just ambient sounds of old building footsteps.
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 4.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 9.00-second mark of the target video.
+
+integrated_multimodal_description:
+[Shot 1] 画室全景，暖橘色黄昏光从木格窗洒入，镜头缓缓下移，空地板上没有影子。
+[Shot 2] At 00:04.000, the camera cuts to 中景，画室门被推开，缩肩的工装男人走进来，目光落在前方男人的背上。
+[Shot 3] At 00:09.000, the camera cuts to 近景，工装男人近景，嘴唇微动，声音很小地问话。
+
+overall_soundscape: 老旧木地板脚步声、窗外远处夜市嘈杂、笔触纸面的沙沙声。
+
+non_diegetic_music: 极轻的钢琴单音，黄昏氛围。
 ```
 
 **Seedance 视频提示词**
 
 ```text
+@[图片1] = S01
+@[图片2] = 沈砚
+@[图片3] = 周明
+@[图片4] = P01
+
 【人物关系与构图逻辑】
-沈砚站在画架前左三分之一处，周明从右侧门进入，两人相距三米
+沈砚站在画架前左三分之一处，周明从右侧门进入，两人相距三米。
 
 【镜头1】
-构图：沈砚在左三分之一，地板占据下半画面
-画面：画室全景，暖橘色黄昏光从木格窗洒入，镜头缓缓下移，空地板上没有影子
+焦距：50mm 标准，中浅景深
+机位：画室主人 + 平视正面
+构图：三分法
+运镜：俯摇
+景别：全景
+画面：画室全景，暖橘色黄昏光从木格窗洒入，镜头缓缓下移，空地板上没有影子。
 台词：{}
-焦点：地板空无影子的位置
-稳定性：缓推
+视线落点：向下看地板
+焦点：锁定地板空无影子的位置
+稳定性：稳定
 
 【镜头2】
-构图：沈砚背影在前景左侧，周明在右侧门口
-画面：画室门被推开，缩肩的工装男人走进来，目光落在前方男人的背上
+焦距：50mm 标准，中浅景深
+机位：过画室主人肩 + 平视
+构图：三分法
+运镜：固定镜头
+景别：中景
+画面：画室门被推开，缩肩的工装男人走进来，目光落在前方男人的背上。
 台词：{}
-焦点：周明的脸
-稳定性：固定
+视线落点：来访者看画室主人背影
+焦点：锁定来访者的脸
+稳定性：稳定
 
 【镜头3】
-构图：周明居中，略微缩肩
-画面：工装男人近景，嘴唇微动，声音很小地问话
-台词：{}
-焦点：周明的眼睛
-稳定性：固定
+焦距：85mm 长焦，极浅景深
+机位：来访者 + 平视正面
+构图：中心构图
+运镜：固定镜头
+景别：特写
+画面：工装男人近景，嘴唇微动，声音很小地问话。
+台词：{这里是……能画画的地方？}
+视线落点：看向前方偏下
+焦点：锁定来访者的眼睛
+稳定性：稳定
 
 <老旧木地板脚步声、窗外远处夜市嘈杂、笔触纸面的沙沙声>
 （极轻的钢琴单音，黄昏氛围）
 
 【约束】
 1. 保持无字幕，避免生成任何文字或字幕
+2. 视频全程禁止出现外形、着装、配饰完全一致的人物
 ```
 
-### undefined · ? · 15 秒 · 4 个分镜
+### E01-02 · S01（黄昏） · 15 秒 · 4 个分镜
 
-> 走位：沈砚转身面对周明，两人面对面坐在画架两侧，距离约两米
+> 走位：沈砚转身面对周明，两人面对面坐在画架两侧，距离约两米。
 
 | 切 | 起点 | 秒 | 景别 | 运镜 | 配方 | 画面 | 人物 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| #1 | 0.00s | 4 |  | undefined（?） | — |  |  |
-| #2 | 4.00s | 4 |  | undefined（?） | — |  |  |
-| #3 | 8.00s | 3 |  | undefined（?） | — |  |  |
-| #4 | 11.00s | 4 |  | undefined（?） | — |  |  |
+| #1 | 0.00s | 4 | 特写 | Static Shot（固定） | — | 沈砚：「白天画人像。黄昏以后，画别的。」 | 沈砚 |
+| #2 | 4.00s | 4 | 中景 | Shake Slightly（轻微晃动） | — | 周明咽了口唾沫，目光往下移——看到沈砚脚下没有影子，后退半步。 | 周明 |
+| #3 | 8.00s | 3 | 特写 | Static Shot（固定） | — | 沈砚：「坐。说吧，你想让影子替你做什么。」 | 沈砚 |
+| #4 | 11.00s | 4 | 大特写 | Push In（推） | — | 周明：「我想让它替我去开会。跟主管说我要离职，把三年的事全说出来。」 | 周明 |
 
 **H3 视频提示词**
 
 ```text
-[Shot 0] Medium close-up of the pale man turning around, face revealed — long eyebrows, flat nose, unsettling still eyes. [Shot 1] The hunched man's eyes dart down — he sees the empty floor. He steps back half a step. [Shot 2] Over-shoulder shot: pale man speaks, brush still in hand. [Shot 3] Close-up on hunched man's clenched fist, knuckles white, as he speaks about three years of being suppressed.
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 4.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 8.00-second mark of the target video; Picture 4 (from Shot 4) aligns with the 11.00-second mark of the target video.
+
+integrated_multimodal_description:
+[Shot 1] 近景，画室主人转身面对来访者，脸上没有表情，眼睛不动。
+[Shot 2] At 00:04.000, the camera cuts to 中景，来访者目光下移，看到空地板，后退半步。
+[Shot 3] At 00:08.000, the camera cuts to 近景，画室主人平静地开口，笔尖还悬在纸上。
+[Shot 4] At 00:11.000, the camera cuts to 特写，来访者的拳头特写，指节发白，声音越来越低。
+
+overall_soundscape: 来访者的吞咽声、窗外夕阳沉下去的光线变化感。
+
+non_diegetic_music: 钢琴音渐沉，加入低频弦乐。
 ```
 
 **Seedance 视频提示词**
 
 ```text
+@[图片1] = S01
+@[图片2] = 沈砚
+@[图片3] = 周明
+@[图片4] = P01
+
 【人物关系与构图逻辑】
-沈砚转身面对周明，两人面对面坐在画架两侧，距离约两米
+沈砚转身面对周明，两人面对面坐在画架两侧，距离约两米。
 
 【镜头1】
-构图：沈砚居中，冷光从侧面打来
-画面：画室主人转身面对来访者，脸上没有表情，眼睛不动
-台词：{}
-焦点：沈砚的眼睛
-稳定性：固定
+焦距：85mm 长焦，极浅景深
+机位：画室主人 + 平视正面
+构图：中心构图
+运镜：固定镜头
+景别：特写
+画面：画室主人转身面对来访者，脸上没有表情，眼睛不动。
+台词：{白天画人像。黄昏以后，画别的。}
+视线落点：直视前方
+焦点：锁定画室主人的眼睛
+稳定性：稳定
 
 【镜头2】
-构图：周明低头，地板在前景
-画面：工装男人目光下移，看到空地板，后退半步
+焦距：35mm 广角，深景深
+机位：来访者视角 + 俯视
+构图：对角线
+运镜：轻微晃动
+景别：中景
+画面：来访者目光下移，看到空地板，后退半步。
 台词：{}
-焦点：周明的脚和地板
-稳定性：手持微晃
+视线落点：向下看地板
+焦点：锁定来访者的脚和地板
+稳定性：微晃
 
 【镜头3】
-构图：沈砚侧脸，笔尖在前景
-画面：画室主人平静地开口，笔尖还悬在纸上
-台词：{}
-焦点：沈砚的嘴和笔尖
-稳定性：固定
+焦距：85mm 长焦，极浅景深
+机位：画室主人侧脸 + 平视
+构图：三分法
+运镜：固定镜头
+景别：特写
+画面：画室主人平静地开口，笔尖还悬在纸上。
+台词：{坐。说吧，你想让影子替你做什么。}
+视线落点：看向对面
+焦点：锁定画室主人的嘴和笔尖
+稳定性：稳定
 
 【镜头4】
-构图：拳头居中在膝盖上
-画面：工装男人的拳头特写，指节发白，声音越来越低
-台词：{}
-焦点：攥紧的拳头
-稳定性：缓推
+焦距：100mm 微距，极浅景深
+机位：来访者拳头 + 俯视
+构图：中心构图
+运镜：推镜
+景别：大特写
+画面：来访者的拳头特写，指节发白，声音越来越低。
+台词：{我想让它替我去开会。跟主管说我要离职，把三年的事全说出来。}
+视线落点：向下看拳头
+焦点：锁定攥紧的拳头
+稳定性：稳定
 
-<周明的吞咽声、窗外夕阳沉下去的光线变化感>
+<来访者的吞咽声、窗外夕阳沉下去的光线变化感>
 （钢琴音渐沉，加入低频弦乐）
 
 【约束】
 1. 保持无字幕，避免生成任何文字或字幕
 ```
 
-### undefined · ? · 16 秒 · 4 个分镜
+### E01-03 · S01（黄昏） · 16 秒 · 4 个分镜
 
-> 走位：沈砚在画架前落笔，周明坐在对面凝视纸面，两人被夕阳光和灯光分割
+> 走位：沈砚在画架前落笔，周明坐在对面凝视纸面，两人被夕阳光和灯光分割。
 
 | 切 | 起点 | 秒 | 景别 | 运镜 | 配方 | 画面 | 人物 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| #1 | 0.00s | 4 |  | undefined（?） | — |  |  |
-| #2 | 4.00s | 4 |  | undefined（?） | — |  |  |
-| #3 | 8.00s | 4 |  | undefined（?） | — |  |  |
-| #4 | 12.00s | 4 |  | undefined（?） | — |  |  |
+| #1 | 0.00s | 4 | 大特写 | Static Shot（固定） | — | 沈砚：「规则你清楚吗？影子替你做一件事，你付一项人格代价。不可逆。」 | 沈砚 |
+| #2 | 4.00s | 4 | 大特写 | Push In（推） | — | 沈砚落笔，照心纹从纸面中央扩散，墨线游走，纸面嘶嘶作响。 |  |
+| #3 | 8.00s | 4 | 特写 | Static Shot（固定） | — | 纸上画面清晰：缩在教室角落的男孩→站在主管面前攥拳的周明→会议室讲台上张嘴发不出声的周明。 | 周明 |
+| #4 | 12.00s | 4 | 特写 | Push In（推） | — | 墨字浮现：你要的不是离职。你要的，是愤怒的勇气。周明的脸白了，眼眶红了。 | 周明 |
 
 **H3 视频提示词**
 
 ```text
-[Shot 0] Close-up on brush touching paper, ink pattern spreading outward like ink dropped in water. Fine hissing sound. [Shot 1] Over-shoulder shot looking down at the sketchbook page — images forming: a small boy huddled in classroom corner, then grown man facing angry boss, then empty podium with silent open mouth. [Shot 2] Close-up of ink characters appearing: The text says what you really want is courage to be angry. The hunched man's face drains of color, tears well up.
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 4.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 8.00-second mark of the target video; Picture 4 (from Shot 4) aligns with the 12.00-second mark of the target video.
+
+integrated_multimodal_description:
+[Shot 1] 特写，画室主人右手拇指擦过手背上的淡墨痕。
+[Shot 2] At 00:04.000, the camera cuts to 特写，笔尖落在纸上，墨线从纸面中央扩散。
+[Shot 3] At 00:08.000, the camera cuts to 近景，纸面上浮现画面：缩在角落的男孩、站在主管面前的男人、讲台前张嘴发不出声。
+[Shot 4] At 00:12.000, the camera cuts to 近景，墨字浮现，来访者脸白了眼眶红了眼泪掉下来。
+
+overall_soundscape: 墨线游走的嘶嘶声、纸面碳化的噼啪声、来访者急促呼吸。
+
+non_diegetic_music: 弦乐渐强，照心纹展开时音乐达到情感顶点。
 ```
 
 **Seedance 视频提示词**
 
 ```text
+@[图片1] = S01
+@[图片2] = 沈砚
+@[图片3] = 周明
+@[图片4] = P01
+
 【人物关系与构图逻辑】
-沈砚在画架前落笔，周明坐在对面凝视纸面，两人被夕阳光和灯光分割
+沈砚在画架前落笔，周明坐在对面凝视纸面，两人被夕阳光和灯光分割。
 
 【镜头1】
-构图：手背居中，墨痕清晰
-画面：画室主人的右手特写，拇指擦过手背上的墨色烙印
-台词：{}
-焦点：手背上的墨痕
-稳定性：固定
+焦距：100mm 微距，极浅景深
+机位：画室主人手背 + 平视
+构图：中心构图
+运镜：固定镜头
+景别：大特写
+画面：画室主人的右手特写，拇指擦过手背上的墨色烙印。
+台词：{规则你清楚吗？影子替你做一件事，你付一项人格代价。不可逆。}
+视线落点：看手背
+焦点：锁定手背上的墨痕
+稳定性：稳定
 
 【镜头2】
-构图：纸面居中，墨线从中心扩散
-画面：笔尖触纸，墨线在纸上游走扩散，发出嘶嘶声
+焦距：100mm 微距，极浅景深
+机位：纸面 + 俯视
+构图：中心构图
+运镜：推镜
+景别：大特写
+画面：笔尖触纸，墨线在纸上游走扩散，发出嘶嘶声。
 台词：{}
-焦点：墨线扩散的边缘
-稳定性：缓推
+视线落点：俯视纸面
+焦点：锁定墨线扩散的边缘
+稳定性：稳定
 
 【镜头3】
-构图：纸面居中，周明肩膀在前景边缘
-画面：纸面画面依次浮现：被欺负的小男孩、攥拳的男人、空张着嘴的讲台
+焦距：50mm 标准，中浅景深
+机位：过来访者肩看纸面 + 过肩
+构图：三分法
+运镜：固定镜头
+景别：特写
+画面：纸面画面依次浮现：被欺负的小男孩、攥拳的男人、空张着嘴的讲台。
 台词：{}
-焦点：纸面上浮现的画面
-稳定性：固定
+视线落点：来访者凝视纸面
+焦点：锁定纸面上浮现的画面
+稳定性：稳定
 
 【镜头4】
-构图：周明居中，泪在脸上
-画面：墨字浮现在纸面，工装男人脸色煞白，眼泪从眼眶滑落
+焦距：85mm 长焦，极浅景深
+机位：来访者 + 平视正面
+构图：中心构图
+运镜：推镜
+景别：特写
+画面：墨字浮现在纸面，来访者脸色煞白，眼泪从眼眶滑落。
 台词：{}
-焦点：周明含泪的眼睛
-稳定性：缓推
+视线落点：盯着纸面
+焦点：锁定来访者含泪的眼睛
+稳定性：稳定
 
-<墨线游走的嘶嘶声、纸面碳化的噼啪声、周明急促呼吸>
+<墨线游走的嘶嘶声、纸面碳化的噼啪声、来访者急促呼吸>
 （弦乐渐强，照心纹展开时音乐达到情感顶点）
 
 【约束】
 1. 保持无字幕，避免生成任何文字或字幕
 ```
 
-### undefined · ? · 15 秒 · 4 个分镜
+### E01-04 · S01（黄昏） · 15 秒 · 4 个分镜
 
-> 走位：沈砚画完收笔，周明起身离开，沈砚独自站在窗边看他走远
+> 走位：沈砚画完收笔，周明起身离开，沈砚独自站在窗边看他走远。
 
 | 切 | 起点 | 秒 | 景别 | 运镜 | 配方 | 画面 | 人物 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| #1 | 0.00s | 4 |  | undefined（?） | — |  |  |
-| #2 | 4.00s | 3 |  | undefined（?） | — |  |  |
-| #3 | 7.00s | 4 |  | undefined（?） | — |  |  |
-| #4 | 11.00s | 4 |  | undefined（?） | — |  |  |
+| #1 | 0.00s | 4 | 特写 | Static Shot（固定） | — | 沈砚：「代价是——永久剥离你的愤怒。」 | 沈砚 |
+| #2 | 4.00s | 3 | 特写 | Static Shot（固定） | — | 周明：「我愿意。」 | 周明 |
+| #3 | 7.00s | 4 | 中景 | Static Shot（固定） | — | 三道纹路交汇，纸边碳化卷起，飘下影屑。周明的影子动了动，重新贴回地板。 | 周明 |
+| #4 | 11.00s | 4 | 特写 | Push In（推） | — | 周明推门离开。画室里，沈砚低头看右手——墨痕在发烫。 | 沈砚 |
 
 **H3 视频提示词**
 
 ```text
-[Shot 0] Two more ink patterns drawn on paper, three patterns intersect. Paper edges curl and carbonize, tiny translucent fragments fall. [Shot 1] The hunched man stands up, legs unsteady, walks to door. He pauses at the door. [Shot 2] Wide shot from behind the easel — the pale man stands alone at window, looking down at his right hand. The ink stain on his hand glows faintly. [Shot 3] Extreme close-up: on the street below under yellow streetlamp, the departing man's shadow on the pavement — its fingertips curl slightly. The pale man's eyes narrow.
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 4.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.00-second mark of the target video; Picture 4 (from Shot 4) aligns with the 11.00-second mark of the target video.
+
+integrated_multimodal_description:
+[Shot 1] 特写，画笔快速在纸上游走，画室主人说代价是永久失去愤怒。
+[Shot 2] At 00:04.000, the camera cuts to 近景，来访者闭上眼，声音沙哑地说我愿意，泪滑落。
+[Shot 3] At 00:07.000, the camera cuts to 中景，纸面纹路交汇，纸边碳化卷起，细碎影屑飘落，地板上的影子重新贴好。
+[Shot 4] At 00:11.000, the camera cuts to 近景，画室主人独自站在窗边，低头看右手手背上的墨痕微微发烫。
+
+overall_soundscape: 纸边碳化噼啪声、门开合声、窗外夜风、墨痕发烫的低频嗡鸣。
+
+non_diegetic_music: 弦乐收束，最后一个音悬停，结尾加入不协和的低频嗡鸣。
 ```
 
 **Seedance 视频提示词**
 
 ```text
+@[图片1] = S01
+@[图片2] = 沈砚
+@[图片3] = 周明
+@[图片4] = P01
+
 【人物关系与构图逻辑】
-沈砚画完收笔，周明起身离开，沈砚独自站在窗边看他走远
+沈砚画完收笔，周明起身离开，沈砚独自站在窗边看他走远。
 
 【镜头1】
-构图：沈砚侧脸在左，纸面在右
-画面：画笔快速在纸上游走，画室主人说代价是永久失去愤怒
-台词：{}
-焦点：纸面和沈砚的嘴
-稳定性：固定
+焦距：50mm 标准，中浅景深
+机位：画室主人侧脸 + 过肩看纸面
+构图：三分法
+运镜：固定镜头
+景别：特写
+画面：画笔快速在纸上游走，画室主人说代价是永久失去愤怒。
+台词：{代价是——永久剥离你的愤怒。}
+视线落点：画室主人看纸面
+焦点：锁定纸面和画室主人的嘴
+稳定性：稳定
 
 【镜头2】
-构图：周明居中，闭眼
-画面：工装男人闭上眼，声音沙哑地说我愿意，泪滑落
-台词：{}
-焦点：周明的脸
-稳定性：固定
+焦距：85mm 长焦，极浅景深
+机位：来访者 + 平视正面
+构图：中心构图
+运镜：固定镜头
+景别：特写
+画面：来访者闭上眼，声音沙哑地说我愿意，泪滑落。
+台词：{我愿意。}
+视线落点：闭眼
+焦点：锁定来访者的脸
+稳定性：稳定
 
 【镜头3】
-构图：纸面在上，影子在下
-画面：纸面纹路交汇，纸边碳化卷起，细碎影屑飘落，地板上的影子重新贴好
+焦距：35mm 广角，深景深
+机位：纸面在上影子在下 + 俯视
+构图：对角线
+运镜：固定镜头
+景别：中景
+画面：纸面纹路交汇，纸边碳化卷起，细碎影屑飘落，地板上的影子重新贴好。
 台词：{}
-焦点：纸边碳化处和地板影子
-稳定性：固定
+视线落点：俯视
+焦点：锁定纸边碳化处和地板影子
+稳定性：稳定
 
 【镜头4】
-构图：沈砚侧脸在窗光中，右手在前景
-画面：画室主人独自站在窗边，低头看右手手背上的墨痕微微发烫
+焦距：85mm 长焦，极浅景深
+机位：画室主人侧脸在窗光中 + 平视
+构图：三分法
+运镜：推镜
+景别：特写
+画面：画室主人独自站在窗边，低头看右手手背上的墨痕微微发烫。
 台词：{}
-焦点：手背上的墨痕
-稳定性：缓推
+视线落点：低头看右手
+焦点：锁定手背上的墨痕
+稳定性：稳定
 
 <纸边碳化噼啪声、门开合声、窗外夜风、墨痕发烫的低频嗡鸣>
 （弦乐收束，最后一个音悬停，结尾加入不协和的低频嗡鸣）
@@ -228,31 +363,21 @@ Cinematic urban fantasy short drama, dusk setting. [Shot 0] Wide shot of old Chi
 1. 保持无字幕，避免生成任何文字或字幕
 ```
 
-### undefined · ? · 0 秒 · 0 个分镜
-
-| 切 | 起点 | 秒 | 景别 | 运镜 | 配方 | 画面 | 人物 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-
-**H3 视频提示词**
-
-```text
-
-```
-
-**Seedance 视频提示词**
-
-```text
-【约束】
-1. 保持无字幕，避免生成任何文字或字幕
-```
-
 ## 生成批次单
 
 | 场景 | 光照 | 段 | 需要的角色 | 道具 |
 | --- | --- | --- | --- | --- |
+| S01 S01 | 黄昏 | E01-01、E01-02、E01-03、E01-04 | 沈砚、周明 | P01 |
 
 ## 配音对齐单
 
 | 段 · 切 | 说话人 | 台词 | 台词秒数 |
 | --- | --- | --- | --- |
+| E01-01#3 | 周明 | 这里是……能画画的地方？ | 2.7 |
+| E01-02#1 | 沈砚 | 白天画人像。黄昏以后，画别的。 | 3.3 |
+| E01-02#3 | 沈砚 | 坐。说吧，你想让影子替你做什么。 | 3.6 |
+| E01-02#4 | 周明 | 我想让它替我去开会。跟主管说我要离职，把三年的事全说出来。 | 6.4 |
+| E01-03#1 | 沈砚 | 规则你清楚吗？影子替你做一件事，你付一项人格代价。不可逆。 | 6.4 |
+| E01-04#1 | 沈砚 | 代价是——永久剥离你的愤怒。 | 3.1 |
+| E01-04#2 | 周明 | 我愿意。 | 0.9 |
 
