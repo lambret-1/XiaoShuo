@@ -1,0 +1,247 @@
+name: 小说转漫剧全流程流水线
+
+on:
+  workflow_dispatch:
+    inputs:
+      book_name:
+        description: '作品名称'
+        required: true
+        default: '影笔代理人'
+      source_dir:
+        description: '小说正文章节目录（相对于仓库根目录）'
+        required: true
+        default: '影笔代理人/正文'
+      output_dir:
+        description: '产物输出目录（相对于仓库根目录）'
+        required: true
+        default: '影笔代理人-剧本/流水线产物'
+      episodes:
+        description: '改编总集数'
+        required: true
+        default: '60'
+      duration:
+        description: '单集时长（分钟）'
+        required: true
+        default: '3'
+      genre:
+        description: '题材类型'
+        required: true
+        default: '都市悬疑'
+      adaptation:
+        description: '改编幅度（忠实/抽核/借壳）'
+        required: true
+        default: '抽核'
+      max_characters:
+        description: '角色设定上限数量'
+        required: true
+        default: '30'
+      start_stage:
+        description: '起始阶段（outline/characters/art/script/storyboard）'
+        required: true
+        default: 'outline'
+        type: choice
+        options:
+          - outline
+          - characters
+          - art
+          - script
+          - storyboard
+
+permissions:
+  contents: write
+
+concurrency:
+  group: novel-pipeline-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  SKILLS_REPO: 'lambret-1/shuohao-skills'
+  SKILLS_BRANCH: 'main'
+  NODE_VERSION: '20'
+
+jobs:
+  pipeline:
+    name: 漫剧素材生成流水线
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+
+    steps:
+      - name: 检出小说仓库
+        uses: actions/checkout@v4
+        with:
+          path: novel-repo
+          fetch-depth: 1
+
+      - name: 检出 shuohao-skills 仓库
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.SKILLS_REPO }}
+          ref: ${{ env.SKILLS_BRANCH }}
+          path: shuohao-skills
+          fetch-depth: 1
+
+      - name: 设置 Node.js 环境
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: 验证 Node 环境
+        run: |
+          node --version
+          npm --version
+          echo "Node 环境就绪"
+
+      - name: 验证 AI 服务配置
+        run: |
+          if [ -z "${{ secrets.AI_API_KEY }}" ]; then
+            echo "::error::未配置 AI_API_KEY Secret，无法调用 AI 服务生成内容"
+            echo "请在仓库 Settings > Secrets and variables > Actions 中添加 AI_API_KEY"
+            exit 1
+          fi
+          echo "AI_API_KEY 已配置"
+          echo "AI_API_URL: ${AI_API_URL:-使用默认 OpenAI 端点}"
+          echo "AI_MODEL: ${AI_MODEL:-使用默认模型}"
+        env:
+          AI_API_URL: ${{ secrets.AI_API_URL }}
+          AI_MODEL: ${{ secrets.AI_MODEL }}
+
+      - name: 验证输入目录
+        run: |
+          SOURCE_PATH="novel-repo/${{ github.event.inputs.source_dir }}"
+          if [ ! -d "$SOURCE_PATH" ]; then
+            echo "::error::输入目录不存在: $SOURCE_PATH"
+            exit 1
+          fi
+          CHAPTER_COUNT=$(find "$SOURCE_PATH" -name "第*.md" -type f | wc -l)
+          echo "检测到章节文件数: $CHAPTER_COUNT"
+          if [ "$CHAPTER_COUNT" -eq 0 ]; then
+            echo "::warning::未检测到第*.md格式的章节文件，请确认目录结构"
+          fi
+
+      - name: 准备流水线脚本
+        run: |
+          # 将流水线脚本复制到工作目录
+          mkdir -p pipeline-scripts
+          cp novel-repo/.github/scripts/ai-client.mjs pipeline-scripts/
+          cp novel-repo/.github/scripts/pipeline-common.mjs pipeline-scripts/
+          cp novel-repo/.github/scripts/pipeline-outline.mjs pipeline-scripts/
+          cp novel-repo/.github/scripts/pipeline-characters.mjs pipeline-scripts/
+          cp novel-repo/.github/scripts/pipeline-art.mjs pipeline-scripts/
+          cp novel-repo/.github/scripts/pipeline-script.mjs pipeline-scripts/
+          cp novel-repo/.github/scripts/pipeline-storyboard.mjs pipeline-scripts/
+          cp novel-repo/.github/scripts/pipeline-runner.mjs pipeline-scripts/
+          chmod +x pipeline-scripts/*.mjs
+          echo "流水线脚本已就绪"
+          ls -la pipeline-scripts/
+
+      - name: 创建输出目录
+        run: |
+          OUTPUT_PATH="novel-repo/${{ github.event.inputs.output_dir }}"
+          mkdir -p "$OUTPUT_PATH"
+          echo "输出目录已创建: $OUTPUT_PATH"
+
+      - name: 执行全流程流水线
+        id: run-pipeline
+        run: |
+          cd pipeline-scripts
+
+          node pipeline-runner.mjs \
+            --book "../novel-repo/${{ github.event.inputs.source_dir }}" \
+            --output "../novel-repo/${{ github.event.inputs.output_dir }}" \
+            --skills "../shuohao-skills" \
+            --name "${{ github.event.inputs.book_name }}" \
+            --episodes "${{ github.event.inputs.episodes }}" \
+            --duration "${{ github.event.inputs.duration }}" \
+            --genre "${{ github.event.inputs.genre }}" \
+            --adaptation "${{ github.event.inputs.adaptation }}" \
+            --max-chars "${{ github.event.inputs.max_characters }}" \
+            --stage "${{ github.event.inputs.start_stage }}"
+
+          echo "流水线执行完成"
+        env:
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_API_URL: ${{ secrets.AI_API_URL }}
+          AI_MODEL: ${{ secrets.AI_MODEL }}
+          AI_TIMEOUT: '600000'
+          AI_MAX_RETRIES: '5'
+
+      - name: 列出生成的产物
+        if: always()
+        run: |
+          OUTPUT_PATH="novel-repo/${{ github.event.inputs.output_dir }}"
+          echo "=== 产物清单 ==="
+          if [ -d "$OUTPUT_PATH" ]; then
+            find "$OUTPUT_PATH" -maxdepth 1 -type f \( -name "*.json" -o -name "*.md" -o -name "*.html" \) -exec ls -lh {} \; | awk '{print $5, $9}'
+          else
+            echo "输出目录不存在"
+          fi
+          echo ""
+          echo "=== 流水线状态 ==="
+          if [ -f "$OUTPUT_PATH/pipeline-status.json" ]; then
+            cat "$OUTPUT_PATH/pipeline-status.json"
+          fi
+
+      - name: 提交产物到仓库
+        if: always()
+        run: |
+          cd novel-repo
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          OUTPUT_DIR="${{ github.event.inputs.output_dir }}"
+
+          # 添加产物
+          git add "$OUTPUT_DIR/" 2>/dev/null || true
+
+          # 检查是否有变更
+          if git diff --cached --quiet; then
+            echo "没有新的产物需要提交"
+          else
+            TS=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S CST')
+            git commit -m "feat: 漫剧流水线产物 - $TS
+
+作品: ${{ github.event.inputs.book_name }}
+集数: ${{ github.event.inputs.episodes }} 集
+单集时长: ${{ github.event.inputs.duration }} 分钟
+题材: ${{ github.event.inputs.genre }}
+起始阶段: ${{ github.event.inputs.start_stage }}
+触发者: ${{ github.triggering_actor }}" || echo "提交失败或无变更"
+            git push || echo "推送失败"
+          fi
+
+      - name: 生成流水线摘要
+        if: always()
+        run: |
+          OUTPUT_PATH="novel-repo/${{ github.event.inputs.output_dir }}"
+          {
+            echo "## 漫剧素材生成流水线执行结果"
+            echo ""
+            echo "| 项目 | 值 |"
+            echo "|------|-----|"
+            echo "| 作品名称 | ${{ github.event.inputs.book_name }} |"
+            echo "| 改编集数 | ${{ github.event.inputs.episodes }} 集 |"
+            echo "| 单集时长 | ${{ github.event.inputs.duration }} 分钟 |"
+            echo "| 题材 | ${{ github.event.inputs.genre }} |"
+            echo "| 改编幅度 | ${{ github.event.inputs.adaptation }} |"
+            echo "| 起始阶段 | ${{ github.event.inputs.start_stage }} |"
+            echo "| 输出目录 | \`${{ github.event.inputs.output_dir }}\` |"
+            echo ""
+            echo "### 产物文件"
+            echo ""
+            if [ -d "$OUTPUT_PATH" ]; then
+              for f in "$OUTPUT_PATH"/*.json "$OUTPUT_PATH"/*.md "$OUTPUT_PATH"/*.html; do
+                if [ -f "$f" ]; then
+                  SIZE=$(du -h "$f" | cut -f1)
+                  NAME=$(basename "$f")
+                  echo "- \`$NAME\` ($SIZE)"
+                fi
+              done
+            fi
+            echo ""
+            echo "### 阶段状态"
+            echo ""
+            if [ -f "$OUTPUT_PATH/pipeline-status.json" ]; then
+              cat "$OUTPUT_PATH/pipeline-status.json"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
