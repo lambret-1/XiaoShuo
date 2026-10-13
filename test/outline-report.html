@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="zh"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>影笔代理人 · 短剧改编大纲</title>
+<style>
+:root{
+  --paper:#eceded; --panel:#f5f6f5; --side:#e4e6e3; --ink:#191d21; --ink-2:#5b636a; --ink-3:#8c9298;
+  --rule:#d2d5d0; --rule-2:#c2c6bf; --seal:#8a3324; --seal-2:#c56a4e; --seal-3:#e0a98c; --seal-soft:#8a332412; --ok:#3d6b4f;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+.page{max-width:1600px;margin:0 auto;padding:24px 32px 90px}
+h1,h2,h3{margin:0;font-weight:400}
+
+.hd{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:12px}
+.hd h1{font:400 28px/1.1 var(--serif);letter-spacing:.06em}
+.hd .sub{font-size:13px;color:var(--ink-2)}
+.hd .right{margin-left:auto;display:flex;align-items:center;gap:10px}
+.gatepill{display:inline-flex;align-items:center;gap:6px;font:500 12px/1 var(--sans);border-radius:99px;padding:6px 12px}
+.gatepill.pass{color:var(--ok);border:1px solid var(--ok)}
+.gatepill.fail{color:var(--seal);border:1px solid var(--seal);background:var(--seal-soft)}
+.expo{font:500 11px/1 var(--sans);color:var(--ink-2);background:var(--panel);
+  border:1px solid var(--rule-2);border-radius:2px;padding:7px 11px;cursor:pointer;transition:.15s}
+.expo:hover{border-color:var(--seal);color:var(--seal)}
+.expo:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:18px 0 6px}
+@media(max-width:980px){.kpis{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--panel);border:1px solid var(--rule);border-radius:2px;padding:11px 14px 9px}
+.kpi .l{font:500 10px/1 var(--sans);letter-spacing:.18em;color:var(--ink-3)}
+.kpi .v{font:400 28px/1.15 var(--serif);margin-top:5px}
+.kpi .v small{font:400 14px var(--serif);color:var(--ink-2)}
+.kpi .v.mode{font-size:21px;padding-top:5px}
+.kpi .d{font-size:11px;color:var(--ink-2);margin-top:1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.kpi.accent{border-top:2px solid var(--seal)}
+
+.galert{margin:14px 0 0;border:1px solid var(--seal);background:var(--seal-soft);border-radius:2px;
+  padding:10px 14px;font-size:13px}
+.galert b{color:var(--seal)}
+.galert span{display:block;font-size:12px;color:var(--ink-2)}
+
+section{margin-top:34px}
+.sec-h{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--rule-2);padding-bottom:8px;margin-bottom:16px}
+.sec-h .no{font:500 12px/1 var(--mono);color:var(--seal)}
+.sec-h h2{font:400 20px/1.2 var(--serif);letter-spacing:.05em}
+.sec-h .note{margin-left:auto;font-size:12px;color:var(--ink-3)}
+
+/* beat-rhythm chart/table tabs */
+.tabs{display:flex;width:max-content;margin-bottom:12px;border:1px solid var(--rule-2);
+  border-radius:2px;overflow:hidden}
+.tab{font:500 12px/1 var(--sans);letter-spacing:.06em;padding:7px 16px;background:var(--panel);
+  border:0;cursor:pointer;color:var(--ink-2);transition:.15s}
+.tab + .tab{border-left:1px solid var(--rule-2)}
+.tab.on{background:var(--seal);color:#fff}
+.tab:focus-visible{outline:2px solid var(--seal);outline-offset:-2px}
+.tabpane{display:none}
+.tabpane.on{display:block}
+
+/* episode overview: first three cards, fade-out + expand */
+.epswrap{position:relative}
+.eps{position:relative}
+.epswrap.clip .eps .ep:nth-child(n+4){display:none}
+.epswrap.clip .eps::after{content:'';position:absolute;left:0;right:0;bottom:0;height:90px;
+  background:linear-gradient(180deg,transparent,var(--paper));pointer-events:none}
+.epsmore{display:block;margin:10px auto 0;font:500 12px/1 var(--sans);letter-spacing:.06em;
+  color:var(--ink-2);background:var(--panel);border:1px solid var(--rule-2);border-radius:2px;
+  padding:8px 18px;cursor:pointer;transition:.15s}
+.epsmore:hover{border-color:var(--seal);color:var(--seal)}
+.epsmore:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+
+/* key decisions: the three sign-off items */
+.dec3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:start}
+@media(max-width:1080px){.dec3{grid-template-columns:1fr}}
+.dcol{background:var(--panel);border:1px solid var(--rule);border-radius:2px;padding:4px 18px 14px}
+.dhead{margin:8px 0 0;font-size:12.5px;color:var(--ink-2)}
+.dlist{list-style:none;margin:8px 0 0;padding:0}
+.dlist li{padding:7px 0;border-top:1px solid var(--rule)}
+.dlist li:first-child{border-top:0}
+.dlist b{display:block;font:400 13.5px/1.6 var(--serif)}
+.dlist small{display:block;font-size:11.5px;color:var(--ink-2);line-height:1.6}
+.dnote{margin:10px 0 0;font-size:12px;color:var(--ink-2);line-height:1.7}
+.dnote.seal{color:var(--seal);background:var(--seal-soft);padding:7px 10px;border-radius:2px}
+.dmaj{list-style:none;margin:8px 0 0;padding:0}
+.dmaj li{display:flex;gap:9px;align-items:baseline;padding:5.5px 0;border-top:1px solid var(--rule);font-size:12.5px}
+.dmaj li:first-child{border-top:0}
+.dmaj i{flex:none;font:500 11px/1 var(--mono);color:var(--seal);font-style:normal;min-width:38px}
+.dmaj b{font:400 12.5px var(--serif)}
+.dmaj span{min-width:0}
+.dmaj em{flex:none;margin-left:auto;font:500 10px/1 var(--sans);letter-spacing:.1em;font-style:normal;
+  color:var(--seal);border:1px solid var(--seal);border-radius:99px;padding:2px 7px}
+
+/* beat-rhythm timeline */
+.chart{background:var(--panel);border:1px solid var(--rule);border-radius:2px;padding:16px 20px 10px}
+.chart .legend{display:flex;gap:18px;font-size:12px;color:var(--ink-2);margin-bottom:2px}
+.chart .legend i{font-style:normal;display:inline-flex;align-items:center;gap:6px}
+.dotk{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--seal-2)}
+.dotk.major{width:12px;height:12px;background:var(--seal)}
+.rhythm svg{display:block;width:100%;height:auto}
+.rhythm .axis{stroke:var(--rule-2);stroke-width:1.5}
+.rhythm .tick{font:400 10.5px var(--mono);fill:var(--ink-3);paint-order:stroke;stroke:var(--panel);stroke-width:3px}
+.rhythm .stem{stroke:var(--seal-2);stroke-width:1.5}
+.rhythm .stem.major{stroke:var(--seal)}
+.rhythm .bdot{fill:var(--seal-2);stroke:var(--panel);stroke-width:2}
+.rhythm .bdot.major{fill:var(--seal)}
+.rhythm .blabel{font:500 12px var(--sans);fill:var(--ink)}
+.rhythm .bsub{font:400 10.5px var(--sans);fill:var(--ink-2)}
+.rhythm .gapnote{font:400 10.5px var(--sans);fill:var(--ink-3)}
+.rhythm .gapnote.bad{fill:var(--seal);font-weight:500}
+
+/* beat detail table + generic tables */
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--rule);font-size:13px}
+th,td{padding:8px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font:500 11px/1 var(--sans);letter-spacing:.1em;color:var(--ink-3);background:var(--side)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-family:var(--mono);font-size:12px;color:var(--ink-2);white-space:nowrap}
+q{quotes:"「" "」";font-family:var(--serif);border-left:2px solid var(--seal);padding-left:8px;display:inline-block}
+
+/* episode cards */
+.eps{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:13px}
+.ep{background:var(--panel);border:1px solid var(--rule);border-radius:2px;padding:14px 16px 12px;position:relative}
+.ep .num{position:absolute;top:10px;right:14px;font:400 30px/1 var(--serif);color:var(--rule-2)}
+.ep header{display:flex;align-items:center;gap:8px;margin-bottom:8px;padding-right:44px;flex-wrap:wrap}
+.ep header b{font:500 15px var(--serif);letter-spacing:.04em}
+.bt{font-style:normal;font-size:11px;padding:2px 8px;border:1px solid var(--seal);border-radius:99px;color:var(--seal)}
+.bt.major{background:var(--seal);color:#fff}
+.ep .syn{margin:0 0 8px;font-size:13px;line-height:1.75}
+.hk{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px;font-size:12.5px;padding:6px 0;border-top:1px solid var(--rule)}
+.hk b{font:500 11px/1.8 var(--sans);letter-spacing:.14em;color:var(--seal);white-space:nowrap}
+:root[lang="en"] .hk b,html[lang="en"] .hk b{letter-spacing:.06em}
+.ep .meta{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.ep .meta i{font-style:normal;font:400 10.5px/1.5 var(--mono);border:1px solid var(--rule-2);
+  border-radius:2px;padding:0 5px;background:var(--paper);color:var(--ink-2)}
+.ep .meta .warn{border-color:var(--seal);color:var(--seal);background:var(--seal-soft)}
+
+/* dispatch matrix */
+.matrix{background:var(--panel);border:1px solid var(--rule);border-radius:2px;padding:16px 18px;overflow-x:auto}
+.matrix table{border-collapse:separate;border-spacing:3px;font-size:12px;background:none;border:0;width:auto}
+.matrix th,.matrix td{border:0;padding:0}
+.matrix th{font:500 10px/1 var(--sans);letter-spacing:.1em;color:var(--ink-3);background:none;
+  text-align:left;padding:0 8px 5px 0;white-space:nowrap}
+.matrix th.ep-h{text-align:center;padding:0 0 5px;font-family:var(--mono)}
+.matrix td.name{padding-right:10px;white-space:nowrap;font-family:var(--serif);font-size:13px}
+.matrix td.tier{padding-right:10px;color:var(--ink-3);font-size:11px;white-space:nowrap}
+.matrix td.mc{width:var(--cw,26px);min-width:var(--cw,26px);height:22px;border-radius:2px;
+  background:var(--paper);border:1px solid var(--rule)}
+.matrix td.mc.on{background:var(--seal);border-color:var(--seal)}
+.matrix td.mc.on.sc{background:var(--seal-2);border-color:var(--seal-2)}
+.matrix td.mc.on.pp{background:var(--seal-3);border-color:var(--seal-3)}
+.matrix td.n{padding-left:10px;font-family:var(--mono);font-size:11px;color:var(--ink-2);white-space:nowrap}
+.matrix tr.div td{padding:8px 0 3px;font:500 10px/1 var(--sans);letter-spacing:.18em;color:var(--ink-3)}
+.matrix .mnote{font-size:11px;color:var(--ink-3);margin:10px 0 0}
+
+/* scene overview cards: full-width multi-column grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:13px;align-items:start}
+.scard{position:relative;background:var(--panel);border:1px solid var(--rule);border-radius:2px;padding:14px 16px}
+.snum{position:absolute;top:10px;right:16px;font:400 26px/1 var(--serif);color:var(--rule-2);letter-spacing:.04em}
+.scard h3{font:400 16px/1.3 var(--serif);letter-spacing:.03em;display:flex;align-items:center;gap:8px;
+  padding-right:90px;flex-wrap:wrap}
+.scard h3 .id{font:400 10.5px var(--mono);color:var(--ink-3)}
+.badge{font:500 10.5px/1 var(--sans);padding:2px 8px;border-radius:99px;border:1px solid var(--seal);color:var(--seal)}
+.badge.once{border-color:var(--seal-2);color:var(--seal-2)}
+.strip{display:flex;flex-wrap:wrap;gap:3px;margin:7px 0 6px}
+.strip i{width:16px;height:10px;border-radius:2px;background:var(--paper);border:1px solid var(--rule)}
+.strip i.on{background:var(--seal);border-color:var(--seal)}
+.strip i.on.lt{background:var(--seal-2);border-color:var(--seal-2)}
+.srow{font-size:11.5px;color:var(--ink-2);display:flex;gap:6px;flex-wrap:wrap;align-items:baseline;margin-top:3px}
+.srow b{font:500 10px/1.8 var(--sans);letter-spacing:.12em;color:var(--ink-3);flex:none}
+.srow i{font-style:normal;font:400 10.5px/1.5 var(--mono);border:1px solid var(--rule-2);
+  border-radius:2px;padding:0 5px;background:var(--paper)}
+.srow .reuse{color:var(--seal)}
+
+/* asset conversion */
+.plan{background:var(--panel);border:1px solid var(--rule);border-radius:2px;padding:16px 18px}
+.plan table{background:none;border:0}
+.plan th{background:none;padding-left:0}
+.plan td{padding-left:0;border-top:1px solid var(--rule);border-bottom:0}
+.plan tr:first-child td{border-top:0}
+.plan td:first-child{font-family:var(--serif);font-size:13px;color:var(--ink)}
+
+/* adaptation notes */
+.core{font:400 17px/1.9 var(--serif);margin:0 0 6px}
+h3.sub{font:500 12px/1 var(--sans);letter-spacing:.18em;color:var(--seal);margin:20px 0 8px}
+
+/* quality gates */
+.gate{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px 28px}
+@media(max-width:900px){.gate{grid-template-columns:1fr}}
+.gate li{display:flex;gap:8px;padding:5px 0;font-size:12.5px;line-height:1.55}
+.gate .m{flex:none;font-weight:700}
+.gate .ok .m,.gate li.ok .m{color:var(--ok)}
+.gate li.bad .m{color:var(--seal)}
+.gate li.bad{background:var(--seal-soft);border-radius:2px;padding-left:6px}
+.gate small{display:block;color:var(--ink-3)}
+.gsum{margin:10px 0 0;font-size:12px;color:var(--ink-2)}
+.gsum b{color:var(--seal)}
+
+.foot{margin-top:40px;font-size:11px;color:var(--ink-3);border-top:1px solid var(--rule);padding-top:14px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* print: expand everything — both tab panes, all episode cards */
+@media print{
+  .expo,.tabs,.epsmore{display:none!important}
+  .tabpane{display:block!important;margin-bottom:14px}
+  .epswrap.clip .eps .ep{display:block!important}
+  .epswrap.clip .eps::after{display:none}
+  .page{max-width:none;padding:0}
+  section,.ep,.scard{page-break-inside:avoid}
+  body{background:#fff}
+}
+</style></head><body>
+<div class="page">
+
+<header class="hd">
+  <h1>影笔代理人</h1>
+  <span class="sub">短剧改编大纲 · 1 集 × 1 分钟 · 都市奇幻悬疑 · 抽核改编</span>
+  <span class="right">
+    <span class="gatepill fail">✗ 质量门 12 / 14</span>
+    <button class="expo" data-name="影笔代理人-outline.json">导出 JSON</button>
+  </span>
+</header>
+
+<div class="kpis">
+  <div class="kpi accent"><div class="l">总集数</div><div class="v">1 <small>× 1 分钟</small></div><div class="d">正片约 1 分钟</div></div>
+  <div class="kpi"><div class="l">爽点</div><div class="v">4</div><div class="d">3 大爆点</div></div>
+  <div class="kpi"><div class="l">角色</div><div class="v">3</div><div class="d">主角 1 · 配角 2 · 功能 0</div></div>
+  <div class="kpi"><div class="l">主场景</div><div class="v">1</div><div class="d">一次性场景 1，需复用方案</div></div>
+  <div class="kpi"><div class="l">生成难点</div><div class="v">0</div><div class="d">预警清单为空</div></div>
+  <div class="kpi"><div class="l">改编幅度</div><div class="v mode">抽核</div><div class="d">砍 2 线 · 合 0 组</div></div>
+</div>
+<div class="galert"><b>✗ 2 项未过</b><span>大爆点不在最后一集才首次出现 — 最早在第 1 集</span><span>生成难点已进预警清单 — 第 1 集缺「手部特写」</span></div>
+
+<section id="sec-rhythm">
+  <div class="sec-h"><span class="no">01</span><h2>爽点节奏</h2></div>
+  <div class="tabs" role="tablist">
+    <button class="tab on" data-pane="pane-timeline">时间轴</button>
+    <button class="tab" data-pane="pane-table">明细表</button>
+  </div>
+  <div class="tabpane on" id="pane-timeline"><div class="chart rhythm">
+  <div class="legend">
+    <i><span class="dotk major"></span>大爆点</i>
+    <i><span class="dotk"></span>常规爽点</i>
+  </div>
+  <svg viewBox="0 0 1520 176" role="img" aria-label="爽点节奏">
+    <line class="axis" x1="30" y1="92" x2="1490" y2="92"/>
+    <line class="axis" x1="760" y1="88" x2="760" y2="96"/>
+    <line class="stem major" x1="760" y1="92" x2="760" y2="57"/>
+    <circle class="bdot major" cx="760" cy="48" r="9"><title>B01 悬念钩子｜冷开场直接展示沈砚脚下没有影子 → 周明发现后后退半步</title></circle>
+    <text class="blabel" x="760" y="26" text-anchor="middle">悬念钩子</text>
+    <text class="bsub" x="760" y="12" text-anchor="middle">冷开场直接展示沈砚脚下没有影…</text>
+    <line class="stem major" x1="760" y1="92" x2="760" y2="127"/>
+    <circle class="bdot major" cx="760" cy="136" r="9"><title>B02 情感爆点｜照心纹展开，画面揭示周明真正的内心 → 墨字浮现：你要的不是离职，是愤怒的勇气。周明落泪</title></circle>
+    <text class="blabel" x="760" y="158" text-anchor="middle">情感爆点</text>
+    <text class="bsub" x="760" y="172" text-anchor="middle">照心纹展开，画面揭示周明真正…</text>
+    <line class="stem major" x1="760" y1="92" x2="760" y2="127"/>
+    <circle class="bdot major" cx="760" cy="136" r="9"><title>B03 反转｜沈砚开出代价：永久剥离愤怒 → 周明闭眼说我愿意</title></circle>
+    <text class="blabel" x="760" y="158" text-anchor="middle">反转</text>
+    <text class="bsub" x="760" y="172" text-anchor="middle">沈砚开出代价：永久剥离愤怒</text>
+    <line class="stem" x1="760" y1="92" x2="760" y2="62"/>
+    <circle class="bdot" cx="760" cy="56" r="6"><title>B04 结尾悬念｜契约完成，周明离开 → 沈砚墨痕异常发烫，周明影子指尖蜷缩——这不该发生</title></circle>
+    <text class="blabel" x="760" y="34" text-anchor="middle">结尾悬念</text>
+    <text class="bsub" x="760" y="20" text-anchor="middle">契约完成，周明离开</text>
+    <text class="tick" x="760" y="112" text-anchor="middle">1</text>
+  </svg>
+</div></div>
+  <div class="tabpane" id="pane-table">
+  <table><thead><tr><th>ID</th><th>类型</th><th>量级</th><th>集</th><th>铺垫</th><th>兑现</th></tr></thead>
+<tbody><tr><td>B01</td><td>悬念钩子</td><td>大爆点</td><td>1</td><td>冷开场直接展示沈砚脚下没有影子</td><td>周明发现后后退半步</td></tr>
+<tr><td>B02</td><td>情感爆点</td><td>大爆点</td><td>1</td><td>照心纹展开，画面揭示周明真正的内心</td><td>墨字浮现：你要的不是离职，是愤怒的勇气。周明落泪</td></tr>
+<tr><td>B03</td><td>反转</td><td>大爆点</td><td>1</td><td>沈砚开出代价：永久剥离愤怒</td><td>周明闭眼说我愿意</td></tr>
+<tr><td>B04</td><td>结尾悬念</td><td>常规</td><td>1</td><td>契约完成，周明离开</td><td>沈砚墨痕异常发烫，周明影子指尖蜷缩——这不该发生</td></tr></tbody></table>
+  </div>
+</section>
+
+<section id="sec-episodes">
+  <div class="sec-h"><span class="no">02</span><h2>分集概览</h2><span class="note">核心交付 · 每集三栏齐全</span></div>
+  <div class="epswrap">
+    <div class="eps">
+<article class="ep" id="ep-1">
+  <span class="num">1</span>
+  <header><b>第 1 集</b><i class="bt major">悬念钩子</i><i class="bt major">情感爆点</i><i class="bt major">反转</i><i class="bt">结尾悬念</i></header>
+  <p class="syn">被主管压榨三年的绘图员周明来到黄昏的一心堂画室，请求没有影子的画室主人沈砚替他画出离职的勇气。照心纹展开——不是会议室和离职申请，而是一个从小学会忍耐的男孩。墨字揭示：你要的不是离职，是愤怒的勇气。沈砚开出代价：影子替你去开会发言，你永久失去愤怒。周明含泪接受。契约完成后，沈砚的墨痕异常发烫，窗外周明的影子指尖微微蜷缩——这不正常。</p>
+  <div class="hk"><b>钩子</b><span>黄昏画室，沈砚站在画架前，脚下干干净净没有影子</span></div>
+  <div class="hk"><b>悬念</b><span>沈砚低头看着发烫的墨痕，窗外周明的影子指尖蜷缩了一下——契约出了什么问题？</span></div>
+  <div class="meta"><i>S01</i><i>C01</i><i>C02</i><i>C03</i><i class="warn" title="室内双人+影子，三人同框时影子独立站位">同框拆解 ✓</i></div>
+</article>
+    </div>
+    
+  </div>
+</section>
+
+<section id="sec-scenes">
+  <div class="sec-h"><span class="no">03</span><h2>场景概览</h2><span class="note">右上 = 出现集</span></div>
+  <div class="scenes">
+<article class="scard">
+  <span class="snum">1</span>
+  <h3><span class="id">S01</span>一心堂画室<span class="badge">主场景</span></h3>
+  <div class="strip"><i class="on"></i></div>
+  <div class="srow"><b>承载爽点</b><span>悬念钩子 · 情感爆点 · 反转 · 结尾悬念</span></div>
+  <div class="srow"><b>复用方案</b><span class="reuse">本集唯一主场景，黄昏→路灯两个光照状态</span></div>
+</article>
+  </div>
+</section>
+
+<section id="sec-decisions">
+  <div class="sec-h"><span class="no">04</span><h2>关键决策</h2><span class="note">拍板过的三件事，落进纸面</span></div>
+  <div class="dec3">
+  <div class="dcol">
+    <h3 class="sub">砍了哪条线</h3>
+    <ul class="dlist"><li><b>周明童年被欺负的完整闪回</b><small>60秒单集容量有限，压缩为照心纹中一个快切镜头</small></li><li><b>主管的具体形象和台词</b><small>客户线第一集只需建立压迫感，不需要反派出场</small></li></ul>
+    
+  </div>
+  <div class="dcol">
+    <h3 class="sub">合了哪些人</h3>
+    <p class="dhead">3 个角色位（主角组 1 · 重要配角 2 · 功能性 0）</p>
+    <p class="dhead">主角组：沈砚</p>
+    
+    
+  </div>
+  <div class="dcol">
+    <h3 class="sub">大爆点落在第几集</h3>
+    <ul class="dmaj"><li><i>ep1</i><span><b>悬念钩子</b> 周明发现后后退半步</span><em>首个</em></li><li><i>ep1</i><span><b>情感爆点</b> 墨字浮现：你要的不是离职，是愤怒的勇气。…</span></li><li><i>ep1</i><span><b>反转</b> 周明闭眼说我愿意</span><em>终局</em></li></ul>
+  </div>
+</div>
+</section>
+
+<section id="sec-matrix">
+  <div class="sec-h"><span class="no">05</span><h2>每集调度矩阵</h2><span class="note">一列 = 这一集要谁、在哪拍</span></div>
+  <div class="matrix" style="--cw:26px">
+  <table>
+    <tr><th>角色 / 场景 / 道具</th><th>层级</th><th class="ep-h">1</th><th>合计</th></tr>
+    <tr><td class="name">沈砚</td><td class="tier">主角组</td><td class="mc on"></td><td class="n">1</td></tr>
+<tr><td class="name">周明</td><td class="tier">重要配角</td><td class="mc on"></td><td class="n">1</td></tr>
+<tr><td class="name">黑影</td><td class="tier">重要配角</td><td class="mc on"></td><td class="n">1</td></tr>
+<tr class="div"><td colspan="4">场　景</td></tr>
+<tr><td class="name">一心堂画室</td><td class="tier">主场景</td><td class="mc on sc"></td><td class="n">1 ⚠</td></tr>
+<tr class="div"><td colspan="4">道　具</td></tr>
+<tr><td class="name">速写本与墨痕</td><td class="tier">B02、B03</td><td class="mc on pp"></td><td class="n">1</td></tr>
+  </table>
+  <p class="mnote">⚠ 一心堂画室 · 复用方案：本集唯一主场景，黄昏→路灯两个光照状态</p>
+</div>
+</section>
+
+<section id="sec-plan">
+  <div class="sec-h"><span class="no">06</span><h2>资产量折算</h2><span class="note">按档自动折算 · 不让模型写</span></div>
+  <div class="plan">
+  <table><thead><tr><th>层级</th><th>人数</th><th>角色</th><th>资产量</th></tr></thead>
+<tbody><tr><td>主角组</td><td>1</td><td>沈砚</td><td>全套角色设定图 + 逐镜一致性核对</td></tr>
+<tr><td>重要配角</td><td>2</td><td>周明、黑影</td><td>半身参考图，关键戏核对</td></tr>
+<tr><td>功能性角色</td><td>0</td><td>—</td><td>提示词直出，松散一致即可</td></tr>
+<tr><td>场景环境</td><td>1+1</td><td>一心堂画室（+一心堂画室复用）</td><td>主场景各一套环境参考 + 光照基调</td></tr>
+<tr><td>叙事道具</td><td>1</td><td>速写本与墨痕</td><td>每件一套白底设定图 + 状态变体，跨集要长一样</td></tr>
+<tr><td>生成难点</td><td>0</td><td>—</td><td>拍摄前逐条过预警清单</td></tr></tbody></table>
+  </div>
+</section>
+
+<section id="sec-characters">
+  <div class="sec-h"><span class="no">07</span><h2>人物表</h2></div>
+  <table><thead><tr><th>ID</th><th>角色</th><th>层级</th><th>定位</th><th>人物弧</th><th>← 改动记录</th></tr></thead>
+<tbody><tr><td>C01</td><td>沈砚</td><td>主角组</td><td>画室主人/影子代理人</td><td>冷静观察者→发现墨痕异常→对自己的能力产生疑虑</td><td>原著主角</td></tr>
+<tr><td>C02</td><td>周明</td><td>重要配角</td><td>客户/被压榨的绘图员</td><td>压抑求助者→照心崩溃→接受失去愤怒的代价</td><td>原著第一章客户</td></tr>
+<tr><td>C03</td><td>黑影</td><td>重要配角</td><td>周明的影子/代行者</td><td>安静跟随→站起来说出周明的心声→重新贴回地板</td><td>原著影子具象化</td></tr></tbody></table>
+</section>
+
+<section id="sec-adaptation">
+  <div class="sec-h"><span class="no">08</span><h2>改编说明</h2><span class="note">为什么这么改 · 附原文依据</span></div>
+  <p class="core">没有影子的画室主人，替被压榨三年的绘图员画出愤怒的勇气，代价是永久剥离他的愤怒——而契约完成的瞬间，异常发生了。</p>
+  <h3 class="sub">保留</h3><table><thead><tr><th>内容</th><th>理由</th><th>原文依据</th></tr></thead>
+<tbody><tr><td>沈砚没有影子的核心设定</td><td>这是世界观的核心钩子</td><td><q>地板上，沈砚站立的位置，干干净净。没有影子。</q></td></tr>
+<tr><td>照心纹揭示真心的机制</td><td>这是故事的情感爆点</td><td><q>你要的不是离职。你要的，是愤怒的勇气。</q></td></tr>
+<tr><td>代行纹+偿价纹的契约体系</td><td>这是世界观的规则基础</td><td><q>影子替你完成一件事，你要付出一项人格作为代价。</q></td></tr></tbody></table>
+  <h3 class="sub">砍掉</h3><table><thead><tr><th>内容</th><th>理由</th></tr></thead>
+<tbody><tr><td>周明童年被欺负的完整闪回</td><td>60秒单集容量有限，压缩为照心纹中一个快切镜头</td></tr>
+<tr><td>主管的具体形象和台词</td><td>客户线第一集只需建立压迫感，不需要反派出场</td></tr></tbody></table>
+  
+  <h3 class="sub">风险与对策</h3><table><thead><tr><th>内容</th><th>对策</th></tr></thead>
+<tbody><tr><td>60秒内要完成求助→照心→契约→异常四个转折，节奏极紧</td><td>照心纹画面用快速蒙太奇，契约对白压缩为三句核心</td></tr></tbody></table>
+</section>
+
+<section id="sec-gates">
+  <div class="sec-h"><span class="no">09</span><h2>质量门</h2></div>
+  <ul class="gate">
+  <li class="ok"><span class="m">✓</span><span>主角组 1–3 人</span></li>
+  <li class="ok"><span class="m">✓</span><span>重要配角 ≤ 5 人</span></li>
+  <li class="ok"><span class="m">✓</span><span>功能性角色 ≤ 5 人</span></li>
+  <li class="ok"><span class="m">✓</span><span>主场景 ≤ 2</span></li>
+  <li class="ok"><span class="m">✓</span><span>叙事道具 ≤ 3 件</span></li>
+  <li class="ok"><span class="m">✓</span><span>一次性场景已标注规避方案</span></li>
+  <li class="ok"><span class="m">✓</span><span>爽点间隔 ≤ 1 集，无真空区</span></li>
+  <li class="ok"><span class="m">✓</span><span>第 1 集有钩子</span></li>
+  <li class="bad"><span class="m">✗</span><span>大爆点不在最后一集才首次出现<small>最早在第 1 集</small></span></li>
+  <li class="ok"><span class="m">✓</span><span>每集梗概三栏齐全（含【钩子】【悬念】）</span></li>
+  <li class="ok"><span class="m">✓</span><span>三人以上同框已标注拆解方案</span></li>
+  <li class="bad"><span class="m">✗</span><span>生成难点已进预警清单<small>第 1 集缺「手部特写」</small></span></li>
+  <li class="ok"><span class="m">✓</span><span>场景/角色/道具引用完整，无失业角色、无空转场景、无零集道具</span></li>
+  <li class="ok"><span class="m">✓</span><span>梗概是叙述体，无引号对白</span></li>
+</ul>
+  <p class="gsum"><b>2 项未过</b></p>
+</section>
+
+<p class="foot">大纲由模型依据原文生成，质量门由脚本确定性检查。</p>
+</div>
+
+<script type="application/json" id="outline-data">{"source":"影笔代理人","lang":"zh","params":{"episodes":1,"minutesPerEpisode":1,"genre":"都市奇幻悬疑","adaptMode":"抽核","preferences":[],"thresholds":{"maxLeads":3,"maxSupport":5,"maxFunctional":5,"maxBeatGap":1,"maxPrimaryScenes":2,"maxProps":3}},"adaptation":{"core":"没有影子的画室主人，替被压榨三年的绘图员画出愤怒的勇气，代价是永久剥离他的愤怒——而契约完成的瞬间，异常发生了。","keep":[{"what":"沈砚没有影子的核心设定","why":"这是世界观的核心钩子","evidence":"地板上，沈砚站立的位置，干干净净。没有影子。"},{"what":"照心纹揭示真心的机制","why":"这是故事的情感爆点","evidence":"你要的不是离职。你要的，是愤怒的勇气。"},{"what":"代行纹+偿价纹的契约体系","why":"这是世界观的规则基础","evidence":"影子替你完成一件事，你要付出一项人格作为代价。"}],"cut":[{"what":"周明童年被欺负的完整闪回","why":"60秒单集容量有限，压缩为照心纹中一个快切镜头"},{"what":"主管的具体形象和台词","why":"客户线第一集只需建立压迫感，不需要反派出场"}],"merge":[],"risks":[{"what":"60秒内要完成求助→照心→契约→异常四个转折，节奏极紧","plan":"照心纹画面用快速蒙太奇，契约对白压缩为三句核心"}]},"characters":[{"id":"C01","name":"沈砚","role":"画室主人/影子代理人","tier":"lead","arc":"冷静观察者→发现墨痕异常→对自己的能力产生疑虑","from":["原著主角"]},{"id":"C02","name":"周明","role":"客户/被压榨的绘图员","tier":"support","arc":"压抑求助者→照心崩溃→接受失去愤怒的代价","from":["原著第一章客户"]},{"id":"C03","name":"黑影","role":"周明的影子/代行者","tier":"support","arc":"安静跟随→站起来说出周明的心声→重新贴回地板","from":["原著影子具象化"]}],"scenes":[{"id":"S01","name":"一心堂画室","primary":true,"reusePlan":"本集唯一主场景，黄昏→路灯两个光照状态"}],"props":[{"id":"P01","name":"速写本与墨痕","function":"缔约的工具，三道纹路（照心/代行/偿价）在上面生成，墨痕是沈砚的身份标记","beatIds":["B02","B03"]}],"beats":[{"id":"B01","type":"悬念钩子","weight":"major","episode":1,"setup":"冷开场直接展示沈砚脚下没有影子","payoff":"周明发现后后退半步"},{"id":"B02","type":"情感爆点","weight":"major","episode":1,"setup":"照心纹展开，画面揭示周明真正的内心","payoff":"墨字浮现：你要的不是离职，是愤怒的勇气。周明落泪"},{"id":"B03","type":"反转","weight":"major","episode":1,"setup":"沈砚开出代价：永久剥离愤怒","payoff":"周明闭眼说我愿意"},{"id":"B04","type":"结尾悬念","weight":"minor","episode":1,"setup":"契约完成，周明离开","payoff":"沈砚墨痕异常发烫，周明影子指尖蜷缩——这不该发生"}],"episodes":[{"ep":1,"synopsis":"被主管压榨三年的绘图员周明来到黄昏的一心堂画室，请求没有影子的画室主人沈砚替他画出离职的勇气。照心纹展开——不是会议室和离职申请，而是一个从小学会忍耐的男孩。墨字揭示：你要的不是离职，是愤怒的勇气。沈砚开出代价：影子替你去开会发言，你永久失去愤怒。周明含泪接受。契约完成后，沈砚的墨痕异常发烫，窗外周明的影子指尖微微蜷缩——这不正常。","hook":"黄昏画室，沈砚站在画架前，脚下干干净净没有影子","suspense":"沈砚低头看着发烫的墨痕，窗外周明的影子指尖蜷缩了一下——契约出了什么问题？","sceneIds":["S01"],"characterIds":["C01","C02","C03"],"propIds":["P01"],"crowdPlan":"室内双人+影子，三人同框时影子独立站位","warnings":[]}]}</script>
+<script>
+// beat rhythm: chart / table toggle
+document.querySelectorAll('.tab').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach((b) => b.classList.toggle('on', b === btn));
+    document.querySelectorAll('.tabpane').forEach((p) => p.classList.toggle('on', p.id === btn.dataset.pane));
+  });
+});
+
+// episode overview: first three by default, one click expands for good
+const epsMore = document.querySelector('.epsmore');
+if (epsMore) {
+  epsMore.addEventListener('click', () => {
+    document.querySelector('.epswrap').classList.remove('clip');
+    epsMore.remove();
+  });
+}
+
+// export: the report carries outline.json verbatim; the download is byte-identical
+document.querySelector('.expo').addEventListener('click', (e) => {
+  const btn = e.currentTarget;
+  const url = URL.createObjectURL(
+    new Blob([document.getElementById('outline-data').textContent], { type: 'application/json' }),
+  );
+  const a = Object.assign(document.createElement('a'), { href: url, download: btn.dataset.name });
+  a.click();
+  // don't revoke immediately — Safari may kill the blob before the download finishes reading
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+});
+</script>
+</body></html>

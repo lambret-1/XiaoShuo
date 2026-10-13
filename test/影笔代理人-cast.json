@@ -1,0 +1,120 @@
+{
+  "source": "影笔代理人",
+  "lang": "zh",
+  "meta": {
+    "source": "影笔代理人",
+    "lang": "zh",
+    "createdAt": "2026-10-13T00:00:00+08:00"
+  },
+  "characters": [
+    {
+      "id": "C01",
+      "name": "沈砚",
+      "aliases": [],
+      "importance": "protagonist",
+      "oneLiner": "没有影子的画室主人，替人画下不敢说的话，代价是对方的一部分人格。",
+      "persona": {
+        "background": [
+          "一心堂画室主人，年龄不详，右手有洗不掉的淡墨痕。黄昏后营业，专画'影子替你做的事'。"
+        ],
+        "personality": [
+          "冷静",
+          "克制",
+          "眼神不动",
+          "不惊讶不同情不劝。像在看实验对象，又像在等什么。"
+        ],
+        "arc": "从绝对冷静的观察者，到发现墨痕异常时第一次皱眉。",
+        "speakingStyle": [
+          "语速平、声音轻、短句、没有情绪起伏。像在陈述天气。"
+        ],
+        "motivation": "未知——他为什么能做这件事？墨痕是什么？",
+        "fear": "墨痕的异常共鸣（本集结尾初现）"
+      },
+      "image": {
+        "sheet": "Character reference sheet layout: left half body portrait front view, right side three full-body views (front/side/back), bottom detail strip showing hand ink mark and facial close-up. Style: realistic Chinese urban fantasy, muted warm tones.",
+        "appearance": "East Asian male, late 20s, tall and thin, pale complexion, long straight eyebrows, flat nose bridge, deep-set eyes with an unsettling stillness. Short black hair, slightly messy. Wears a dark grey linen long-sleeve shirt with rolled-up cuffs.",
+        "costume": "Dark grey rolled-sleeve linen shirt, black loose trousers, worn cloth slippers. A faint ink stain on the back of right hand like a birthmark.",
+        "vibe": "Quiet, detached, slightly uncanny. Like a man who has seen too many people's secrets and doesn't care anymore. Warm dusk light from behind creates an empty floor where his shadow should be."
+      },
+      "voice": {
+        "description": "Low, even, breathy male voice. Very little intonation variation.",
+        "pace": "Slow and deliberate, each word measured.",
+        "tone": "Neutral to the point of coldness. No warmth, no judgment."
+      }
+    },
+    {
+      "id": "C02",
+      "name": "周明",
+      "aliases": [
+        "绘图员"
+      ],
+      "importance": "supporting",
+      "oneLiner": "被主管压榨三年不敢反抗的绘图员，想让影子替他说出离职的话。",
+      "persona": {
+        "background": [
+          "32岁，建筑设计院绘图员。被主管压了三年项目署名，每天加班到凌晨，被当众骂废物。"
+        ],
+        "personality": [
+          "内向",
+          "退缩",
+          "肩膀习惯性缩着",
+          "手指抠缝线。从小被教要忍要乖，愤怒被压了三十年。"
+        ],
+        "arc": "从紧张求助，到照心纹前崩溃落泪，到闭眼说出'我愿意'。",
+        "speakingStyle": [
+          "声音小、语速快、停顿多、越说越低。说到委屈时哽住。"
+        ],
+        "motivation": "表面：离职。真心：想愤怒一次，想被看见不是废物。",
+        "fear": "一辈子都不敢站出来"
+      },
+      "image": {
+        "sheet": "Character reference sheet layout: left half body portrait, right three full-body views, bottom detail strip showing calloused fingers and hunched posture. Style: realistic, worn working-class look.",
+        "appearance": "East Asian male, early 30s, medium build but shoulders hunched forward. Tired face with slight dark circles. Hair combed flat, slightly oily at temples. Pencil calluses on fingers, lead dust under nails.",
+        "costume": "Washed-out grey work uniform with pockets, slightly too big. Dark work trousers with visible stitching he picks at. Worn white sneakers.",
+        "vibe": "Weary, apologetic, shrinking into himself. Like someone who has been told he is worthless so many times he believes it."
+      },
+      "voice": {
+        "description": "Nervous, mid-range male voice. Frequent swallowing and pauses.",
+        "pace": "Fast when anxious, slow when ashamed. Voice drops at key moments.",
+        "tone": "Guarded, then breaking. The crack when he says 'I dare not' is the emotional peak."
+      }
+    },
+    {
+      "id": "C03",
+      "name": "黑影",
+      "aliases": [
+        "周明的影子"
+      ],
+      "importance": "supporting",
+      "oneLiner": "周明的影子站起来替他说出三年不敢说的话，声音是周明的却像从井底传来。",
+      "persona": {
+        "background": [
+          "周明的影子，在照心纹完成后短暂具象化。没有五官，和周明一模一样的轮廓，纯黑。"
+        ],
+        "personality": [
+          "直接",
+          "空旷",
+          "回声感。说出周明心里排练了一百遍却不敢说的话。"
+        ],
+        "arc": "从贴在地板上的安静影子，到站起来面对周明，再到重新贴回地板。",
+        "speakingStyle": [
+          "周明的声音但干涩、空旷、有回声。像从很深的井底传上来。"
+        ],
+        "motivation": "替主人说出压抑的愤怒。",
+        "fear": "未知——结尾指尖蜷缩暗示异常"
+      },
+      "image": {
+        "sheet": "Shadow entity reference: featureless human silhouette, solid black, same proportions as the character Zhou Ming. Reference shows: normal shadow on floor, risen shadow standing, close-up of curled fingertips. Style: horror-realistic, pure silhouette, no interior detail.",
+        "appearance": "Featureless solid black human silhouette. Same height and build as Zhou Ming. No facial features, no clothing detail, just pure darkness shaped like a person. Edges slightly soft like smoke.",
+        "costume": "None — it is a shadow. The silhouette mirrors Zhou Ming's hunched posture.",
+        "vibe": "Unsettling, echo-like. When it speaks, the sound seems to come from everywhere and nowhere. Cold air follows it. Goosebumps appear on Zhou Ming's arm."
+      },
+      "voice": {
+        "description": "Zhou Ming's voice but dry, hollow, with deep reverb. Like shouting into a well.",
+        "pace": "Slow, deliberate. Each sentence lands like a stone dropped into water.",
+        "tone": "Accusatory, mournful, echoing. It says the things Zhou Ming rehearsed alone at night."
+      }
+    }
+  ],
+  "summary": "黄昏的老街画室里，没有影子的画室主人沈砚接待了被主管压榨三年的绘图员周明。照心纹揭示周明真正想要的不是离职，而是愤怒的勇气。契约成立——影子替他去开会，他永久失去愤怒。但契约完成的瞬间，沈砚的墨痕异常发烫，周明的影子指尖微微蜷缩，暗示出了不该有的问题。"
+}

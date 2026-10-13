@@ -1,0 +1,60 @@
+{
+  "source": "影笔代理人",
+  "lang": "zh",
+  "meta": {
+    "source": "影笔代理人",
+    "lang": "zh",
+    "createdAt": "2026-10-13T00:00:00+08:00"
+  },
+  "scenes": [
+    {
+      "id": "S01",
+      "name": "一心堂画室",
+      "primary": true,
+      "designIntent": "老街二楼的老式画室，既是沈砚的工作空间，也是影契发生的神圣/诡异场所。空间要旧、要安静、要有时间沉淀感。",
+      "anchors": [
+        "木格窗半开，夕阳透进来在地板投下格子光",
+        "画架上的速写本，笔尖悬在纸面上方",
+        "木地板老旧，有岁月划痕和蜡油痕迹",
+        "满室松烟墨味（视觉上通过墨瓶、砚台、笔筒呈现）"
+      ],
+      "lightingStates": [
+        {
+          "name": "黄昏",
+          "prompt": "Interior of old Chinese artist studio on second floor of a heritage street building. Warm orange-grey dusk light streaming through half-open wooden lattice window. Dust particles floating in light beam. Oil-paper umbrella scrolls on walls. Ink bottle and brush pot on wooden desk. Old wooden floor with visible grain and wax marks. No people. Cinematic warm tones, shallow depth of field."
+        },
+        {
+          "name": "路灯亮起",
+          "prompt": "Same interior studio but dusk has faded. Yellow streetlamp light through wooden lattice window casting grid shadows on old wooden floor. Studio interior dim, only desk lamp and ink bottle catching faint glow. No people. Cool blue ambient mixed with warm yellow window light. Quiet, eerie atmosphere."
+        }
+      ],
+      "emptyScenePrompt": "Empty artist studio interior, second floor of old Chinese heritage building. Wooden lattice window half open, warm dusk light streaming in. Easel with sketchbook, ink bottle, brush pot on desk. Old wooden floor with scratches. Scrolls on wall. No people, no shadows. Cinematic, warm tones.",
+      "variantOf": null,
+      "episodes": [1]
+    }
+  ],
+  "props": [
+    {
+      "id": "P01",
+      "name": "速写本与墨痕",
+      "dramaFunction": "缔约工具：照心纹、代行纹、偿价纹三道纹路在速写本上生成。沈砚右手的墨痕是身份标记，结尾异常发烫。",
+      "anchors": [
+        "厚皮速写本，翻开在新的一页",
+        "沈砚右手手背上淡墨痕，像烙印",
+        "纹路生成时墨线在纸上游走，纸面嘶嘶响"
+      ],
+      "scale": "handheld size sketchbook (A4), ink stain on back of right hand palm-sized",
+      "states": [
+        {
+          "name": "空白待画",
+          "prompt": "Blank thick-sketch sketchbook opened to a fresh page, lying on wooden desk. Black ink bottle and fine brush beside it. Pure white background, no hands, no people. Product photography style, soft studio lighting."
+        },
+        {
+          "name": "三道纹路成型",
+          "prompt": "Sketchbook page with three intersecting ink patterns spreading like ink dropped in water. Delicate flowing lines forming abstract runes. Paper edges slightly curling and carbonizing. Pure white background, no hands, no people. Macro shot, dramatic lighting."
+        }
+      ],
+      "episodes": [1]
+    }
+  ]
+}
