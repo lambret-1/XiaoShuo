@@ -1,0 +1,1034 @@
+<!doctype html>
+<html lang="zh"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>影笔代理人 · 美术设定集</title>
+<style>
+:root{
+  --paper:#eceded; --panel:#f5f6f5; --side:#e4e6e3; --ink:#191d21; --ink-2:#5b636a; --ink-3:#8c9298;
+  --rule:#d2d5d0; --rule-2:#c2c6bf; --seal:#8a3324; --seal-2:#c56a4e; --seal-soft:#8a332412; --ok:#3d6b4f;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+.page{max-width:1600px;margin:0 auto;padding:24px 32px 90px}
+h1,h2,h3,h4{margin:0;font-weight:400}
+
+.hd{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:12px}
+.hd h1{font:400 28px/1.1 var(--serif);letter-spacing:.06em}
+.hd .sub{font-size:13px;color:var(--ink-2)}
+.hd .right{margin-left:auto;display:flex;align-items:center;gap:10px}
+.gatepill{display:inline-flex;align-items:center;gap:6px;font:500 12px/1 var(--sans);border-radius:99px;padding:6px 12px}
+.gatepill.pass{color:var(--ok);border:1px solid var(--ok)}
+.gatepill.fail{color:var(--seal);border:1px solid var(--seal);background:var(--seal-soft)}
+.expo{font:500 11px/1 var(--sans);color:var(--ink-2);background:var(--panel);
+  border:1px solid var(--rule-2);border-radius:2px;padding:7px 11px;cursor:pointer;transition:.15s}
+.expo:hover{border-color:var(--seal);color:var(--seal)}
+.expo:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 6px}
+@media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--panel);border:1px solid var(--rule);border-radius:2px;padding:11px 14px 9px}
+.kpi .l{font:500 10px/1 var(--sans);letter-spacing:.18em;color:var(--ink-3)}
+.kpi .v{font:400 28px/1.15 var(--serif);margin-top:5px}
+.kpi .d{font-size:11px;color:var(--ink-2);margin-top:1px}
+.kpi.accent{border-top:2px solid var(--seal)}
+.galert{margin:14px 0 0;border:1px solid var(--seal);background:var(--seal-soft);border-radius:2px;
+  padding:10px 14px;font-size:13px}
+.galert b{color:var(--seal)}
+.galert span{display:block;font-size:12px;color:var(--ink-2)}
+
+section.top-sec{margin-top:34px}
+.sec-h{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--rule-2);padding-bottom:8px;margin-bottom:16px}
+.sec-h .no{font:500 12px/1 var(--mono);color:var(--seal)}
+.sec-h h2{font:400 20px/1.2 var(--serif);letter-spacing:.05em}
+.sec-h .note{margin-left:auto;font-size:12px;color:var(--ink-3)}
+
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--rule);font-size:13px}
+th,td{padding:8px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font:500 11px/1 var(--sans);letter-spacing:.1em;color:var(--ink-3);background:var(--side)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-family:var(--mono);font-size:12px;color:var(--ink-2);white-space:nowrap}
+.mono{font:400 11.5px/1.7 var(--mono);color:var(--ink-2);word-break:break-word}
+
+/* 场景设定卡：一排两张（方便截图宣传），卡内纵排、设定图占满卡宽 */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+@media(max-width:1100px){.cards{grid-template-columns:1fr}}
+.scene{background:var(--panel);border:1px solid var(--rule);border-radius:2px;padding:18px 20px}
+.sc-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--rule-2);padding-bottom:10px}
+.sc-id{font:500 12px/1 var(--mono);color:var(--seal)}
+.sc-h h3{font:400 20px/1.2 var(--serif);letter-spacing:.04em}
+.badge{font:500 10.5px/1 var(--sans);padding:2px 8px;border-radius:99px;border:1px solid var(--seal);color:var(--seal)}
+.badge.once{border-color:var(--seal-2);color:var(--seal-2)}
+.sc-use{margin-left:auto;font-size:12px;color:var(--ink-2)}
+.sc-sum{margin:10px 0 12px;font:400 14.5px/1.9 var(--serif)}
+.scene .blk{margin-top:16px}
+.scene .pgroup{margin-top:16px}
+
+.plate{margin:0;background:#fff;border:1px solid var(--rule-2);border-radius:2px;overflow:hidden}
+.plate .zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.plate .zoom:focus-visible{outline:2px solid var(--seal);outline-offset:-2px}
+.plate img{display:block;width:100%;height:auto}
+/* 图片弹层 */
+.lightbox{position:fixed;inset:0;z-index:50;display:none;place-items:center;
+  background:#191d21e6;padding:32px;cursor:zoom-out}
+.lightbox.on{display:grid}
+.lightbox img{max-width:100%;max-height:100%;background:#fff;border-radius:2px;
+  box-shadow:0 8px 40px #0006}
+.lightbox-x{position:absolute;top:18px;right:22px;font:500 13px/1 var(--sans);color:#fff;
+  background:none;border:1px solid #fff6;border-radius:3px;padding:8px 12px;cursor:pointer}
+.lightbox-x:hover{border-color:#fff}
+.plate figcaption{font-size:11px;letter-spacing:.08em;color:var(--ink-3);padding:6px 10px;border-top:1px solid var(--rule)}
+.plate-empty{display:grid;place-items:center;min-height:180px;text-align:center;
+  border:1px dashed var(--rule-2);background:var(--paper);color:var(--ink-3);font-size:13px}
+.plate-empty em{font-style:normal;font-size:12px;opacity:.8}
+.variant{margin:10px 0 0;font-size:12.5px;color:var(--seal);background:var(--seal-soft);padding:7px 10px;border-radius:2px}
+.variant b{font-family:var(--mono);font-weight:500}
+
+.blk{margin-bottom:16px}
+.blk h4{font:500 11px/1.6 var(--sans);letter-spacing:.18em;color:var(--seal);margin-bottom:8px}
+.blk h4 small{display:block;letter-spacing:0;font-weight:400;color:var(--ink-3);font-size:11px}
+.anchors{margin:0;padding:0 0 0 2px;list-style:none;counter-reset:an}
+/* ::before 序号也是网格项，desc 必须显式钉在第二列，否则会掉进 22px 窄列一字一行 */
+.anchors li{counter-increment:an;display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:8px;
+  padding:6px 0;border-top:1px solid var(--rule);font-size:13px}
+.anchors li:first-child{border-top:0}
+.anchors li::before{content:counter(an,decimal-leading-zero);grid-column:1;grid-row:1;
+  font:500 11px/1.9 var(--mono);color:var(--seal)}
+.anchors b{grid-column:2;font-weight:500}
+.anchors span{grid-column:2;display:block;font-size:12px;color:var(--ink-2)}
+.lights{display:flex;flex-direction:column;gap:6px}
+.light{display:flex;align-items:baseline;gap:10px;background:var(--paper);border:1px solid var(--rule);
+  border-radius:2px;padding:7px 10px}
+.light i{flex:none;font-style:normal;font:500 12px/1.6 var(--sans);color:var(--ink)}
+.light .mono{flex:1;min-width:0}
+
+.pgroup{border:1px solid var(--rule);border-radius:2px;background:var(--paper);padding:4px 12px 8px;margin-top:12px}
+.pr{border-bottom:1px solid var(--rule)}
+.pgroup .pr:last-of-type{border-bottom:0}
+.pr summary{display:flex;align-items:center;gap:10px;padding:10px 0;cursor:pointer;list-style:none;
+  font:500 12px/1 var(--sans);letter-spacing:.04em}
+.pr summary::-webkit-details-marker{display:none}
+.pr summary::before{content:"▸";color:var(--seal);font-size:11px;transition:transform .15s}
+.pr[open] summary::before{transform:rotate(90deg)}
+.pr summary span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pr p{margin:0 0 10px;padding:10px 12px;background:var(--panel);border:1px solid var(--rule);
+  border-radius:2px;font:400 12px/1.75 var(--mono);white-space:pre-wrap;word-break:break-word}
+.pgroup-f{padding:10px 0 4px}
+.copy{flex:none;font:500 11px/1 var(--sans);color:var(--ink-2);background:var(--panel);
+  border:1px solid var(--rule-2);border-radius:2px;padding:4px 10px;cursor:pointer;transition:.15s}
+.copy:hover{border-color:var(--seal);color:var(--seal)}
+.copy:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+.copy[data-done]{border-color:var(--seal);color:var(--seal)}
+.copy.wide{width:100%;padding:9px}
+.copy.mini{padding:2px 7px;font-size:10.5px}
+
+.gate{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px 28px}
+@media(max-width:900px){.gate{grid-template-columns:1fr}}
+.gate li{display:flex;gap:8px;padding:5px 0;font-size:12.5px;line-height:1.55}
+.gate .m{flex:none;font-weight:700}
+.gate li.ok .m{color:var(--ok)}
+.gate li.bad .m{color:var(--seal)}
+.gate li.bad{background:var(--seal-soft);border-radius:2px;padding-left:6px}
+.gate small{display:block;color:var(--ink-3)}
+.gsum{margin:10px 0 0;font-size:12px;color:var(--ink-2)}
+.gsum b{color:var(--seal)}
+
+.foot{margin-top:40px;font-size:11px;color:var(--ink-3);border-top:1px solid var(--rule);padding-top:14px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media print{
+  .expo,.copy{display:none!important}
+  .pr p{display:block!important}
+  .pr summary::before{content:""}
+  .page{max-width:none;padding:0}
+  section.top-sec,.scene{page-break-inside:avoid}
+  body{background:#fff}
+}
+</style></head><body>
+<div class="page">
+
+<header class="hd">
+  <h1>影笔代理人</h1>
+  <span class="sub">美术设定集</span>
+  <span class="right">
+    <span class="gatepill fail">✗ 质量门 8 / 10</span>
+    <button class="expo" data-name="影笔代理人-art.json">导出 JSON</button>
+  </span>
+</header>
+
+<div class="kpis">
+  <div class="kpi accent"><div class="l">场景</div><div class="v">6</div><div class="d">主场景 2</div></div>
+  <div class="kpi"><div class="l">叙事道具</div><div class="v">3</div><div class="d">4 个状态变体</div></div>
+  <div class="kpi"><div class="l">一致性锚点</div><div class="v">27</div><div class="d">生成镜头的核对表（场景 + 道具）</div></div>
+  <div class="kpi"><div class="l">光照状态</div><div class="v">8</div><div class="d">换时段 = 重新生成</div></div>
+</div>
+<div class="galert"><b>✗ 2 项未过</b><span>一致性锚点 3–5 个 — 七起死亡档案（2 个）</span><span>道具尺度参照写进提示词 — 速写本与墨痕（提示词缺「handheld scale」）；银书签&quot;归一&quot;（提示词缺「handheld scale」）；七起死亡档案（提示词缺「tabletop scale」）</span></div>
+
+<section class="top-sec" id="sec-list">
+  <div class="sec-h"><span class="no">01</span><h2>场景清单</h2></div>
+  <table><thead><tr><th>ID</th><th>场景</th><th>类型</th><th>出现集</th><th>锚点</th><th>光照</th><th>变体</th></tr></thead>
+<tbody><tr><td>S01</td><td>一心堂画室</td><td>主场景</td><td>1、2、3、5、9</td><td>4</td><td>黄昏、上午阳光、夜晚</td><td>—</td></tr>
+<tr><td>S02</td><td>设计院会议室</td><td>一次性</td><td>2</td><td>3</td><td>日光灯上午</td><td>—</td></tr>
+<tr><td>S03</td><td>梧水街老街</td><td>主场景</td><td>4、9</td><td>3</td><td>黄昏路灯</td><td>—</td></tr>
+<tr><td>S04</td><td>茶香巷归一盏茶馆</td><td>一次性</td><td>6、7、8</td><td>3</td><td>夜晚暗影</td><td>—</td></tr>
+<tr><td>S05</td><td>档案馆地下库房</td><td>一次性</td><td>5</td><td>3</td><td>昏暗库房</td><td>—</td></tr>
+<tr><td>S06</td><td>旧墓园</td><td>一次性</td><td>10</td><td>3</td><td>黄昏夕阳</td><td>—</td></tr></tbody></table>
+</section>
+
+<section class="top-sec" id="sec-cards">
+  <div class="sec-h"><span class="no">02</span><h2>场景设定卡</h2></div>
+  <div class="cards">
+<article class="scene" id="sc-S01">
+  <header class="sc-h">
+    <span class="sc-id">S01</span>
+    <h3>一心堂画室</h3>
+    <span class="badge">主场景</span>
+    <span class="sc-use">出现集 1、2、3、5、9　承载爽点 悬念钩 · 情感爆点 · 身世揭秘</span>
+  </header>
+  <p class="sc-sum">设计意图：老街二楼的老式画室，既是沈砚的工作空间，也是影契发生的神圣/诡异场所。空间要旧、要安静、要有时间沉淀感。</p>
+  <div class="plate plate-empty"><span>一心堂画室 · 尚未出图<br><em>用下方提示词生成</em></span></div>
+  
+  <section class="blk">
+    <h4>一致性锚点<small>每次生成都必须出现的特征——认场景靠它，QC 也靠它</small></h4>
+    <ol class="anchors"><li><b>木格窗</b><span>半开，夕阳透进来在地板投下格子光</span></li><li><b>画架速写本</b><span>笔尖悬在纸面上方，墨痕在黄昏光下泛冷光</span></li><li><b>老旧木地板</b><span>有岁月划痕和蜡油痕迹，沈砚站立处空无影子</span></li><li><b>松烟墨味</b><span>视觉上通过墨瓶、砚台、笔筒呈现</span></li></ol>
+  </section>
+  <section class="blk">
+    <h4>光照与时段</h4>
+    <div class="lights"><div class="light"><i>黄昏</i><span class="mono">Interior of old Chinese artist studio on second floor of a heritage street building. Warm orange-grey dusk light streaming through half-open wooden lattice window. Dust particles floating in light beam. Ink bottle and brush pot on wooden desk. Old wooden floor with visible grain and wax marks. No people. Cinematic warm tones, shallow depth of field.</span><button class="copy mini" data-copy="Interior of old Chinese artist studio on second floor of a heritage street building. Warm orange-grey dusk light streaming through half-open wooden lattice window. Dust particles floating in light beam. Ink bottle and brush pot on wooden desk. Old wooden floor with visible grain and wax marks. No people. Cinematic warm tones, shallow depth of field.">复制</button></div><div class="light"><i>上午阳光</i><span class="mono">Same artist studio interior but morning sunlight streaming directly through wooden lattice window. Bright warm light on old wooden floor. Easel and sketchbook on desk. No people. Warm golden morning light.</span><button class="copy mini" data-copy="Same artist studio interior but morning sunlight streaming directly through wooden lattice window. Bright warm light on old wooden floor. Easel and sketchbook on desk. No people. Warm golden morning light.">复制</button></div><div class="light"><i>夜晚</i><span class="mono">Same studio interior at night. Only desk lamp and ink bottle catching faint glow. Wooden lattice window dark outside. No people. Cool blue ambient mixed with warm yellow desk lamp. Quiet, eerie atmosphere.</span><button class="copy mini" data-copy="Same studio interior at night. Only desk lamp and ink bottle catching faint glow. Wooden lattice window dark outside. No people. Cool blue ambient mixed with warm yellow desk lamp. Quiet, eerie atmosphere.">复制</button></div></div>
+  </section>
+  <div class="pgroup">
+    <details class="pr">
+  <summary><span>主视角 EN</span><button class="copy" data-copy="Empty artist studio interior, second floor of old Chinese heritage building. Wooden lattice window half open, warm dusk light streaming in. Easel with sketchbook, ink bottle, brush pot on desk. Old wooden floor with scratches. No people, no shadows. Cinematic, warm tones.">复制</button></summary>
+  <p>Empty artist studio interior, second floor of old Chinese heritage building. Wooden lattice window half open, warm dusk light streaming in. Easel with sketchbook, ink bottle, brush pot on desk. Old wooden floor with scratches. No people, no shadows. Cinematic, warm tones.</p>
+</details>
+    <details class="pr">
+  <summary><span>设定图 EN</span><button class="copy" data-copy="Single scene reference sheet on warm neutral background. Wide establishing shot of the studio interior. Shows wooden lattice window, easel, desk with ink tools, and old wooden floor. Dusk lighting. No people.">复制</button></summary>
+  <p>Single scene reference sheet on warm neutral background. Wide establishing shot of the studio interior. Shows wooden lattice window, easel, desk with ink tools, and old wooden floor. Dusk lighting. No people.</p>
+</details>
+    <details class="pr">
+  <summary><span>反向提示词</span><button class="copy" data-copy="people, person, human, face, hands, character, animated, cartoon, anime, shadow of person">复制</button></summary>
+  <p>people, person, human, face, hands, character, animated, cartoon, anime, shadow of person</p>
+</details>
+    <div class="pgroup-f"><button class="copy wide" data-copy="{
+  &quot;id&quot;: &quot;S01&quot;,
+  &quot;name&quot;: &quot;一心堂画室&quot;,
+  &quot;primary&quot;: true,
+  &quot;summary&quot;: &quot;设计意图：老街二楼的老式画室，既是沈砚的工作空间，也是影契发生的神圣/诡异场所。空间要旧、要安静、要有时间沉淀感。&quot;,
+  &quot;anchors&quot;: [
+    {
+      &quot;name&quot;: &quot;木格窗&quot;,
+      &quot;desc&quot;: &quot;半开，夕阳透进来在地板投下格子光&quot;
+    },
+    {
+      &quot;name&quot;: &quot;画架速写本&quot;,
+      &quot;desc&quot;: &quot;笔尖悬在纸面上方，墨痕在黄昏光下泛冷光&quot;
+    },
+    {
+      &quot;name&quot;: &quot;老旧木地板&quot;,
+      &quot;desc&quot;: &quot;有岁月划痕和蜡油痕迹，沈砚站立处空无影子&quot;
+    },
+    {
+      &quot;name&quot;: &quot;松烟墨味&quot;,
+      &quot;desc&quot;: &quot;视觉上通过墨瓶、砚台、笔筒呈现&quot;
+    }
+  ],
+  &quot;lighting&quot;: [
+    {
+      &quot;state&quot;: &quot;黄昏&quot;,
+      &quot;prompt&quot;: &quot;Interior of old Chinese artist studio on second floor of a heritage street building. Warm orange-grey dusk light streaming through half-open wooden lattice window. Dust particles floating in light beam. Ink bottle and brush pot on wooden desk. Old wooden floor with visible grain and wax marks. No people. Cinematic warm tones, shallow depth of field.&quot;
+    },
+    {
+      &quot;state&quot;: &quot;上午阳光&quot;,
+      &quot;prompt&quot;: &quot;Same artist studio interior but morning sunlight streaming directly through wooden lattice window. Bright warm light on old wooden floor. Easel and sketchbook on desk. No people. Warm golden morning light.&quot;
+    },
+    {
+      &quot;state&quot;: &quot;夜晚&quot;,
+      &quot;prompt&quot;: &quot;Same studio interior at night. Only desk lamp and ink bottle catching faint glow. Wooden lattice window dark outside. No people. Cool blue ambient mixed with warm yellow desk lamp. Quiet, eerie atmosphere.&quot;
+    }
+  ],
+  &quot;image&quot;: {
+    &quot;prompt&quot;: &quot;Empty artist studio interior, second floor of old Chinese heritage building. Wooden lattice window half open, warm dusk light streaming in. Easel with sketchbook, ink bottle, brush pot on desk. Old wooden floor with scratches. No people, no shadows. Cinematic, warm tones.&quot;,
+    &quot;negativePrompt&quot;: &quot;people, person, human, face, hands, character, animated, cartoon, anime, shadow of person&quot;,
+    &quot;sheet&quot;: &quot;Single scene reference sheet on warm neutral background. Wide establishing shot of the studio interior. Shows wooden lattice window, easel, desk with ink tools, and old wooden floor. Dusk lighting. No people.&quot;,
+    &quot;tags&quot;: [
+      &quot;artist studio&quot;,
+      &quot;wooden interior&quot;,
+      &quot;dusk light&quot;,
+      &quot;warm tones&quot;,
+      &quot;ink tools&quot;
+    ]
+  },
+  &quot;usage&quot;: {
+    &quot;episodes&quot;: [
+      1,
+      2,
+      3,
+      5,
+      9
+    ],
+    &quot;beats&quot;: [
+      &quot;悬念钩&quot;,
+      &quot;情感爆点&quot;,
+      &quot;身世揭秘&quot;
+    ]
+  }
+}">复制整个场景 JSON</button></div>
+  </div>
+</article>
+<article class="scene" id="sc-S02">
+  <header class="sc-h">
+    <span class="sc-id">S02</span>
+    <h3>设计院会议室</h3>
+    <span class="badge once">一次性</span>
+    <span class="sc-use">出现集 2　承载爽点 打脸</span>
+  </header>
+  <p class="sc-sum">设计意图：长条形会议室，日光灯，十二个人围坐，主位在一端。要的是职场的压抑感和当众打脸的戏剧性。</p>
+  <div class="plate plate-empty"><span>设计院会议室 · 尚未出图<br><em>用下方提示词生成</em></span></div>
+  
+  <section class="blk">
+    <h4>一致性锚点<small>每次生成都必须出现的特征——认场景靠它，QC 也靠它</small></h4>
+    <ol class="anchors"><li><b>长条形会议桌</b><span>坐了十二个人，桌面摊着项目进度表</span></li><li><b>主位</b><span>主管坐的位置，居高临下</span></li><li><b>日光灯</b><span>冷白色，照得每个人脸都很白</span></li></ol>
+  </section>
+  <section class="blk">
+    <h4>光照与时段</h4>
+    <div class="lights"><div class="light"><i>日光灯上午</i><span class="mono">Interior of modern corporate conference room. Long rectangular table seating 12 people. Cold white fluorescent ceiling lights. Head of table on the far end. Window blinds half closed. No people. Realistic office style, cold tones.</span><button class="copy mini" data-copy="Interior of modern corporate conference room. Long rectangular table seating 12 people. Cold white fluorescent ceiling lights. Head of table on the far end. Window blinds half closed. No people. Realistic office style, cold tones.">复制</button></div></div>
+  </section>
+  <div class="pgroup">
+    <details class="pr">
+  <summary><span>主视角 EN</span><button class="copy" data-copy="Empty modern corporate conference room, long rectangular table, 12 office chairs around it. Cold white fluorescent lighting. Project schedule papers on table. No people, no shadows. Wide establishing shot.">复制</button></summary>
+  <p>Empty modern corporate conference room, long rectangular table, 12 office chairs around it. Cold white fluorescent lighting. Project schedule papers on table. No people, no shadows. Wide establishing shot.</p>
+</details>
+    <details class="pr">
+  <summary><span>设定图 EN</span><button class="copy" data-copy="Single scene reference sheet. Wide shot of conference room interior. Shows long table, chairs, fluorescent lights, head of table position. Cold tones.">复制</button></summary>
+  <p>Single scene reference sheet. Wide shot of conference room interior. Shows long table, chairs, fluorescent lights, head of table position. Cold tones.</p>
+</details>
+    <details class="pr">
+  <summary><span>反向提示词</span><button class="copy" data-copy="people, person, human, face, hands, character, animated, cartoon, anime">复制</button></summary>
+  <p>people, person, human, face, hands, character, animated, cartoon, anime</p>
+</details>
+    <div class="pgroup-f"><button class="copy wide" data-copy="{
+  &quot;id&quot;: &quot;S02&quot;,
+  &quot;name&quot;: &quot;设计院会议室&quot;,
+  &quot;primary&quot;: false,
+  &quot;summary&quot;: &quot;设计意图：长条形会议室，日光灯，十二个人围坐，主位在一端。要的是职场的压抑感和当众打脸的戏剧性。&quot;,
+  &quot;anchors&quot;: [
+    {
+      &quot;name&quot;: &quot;长条形会议桌&quot;,
+      &quot;desc&quot;: &quot;坐了十二个人，桌面摊着项目进度表&quot;
+    },
+    {
+      &quot;name&quot;: &quot;主位&quot;,
+      &quot;desc&quot;: &quot;主管坐的位置，居高临下&quot;
+    },
+    {
+      &quot;name&quot;: &quot;日光灯&quot;,
+      &quot;desc&quot;: &quot;冷白色，照得每个人脸都很白&quot;
+    }
+  ],
+  &quot;lighting&quot;: [
+    {
+      &quot;state&quot;: &quot;日光灯上午&quot;,
+      &quot;prompt&quot;: &quot;Interior of modern corporate conference room. Long rectangular table seating 12 people. Cold white fluorescent ceiling lights. Head of table on the far end. Window blinds half closed. No people. Realistic office style, cold tones.&quot;
+    }
+  ],
+  &quot;image&quot;: {
+    &quot;prompt&quot;: &quot;Empty modern corporate conference room, long rectangular table, 12 office chairs around it. Cold white fluorescent lighting. Project schedule papers on table. No people, no shadows. Wide establishing shot.&quot;,
+    &quot;negativePrompt&quot;: &quot;people, person, human, face, hands, character, animated, cartoon, anime&quot;,
+    &quot;sheet&quot;: &quot;Single scene reference sheet. Wide shot of conference room interior. Shows long table, chairs, fluorescent lights, head of table position. Cold tones.&quot;,
+    &quot;tags&quot;: [
+      &quot;conference room&quot;,
+      &quot;office interior&quot;,
+      &quot;fluorescent light&quot;,
+      &quot;cold tones&quot;
+    ]
+  },
+  &quot;usage&quot;: {
+    &quot;episodes&quot;: [
+      2
+    ],
+    &quot;beats&quot;: [
+      &quot;打脸&quot;
+    ]
+  }
+}">复制整个场景 JSON</button></div>
+  </div>
+</article>
+<article class="scene" id="sc-S03">
+  <header class="sc-h">
+    <span class="sc-id">S03</span>
+    <h3>梧水街老街</h3>
+    <span class="badge">主场景</span>
+    <span class="sc-use">出现集 4、9　承载爽点 世界观扩展 · 恐怖爆点</span>
+  </header>
+  <p class="sc-sum">设计意图：黄昏石板路，路灯昏黄，行人的影子被拉得很长。要的是日常感下的诡异——每个人脸上笑着，影子在说不敢说的话。</p>
+  <div class="plate plate-empty"><span>梧水街老街 · 尚未出图<br><em>用下方提示词生成</em></span></div>
+  
+  <section class="blk">
+    <h4>一致性锚点<small>每次生成都必须出现的特征——认场景靠它，QC 也靠它</small></h4>
+    <ol class="anchors"><li><b>石板路</b><span>老街的青石板，被路灯照得一格一格</span></li><li><b>昏黄路灯</b><span>把行人的影子拉得很长</span></li><li><b>夜市嘈杂</b><span>远处夜市的声音</span></li></ol>
+  </section>
+  <section class="blk">
+    <h4>光照与时段</h4>
+    <div class="lights"><div class="light"><i>黄昏路灯</i><span class="mono">Old Chinese heritage street at dusk. Stone pavement lit by yellow streetlamps. Long shadows stretching on ground. Shops with warm lights in windows. No people. Cinematic dusk atmosphere, long shadows.</span><button class="copy mini" data-copy="Old Chinese heritage street at dusk. Stone pavement lit by yellow streetlamps. Long shadows stretching on ground. Shops with warm lights in windows. No people. Cinematic dusk atmosphere, long shadows.">复制</button></div></div>
+  </section>
+  <div class="pgroup">
+    <details class="pr">
+  <summary><span>主视角 EN</span><button class="copy" data-copy="Empty old Chinese heritage street at dusk. Stone pavement, yellow streetlamps casting long shadows. Shop windows with warm interior lights. No people. Cinematic dusk atmosphere, long shadows on ground.">复制</button></summary>
+  <p>Empty old Chinese heritage street at dusk. Stone pavement, yellow streetlamps casting long shadows. Shop windows with warm interior lights. No people. Cinematic dusk atmosphere, long shadows on ground.</p>
+</details>
+    <details class="pr">
+  <summary><span>设定图 EN</span><button class="copy" data-copy="Single scene reference sheet. Wide shot of old street at dusk. Shows stone pavement, streetlamps, long shadows, shop lights.">复制</button></summary>
+  <p>Single scene reference sheet. Wide shot of old street at dusk. Shows stone pavement, streetlamps, long shadows, shop lights.</p>
+</details>
+    <details class="pr">
+  <summary><span>反向提示词</span><button class="copy" data-copy="people, person, human, face, hands, character, animated, cartoon, anime, modern cars">复制</button></summary>
+  <p>people, person, human, face, hands, character, animated, cartoon, anime, modern cars</p>
+</details>
+    <div class="pgroup-f"><button class="copy wide" data-copy="{
+  &quot;id&quot;: &quot;S03&quot;,
+  &quot;name&quot;: &quot;梧水街老街&quot;,
+  &quot;primary&quot;: true,
+  &quot;summary&quot;: &quot;设计意图：黄昏石板路，路灯昏黄，行人的影子被拉得很长。要的是日常感下的诡异——每个人脸上笑着，影子在说不敢说的话。&quot;,
+  &quot;anchors&quot;: [
+    {
+      &quot;name&quot;: &quot;石板路&quot;,
+      &quot;desc&quot;: &quot;老街的青石板，被路灯照得一格一格&quot;
+    },
+    {
+      &quot;name&quot;: &quot;昏黄路灯&quot;,
+      &quot;desc&quot;: &quot;把行人的影子拉得很长&quot;
+    },
+    {
+      &quot;name&quot;: &quot;夜市嘈杂&quot;,
+      &quot;desc&quot;: &quot;远处夜市的声音&quot;
+    }
+  ],
+  &quot;lighting&quot;: [
+    {
+      &quot;state&quot;: &quot;黄昏路灯&quot;,
+      &quot;prompt&quot;: &quot;Old Chinese heritage street at dusk. Stone pavement lit by yellow streetlamps. Long shadows stretching on ground. Shops with warm lights in windows. No people. Cinematic dusk atmosphere, long shadows.&quot;
+    }
+  ],
+  &quot;image&quot;: {
+    &quot;prompt&quot;: &quot;Empty old Chinese heritage street at dusk. Stone pavement, yellow streetlamps casting long shadows. Shop windows with warm interior lights. No people. Cinematic dusk atmosphere, long shadows on ground.&quot;,
+    &quot;negativePrompt&quot;: &quot;people, person, human, face, hands, character, animated, cartoon, anime, modern cars&quot;,
+    &quot;sheet&quot;: &quot;Single scene reference sheet. Wide shot of old street at dusk. Shows stone pavement, streetlamps, long shadows, shop lights.&quot;,
+    &quot;tags&quot;: [
+      &quot;old street&quot;,
+      &quot;dusk&quot;,
+      &quot;streetlamp&quot;,
+      &quot;long shadows&quot;,
+      &quot;cinematic&quot;
+    ]
+  },
+  &quot;usage&quot;: {
+    &quot;episodes&quot;: [
+      4,
+      9
+    ],
+    &quot;beats&quot;: [
+      &quot;世界观扩展&quot;,
+      &quot;恐怖爆点&quot;
+    ]
+  }
+}">复制整个场景 JSON</button></div>
+  </div>
+</article>
+<article class="scene" id="sc-S04">
+  <header class="sc-h">
+    <span class="sc-id">S04</span>
+    <h3>茶香巷归一盏茶馆</h3>
+    <span class="badge once">一次性</span>
+    <span class="sc-use">出现集 6、7、8　承载爽点 悬疑推进 · 规则反制</span>
+  </header>
+  <p class="sc-sum">设计意图：暗巷里的茶馆，灯火早已熄灭，木门紧闭。要的是守候的紧张感和影商出现的诡异氛围。</p>
+  <div class="plate plate-empty"><span>茶香巷归一盏茶馆 · 尚未出图<br><em>用下方提示词生成</em></span></div>
+  
+  <section class="blk">
+    <h4>一致性锚点<small>每次生成都必须出现的特征——认场景靠它，QC 也靠它</small></h4>
+    <ol class="anchors"><li><b>窄巷</b><span>两侧老旧民居，木门紧闭，墙爬干枯爬山虎</span></li><li><b>茶馆门面</b><span>灯火熄灭，木门紧闭</span></li><li><b>暗影守候</b><span>对面的暗影里，两人守候</span></li></ol>
+  </section>
+  <section class="blk">
+    <h4>光照与时段</h4>
+    <div class="lights"><div class="light"><i>夜晚暗影</i><span class="mono">Narrow old Chinese alley at night. Old wooden doors closed on both sides. Dried ivy climbing on walls. One teahouse with lights off. Faint streetlight from distance. No people. Dark quiet atmosphere, ominous.</span><button class="copy mini" data-copy="Narrow old Chinese alley at night. Old wooden doors closed on both sides. Dried ivy climbing on walls. One teahouse with lights off. Faint streetlight from distance. No people. Dark quiet atmosphere, ominous.">复制</button></div></div>
+  </section>
+  <div class="pgroup">
+    <details class="pr">
+  <summary><span>主视角 EN</span><button class="copy" data-copy="Empty narrow old Chinese alley at night. Old wooden doors closed, dried ivy on walls. One teahouse with lights off in the distance. Faint streetlight. No people. Dark quiet atmosphere, ominous.">复制</button></summary>
+  <p>Empty narrow old Chinese alley at night. Old wooden doors closed, dried ivy on walls. One teahouse with lights off in the distance. Faint streetlight. No people. Dark quiet atmosphere, ominous.</p>
+</details>
+    <details class="pr">
+  <summary><span>设定图 EN</span><button class="copy" data-copy="Single scene reference sheet. Dark alley interior. Shows old doors, ivy, distant teahouse with lights off. Night atmosphere.">复制</button></summary>
+  <p>Single scene reference sheet. Dark alley interior. Shows old doors, ivy, distant teahouse with lights off. Night atmosphere.</p>
+</details>
+    <details class="pr">
+  <summary><span>反向提示词</span><button class="copy" data-copy="people, person, human, face, hands, character, animated, cartoon, anime, bright lights">复制</button></summary>
+  <p>people, person, human, face, hands, character, animated, cartoon, anime, bright lights</p>
+</details>
+    <div class="pgroup-f"><button class="copy wide" data-copy="{
+  &quot;id&quot;: &quot;S04&quot;,
+  &quot;name&quot;: &quot;茶香巷归一盏茶馆&quot;,
+  &quot;primary&quot;: false,
+  &quot;summary&quot;: &quot;设计意图：暗巷里的茶馆，灯火早已熄灭，木门紧闭。要的是守候的紧张感和影商出现的诡异氛围。&quot;,
+  &quot;anchors&quot;: [
+    {
+      &quot;name&quot;: &quot;窄巷&quot;,
+      &quot;desc&quot;: &quot;两侧老旧民居，木门紧闭，墙爬干枯爬山虎&quot;
+    },
+    {
+      &quot;name&quot;: &quot;茶馆门面&quot;,
+      &quot;desc&quot;: &quot;灯火熄灭，木门紧闭&quot;
+    },
+    {
+      &quot;name&quot;: &quot;暗影守候&quot;,
+      &quot;desc&quot;: &quot;对面的暗影里，两人守候&quot;
+    }
+  ],
+  &quot;lighting&quot;: [
+    {
+      &quot;state&quot;: &quot;夜晚暗影&quot;,
+      &quot;prompt&quot;: &quot;Narrow old Chinese alley at night. Old wooden doors closed on both sides. Dried ivy climbing on walls. One teahouse with lights off. Faint streetlight from distance. No people. Dark quiet atmosphere, ominous.&quot;
+    }
+  ],
+  &quot;image&quot;: {
+    &quot;prompt&quot;: &quot;Empty narrow old Chinese alley at night. Old wooden doors closed, dried ivy on walls. One teahouse with lights off in the distance. Faint streetlight. No people. Dark quiet atmosphere, ominous.&quot;,
+    &quot;negativePrompt&quot;: &quot;people, person, human, face, hands, character, animated, cartoon, anime, bright lights&quot;,
+    &quot;sheet&quot;: &quot;Single scene reference sheet. Dark alley interior. Shows old doors, ivy, distant teahouse with lights off. Night atmosphere.&quot;,
+    &quot;tags&quot;: [
+      &quot;dark alley&quot;,
+      &quot;night&quot;,
+      &quot;teahouse&quot;,
+      &quot;ominous&quot;,
+      &quot;old wood&quot;
+    ]
+  },
+  &quot;usage&quot;: {
+    &quot;episodes&quot;: [
+      6,
+      7,
+      8
+    ],
+    &quot;beats&quot;: [
+      &quot;悬疑推进&quot;,
+      &quot;规则反制&quot;
+    ]
+  }
+}">复制整个场景 JSON</button></div>
+  </div>
+</article>
+<article class="scene" id="sc-S05">
+  <header class="sc-h">
+    <span class="sc-id">S05</span>
+    <h3>档案馆地下库房</h3>
+    <span class="badge once">一次性</span>
+    <span class="sc-use">出现集 5　承载爽点 悬疑推进</span>
+  </header>
+  <p class="sc-sum">设计意图：不见天日的地下库房，纸霉与旧木的气味凝在潮气里。要的是历史感和秘密感。</p>
+  <div class="plate plate-empty"><span>档案馆地下库房 · 尚未出图<br><em>用下方提示词生成</em></span></div>
+  
+  <section class="blk">
+    <h4>一致性锚点<small>每次生成都必须出现的特征——认场景靠它，QC 也靠它</small></h4>
+    <ol class="anchors"><li><b>地下石阶</b><span>脚步声在走廊里弹回来</span></li><li><b>铁门锁</b><span>一串铜钥匙，打开最里侧的铁门</span></li><li><b>旧档案</b><span>纸霉与旧木的气味</span></li></ol>
+  </section>
+  <section class="blk">
+    <h4>光照与时段</h4>
+    <div class="lights"><div class="light"><i>昏暗库房</i><span class="mono">Underground archive storage room. Dim fluorescent light. Old metal shelves with yellowed files. Concrete walls. Musty atmosphere. No people. Cold damp tones.</span><button class="copy mini" data-copy="Underground archive storage room. Dim fluorescent light. Old metal shelves with yellowed files. Concrete walls. Musty atmosphere. No people. Cold damp tones.">复制</button></div></div>
+  </section>
+  <div class="pgroup">
+    <details class="pr">
+  <summary><span>主视角 EN</span><button class="copy" data-copy="Empty underground archive storage room. Dim fluorescent lighting. Metal shelves with old yellowed files. Concrete walls. Musty damp atmosphere. No people. Cold tones.">复制</button></summary>
+  <p>Empty underground archive storage room. Dim fluorescent lighting. Metal shelves with old yellowed files. Concrete walls. Musty damp atmosphere. No people. Cold tones.</p>
+</details>
+    <details class="pr">
+  <summary><span>设定图 EN</span><button class="copy" data-copy="Single scene reference sheet. Underground archive interior. Shows shelves with files, concrete walls, dim lighting.">复制</button></summary>
+  <p>Single scene reference sheet. Underground archive interior. Shows shelves with files, concrete walls, dim lighting.</p>
+</details>
+    <details class="pr">
+  <summary><span>反向提示词</span><button class="copy" data-copy="people, person, human, face, hands, character, animated, cartoon, anime, bright light">复制</button></summary>
+  <p>people, person, human, face, hands, character, animated, cartoon, anime, bright light</p>
+</details>
+    <div class="pgroup-f"><button class="copy wide" data-copy="{
+  &quot;id&quot;: &quot;S05&quot;,
+  &quot;name&quot;: &quot;档案馆地下库房&quot;,
+  &quot;primary&quot;: false,
+  &quot;summary&quot;: &quot;设计意图：不见天日的地下库房，纸霉与旧木的气味凝在潮气里。要的是历史感和秘密感。&quot;,
+  &quot;anchors&quot;: [
+    {
+      &quot;name&quot;: &quot;地下石阶&quot;,
+      &quot;desc&quot;: &quot;脚步声在走廊里弹回来&quot;
+    },
+    {
+      &quot;name&quot;: &quot;铁门锁&quot;,
+      &quot;desc&quot;: &quot;一串铜钥匙，打开最里侧的铁门&quot;
+    },
+    {
+      &quot;name&quot;: &quot;旧档案&quot;,
+      &quot;desc&quot;: &quot;纸霉与旧木的气味&quot;
+    }
+  ],
+  &quot;lighting&quot;: [
+    {
+      &quot;state&quot;: &quot;昏暗库房&quot;,
+      &quot;prompt&quot;: &quot;Underground archive storage room. Dim fluorescent light. Old metal shelves with yellowed files. Concrete walls. Musty atmosphere. No people. Cold damp tones.&quot;
+    }
+  ],
+  &quot;image&quot;: {
+    &quot;prompt&quot;: &quot;Empty underground archive storage room. Dim fluorescent lighting. Metal shelves with old yellowed files. Concrete walls. Musty damp atmosphere. No people. Cold tones.&quot;,
+    &quot;negativePrompt&quot;: &quot;people, person, human, face, hands, character, animated, cartoon, anime, bright light&quot;,
+    &quot;sheet&quot;: &quot;Single scene reference sheet. Underground archive interior. Shows shelves with files, concrete walls, dim lighting.&quot;,
+    &quot;tags&quot;: [
+      &quot;archive&quot;,
+      &quot;underground&quot;,
+      &quot;dim light&quot;,
+      &quot;old files&quot;,
+      &quot;cold tones&quot;
+    ]
+  },
+  &quot;usage&quot;: {
+    &quot;episodes&quot;: [
+      5
+    ],
+    &quot;beats&quot;: [
+      &quot;悬疑推进&quot;
+    ]
+  }
+}">复制整个场景 JSON</button></div>
+  </div>
+</article>
+<article class="scene" id="sc-S06">
+  <header class="sc-h">
+    <span class="sc-id">S06</span>
+    <h3>旧墓园</h3>
+    <span class="badge once">一次性</span>
+    <span class="sc-use">出现集 10　承载爽点 大爆点</span>
+  </header>
+  <p class="sc-sum">设计意图：荒废十年的城郊墓园，石碑东倒西歪，荒草半人高。黄昏夕阳把残碑影子拉得老长。要的是荒凉和脱壳影出现的恐怖感。</p>
+  <div class="plate plate-empty"><span>旧墓园 · 尚未出图<br><em>用下方提示词生成</em></span></div>
+  
+  <section class="blk">
+    <h4>一致性锚点<small>每次生成都必须出现的特征——认场景靠它，QC 也靠它</small></h4>
+    <ol class="anchors"><li><b>残碑</b><span>石碑东倒西歪，缝里长出半人高的荒草</span></li><li><b>黄昏夕阳</b><span>从西边斜过来，把影子拉得老长</span></li><li><b>脱壳影</b><span>悬浮的黑色影子，不在地面上</span></li></ol>
+  </section>
+  <section class="blk">
+    <h4>光照与时段</h4>
+    <div class="lights"><div class="light"><i>黄昏夕阳</i><span class="mono">Abandoned old cemetery at dusk. Tilted gravestones, half-height wild grass. Orange sunset light from west casting long shadows. No people. Desolate eerie atmosphere.</span><button class="copy mini" data-copy="Abandoned old cemetery at dusk. Tilted gravestones, half-height wild grass. Orange sunset light from west casting long shadows. No people. Desolate eerie atmosphere.">复制</button></div></div>
+  </section>
+  <div class="pgroup">
+    <details class="pr">
+  <summary><span>主视角 EN</span><button class="copy" data-copy="Empty abandoned old cemetery at dusk. Tilted gravestones, tall wild grass. Orange sunset casting long shadows across ground. No people. Desolate eerie atmosphere. Wide shot.">复制</button></summary>
+  <p>Empty abandoned old cemetery at dusk. Tilted gravestones, tall wild grass. Orange sunset casting long shadows across ground. No people. Desolate eerie atmosphere. Wide shot.</p>
+</details>
+    <details class="pr">
+  <summary><span>设定图 EN</span><button class="copy" data-copy="Single scene reference sheet. Wide shot of abandoned cemetery at dusk. Shows tilted gravestones, wild grass, long sunset shadows.">复制</button></summary>
+  <p>Single scene reference sheet. Wide shot of abandoned cemetery at dusk. Shows tilted gravestones, wild grass, long sunset shadows.</p>
+</details>
+    <details class="pr">
+  <summary><span>反向提示词</span><button class="copy" data-copy="people, person, human, face, hands, character, animated, cartoon, anime, well-maintained cemetery">复制</button></summary>
+  <p>people, person, human, face, hands, character, animated, cartoon, anime, well-maintained cemetery</p>
+</details>
+    <div class="pgroup-f"><button class="copy wide" data-copy="{
+  &quot;id&quot;: &quot;S06&quot;,
+  &quot;name&quot;: &quot;旧墓园&quot;,
+  &quot;primary&quot;: false,
+  &quot;summary&quot;: &quot;设计意图：荒废十年的城郊墓园，石碑东倒西歪，荒草半人高。黄昏夕阳把残碑影子拉得老长。要的是荒凉和脱壳影出现的恐怖感。&quot;,
+  &quot;anchors&quot;: [
+    {
+      &quot;name&quot;: &quot;残碑&quot;,
+      &quot;desc&quot;: &quot;石碑东倒西歪，缝里长出半人高的荒草&quot;
+    },
+    {
+      &quot;name&quot;: &quot;黄昏夕阳&quot;,
+      &quot;desc&quot;: &quot;从西边斜过来，把影子拉得老长&quot;
+    },
+    {
+      &quot;name&quot;: &quot;脱壳影&quot;,
+      &quot;desc&quot;: &quot;悬浮的黑色影子，不在地面上&quot;
+    }
+  ],
+  &quot;lighting&quot;: [
+    {
+      &quot;state&quot;: &quot;黄昏夕阳&quot;,
+      &quot;prompt&quot;: &quot;Abandoned old cemetery at dusk. Tilted gravestones, half-height wild grass. Orange sunset light from west casting long shadows. No people. Desolate eerie atmosphere.&quot;
+    }
+  ],
+  &quot;image&quot;: {
+    &quot;prompt&quot;: &quot;Empty abandoned old cemetery at dusk. Tilted gravestones, tall wild grass. Orange sunset casting long shadows across ground. No people. Desolate eerie atmosphere. Wide shot.&quot;,
+    &quot;negativePrompt&quot;: &quot;people, person, human, face, hands, character, animated, cartoon, anime, well-maintained cemetery&quot;,
+    &quot;sheet&quot;: &quot;Single scene reference sheet. Wide shot of abandoned cemetery at dusk. Shows tilted gravestones, wild grass, long sunset shadows.&quot;,
+    &quot;tags&quot;: [
+      &quot;cemetery&quot;,
+      &quot;dusk&quot;,
+      &quot;desolate&quot;,
+      &quot;long shadows&quot;,
+      &quot;wild grass&quot;
+    ]
+  },
+  &quot;usage&quot;: {
+    &quot;episodes&quot;: [
+      10
+    ],
+    &quot;beats&quot;: [
+      &quot;大爆点&quot;
+    ]
+  }
+}">复制整个场景 JSON</button></div>
+  </div>
+</article>
+  </div>
+</section>
+
+<section class="top-sec" id="sec-prop-list">
+  <div class="sec-h"><span class="no">03</span><h2>道具清单</h2></div>
+  <table><thead><tr><th>ID</th><th>道具</th><th>尺度</th><th>状态</th><th>关联场景</th><th>出现集</th><th>锚点</th></tr></thead>
+<tbody><tr><td>P01</td><td>速写本与墨痕</td><td>手持级</td><td>空白待画、三道纹路成型</td><td>S01</td><td>1、2、3、9、10</td><td>3</td></tr>
+<tr><td>P02</td><td>银书签&quot;归一&quot;</td><td>手持级</td><td>静置冷光</td><td>S01、S04</td><td>3、6、7、8、10</td><td>3</td></tr>
+<tr><td>P03</td><td>七起死亡档案</td><td>桌面级</td><td>摊开桌上</td><td>S01、S05</td><td>3、5</td><td>2</td></tr></tbody></table>
+</section>
+
+<section class="top-sec" id="sec-prop-cards">
+  <div class="sec-h"><span class="no">04</span><h2>道具设定卡</h2></div>
+  <div class="cards">
+<article class="scene" id="pr-P01">
+  <header class="sc-h">
+    <span class="sc-id">P01</span>
+    <h3>速写本与墨痕</h3>
+    <span class="badge">手持级</span>
+    <span class="sc-use">出现集 1、2、3、9、10　承载爽点 悬念钩 · 情感爆点 · 大爆点</span>
+  </header>
+  <p class="sc-sum">戏剧功能：缔约工具——照心纹、代行纹、偿价纹三道纹路在速写本上生成。沈砚右手的墨痕是身份标记。</p>
+  <div class="plate plate-empty"><span>速写本与墨痕 · 尚未出图<br><em>用下方提示词生成</em></span></div>
+  <p class="variant">关联场景：<b>S01</b>　关联角色：沈砚</p>
+  <section class="blk">
+    <h4>一致性锚点<small>每次生成都必须出现的特征——认场景靠它，QC 也靠它</small></h4>
+    <ol class="anchors"><li><b>厚皮速写本</b><span>翻开在新的一页，三道纹路生成时纸面嘶嘶响</span></li><li><b>右手墨痕</b><span>沈砚手背上淡墨痕，像烙印，黄昏时泛冷光</span></li><li><b>纸边碳化</b><span>契约完成时纸边卷起碳化，飘下半透明影屑</span></li></ol>
+  </section>
+  <section class="blk">
+    <h4>状态变体</h4>
+    <div class="lights"><div class="light"><i>空白待画</i><span class="mono">Blank thick-sketch sketchbook opened to a fresh page, lying on wooden desk. Black ink bottle and fine brush beside it. Pure white background, no hands, no people. Product photography style, soft studio lighting. Handheld size reference.</span><button class="copy mini" data-copy="Blank thick-sketch sketchbook opened to a fresh page, lying on wooden desk. Black ink bottle and fine brush beside it. Pure white background, no hands, no people. Product photography style, soft studio lighting. Handheld size reference.">复制</button></div><div class="light"><i>三道纹路成型</i><span class="mono">Sketchbook page with three intersecting ink patterns spreading like ink dropped in water. Delicate flowing lines forming abstract runes. Paper edges slightly curling and carbonizing. Pure white background, no hands, no people. Macro shot, dramatic lighting. Handheld size reference.</span><button class="copy mini" data-copy="Sketchbook page with three intersecting ink patterns spreading like ink dropped in water. Delicate flowing lines forming abstract runes. Paper edges slightly curling and carbonizing. Pure white background, no hands, no people. Macro shot, dramatic lighting. Handheld size reference.">复制</button></div></div>
+  </section>
+  <div class="pgroup">
+    <details class="pr">
+  <summary><span>主视角 EN</span><button class="copy" data-copy="Blank thick sketchbook opened to a fresh page, on pure white background. A black ink bottle and fine brush placed beside it. Handheld size product shot. No hands, no people.">复制</button></summary>
+  <p>Blank thick sketchbook opened to a fresh page, on pure white background. A black ink bottle and fine brush placed beside it. Handheld size product shot. No hands, no people.</p>
+</details>
+    <details class="pr">
+  <summary><span>设定图 EN</span><button class="copy" data-copy="Single product reference on pure white background. Top-down view of open sketchbook with ink bottle and brush beside it. Handheld size scale reference. No hands.">复制</button></summary>
+  <p>Single product reference on pure white background. Top-down view of open sketchbook with ink bottle and brush beside it. Handheld size scale reference. No hands.</p>
+</details>
+    <details class="pr">
+  <summary><span>反向提示词</span><button class="copy" data-copy="hands, person, people, human, fingers, cartoon, anime, blurry, shadow of person">复制</button></summary>
+  <p>hands, person, people, human, fingers, cartoon, anime, blurry, shadow of person</p>
+</details>
+    <div class="pgroup-f"><button class="copy wide" data-copy="{
+  &quot;id&quot;: &quot;P01&quot;,
+  &quot;name&quot;: &quot;速写本与墨痕&quot;,
+  &quot;scale&quot;: &quot;手持级&quot;,
+  &quot;summary&quot;: &quot;戏剧功能：缔约工具——照心纹、代行纹、偿价纹三道纹路在速写本上生成。沈砚右手的墨痕是身份标记。&quot;,
+  &quot;anchors&quot;: [
+    {
+      &quot;name&quot;: &quot;厚皮速写本&quot;,
+      &quot;desc&quot;: &quot;翻开在新的一页，三道纹路生成时纸面嘶嘶响&quot;
+    },
+    {
+      &quot;name&quot;: &quot;右手墨痕&quot;,
+      &quot;desc&quot;: &quot;沈砚手背上淡墨痕，像烙印，黄昏时泛冷光&quot;
+    },
+    {
+      &quot;name&quot;: &quot;纸边碳化&quot;,
+      &quot;desc&quot;: &quot;契约完成时纸边卷起碳化，飘下半透明影屑&quot;
+    }
+  ],
+  &quot;states&quot;: [
+    {
+      &quot;state&quot;: &quot;空白待画&quot;,
+      &quot;prompt&quot;: &quot;Blank thick-sketch sketchbook opened to a fresh page, lying on wooden desk. Black ink bottle and fine brush beside it. Pure white background, no hands, no people. Product photography style, soft studio lighting. Handheld size reference.&quot;
+    },
+    {
+      &quot;state&quot;: &quot;三道纹路成型&quot;,
+      &quot;prompt&quot;: &quot;Sketchbook page with three intersecting ink patterns spreading like ink dropped in water. Delicate flowing lines forming abstract runes. Paper edges slightly curling and carbonizing. Pure white background, no hands, no people. Macro shot, dramatic lighting. Handheld size reference.&quot;
+    }
+  ],
+  &quot;relatedScenes&quot;: [
+    &quot;S01&quot;
+  ],
+  &quot;carriedBy&quot;: [
+    &quot;沈砚&quot;
+  ],
+  &quot;image&quot;: {
+    &quot;prompt&quot;: &quot;Blank thick sketchbook opened to a fresh page, on pure white background. A black ink bottle and fine brush placed beside it. Handheld size product shot. No hands, no people.&quot;,
+    &quot;negativePrompt&quot;: &quot;hands, person, people, human, fingers, cartoon, anime, blurry, shadow of person&quot;,
+    &quot;sheet&quot;: &quot;Single product reference on pure white background. Top-down view of open sketchbook with ink bottle and brush beside it. Handheld size scale reference. No hands.&quot;,
+    &quot;tags&quot;: [
+      &quot;sketchbook&quot;,
+      &quot;ink bottle&quot;,
+      &quot;brush&quot;,
+      &quot;white background&quot;,
+      &quot;product shot&quot;
+    ]
+  },
+  &quot;usage&quot;: {
+    &quot;episodes&quot;: [
+      1,
+      2,
+      3,
+      9,
+      10
+    ],
+    &quot;beats&quot;: [
+      &quot;悬念钩&quot;,
+      &quot;情感爆点&quot;,
+      &quot;大爆点&quot;
+    ]
+  }
+}">复制整个场景 JSON</button></div>
+  </div>
+</article>
+<article class="scene" id="pr-P02">
+  <header class="sc-h">
+    <span class="sc-id">P02</span>
+    <h3>银书签&quot;归一&quot;</h3>
+    <span class="badge">手持级</span>
+    <span class="sc-use">出现集 3、6、7、8、10　承载爽点 道具觉醒 · 规则反制 · 大爆点</span>
+  </header>
+  <p class="sc-sum">戏剧功能：连接沈砚过去的关键道具。正面刻着照心纹般的纹路，背面刻着&quot;归一&quot;。会渗出纯白气息与墨痕对峙。</p>
+  <div class="plate plate-empty"><span>银书签&quot;归一&quot; · 尚未出图<br><em>用下方提示词生成</em></span></div>
+  <p class="variant">关联场景：<b>S01、S04</b>　关联角色：苏听晚、沈砚</p>
+  <section class="blk">
+    <h4>一致性锚点<small>每次生成都必须出现的特征——认场景靠它，QC 也靠它</small></h4>
+    <ol class="anchors"><li><b>银色书签</b><span>边缘磨得发亮，正面刻一圈极细的纹路</span></li><li><b>归一</b><span>背面刻着两个小字</span></li><li><b>黑白对峙</b><span>纯白气息从书签渗出，与墨痕的温热对峙</span></li></ol>
+  </section>
+  <section class="blk">
+    <h4>状态变体</h4>
+    <div class="lights"><div class="light"><i>静置冷光</i><span class="mono">Old silver bookmark with intricate engraved patterns on front. Engraved Chinese characters on back. Pure white background, no hands, no people. Macro shot, soft lighting. Handheld size reference.</span><button class="copy mini" data-copy="Old silver bookmark with intricate engraved patterns on front. Engraved Chinese characters on back. Pure white background, no hands, no people. Macro shot, soft lighting. Handheld size reference.">复制</button></div></div>
+  </section>
+  <div class="pgroup">
+    <details class="pr">
+  <summary><span>主视角 EN</span><button class="copy" data-copy="Vintage silver bookmark with intricate engraved scroll patterns on front surface. Two small Chinese characters engraved on back. Worn edges. Pure white background, no hands, no people. Macro product shot. Handheld size.">复制</button></summary>
+  <p>Vintage silver bookmark with intricate engraved scroll patterns on front surface. Two small Chinese characters engraved on back. Worn edges. Pure white background, no hands, no people. Macro product shot. Handheld size.</p>
+</details>
+    <details class="pr">
+  <summary><span>设定图 EN</span><button class="copy" data-copy="Single product reference on pure white background. Close-up of silver bookmark showing engraved patterns. Handheld size macro shot. No hands.">复制</button></summary>
+  <p>Single product reference on pure white background. Close-up of silver bookmark showing engraved patterns. Handheld size macro shot. No hands.</p>
+</details>
+    <details class="pr">
+  <summary><span>反向提示词</span><button class="copy" data-copy="hands, person, people, human, fingers, cartoon, anime, blurry, modern jewelry">复制</button></summary>
+  <p>hands, person, people, human, fingers, cartoon, anime, blurry, modern jewelry</p>
+</details>
+    <div class="pgroup-f"><button class="copy wide" data-copy="{
+  &quot;id&quot;: &quot;P02&quot;,
+  &quot;name&quot;: &quot;银书签\&quot;归一\&quot;&quot;,
+  &quot;scale&quot;: &quot;手持级&quot;,
+  &quot;summary&quot;: &quot;戏剧功能：连接沈砚过去的关键道具。正面刻着照心纹般的纹路，背面刻着\&quot;归一\&quot;。会渗出纯白气息与墨痕对峙。&quot;,
+  &quot;anchors&quot;: [
+    {
+      &quot;name&quot;: &quot;银色书签&quot;,
+      &quot;desc&quot;: &quot;边缘磨得发亮，正面刻一圈极细的纹路&quot;
+    },
+    {
+      &quot;name&quot;: &quot;归一&quot;,
+      &quot;desc&quot;: &quot;背面刻着两个小字&quot;
+    },
+    {
+      &quot;name&quot;: &quot;黑白对峙&quot;,
+      &quot;desc&quot;: &quot;纯白气息从书签渗出，与墨痕的温热对峙&quot;
+    }
+  ],
+  &quot;states&quot;: [
+    {
+      &quot;state&quot;: &quot;静置冷光&quot;,
+      &quot;prompt&quot;: &quot;Old silver bookmark with intricate engraved patterns on front. Engraved Chinese characters on back. Pure white background, no hands, no people. Macro shot, soft lighting. Handheld size reference.&quot;
+    }
+  ],
+  &quot;relatedScenes&quot;: [
+    &quot;S01&quot;,
+    &quot;S04&quot;
+  ],
+  &quot;carriedBy&quot;: [
+    &quot;苏听晚&quot;,
+    &quot;沈砚&quot;
+  ],
+  &quot;image&quot;: {
+    &quot;prompt&quot;: &quot;Vintage silver bookmark with intricate engraved scroll patterns on front surface. Two small Chinese characters engraved on back. Worn edges. Pure white background, no hands, no people. Macro product shot. Handheld size.&quot;,
+    &quot;negativePrompt&quot;: &quot;hands, person, people, human, fingers, cartoon, anime, blurry, modern jewelry&quot;,
+    &quot;sheet&quot;: &quot;Single product reference on pure white background. Close-up of silver bookmark showing engraved patterns. Handheld size macro shot. No hands.&quot;,
+    &quot;tags&quot;: [
+      &quot;silver bookmark&quot;,
+      &quot;engraved patterns&quot;,
+      &quot;vintage&quot;,
+      &quot;white background&quot;,
+      &quot;macro&quot;
+    ]
+  },
+  &quot;usage&quot;: {
+    &quot;episodes&quot;: [
+      3,
+      6,
+      7,
+      8,
+      10
+    ],
+    &quot;beats&quot;: [
+      &quot;道具觉醒&quot;,
+      &quot;规则反制&quot;,
+      &quot;大爆点&quot;
+    ]
+  }
+}">复制整个场景 JSON</button></div>
+  </div>
+</article>
+<article class="scene" id="pr-P03">
+  <header class="sc-h">
+    <span class="sc-id">P03</span>
+    <h3>七起死亡档案</h3>
+    <span class="badge">桌面级</span>
+    <span class="sc-use">出现集 3、5　承载爽点 世界观扩展</span>
+  </header>
+  <p class="sc-sum">戏剧功能：苏听晚调查的核心证据——七起不明原因衰竭死亡，都住在梧水街周边。</p>
+  <div class="plate plate-empty"><span>七起死亡档案 · 尚未出图<br><em>用下方提示词生成</em></span></div>
+  <p class="variant">关联场景：<b>S01、S05</b>　关联角色：苏听晚</p>
+  <section class="blk">
+    <h4>一致性锚点<small>每次生成都必须出现的特征——认场景靠它，QC 也靠它</small></h4>
+    <ol class="anchors"><li><b>牛皮纸档案袋</b><span>两个角起了毛边，边还是齐的</span></li><li><b>七份尸检报告</b><span>全部一致——没有器质性病变，死因不明</span></li></ol>
+  </section>
+  <section class="blk">
+    <h4>状态变体</h4>
+    <div class="lights"><div class="light"><i>摊开桌上</i><span class="mono">Kraft paper archive bag on wooden desk. Seven copies of autopsy reports spread out. Pure white background, no hands, no people. Desktop size product shot.</span><button class="copy mini" data-copy="Kraft paper archive bag on wooden desk. Seven copies of autopsy reports spread out. Pure white background, no hands, no people. Desktop size product shot.">复制</button></div></div>
+  </section>
+  <div class="pgroup">
+    <details class="pr">
+  <summary><span>主视角 EN</span><button class="copy" data-copy="Kraft paper archive bag on pure white background. Seven copies of autopsy report documents spread beside it. Desktop size. No hands, no people.">复制</button></summary>
+  <p>Kraft paper archive bag on pure white background. Seven copies of autopsy report documents spread beside it. Desktop size. No hands, no people.</p>
+</details>
+    <details class="pr">
+  <summary><span>设定图 EN</span><button class="copy" data-copy="Single product reference on pure white background. Top-down view of archive bag with documents. Desktop size scale reference. No hands.">复制</button></summary>
+  <p>Single product reference on pure white background. Top-down view of archive bag with documents. Desktop size scale reference. No hands.</p>
+</details>
+    <details class="pr">
+  <summary><span>反向提示词</span><button class="copy" data-copy="hands, person, people, human, fingers, cartoon, anime, blurry">复制</button></summary>
+  <p>hands, person, people, human, fingers, cartoon, anime, blurry</p>
+</details>
+    <div class="pgroup-f"><button class="copy wide" data-copy="{
+  &quot;id&quot;: &quot;P03&quot;,
+  &quot;name&quot;: &quot;七起死亡档案&quot;,
+  &quot;scale&quot;: &quot;桌面级&quot;,
+  &quot;summary&quot;: &quot;戏剧功能：苏听晚调查的核心证据——七起不明原因衰竭死亡，都住在梧水街周边。&quot;,
+  &quot;anchors&quot;: [
+    {
+      &quot;name&quot;: &quot;牛皮纸档案袋&quot;,
+      &quot;desc&quot;: &quot;两个角起了毛边，边还是齐的&quot;
+    },
+    {
+      &quot;name&quot;: &quot;七份尸检报告&quot;,
+      &quot;desc&quot;: &quot;全部一致——没有器质性病变，死因不明&quot;
+    }
+  ],
+  &quot;states&quot;: [
+    {
+      &quot;state&quot;: &quot;摊开桌上&quot;,
+      &quot;prompt&quot;: &quot;Kraft paper archive bag on wooden desk. Seven copies of autopsy reports spread out. Pure white background, no hands, no people. Desktop size product shot.&quot;
+    }
+  ],
+  &quot;relatedScenes&quot;: [
+    &quot;S01&quot;,
+    &quot;S05&quot;
+  ],
+  &quot;carriedBy&quot;: [
+    &quot;苏听晚&quot;
+  ],
+  &quot;image&quot;: {
+    &quot;prompt&quot;: &quot;Kraft paper archive bag on pure white background. Seven copies of autopsy report documents spread beside it. Desktop size. No hands, no people.&quot;,
+    &quot;negativePrompt&quot;: &quot;hands, person, people, human, fingers, cartoon, anime, blurry&quot;,
+    &quot;sheet&quot;: &quot;Single product reference on pure white background. Top-down view of archive bag with documents. Desktop size scale reference. No hands.&quot;,
+    &quot;tags&quot;: [
+      &quot;archive bag&quot;,
+      &quot;documents&quot;,
+      &quot;white background&quot;,
+      &quot;product shot&quot;
+    ]
+  },
+  &quot;usage&quot;: {
+    &quot;episodes&quot;: [
+      3,
+      5
+    ],
+    &quot;beats&quot;: [
+      &quot;世界观扩展&quot;
+    ]
+  }
+}">复制整个场景 JSON</button></div>
+  </div>
+</article>
+  </div>
+</section>
+
+<section class="top-sec" id="sec-gates">
+  <div class="sec-h"><span class="no">05</span><h2>质量门</h2></div>
+  <ul class="gate">
+  <li class="bad"><span class="m">✗</span><span>一致性锚点 3–5 个<small>七起死亡档案（2 个）</small></span></li>
+  <li class="ok"><span class="m">✓</span><span>光照状态至少 1 个且落成提示词</span></li>
+  <li class="ok"><span class="m">✓</span><span>参考图无人：反向提示词禁人（场景与道具都查）</span></li>
+  <li class="ok"><span class="m">✓</span><span>出图提示词全部英文</span></li>
+  <li class="ok"><span class="m">✓</span><span>提示词不含角色名<small>未提供 cast.json，本门跳过（视为通过）</small></span></li>
+  <li class="ok"><span class="m">✓</span><span>变体引用完整（variantOf 存在且带 changes）</span></li>
+  <li class="ok"><span class="m">✓</span><span>道具状态至少 1 个且落成提示词</span></li>
+  <li class="bad"><span class="m">✗</span><span>道具尺度参照写进提示词<small>速写本与墨痕（提示词缺「handheld scale」）；银书签&quot;归一&quot;（提示词缺「handheld scale」）；七起死亡档案（提示词缺「tabletop scale」）</small></span></li>
+  <li class="ok"><span class="m">✓</span><span>道具参考图无手：反向提示词禁手</span></li>
+  <li class="ok"><span class="m">✓</span><span>道具设定图纯白背景可抠</span></li>
+</ul>
+  <p class="gsum"><b>2 项未过</b></p>
+</section>
+
+<p class="foot">设定与提示词由模型依据大纲/原文生成，质量门由脚本确定性检查。参考图一律无人——人是另一层资产；道具参考图另加无手、纯白背景。</p>
+</div>
+
+<div class="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-x" aria-label="关闭">关闭</button>
+  <img alt="">
+</div>
+
+<script type="application/json" id="art-data">{"source":"影笔代理人","dynasty":"当代","scenes":[{"id":"S01","name":"一心堂画室","primary":true,"summary":"设计意图：老街二楼的老式画室，既是沈砚的工作空间，也是影契发生的神圣/诡异场所。空间要旧、要安静、要有时间沉淀感。","anchors":[{"name":"木格窗","desc":"半开，夕阳透进来在地板投下格子光"},{"name":"画架速写本","desc":"笔尖悬在纸面上方，墨痕在黄昏光下泛冷光"},{"name":"老旧木地板","desc":"有岁月划痕和蜡油痕迹，沈砚站立处空无影子"},{"name":"松烟墨味","desc":"视觉上通过墨瓶、砚台、笔筒呈现"}],"lighting":[{"state":"黄昏","prompt":"Interior of old Chinese artist studio on second floor of a heritage street building. Warm orange-grey dusk light streaming through half-open wooden lattice window. Dust particles floating in light beam. Ink bottle and brush pot on wooden desk. Old wooden floor with visible grain and wax marks. No people. Cinematic warm tones, shallow depth of field."},{"state":"上午阳光","prompt":"Same artist studio interior but morning sunlight streaming directly through wooden lattice window. Bright warm light on old wooden floor. Easel and sketchbook on desk. No people. Warm golden morning light."},{"state":"夜晚","prompt":"Same studio interior at night. Only desk lamp and ink bottle catching faint glow. Wooden lattice window dark outside. No people. Cool blue ambient mixed with warm yellow desk lamp. Quiet, eerie atmosphere."}],"image":{"prompt":"Empty artist studio interior, second floor of old Chinese heritage building. Wooden lattice window half open, warm dusk light streaming in. Easel with sketchbook, ink bottle, brush pot on desk. Old wooden floor with scratches. No people, no shadows. Cinematic, warm tones.","negativePrompt":"people, person, human, face, hands, character, animated, cartoon, anime, shadow of person","sheet":"Single scene reference sheet on warm neutral background. Wide establishing shot of the studio interior. Shows wooden lattice window, easel, desk with ink tools, and old wooden floor. Dusk lighting. No people.","tags":["artist studio","wooden interior","dusk light","warm tones","ink tools"]},"usage":{"episodes":[1,2,3,5,9],"beats":["悬念钩","情感爆点","身世揭秘"]}},{"id":"S02","name":"设计院会议室","primary":false,"summary":"设计意图：长条形会议室，日光灯，十二个人围坐，主位在一端。要的是职场的压抑感和当众打脸的戏剧性。","anchors":[{"name":"长条形会议桌","desc":"坐了十二个人，桌面摊着项目进度表"},{"name":"主位","desc":"主管坐的位置，居高临下"},{"name":"日光灯","desc":"冷白色，照得每个人脸都很白"}],"lighting":[{"state":"日光灯上午","prompt":"Interior of modern corporate conference room. Long rectangular table seating 12 people. Cold white fluorescent ceiling lights. Head of table on the far end. Window blinds half closed. No people. Realistic office style, cold tones."}],"image":{"prompt":"Empty modern corporate conference room, long rectangular table, 12 office chairs around it. Cold white fluorescent lighting. Project schedule papers on table. No people, no shadows. Wide establishing shot.","negativePrompt":"people, person, human, face, hands, character, animated, cartoon, anime","sheet":"Single scene reference sheet. Wide shot of conference room interior. Shows long table, chairs, fluorescent lights, head of table position. Cold tones.","tags":["conference room","office interior","fluorescent light","cold tones"]},"usage":{"episodes":[2],"beats":["打脸"]}},{"id":"S03","name":"梧水街老街","primary":true,"summary":"设计意图：黄昏石板路，路灯昏黄，行人的影子被拉得很长。要的是日常感下的诡异——每个人脸上笑着，影子在说不敢说的话。","anchors":[{"name":"石板路","desc":"老街的青石板，被路灯照得一格一格"},{"name":"昏黄路灯","desc":"把行人的影子拉得很长"},{"name":"夜市嘈杂","desc":"远处夜市的声音"}],"lighting":[{"state":"黄昏路灯","prompt":"Old Chinese heritage street at dusk. Stone pavement lit by yellow streetlamps. Long shadows stretching on ground. Shops with warm lights in windows. No people. Cinematic dusk atmosphere, long shadows."}],"image":{"prompt":"Empty old Chinese heritage street at dusk. Stone pavement, yellow streetlamps casting long shadows. Shop windows with warm interior lights. No people. Cinematic dusk atmosphere, long shadows on ground.","negativePrompt":"people, person, human, face, hands, character, animated, cartoon, anime, modern cars","sheet":"Single scene reference sheet. Wide shot of old street at dusk. Shows stone pavement, streetlamps, long shadows, shop lights.","tags":["old street","dusk","streetlamp","long shadows","cinematic"]},"usage":{"episodes":[4,9],"beats":["世界观扩展","恐怖爆点"]}},{"id":"S04","name":"茶香巷归一盏茶馆","primary":false,"summary":"设计意图：暗巷里的茶馆，灯火早已熄灭，木门紧闭。要的是守候的紧张感和影商出现的诡异氛围。","anchors":[{"name":"窄巷","desc":"两侧老旧民居，木门紧闭，墙爬干枯爬山虎"},{"name":"茶馆门面","desc":"灯火熄灭，木门紧闭"},{"name":"暗影守候","desc":"对面的暗影里，两人守候"}],"lighting":[{"state":"夜晚暗影","prompt":"Narrow old Chinese alley at night. Old wooden doors closed on both sides. Dried ivy climbing on walls. One teahouse with lights off. Faint streetlight from distance. No people. Dark quiet atmosphere, ominous."}],"image":{"prompt":"Empty narrow old Chinese alley at night. Old wooden doors closed, dried ivy on walls. One teahouse with lights off in the distance. Faint streetlight. No people. Dark quiet atmosphere, ominous.","negativePrompt":"people, person, human, face, hands, character, animated, cartoon, anime, bright lights","sheet":"Single scene reference sheet. Dark alley interior. Shows old doors, ivy, distant teahouse with lights off. Night atmosphere.","tags":["dark alley","night","teahouse","ominous","old wood"]},"usage":{"episodes":[6,7,8],"beats":["悬疑推进","规则反制"]}},{"id":"S05","name":"档案馆地下库房","primary":false,"summary":"设计意图：不见天日的地下库房，纸霉与旧木的气味凝在潮气里。要的是历史感和秘密感。","anchors":[{"name":"地下石阶","desc":"脚步声在走廊里弹回来"},{"name":"铁门锁","desc":"一串铜钥匙，打开最里侧的铁门"},{"name":"旧档案","desc":"纸霉与旧木的气味"}],"lighting":[{"state":"昏暗库房","prompt":"Underground archive storage room. Dim fluorescent light. Old metal shelves with yellowed files. Concrete walls. Musty atmosphere. No people. Cold damp tones."}],"image":{"prompt":"Empty underground archive storage room. Dim fluorescent lighting. Metal shelves with old yellowed files. Concrete walls. Musty damp atmosphere. No people. Cold tones.","negativePrompt":"people, person, human, face, hands, character, animated, cartoon, anime, bright light","sheet":"Single scene reference sheet. Underground archive interior. Shows shelves with files, concrete walls, dim lighting.","tags":["archive","underground","dim light","old files","cold tones"]},"usage":{"episodes":[5],"beats":["悬疑推进"]}},{"id":"S06","name":"旧墓园","primary":false,"summary":"设计意图：荒废十年的城郊墓园，石碑东倒西歪，荒草半人高。黄昏夕阳把残碑影子拉得老长。要的是荒凉和脱壳影出现的恐怖感。","anchors":[{"name":"残碑","desc":"石碑东倒西歪，缝里长出半人高的荒草"},{"name":"黄昏夕阳","desc":"从西边斜过来，把影子拉得老长"},{"name":"脱壳影","desc":"悬浮的黑色影子，不在地面上"}],"lighting":[{"state":"黄昏夕阳","prompt":"Abandoned old cemetery at dusk. Tilted gravestones, half-height wild grass. Orange sunset light from west casting long shadows. No people. Desolate eerie atmosphere."}],"image":{"prompt":"Empty abandoned old cemetery at dusk. Tilted gravestones, tall wild grass. Orange sunset casting long shadows across ground. No people. Desolate eerie atmosphere. Wide shot.","negativePrompt":"people, person, human, face, hands, character, animated, cartoon, anime, well-maintained cemetery","sheet":"Single scene reference sheet. Wide shot of abandoned cemetery at dusk. Shows tilted gravestones, wild grass, long sunset shadows.","tags":["cemetery","dusk","desolate","long shadows","wild grass"]},"usage":{"episodes":[10],"beats":["大爆点"]}}],"props":[{"id":"P01","name":"速写本与墨痕","scale":"手持级","summary":"戏剧功能：缔约工具——照心纹、代行纹、偿价纹三道纹路在速写本上生成。沈砚右手的墨痕是身份标记。","anchors":[{"name":"厚皮速写本","desc":"翻开在新的一页，三道纹路生成时纸面嘶嘶响"},{"name":"右手墨痕","desc":"沈砚手背上淡墨痕，像烙印，黄昏时泛冷光"},{"name":"纸边碳化","desc":"契约完成时纸边卷起碳化，飘下半透明影屑"}],"states":[{"state":"空白待画","prompt":"Blank thick-sketch sketchbook opened to a fresh page, lying on wooden desk. Black ink bottle and fine brush beside it. Pure white background, no hands, no people. Product photography style, soft studio lighting. Handheld size reference."},{"state":"三道纹路成型","prompt":"Sketchbook page with three intersecting ink patterns spreading like ink dropped in water. Delicate flowing lines forming abstract runes. Paper edges slightly curling and carbonizing. Pure white background, no hands, no people. Macro shot, dramatic lighting. Handheld size reference."}],"relatedScenes":["S01"],"carriedBy":["沈砚"],"image":{"prompt":"Blank thick sketchbook opened to a fresh page, on pure white background. A black ink bottle and fine brush placed beside it. Handheld size product shot. No hands, no people.","negativePrompt":"hands, person, people, human, fingers, cartoon, anime, blurry, shadow of person","sheet":"Single product reference on pure white background. Top-down view of open sketchbook with ink bottle and brush beside it. Handheld size scale reference. No hands.","tags":["sketchbook","ink bottle","brush","white background","product shot"]},"usage":{"episodes":[1,2,3,9,10],"beats":["悬念钩","情感爆点","大爆点"]}},{"id":"P02","name":"银书签\"归一\"","scale":"手持级","summary":"戏剧功能：连接沈砚过去的关键道具。正面刻着照心纹般的纹路，背面刻着\"归一\"。会渗出纯白气息与墨痕对峙。","anchors":[{"name":"银色书签","desc":"边缘磨得发亮，正面刻一圈极细的纹路"},{"name":"归一","desc":"背面刻着两个小字"},{"name":"黑白对峙","desc":"纯白气息从书签渗出，与墨痕的温热对峙"}],"states":[{"state":"静置冷光","prompt":"Old silver bookmark with intricate engraved patterns on front. Engraved Chinese characters on back. Pure white background, no hands, no people. Macro shot, soft lighting. Handheld size reference."}],"relatedScenes":["S01","S04"],"carriedBy":["苏听晚","沈砚"],"image":{"prompt":"Vintage silver bookmark with intricate engraved scroll patterns on front surface. Two small Chinese characters engraved on back. Worn edges. Pure white background, no hands, no people. Macro product shot. Handheld size.","negativePrompt":"hands, person, people, human, fingers, cartoon, anime, blurry, modern jewelry","sheet":"Single product reference on pure white background. Close-up of silver bookmark showing engraved patterns. Handheld size macro shot. No hands.","tags":["silver bookmark","engraved patterns","vintage","white background","macro"]},"usage":{"episodes":[3,6,7,8,10],"beats":["道具觉醒","规则反制","大爆点"]}},{"id":"P03","name":"七起死亡档案","scale":"桌面级","summary":"戏剧功能：苏听晚调查的核心证据——七起不明原因衰竭死亡，都住在梧水街周边。","anchors":[{"name":"牛皮纸档案袋","desc":"两个角起了毛边，边还是齐的"},{"name":"七份尸检报告","desc":"全部一致——没有器质性病变，死因不明"}],"states":[{"state":"摊开桌上","prompt":"Kraft paper archive bag on wooden desk. Seven copies of autopsy reports spread out. Pure white background, no hands, no people. Desktop size product shot."}],"relatedScenes":["S01","S05"],"carriedBy":["苏听晚"],"image":{"prompt":"Kraft paper archive bag on pure white background. Seven copies of autopsy report documents spread beside it. Desktop size. No hands, no people.","negativePrompt":"hands, person, people, human, fingers, cartoon, anime, blurry","sheet":"Single product reference on pure white background. Top-down view of archive bag with documents. Desktop size scale reference. No hands.","tags":["archive bag","documents","white background","product shot"]},"usage":{"episodes":[3,5],"beats":["世界观扩展"]}}]}</script>
+<script>
+const L = {"copied":"已复制","failed":"复制失败"};
+
+// 图片弹层：点图放大，点背景或 Esc 关闭
+const lb = document.querySelector('.lightbox');
+const lbImg = lb.querySelector('img');
+function closeLb() { lb.classList.remove('on'); lbImg.removeAttribute('src'); }
+document.addEventListener('click', (e) => {
+  const z = e.target.closest('.zoom');
+  if (z) { lbImg.src = z.dataset.src; lb.classList.add('on'); return; }
+  if (e.target.closest('.lightbox')) closeLb();
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLb(); });
+
+// 复制按钮
+document.addEventListener('click', async (e) => {
+  const btn = e.target.closest('.copy');
+  if (!btn) return;
+  e.preventDefault();
+  const label = btn.textContent;
+  try {
+    await navigator.clipboard.writeText(btn.dataset.copy);
+    btn.textContent = L.copied;
+    btn.dataset.done = '1';
+  } catch {
+    btn.textContent = L.failed;
+  }
+  setTimeout(() => { btn.textContent = label; delete btn.dataset.done; }, 1600);
+});
+
+// 导出：报告自己带着完整的 art.json，下载的是它原样
+document.querySelector('.expo').addEventListener('click', (e) => {
+  const btn = e.currentTarget;
+  const url = URL.createObjectURL(
+    new Blob([document.getElementById('art-data').textContent], { type: 'application/json' }),
+  );
+  const a = Object.assign(document.createElement('a'), { href: url, download: btn.dataset.name });
+  a.click();
+  // 别立刻回收——Safari 会抢在下载读完之前撤掉 blob
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+});
+</script>
+</body></html>

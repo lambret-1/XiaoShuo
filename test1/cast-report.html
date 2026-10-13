@@ -1,0 +1,1279 @@
+<!doctype html>
+<html lang="zh"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>影笔代理人 · 角色设定集</title>
+<style>
+/* 冷灰印张 + 铁锈红印记。红色只用在与原文有关的地方和当前选中态。 */
+:root{
+  --paper:#eceded; --panel:#f5f6f5; --side:#e4e6e3; --ink:#191d21; --ink-2:#5b636a; --ink-3:#8c9298;
+  --rule:#d2d5d0; --rule-2:#c2c6bf; --seal:#8a3324; --seal-soft:#8a332412;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC",Georgia,"Iowan Old Style",serif;
+  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --top:60px; --side-w:400px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.7 var(--sans);
+  -webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{margin:0;font-weight:400}
+button{font-family:inherit}
+
+/* ---------- 顶栏 ---------- */
+.top{position:sticky;top:0;z-index:20;height:var(--top);display:flex;align-items:center;gap:24px;
+  padding:0 20px;background:var(--panel);border-bottom:1px solid var(--rule-2)}
+.brand{display:flex;align-items:baseline;gap:10px;flex:none}
+.brand h1{font:400 22px/1 var(--serif);letter-spacing:.04em}
+.brand em{font:italic 12px/1 var(--serif);color:var(--ink-3)}
+.search{flex:1;max-width:720px;position:relative}
+.search input{width:100%;height:34px;padding:0 12px 0 32px;border:1px solid var(--rule-2);
+  border-radius:3px;background:var(--paper);color:var(--ink);font:14px/1 var(--sans);outline:none}
+.search input:focus{border-color:var(--seal)}
+.search svg{position:absolute;left:10px;top:9px;width:14px;height:14px;stroke:var(--ink-3);fill:none}
+.topmeta{margin-left:auto;font-size:12px;color:var(--ink-3);display:flex;align-items:center;
+  gap:10px;flex:none}
+.topmeta i{font-style:normal;color:var(--rule-2)}
+/* 导出：下载的就是内嵌的那份 cast.json，编辑完能直接喂回 render */
+.expo{margin-left:4px;font:500 11px/1 var(--sans);color:var(--ink-2);background:var(--paper);
+  border:1px solid var(--rule-2);border-radius:2px;padding:6px 10px;cursor:pointer;transition:.15s}
+.expo:hover{border-color:var(--seal);color:var(--seal)}
+.expo:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+
+/* ---------- 骨架 ---------- */
+.shell{display:grid;grid-template-columns:var(--side-w) minmax(0,1fr);align-items:start}
+@media(max-width:1080px){:root{--side-w:100%}.shell{grid-template-columns:1fr}}
+
+/* ---------- 左栏 ---------- */
+.side{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow-y:auto;
+  background:var(--side);border-right:1px solid var(--rule-2)}
+@media(max-width:1080px){.side{position:static;height:auto}}
+.synopsis{padding:18px 20px;border-bottom:1px solid var(--rule)}
+.lbl{font:500 10px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3)}
+.synopsis p{margin:10px 0 0;font:400 14px/1.95 var(--serif)}
+/* 摘要默认三行，底部渐隐——左栏第一屏要留给角色列表。点一下展开，之后不再收起 */
+.syn-clamp{cursor:pointer}
+.syn-clamp p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+  -webkit-mask-image:linear-gradient(180deg,#000 58%,transparent);
+  mask-image:linear-gradient(180deg,#000 58%,transparent)}
+.syn-more{display:none;margin-top:7px;padding:0;background:none;border:0;cursor:pointer;
+  font:500 11px/1 var(--sans);letter-spacing:.06em;color:var(--seal)}
+.syn-clamp .syn-more{display:block}
+.syn-more:hover{text-decoration:underline}
+.syn-more:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+.roster-h{padding:14px 20px 8px}
+.roster{display:block}
+.rost{display:grid;grid-template-columns:76px minmax(0,1fr);gap:12px;width:100%;text-align:left;
+  padding:12px 20px;background:none;border:0;border-bottom:1px solid var(--rule);
+  border-left:2px solid transparent;cursor:pointer;color:inherit}
+.rost:hover{background:#00000006}
+.rost.on{background:var(--panel);border-left-color:var(--seal)}
+.rost:focus-visible{outline:2px solid var(--seal);outline-offset:-2px}
+/* 缩略图 = 设定图的左栏切片。设定图固定 16:9、左栏占约 34%，
+   所以把整图按 1/0.34 ≈ 294% 放大再左上对齐，裁出来正好是半身像。
+   比 <img> + object-position 可控：不依赖浏览器怎么 cover。 */
+.rost-thumb{display:block;width:76px;height:76px;border:1px solid var(--rule-2);border-radius:6px;
+  background:#fff no-repeat left top;background-size:294% auto}
+.rost-body{min-width:0}
+.rost-top{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+.rost-n{font:500 10px/1 var(--mono);color:var(--ink-3);font-style:normal}
+.rost-name{font:400 17px/1.2 var(--serif);letter-spacing:.03em}
+.rost-meta{font-size:11px;color:var(--ink-3)}
+.rost-one{display:block;margin-top:5px;font-size:12.5px;line-height:1.65;color:var(--ink-2)}
+.rost-chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px}
+.rost-chips i{font-style:normal;font-size:11px;padding:1px 6px;border:1px solid var(--rule-2);
+  border-radius:2px;color:var(--ink-2);background:var(--paper)}
+.side-foot{padding:14px 20px 28px;font-size:11px;line-height:1.7;color:var(--ink-3)}
+.badge{font-size:11px;padding:1px 7px;border:1px solid var(--rule-2);border-radius:2px;color:var(--ink-2)}
+.rost.on .badge,.char-h .badge{border-color:var(--seal);color:var(--seal)}
+
+/* ---------- 主区 ---------- */
+.main{padding:26px 28px 72px;min-width:0;max-width:1500px}
+.char{display:none}
+.char.on{display:block}
+.char-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+  padding-bottom:14px;border-bottom:1px solid var(--rule-2)}
+.char-n{font:500 13px/1 var(--mono);color:var(--seal)}
+.char-h h2{font:400 clamp(24px,2.4vw,30px)/1.1 var(--serif);letter-spacing:.05em}
+.aka{font-size:12px;color:var(--ink-3)}
+.char-one{margin-left:auto;font:400 14px/1.7 var(--serif);color:var(--ink-2);text-align:right;max-width:44ch}
+@media(max-width:900px){.char-one{margin-left:0;text-align:left}}
+
+.upper{display:grid;grid-template-columns:minmax(0,1fr) 500px;gap:26px;align-items:start;margin-top:20px}
+@media(max-width:1240px){.upper{grid-template-columns:1fr}}
+
+/* 设定图是白底印张 */
+.plate-wrap{position:relative;margin:0}
+.plate{display:block;width:100%;padding:0;background:#fff;border:1px solid var(--rule-2);
+  border-radius:2px;overflow:hidden;cursor:zoom-in}
+.plate img{display:block;width:100%;height:auto}
+.plate:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+/* 右下角浮在图上，hover 才明显——别挡住画面 */
+.copy-img{position:absolute;right:10px;bottom:10px;font:500 11px/1 var(--sans);color:var(--ink-2);
+  background:var(--paper);border:1px solid var(--rule-2);border-radius:3px;padding:6px 10px;
+  cursor:pointer;opacity:.55;transition:.15s}
+.plate-wrap:hover .copy-img{opacity:1}
+.copy-img:hover{border-color:var(--seal);color:var(--seal)}
+.copy-img:focus-visible{opacity:1;outline:2px solid var(--seal);outline-offset:2px}
+.copy-img[data-done]{border-color:var(--seal);color:var(--seal);opacity:1}
+
+/* 弹层 */
+.lightbox{position:fixed;inset:0;z-index:50;display:none;place-items:center;
+  background:#191d21e6;padding:32px;cursor:zoom-out}
+.lightbox.on{display:grid}
+.lightbox img{max-width:100%;max-height:100%;background:#fff;border-radius:2px;
+  box-shadow:0 8px 40px #0006}
+.lightbox-x{position:absolute;top:18px;right:22px;font:500 13px/1 var(--sans);color:#fff;
+  background:none;border:1px solid #fff6;border-radius:3px;padding:8px 12px;cursor:pointer}
+.lightbox-x:hover{border-color:#fff}
+.plate-empty{display:grid;place-items:center;min-height:220px;text-align:center;
+  border:1px dashed var(--rule-2);background:var(--panel);color:var(--ink-3);font-size:13px}
+.plate-empty em{font-style:normal;font-size:12px;opacity:.8}
+.plate-c{margin:7px 0 0;font-size:11px;letter-spacing:.1em;color:var(--ink-3)}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 30px;margin-top:24px}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}}
+.blk{margin-bottom:20px}
+.blk h3{font:500 11px/1 var(--sans);letter-spacing:.2em;color:var(--seal);margin-bottom:7px}
+.blk p{margin:0;font-size:13.5px;line-height:1.85}
+
+/* 原文：衬线体，铁锈红边栏。这里是书自己在说话 */
+.source .quotes{display:grid;grid-template-columns:1fr 1fr;gap:10px 30px}
+@media(max-width:700px){.source .quotes{grid-template-columns:1fr}}
+.source blockquote{margin:0;padding-left:13px;border-left:2px solid var(--seal);
+  font:400 13.5px/1.85 var(--serif)}
+
+/* ---------- 右侧信息卡 ---------- */
+.side-cards{display:flex;flex-direction:column;gap:14px}
+.card{border:1px solid var(--rule);border-radius:2px;background:var(--panel);padding:14px 16px}
+.card h4{font:500 11px/1 var(--sans);letter-spacing:.2em;color:var(--ink-3);margin-bottom:10px;
+  display:flex;align-items:center;gap:8px}
+.tag-en{font:500 9px/1 var(--mono);letter-spacing:.22em;color:var(--rule-2);font-style:normal}
+.card dl{margin:0}
+.kv{display:flex;gap:12px;padding:2.5px 0;font-size:13px}
+.kv dt{color:var(--ink-3);flex:none;width:46px}
+.kv dd{margin:0;min-width:0}
+.rel-n{color:var(--ink)!important;width:auto!important;min-width:46px}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 0;padding:0;list-style:none}
+.tags li{font:400 11px/1.5 var(--mono);color:var(--ink-2);border:1px solid var(--rule-2);
+  background:var(--paper);border-radius:2px;padding:1px 6px}
+
+/* ---------- 提示词 ---------- */
+.prompts{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}
+@media(max-width:900px){.prompts{grid-template-columns:1fr}}
+.pgroup{border:1px solid var(--rule);border-radius:2px;background:var(--panel);padding:6px 14px 10px}
+.pr{border-bottom:1px solid var(--rule)}
+.pgroup .pr:last-of-type{border-bottom:0}
+.pr summary{display:flex;align-items:center;gap:10px;padding:11px 0;cursor:pointer;list-style:none;
+  font:500 12px/1 var(--sans);letter-spacing:.04em}
+.pr summary::-webkit-details-marker{display:none}
+.pr summary::before{content:"▸";color:var(--seal);font-size:11px;transition:transform .15s}
+.pr[open] summary::before{transform:rotate(90deg)}
+.pr summary span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pr p{margin:0 0 12px;padding:11px 12px;background:var(--paper);border:1px solid var(--rule);
+  border-radius:2px;font:400 12px/1.75 var(--mono);white-space:pre-wrap;word-break:break-word}
+.pgroup-f{padding:12px 0 4px}
+
+.copy{flex:none;font:500 11px/1 var(--sans);color:var(--ink-2);background:var(--paper);
+  border:1px solid var(--rule-2);border-radius:2px;padding:4px 10px;cursor:pointer;transition:.15s}
+.copy:hover{border-color:var(--seal);color:var(--seal)}
+.copy:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+.copy[data-done]{border-color:var(--seal);color:var(--seal)}
+.copy.wide{width:100%;padding:9px}
+
+/* ---------- 关系图谱 ---------- */
+/* 布局在 Node 里算好写进 SVG，这里只管高亮。红色仍然只给选中态 */
+.gtoggle{display:flex;align-items:center;gap:9px;width:100%;padding:13px 20px;text-align:left;
+  background:none;border:0;border-bottom:1px solid var(--rule);border-left:2px solid transparent;
+  cursor:pointer;color:var(--ink-2);font:500 12px/1 var(--sans);letter-spacing:.1em}
+.gtoggle:hover{background:#00000006}
+.gtoggle.on{background:var(--panel);border-left-color:var(--seal);color:var(--seal)}
+.gtoggle:focus-visible{outline:2px solid var(--seal);outline-offset:-2px}
+.gtoggle svg{width:15px;height:15px;flex:none;stroke:currentColor;fill:none;stroke-width:1.3}
+.graph{display:none}
+.graph.on{display:block}
+.main.gmode .char{display:none}
+.graph-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+  padding-bottom:14px;border-bottom:1px solid var(--rule-2)}
+.graph-h h2{font:400 clamp(22px,2.2vw,28px)/1.1 var(--serif);letter-spacing:.05em}
+.graph-h .hint{margin-left:auto;font-size:12px;color:var(--ink-3)}
+.graph-body{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:26px;
+  align-items:start;margin-top:20px}
+@media(max-width:1100px){.graph-body{grid-template-columns:1fr}}
+.graph-canvas{background:var(--panel);border:1px solid var(--rule);border-radius:2px;padding:10px}
+.graph-canvas svg{display:block;width:100%;height:auto}
+.graph-empty{margin:0 0 8px;text-align:center;font-size:12.5px;color:var(--ink-3)}
+.gedge{fill:none;stroke:var(--rule-2);stroke-width:1.1;transition:.15s}
+.gedge.hot{stroke:var(--seal);stroke-width:2}
+.gedge.dim{opacity:.15}
+.gnode{cursor:pointer;transition:.15s}
+.gnode .gdot{fill:var(--paper);stroke:var(--ink-2);stroke-width:1.5}
+/* 看不见的命中区：节点本身才十来个像素，光标很难压准。
+   单独一个类，免得被下面 .lead / .hot 的规则一起染色 */
+.gnode .ghit{fill:none;stroke:none;pointer-events:all}
+.gnode text{font:400 13px var(--serif);fill:var(--ink)}
+.gnode.lead .gdot{fill:var(--seal);stroke:var(--seal)}
+.gnode.hot .gdot{stroke:var(--seal);stroke-width:2.5}
+.gnode.hot text{fill:var(--seal)}
+.gnode.dim{opacity:.22}
+.gnode:focus-visible{outline:2px solid var(--seal)}
+/* 弦上的关系文字。默认按边数决定开不开，悬停的那条永远显示。
+   paint-order + 同色描边 = 给字加一圈底衬，压在弦上也读得清 */
+.glabel{display:none;font:400 9px var(--sans);fill:var(--ink-3);pointer-events:none;
+  paint-order:stroke;stroke:var(--panel);stroke-width:3px;stroke-linejoin:round}
+.graph.labels .glabel{display:block}
+.glabel.dim{opacity:.15}
+.glabel.hot{display:block;fill:var(--seal);font-weight:500}
+.glabtoggle{font:500 11px/1 var(--sans);color:var(--ink-2);background:var(--paper);
+  border:1px solid var(--rule-2);border-radius:2px;padding:4px 10px;cursor:pointer;transition:.15s}
+.glabtoggle:hover{border-color:var(--seal);color:var(--seal)}
+.glabtoggle.on{border-color:var(--seal);color:var(--seal);background:var(--seal-soft)}
+.glabtoggle:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+.grel{border:1px solid var(--rule);border-radius:2px;background:var(--panel)}
+.grel h4{font:500 11px/1 var(--sans);letter-spacing:.2em;color:var(--ink-3);padding:14px 16px 11px}
+.grel-list{max-height:56vh;overflow-y:auto;border-top:1px solid var(--rule)}
+.grow{display:block;width:100%;text-align:left;padding:11px 16px;background:none;border:0;
+  border-bottom:1px solid var(--rule);cursor:pointer;color:inherit;transition:.15s}
+.grow:last-child{border-bottom:0}
+.grow:hover,.grow.hot{background:var(--seal-soft)}
+.grow.dim{opacity:.3}
+.grow:focus-visible{outline:2px solid var(--seal);outline-offset:-2px}
+.grow b{font:400 14px/1.4 var(--serif);letter-spacing:.03em}
+.grow i{font-style:normal;color:var(--ink-3);padding:0 6px}
+.grow span{display:block;margin-top:4px;font-size:12.5px;line-height:1.65;color:var(--ink-2)}
+.grow em{font-style:normal;color:var(--ink-3)}
+.grel-foot{margin:0;padding:11px 16px;border-top:1px solid var(--rule);
+  font-size:11px;line-height:1.6;color:var(--ink-3)}
+
+/* 签名：推断标记 */
+.inf{color:var(--ink-3);font-size:.88em;background:var(--seal-soft);padding:0 3px;border-radius:2px}
+
+.nomatch{display:none;padding:20px;font-size:13px;color:var(--ink-3)}
+.nomatch.on{display:block}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* 屏幕上一次一个角色，纸上要完整 */
+@media print{
+  .top,.side,.copy{display:none!important}
+  .shell{display:block}
+  .main{padding:0}
+  .graph{display:block!important;page-break-after:always}
+  .char{display:block!important;page-break-after:always}
+  .pr p{display:block!important}
+  .pr summary::before{content:""}
+  body{background:#fff}
+}
+</style></head><body>
+
+<header class="top">
+  <div class="brand"><h1>影笔代理人</h1></div>
+  <div class="search">
+    <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" stroke-width="1.5"/><path d="M11 11l4 4" stroke-width="1.5"/></svg>
+    <input id="q" type="search" placeholder="搜索角色、特质、身份" aria-label="搜索角色、特质、身份" autocomplete="off">
+  </div>
+  <div class="topmeta">
+    <span>角色设定集</span><i>·</i>
+    <span>5 位角色 · 按戏份排序</span>
+    <button class="expo" data-name="影笔代理人-cast.json">导出 JSON</button>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="side">
+    <section class="synopsis syn-clamp"><div class="lbl">故事摘要</div><p>黄昏的梧水街老街二楼，一心堂画室。没有影子的画室主人沈砚，替被压榨三年的绘图员周明画出愤怒的勇气，代价是永久剥离愤怒。同一时刻，档案馆的苏听晚带着七起不明原因死亡找上门——她的影子安静得不像活人。</p><button class="syn-more">全部展开</button></section>
+    <button class="gtoggle" aria-controls="graph">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="3.2" cy="4" r="1.9"/><circle cx="12.8" cy="6.2" r="1.9"/><circle cx="7.2" cy="13" r="1.9"/><path d="M5 4.6l6 1.2M4 5.9l2.5 5.4M11.7 7.9l-3.3 3.7"/></svg>
+      <span>关系图谱</span>
+    </button>
+    <div class="roster-h lbl">角色 · 按戏份排序</div>
+    <nav class="roster" aria-label="角色索引">
+      <button class="rost on" data-target="p-沈砚" data-hay="沈砚 画室主人 无影画师 一心堂画室主人，影契代理人 男 二十七八岁 冷静 疏离 观察者 克制 脚下没有影子的画室主人，黄昏以后替人画影契，收取人格代价。">
+  <span class="rost-thumb"></span>
+  <span class="rost-body">
+    <span class="rost-top">
+      <em class="rost-n">01</em>
+      <b class="rost-name">沈砚</b>
+      <span class="badge">主角</span>
+      <span class="rost-meta">男 · 二十七八岁</span>
+    </span>
+    <span class="rost-one">脚下没有影子的画室主人，黄昏以后替人画影契，收取人格代价。</span>
+    <span class="rost-chips"><i>冷静</i><i>疏离</i><i>观察者</i><i>克制</i></span>
+  </span>
+</button>
+<button class="rost" data-target="p-苏听晚" data-hay="苏听晚 档案馆 市档案馆工作人员 女 二十六七岁 冷静 好奇 坚定 压抑 市档案馆的女人，调查七起不明原因死亡，她的影子安静得不像活人。">
+  <span class="rost-thumb"></span>
+  <span class="rost-body">
+    <span class="rost-top">
+      <em class="rost-n">02</em>
+      <b class="rost-name">苏听晚</b>
+      <span class="badge">主角</span>
+      <span class="rost-meta">女 · 二十六七岁</span>
+    </span>
+    <span class="rost-one">市档案馆的女人，调查七起不明原因死亡，她的影子安静得不像活人。</span>
+    <span class="rost-chips"><i>冷静</i><i>好奇</i><i>坚定</i><i>压抑</i></span>
+  </span>
+</button>
+<button class="rost" data-target="p-周明" data-hay="周明 绘图员 建筑设计院绘图员 男 三十二三岁 压抑 怯懦 隐忍 内心积压愤怒 被压榨三年的建筑设计院绘图员，影子替他说出了不敢说的话。">
+  <span class="rost-thumb"></span>
+  <span class="rost-body">
+    <span class="rost-top">
+      <em class="rost-n">03</em>
+      <b class="rost-name">周明</b>
+      <span class="badge">配角</span>
+      <span class="rost-meta">男 · 三十二三岁</span>
+    </span>
+    <span class="rost-one">被压榨三年的建筑设计院绘图员，影子替他说出了不敢说的话。</span>
+    <span class="rost-chips"><i>压抑</i><i>怯懦</i><i>隐忍</i><i>内心积压愤怒</i></span>
+  </span>
+</button>
+<button class="rost" data-target="p-黑市影商" data-hay="黑市影商 影商 黑市影商 不明 不明 阴冷 操控性 掠夺 篡改契约、诱导普通人缔约、让影子不回归、批量制造空洞化的黑市经营者。">
+  <span class="rost-thumb"></span>
+  <span class="rost-body">
+    <span class="rost-top">
+      <em class="rost-n">04</em>
+      <b class="rost-name">黑市影商</b>
+      <span class="badge">配角</span>
+      <span class="rost-meta">不明 · 不明</span>
+    </span>
+    <span class="rost-one">篡改契约、诱导普通人缔约、让影子不回归、批量制造空洞化的黑市经营者。</span>
+    <span class="rost-chips"><i>阴冷</i><i>操控性</i><i>掠夺</i></span>
+  </span>
+</button>
+<button class="rost" data-target="p-陈婆婆" data-hay="陈婆婆 老街住户 老街住户 女 七十多岁 慈祥 知晓往事 沉静 梧水街的老住户，知道一心堂的旧事。">
+  <span class="rost-thumb"></span>
+  <span class="rost-body">
+    <span class="rost-top">
+      <em class="rost-n">05</em>
+      <b class="rost-name">陈婆婆</b>
+      <span class="badge">龙套</span>
+      <span class="rost-meta">女 · 七十多岁</span>
+    </span>
+    <span class="rost-one">梧水街的老住户，知道一心堂的旧事。</span>
+    <span class="rost-chips"><i>慈祥</i><i>知晓往事</i><i>沉静</i></span>
+  </span>
+</button>
+    </nav>
+    <p class="nomatch">没有匹配的角色</p>
+    <p class="side-foot">标注（推断）的条目为原文未明写、依据文本推演。</p>
+  </aside>
+
+  <main class="main">
+    <section class="graph labels" id="graph">
+  <header class="graph-h">
+    <h2>关系图谱</h2>
+    <span class="badge">5 位角色 · 4 组关系</span>
+    <button class="glabtoggle on" aria-pressed="true">关系文字</button>
+    <span class="hint">悬停看关系，点击进角色</span>
+  </header>
+  <div class="graph-body">
+    <div class="graph-canvas">
+      <svg viewBox="0 0 480 480" role="img" aria-label="关系图谱">
+        <g class="gedges"><path class="gedge" data-a="周明" data-b="沈砚" d="M316.4 345.2 Q253.4 235.7 240 110"></path><path class="gedge" data-a="沈砚" data-b="苏听晚" d="M240 110 Q261.6 210.2 363.6 199.8"></path><path class="gedge" data-a="沈砚" data-b="黑市影商" d="M240 110 Q226.6 235.7 163.6 345.2"></path><path class="gedge" data-a="沈砚" data-b="陈婆婆" d="M240 110 Q218.4 210.2 116.4 199.8"></path></g>
+        <g class="gnodes"><g class="gnode lead" data-node="沈砚" data-target="p-沈砚" tabindex="0" role="button" aria-label="沈砚">
+  <circle class="ghit" cx="240" cy="110" r="24"></circle>
+  <circle class="gdot" cx="240" cy="110" r="11"></circle>
+  <text x="240" y="89" text-anchor="middle">沈砚</text>
+</g><g class="gnode lead" data-node="苏听晚" data-target="p-苏听晚" tabindex="0" role="button" aria-label="苏听晚">
+  <circle class="ghit" cx="363.6" cy="199.8" r="24"></circle>
+  <circle class="gdot" cx="363.6" cy="199.8" r="11"></circle>
+  <text x="377.9" y="199.7" text-anchor="start">苏听晚</text>
+</g><g class="gnode" data-node="周明" data-target="p-周明" tabindex="0" role="button" aria-label="周明">
+  <circle class="ghit" cx="316.4" cy="345.2" r="24"></circle>
+  <circle class="gdot" cx="316.4" cy="345.2" r="7"></circle>
+  <text x="325.2" y="361.8" text-anchor="start">周明</text>
+</g><g class="gnode" data-node="黑市影商" data-target="p-黑市影商" tabindex="0" role="button" aria-label="黑市影商">
+  <circle class="ghit" cx="163.6" cy="345.2" r="24"></circle>
+  <circle class="gdot" cx="163.6" cy="345.2" r="7"></circle>
+  <text x="154.8" y="361.8" text-anchor="end">黑市影商</text>
+</g><g class="gnode" data-node="陈婆婆" data-target="p-陈婆婆" tabindex="0" role="button" aria-label="陈婆婆">
+  <circle class="ghit" cx="116.4" cy="199.8" r="24"></circle>
+  <circle class="gdot" cx="116.4" cy="199.8" r="5.5"></circle>
+  <text x="102.1" y="199.7" text-anchor="end">陈婆婆</text>
+</g></g>
+        <g class="glabels"><text class="glabel" data-a="周明" data-b="沈砚" x="277.5" y="264.2" text-anchor="middle" dominant-baseline="middle">影契代理人<title>沈砚 · 第一案缔约人
+周明 · 影契代理人</title></text><text class="glabel" data-a="沈砚" data-b="苏听晚" x="281.7" y="182.6" text-anchor="middle" dominant-baseline="middle">带他看见过去…<title>沈砚 · 带他看见过去的人
+苏听晚 · 带她看见影子世界的画室主人</title></text><text class="glabel" data-a="沈砚" data-b="黑市影商" x="202.5" y="264.2" text-anchor="middle" dominant-baseline="middle">对立面的存在<title>沈砚 · 对立面的存在
+黑市影商 · 对立面的代理人</title></text><text class="glabel" data-a="沈砚" data-b="陈婆婆" x="214" y="167.8" text-anchor="middle" dominant-baseline="middle">老街的邻居<title>陈婆婆 · 老街的邻居</title></text></g>
+      </svg>
+      
+    </div>
+    <aside class="grel">
+      <h4>全部关系</h4>
+      <div class="grel-list"><button class="grow" data-a="周明" data-b="沈砚" data-target="p-周明">
+  <b>周明</b><i>—</i><b>沈砚</b>
+  <span><em>沈砚</em> 第一案缔约人</span><span><em>周明</em> 影契代理人</span>
+</button><button class="grow" data-a="沈砚" data-b="苏听晚" data-target="p-沈砚">
+  <b>沈砚</b><i>—</i><b>苏听晚</b>
+  <span><em>沈砚</em> 带他看见过去的人</span><span><em>苏听晚</em> 带她看见影子世界的画室主人</span>
+</button><button class="grow" data-a="沈砚" data-b="黑市影商" data-target="p-沈砚">
+  <b>沈砚</b><i>—</i><b>黑市影商</b>
+  <span><em>沈砚</em> 对立面的存在</span><span><em>黑市影商</em> 对立面的代理人</span>
+</button><button class="grow" data-a="沈砚" data-b="陈婆婆" data-target="p-沈砚">
+  <b>沈砚</b><i>—</i><b>陈婆婆</b>
+  <span><em>陈婆婆</em> 老街的邻居</span>
+</button></div>
+      <p class="grel-foot">另有 1 条关系指向没做画像的角色，图里不画</p>
+    </aside>
+  </div>
+</section>
+    <article class="char on" id="p-沈砚">
+  <header class="char-h">
+    <span class="char-n">01</span>
+    <h2>沈砚</h2>
+    <span class="badge">主角</span>
+    <span class="aka">又称　画室主人 · 无影画师</span>
+    <span class="char-one">脚下没有影子的画室主人，黄昏以后替人画影契，收取人格代价。</span>
+  </header>
+
+  <div class="upper">
+    <div class="stage">
+      <div class="plate plate-empty">
+         <span>沈砚 · 尚未出图<br><em>用下方提示词生成</em></span>
+       </div>
+
+      <div class="grid2">
+        <section class="blk"><h3>外貌</h3><p>长眉，鼻梁很平，脸上没什么血色。右手手背有一块洗不掉的淡墨痕，像烙印。眼睛不动——不惊讶，不同情，也不劝。</p></section>
+        <section class="blk"><h3>性情</h3><p>声音很平，语速慢，每个字都像量过的。没有情绪起伏，但不是冷漠——是见过太多秘密后的平静。</p></section>
+        <section class="blk"><h3>动机</h3><p>完成影契，收取人格代价。但他自己的过去正逐渐浮现。</p></section>
+        <section class="blk"><h3>人物弧光</h3><p>从冷静的规则执行者，逐渐面对自己没有影子的过去——他的影子在很远的地方正在醒来。</p></section>
+      </div>
+
+      <section class="blk source"><h3>原文依据</h3>
+               <div class="quotes"><blockquote>白天画人像。黄昏以后，画别的。</blockquote><blockquote>我是代理人。我只见证，不救赎。</blockquote></div>
+             </section>
+    </div>
+
+    <aside class="side-cards">
+      <div class="card">
+        <dl><div class="kv"><dt>性别</dt><dd>男</dd></div><div class="kv"><dt>年龄</dt><dd>二十七八岁</dd></div><div class="kv"><dt>身份</dt><dd>一心堂画室主人，影契代理人</dd></div></dl>
+      </div>
+
+      <div class="card"><h4>关系</h4>
+               <dl><div class="kv"><dt class="rel-n">周明</dt><dd>第一案缔约人</dd></div><div class="kv"><dt class="rel-n">苏听晚</dt><dd>带他看见过去的人</dd></div><div class="kv"><dt class="rel-n">黑市影商</dt><dd>对立面的存在</dd></div></dl>
+             </div>
+
+      <div class="card">
+        <h4>声音<i class="tag-en">VOICE</i></h4>
+        <dl><div class="kv"><dt>音色</dt><dd>低平的男中音，气声多，几乎没有胸腔共鸣</dd></div><div class="kv"><dt>音高</dt><dd>低</dd></div><div class="kv"><dt>语速</dt><dd>缓慢，每个字都量过似的</dd></div><div class="kv"><dt>口音</dt><dd>无明显口音，普通话标准</dd></div><div class="kv"><dt>情绪</dt><dd>平静到近乎冷漠，没有温度</dd></div><div class="kv"><dt>类比</dt><dd>像一个见过太多人秘密但从不评价的人</dd></div></dl>
+      </div>
+
+      <div class="card"><h4>形象</h4>
+               <ul class="tags"><li>character sheet</li><li>half-body portrait</li><li>three full-body views</li><li>neutral warm background</li></ul>
+             </div>
+    </aside>
+  </div>
+
+  <div class="prompts">
+    <div class="pgroup">
+      <details class="pr">
+  <summary><span>出图提示词 · 喂出图模型用这条</span><button class="copy" data-copy="Character design sheet, East Asian male late 20s, tall thin build, pale complexion, long straight eyebrows, flat nose bridge, deep-set unsettling still eyes. Short messy black hair. Dark grey rolled-sleeve linen shirt, black loose trousers. Faint ink stain on back of right hand like a birthmark. Realistic Chinese urban fantasy style, muted warm dusk tones.">复制</button></summary>
+  <p>Character design sheet, East Asian male late 20s, tall thin build, pale complexion, long straight eyebrows, flat nose bridge, deep-set unsettling still eyes. Short messy black hair. Dark grey rolled-sleeve linen shirt, black loose trousers. Faint ink stain on back of right hand like a birthmark. Realistic Chinese urban fantasy style, muted warm dusk tones.</p>
+</details>
+      <details class="pr">
+  <summary><span>角色设定图提示词 EN</span><button class="copy" data-copy="Single character model sheet on one landscape canvas. LEFT ZONE ~34%: one half-body bust portrait facing camera. RIGHT-TOP ZONE: three full-body views (front, side, back) on neutral background. RIGHT-BOTTOM ZONE: three small close-up studies — hand ink stain, eyes, mouth.">复制</button></summary>
+  <p>Single character model sheet on one landscape canvas. LEFT ZONE ~34%: one half-body bust portrait facing camera. RIGHT-TOP ZONE: three full-body views (front, side, back) on neutral background. RIGHT-BOTTOM ZONE: three small close-up studies — hand ink stain, eyes, mouth.</p>
+</details>
+      <details class="pr">
+  <summary><span>反向提示词</span><button class="copy" data-copy="blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, bright cheerful colors, smiling expression">复制</button></summary>
+  <p>blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, bright cheerful colors, smiling expression</p>
+</details>
+      <details class="pr">
+  <summary><span>出图提示词（中文对照）</span><button class="copy" data-copy="东亚男性，二十七八岁，高瘦苍白，长眉平鼻梁，深眼窝眼神静止。黑色短发微乱。深色卷袖亚麻衬衫，黑色宽松裤。右手手背淡墨痕如烙印。写实都市奇幻风格，暖黄昏色调。">复制</button></summary>
+  <p>东亚男性，二十七八岁，高瘦苍白，长眉平鼻梁，深眼窝眼神静止。黑色短发微乱。深色卷袖亚麻衬衫，黑色宽松裤。右手手背淡墨痕如烙印。写实都市奇幻风格，暖黄昏色调。</p>
+</details>
+    </div>
+    <div class="pgroup">
+      <details class="pr">
+  <summary><span>音色提示词 · 喂 TTS 引擎用这条</span><button class="copy" data-copy="Low even male voice, late 20s. Very little intonation variation. Slow deliberate pace, each word measured. Neutral to the point of coldness. No warmth, no judgment. Slight breathy quality.">复制</button></summary>
+  <p>Low even male voice, late 20s. Very little intonation variation. Slow deliberate pace, each word measured. Neutral to the point of coldness. No warmth, no judgment. Slight breathy quality.</p>
+</details>
+      <div class="pgroup-f">
+        <button class="copy wide" data-copy="{
+  &quot;name&quot;: &quot;沈砚&quot;,
+  &quot;aliases&quot;: [
+    &quot;画室主人&quot;,
+    &quot;无影画师&quot;
+  ],
+  &quot;importance&quot;: &quot;protagonist&quot;,
+  &quot;oneLiner&quot;: &quot;脚下没有影子的画室主人，黄昏以后替人画影契，收取人格代价。&quot;,
+  &quot;persona&quot;: {
+    &quot;gender&quot;: &quot;男&quot;,
+    &quot;ageRange&quot;: &quot;二十七八岁&quot;,
+    &quot;identity&quot;: &quot;一心堂画室主人，影契代理人&quot;,
+    &quot;appearance&quot;: &quot;长眉，鼻梁很平，脸上没什么血色。右手手背有一块洗不掉的淡墨痕，像烙印。眼睛不动——不惊讶，不同情，也不劝。&quot;,
+    &quot;personality&quot;: [
+      &quot;冷静&quot;,
+      &quot;疏离&quot;,
+      &quot;观察者&quot;,
+      &quot;克制&quot;
+    ],
+    &quot;temperament&quot;: &quot;声音很平，语速慢，每个字都像量过的。没有情绪起伏，但不是冷漠——是见过太多秘密后的平静。&quot;,
+    &quot;motivation&quot;: &quot;完成影契，收取人格代价。但他自己的过去正逐渐浮现。&quot;,
+    &quot;arc&quot;: &quot;从冷静的规则执行者，逐渐面对自己没有影子的过去——他的影子在很远的地方正在醒来。&quot;,
+    &quot;relationships&quot;: [
+      {
+        &quot;name&quot;: &quot;周明&quot;,
+        &quot;relation&quot;: &quot;第一案缔约人&quot;
+      },
+      {
+        &quot;name&quot;: &quot;苏听晚&quot;,
+        &quot;relation&quot;: &quot;带他看见过去的人&quot;
+      },
+      {
+        &quot;name&quot;: &quot;黑市影商&quot;,
+        &quot;relation&quot;: &quot;对立面的存在&quot;
+      }
+    ],
+    &quot;evidence&quot;: [
+      &quot;白天画人像。黄昏以后，画别的。&quot;,
+      &quot;我是代理人。我只见证，不救赎。&quot;
+    ]
+  },
+  &quot;image&quot;: {
+    &quot;prompt&quot;: &quot;Character design sheet, East Asian male late 20s, tall thin build, pale complexion, long straight eyebrows, flat nose bridge, deep-set unsettling still eyes. Short messy black hair. Dark grey rolled-sleeve linen shirt, black loose trousers. Faint ink stain on back of right hand like a birthmark. Realistic Chinese urban fantasy style, muted warm dusk tones.&quot;,
+    &quot;promptLocal&quot;: &quot;东亚男性，二十七八岁，高瘦苍白，长眉平鼻梁，深眼窝眼神静止。黑色短发微乱。深色卷袖亚麻衬衫，黑色宽松裤。右手手背淡墨痕如烙印。写实都市奇幻风格，暖黄昏色调。&quot;,
+    &quot;negativePrompt&quot;: &quot;blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, bright cheerful colors, smiling expression&quot;,
+    &quot;tags&quot;: [
+      &quot;character sheet&quot;,
+      &quot;half-body portrait&quot;,
+      &quot;three full-body views&quot;,
+      &quot;neutral warm background&quot;
+    ],
+    &quot;sheet&quot;: &quot;Single character model sheet on one landscape canvas. LEFT ZONE ~34%: one half-body bust portrait facing camera. RIGHT-TOP ZONE: three full-body views (front, side, back) on neutral background. RIGHT-BOTTOM ZONE: three small close-up studies — hand ink stain, eyes, mouth.&quot;
+  },
+  &quot;voice&quot;: {
+    &quot;timbre&quot;: &quot;低平的男中音，气声多，几乎没有胸腔共鸣&quot;,
+    &quot;pitch&quot;: &quot;低&quot;,
+    &quot;pace&quot;: &quot;缓慢，每个字都量过似的&quot;,
+    &quot;accent&quot;: &quot;无明显口音，普通话标准&quot;,
+    &quot;emotion&quot;: &quot;平静到近乎冷漠，没有温度&quot;,
+    &quot;referenceHint&quot;: &quot;像一个见过太多人秘密但从不评价的人&quot;,
+    &quot;prompt&quot;: &quot;Low even male voice, late 20s. Very little intonation variation. Slow deliberate pace, each word measured. Neutral to the point of coldness. No warmth, no judgment. Slight breathy quality.&quot;
+  }
+}">复制整份角色 JSON</button>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="char" id="p-苏听晚">
+  <header class="char-h">
+    <span class="char-n">02</span>
+    <h2>苏听晚</h2>
+    <span class="badge">主角</span>
+    <span class="aka">又称　档案馆</span>
+    <span class="char-one">市档案馆的女人，调查七起不明原因死亡，她的影子安静得不像活人。</span>
+  </header>
+
+  <div class="upper">
+    <div class="stage">
+      <div class="plate plate-empty">
+         <span>苏听晚 · 尚未出图<br><em>用下方提示词生成</em></span>
+       </div>
+
+      <div class="grid2">
+        <section class="blk"><h3>外貌</h3><p>穿米白色风衣，头发扎低马尾，露出干净的额头。手里抱牛皮纸档案袋。档案袋的两个角已经起了毛边，边还是齐的。</p></section>
+        <section class="blk"><h3>性情</h3><p>声音温和清晰，语气自然。看到影子世界时后背起鸡皮疙瘩，但没有尖叫。</p></section>
+        <section class="blk"><h3>动机</h3><p>查清楚七起不明原因死亡的真相，找到黑市影商，阻止他们继续害人。</p></section>
+        <section class="blk"><h3>人物弧光</h3><p>从调查者到决定主动追查黑市影商。她的影子异常安静——像一间没有人住过的房子。</p></section>
+      </div>
+
+      <section class="blk source"><h3>原文依据</h3>
+               <div class="quotes"><blockquote>我想要真相。</blockquote><blockquote>你的影子，它还在吗？</blockquote></div>
+             </section>
+    </div>
+
+    <aside class="side-cards">
+      <div class="card">
+        <dl><div class="kv"><dt>性别</dt><dd>女</dd></div><div class="kv"><dt>年龄</dt><dd>二十六七岁</dd></div><div class="kv"><dt>身份</dt><dd>市档案馆工作人员</dd></div></dl>
+      </div>
+
+      <div class="card"><h4>关系</h4>
+               <dl><div class="kv"><dt class="rel-n">沈砚</dt><dd>带她看见影子世界的画室主人</dd></div></dl>
+             </div>
+
+      <div class="card">
+        <h4>声音<i class="tag-en">VOICE</i></h4>
+        <dl><div class="kv"><dt>音色</dt><dd>温和清晰的女中音</dd></div><div class="kv"><dt>音高</dt><dd>中等</dd></div><div class="kv"><dt>语速</dt><dd>自然，不慌不忙</dd></div><div class="kv"><dt>口音</dt><dd>标准普通话</dd></div><div class="kv"><dt>情绪</dt><dd>冷静，但看到影子世界时声音发紧</dd></div><div class="kv"><dt>类比</dt><dd>像一个做档案工作的人，习惯了冷静</dd></div></dl>
+      </div>
+
+      <div class="card"><h4>形象</h4>
+               <ul class="tags"><li>character sheet</li><li>half-body portrait</li><li>three full-body views</li></ul>
+             </div>
+    </aside>
+  </div>
+
+  <div class="prompts">
+    <div class="pgroup">
+      <details class="pr">
+  <summary><span>出图提示词 · 喂出图模型用这条</span><button class="copy" data-copy="Character design sheet, East Asian female late 20s, clean forehead, low ponytail, wearing a cream-colored trench coat. Holding a kraft paper archive bag. Calm determined expression. Realistic style, dusk tones.">复制</button></summary>
+  <p>Character design sheet, East Asian female late 20s, clean forehead, low ponytail, wearing a cream-colored trench coat. Holding a kraft paper archive bag. Calm determined expression. Realistic style, dusk tones.</p>
+</details>
+      <details class="pr">
+  <summary><span>角色设定图提示词 EN</span><button class="copy" data-copy="Single character model sheet. LEFT: half-body bust. RIGHT: three full-body views holding archive bag.">复制</button></summary>
+  <p>Single character model sheet. LEFT: half-body bust. RIGHT: three full-body views holding archive bag.</p>
+</details>
+      <details class="pr">
+  <summary><span>反向提示词</span><button class="copy" data-copy="blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, heavy makeup">复制</button></summary>
+  <p>blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, heavy makeup</p>
+</details>
+      <details class="pr">
+  <summary><span>出图提示词（中文对照）</span><button class="copy" data-copy="东亚女性，二十七八岁，干净额头，低马尾，穿米白色风衣。手里抱牛皮纸档案袋。表情冷静坚定。写实风格，黄昏色调。">复制</button></summary>
+  <p>东亚女性，二十七八岁，干净额头，低马尾，穿米白色风衣。手里抱牛皮纸档案袋。表情冷静坚定。写实风格，黄昏色调。</p>
+</details>
+    </div>
+    <div class="pgroup">
+      <details class="pr">
+  <summary><span>音色提示词 · 喂 TTS 引擎用这条</span><button class="copy" data-copy="Calm female voice late 20s. Clear and moderate pace. Normally composed, but voice tightens when seeing shadow world for the first time.">复制</button></summary>
+  <p>Calm female voice late 20s. Clear and moderate pace. Normally composed, but voice tightens when seeing shadow world for the first time.</p>
+</details>
+      <div class="pgroup-f">
+        <button class="copy wide" data-copy="{
+  &quot;name&quot;: &quot;苏听晚&quot;,
+  &quot;aliases&quot;: [
+    &quot;档案馆&quot;
+  ],
+  &quot;importance&quot;: &quot;protagonist&quot;,
+  &quot;oneLiner&quot;: &quot;市档案馆的女人，调查七起不明原因死亡，她的影子安静得不像活人。&quot;,
+  &quot;persona&quot;: {
+    &quot;gender&quot;: &quot;女&quot;,
+    &quot;ageRange&quot;: &quot;二十六七岁&quot;,
+    &quot;identity&quot;: &quot;市档案馆工作人员&quot;,
+    &quot;appearance&quot;: &quot;穿米白色风衣，头发扎低马尾，露出干净的额头。手里抱牛皮纸档案袋。档案袋的两个角已经起了毛边，边还是齐的。&quot;,
+    &quot;personality&quot;: [
+      &quot;冷静&quot;,
+      &quot;好奇&quot;,
+      &quot;坚定&quot;,
+      &quot;压抑&quot;
+    ],
+    &quot;temperament&quot;: &quot;声音温和清晰，语气自然。看到影子世界时后背起鸡皮疙瘩，但没有尖叫。&quot;,
+    &quot;motivation&quot;: &quot;查清楚七起不明原因死亡的真相，找到黑市影商，阻止他们继续害人。&quot;,
+    &quot;arc&quot;: &quot;从调查者到决定主动追查黑市影商。她的影子异常安静——像一间没有人住过的房子。&quot;,
+    &quot;relationships&quot;: [
+      {
+        &quot;name&quot;: &quot;沈砚&quot;,
+        &quot;relation&quot;: &quot;带她看见影子世界的画室主人&quot;
+      }
+    ],
+    &quot;evidence&quot;: [
+      &quot;我想要真相。&quot;,
+      &quot;你的影子，它还在吗？&quot;
+    ]
+  },
+  &quot;image&quot;: {
+    &quot;prompt&quot;: &quot;Character design sheet, East Asian female late 20s, clean forehead, low ponytail, wearing a cream-colored trench coat. Holding a kraft paper archive bag. Calm determined expression. Realistic style, dusk tones.&quot;,
+    &quot;promptLocal&quot;: &quot;东亚女性，二十七八岁，干净额头，低马尾，穿米白色风衣。手里抱牛皮纸档案袋。表情冷静坚定。写实风格，黄昏色调。&quot;,
+    &quot;negativePrompt&quot;: &quot;blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, heavy makeup&quot;,
+    &quot;tags&quot;: [
+      &quot;character sheet&quot;,
+      &quot;half-body portrait&quot;,
+      &quot;three full-body views&quot;
+    ],
+    &quot;sheet&quot;: &quot;Single character model sheet. LEFT: half-body bust. RIGHT: three full-body views holding archive bag.&quot;
+  },
+  &quot;voice&quot;: {
+    &quot;timbre&quot;: &quot;温和清晰的女中音&quot;,
+    &quot;pitch&quot;: &quot;中等&quot;,
+    &quot;pace&quot;: &quot;自然，不慌不忙&quot;,
+    &quot;accent&quot;: &quot;标准普通话&quot;,
+    &quot;emotion&quot;: &quot;冷静，但看到影子世界时声音发紧&quot;,
+    &quot;referenceHint&quot;: &quot;像一个做档案工作的人，习惯了冷静&quot;,
+    &quot;prompt&quot;: &quot;Calm female voice late 20s. Clear and moderate pace. Normally composed, but voice tightens when seeing shadow world for the first time.&quot;
+  }
+}">复制整份角色 JSON</button>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="char" id="p-周明">
+  <header class="char-h">
+    <span class="char-n">03</span>
+    <h2>周明</h2>
+    <span class="badge">配角</span>
+    <span class="aka">又称　绘图员</span>
+    <span class="char-one">被压榨三年的建筑设计院绘图员，影子替他说出了不敢说的话。</span>
+  </header>
+
+  <div class="upper">
+    <div class="stage">
+      <div class="plate plate-empty">
+         <span>周明 · 尚未出图<br><em>用下方提示词生成</em></span>
+       </div>
+
+      <div class="grid2">
+        <section class="blk"><h3>外貌</h3><p>穿洗发白的灰色工装，肩膀习惯性缩着。手指布满铅笔老茧，指甲缝里嵌着洗不净的铅灰。</p></section>
+        <section class="blk"><h3>性情</h3><p>声音很小，说话结巴，越急越说不出。哭的时候声音是哑的，像被堵住了。缔约后变得异常平静——因为愤怒已经被永久剥离了。</p></section>
+        <section class="blk"><h3>动机</h3><p>想让影子替他去周一部门例会，跟主管说离职，把三年的事全部说出来。</p></section>
+        <section class="blk"><h3>人物弧光</h3><p>从不敢愤怒到选择放弃愤怒——他以为付出代价就能换来勇气，但代价本身就是他最想要的东西。</p></section>
+      </div>
+
+      <section class="blk source"><h3>原文依据</h3>
+               <div class="quotes"><blockquote>我想……让它替我去开会。</blockquote><blockquote>我愿意。</blockquote><blockquote>我不是废物。</blockquote></div>
+             </section>
+    </div>
+
+    <aside class="side-cards">
+      <div class="card">
+        <dl><div class="kv"><dt>性别</dt><dd>男</dd></div><div class="kv"><dt>年龄</dt><dd>三十二三岁</dd></div><div class="kv"><dt>身份</dt><dd>建筑设计院绘图员</dd></div></dl>
+      </div>
+
+      <div class="card"><h4>关系</h4>
+               <dl><div class="kv"><dt class="rel-n">沈砚</dt><dd>影契代理人</dd></div><div class="kv"><dt class="rel-n">赵国栋</dt><dd>压榨他三年的主管（未出场）</dd></div></dl>
+             </div>
+
+      <div class="card">
+        <h4>声音<i class="tag-en">VOICE</i></h4>
+        <dl><div class="kv"><dt>音色</dt><dd>缔约前紧张的男中音，缔约后变得异常平静</dd></div><div class="kv"><dt>音高</dt><dd>中等偏高</dd></div><div class="kv"><dt>语速</dt><dd>犹豫→稳定</dd></div><div class="kv"><dt>口音</dt><dd>普通话</dd></div><div class="kv"><dt>情绪</dt><dd>缔约前压抑颤抖，缔约后完全没有情绪起伏</dd></div><div class="kv"><dt>类比</dt><dd>缔约前像一个常年被骂到不敢说话的上班族，缔约后像一个没有情绪的人</dd></div></dl>
+      </div>
+
+      <div class="card"><h4>形象</h4>
+               <ul class="tags"><li>character sheet</li><li>half-body portrait</li><li>three full-body views</li><li>office workwear</li></ul>
+             </div>
+    </aside>
+  </div>
+
+  <div class="prompts">
+    <div class="pgroup">
+      <details class="pr">
+  <summary><span>出图提示词 · 喂出图模型用这条</span><button class="copy" data-copy="Character design sheet, East Asian male mid 30s, previously hunched but now standing straight after contract. Tired face but calm empty expression. Washed-out grey work uniform. Pencil calluses on fingers, lead dust under nails. Realistic style, muted cool tones.">复制</button></summary>
+  <p>Character design sheet, East Asian male mid 30s, previously hunched but now standing straight after contract. Tired face but calm empty expression. Washed-out grey work uniform. Pencil calluses on fingers, lead dust under nails. Realistic style, muted cool tones.</p>
+</details>
+      <details class="pr">
+  <summary><span>角色设定图提示词 EN</span><button class="copy" data-copy="Single character model sheet. LEFT: half-body bust showing posture change. RIGHT: three full-body views.">复制</button></summary>
+  <p>Single character model sheet. LEFT: half-body bust showing posture change. RIGHT: three full-body views.</p>
+</details>
+      <details class="pr">
+  <summary><span>反向提示词</span><button class="copy" data-copy="blurry, low quality, extra fingers, deformed hands, confident posture, bright colors, smiling">复制</button></summary>
+  <p>blurry, low quality, extra fingers, deformed hands, confident posture, bright colors, smiling</p>
+</details>
+      <details class="pr">
+  <summary><span>出图提示词（中文对照）</span><button class="copy" data-copy="东亚男性，三十出头，以前缩肩但缔约后站得笔直。疲惫面容但表情平静空洞。洗发白的灰色工装。手指有铅笔老茧，指甲缝嵌铅灰。写实风格，冷色调。">复制</button></summary>
+  <p>东亚男性，三十出头，以前缩肩但缔约后站得笔直。疲惫面容但表情平静空洞。洗发白的灰色工装。手指有铅笔老茧，指甲缝嵌铅灰。写实风格，冷色调。</p>
+</details>
+    </div>
+    <div class="pgroup">
+      <details class="pr">
+  <summary><span>音色提示词 · 喂 TTS 引擎用这条</span><button class="copy" data-copy="Male voice mid 30s. Before contract: hesitant, nervous, voice cracking. After contract: completely flat, no emotional variation. Same voice but emotionally empty.">复制</button></summary>
+  <p>Male voice mid 30s. Before contract: hesitant, nervous, voice cracking. After contract: completely flat, no emotional variation. Same voice but emotionally empty.</p>
+</details>
+      <div class="pgroup-f">
+        <button class="copy wide" data-copy="{
+  &quot;name&quot;: &quot;周明&quot;,
+  &quot;aliases&quot;: [
+    &quot;绘图员&quot;
+  ],
+  &quot;importance&quot;: &quot;supporting&quot;,
+  &quot;oneLiner&quot;: &quot;被压榨三年的建筑设计院绘图员，影子替他说出了不敢说的话。&quot;,
+  &quot;persona&quot;: {
+    &quot;gender&quot;: &quot;男&quot;,
+    &quot;ageRange&quot;: &quot;三十二三岁&quot;,
+    &quot;identity&quot;: &quot;建筑设计院绘图员&quot;,
+    &quot;appearance&quot;: &quot;穿洗发白的灰色工装，肩膀习惯性缩着。手指布满铅笔老茧，指甲缝里嵌着洗不净的铅灰。&quot;,
+    &quot;personality&quot;: [
+      &quot;压抑&quot;,
+      &quot;怯懦&quot;,
+      &quot;隐忍&quot;,
+      &quot;内心积压愤怒&quot;
+    ],
+    &quot;temperament&quot;: &quot;声音很小，说话结巴，越急越说不出。哭的时候声音是哑的，像被堵住了。缔约后变得异常平静——因为愤怒已经被永久剥离了。&quot;,
+    &quot;motivation&quot;: &quot;想让影子替他去周一部门例会，跟主管说离职，把三年的事全部说出来。&quot;,
+    &quot;arc&quot;: &quot;从不敢愤怒到选择放弃愤怒——他以为付出代价就能换来勇气，但代价本身就是他最想要的东西。&quot;,
+    &quot;relationships&quot;: [
+      {
+        &quot;name&quot;: &quot;沈砚&quot;,
+        &quot;relation&quot;: &quot;影契代理人&quot;
+      },
+      {
+        &quot;name&quot;: &quot;赵国栋&quot;,
+        &quot;relation&quot;: &quot;压榨他三年的主管（未出场）&quot;
+      }
+    ],
+    &quot;evidence&quot;: [
+      &quot;我想……让它替我去开会。&quot;,
+      &quot;我愿意。&quot;,
+      &quot;我不是废物。&quot;
+    ]
+  },
+  &quot;image&quot;: {
+    &quot;prompt&quot;: &quot;Character design sheet, East Asian male mid 30s, previously hunched but now standing straight after contract. Tired face but calm empty expression. Washed-out grey work uniform. Pencil calluses on fingers, lead dust under nails. Realistic style, muted cool tones.&quot;,
+    &quot;promptLocal&quot;: &quot;东亚男性，三十出头，以前缩肩但缔约后站得笔直。疲惫面容但表情平静空洞。洗发白的灰色工装。手指有铅笔老茧，指甲缝嵌铅灰。写实风格，冷色调。&quot;,
+    &quot;negativePrompt&quot;: &quot;blurry, low quality, extra fingers, deformed hands, confident posture, bright colors, smiling&quot;,
+    &quot;tags&quot;: [
+      &quot;character sheet&quot;,
+      &quot;half-body portrait&quot;,
+      &quot;three full-body views&quot;,
+      &quot;office workwear&quot;
+    ],
+    &quot;sheet&quot;: &quot;Single character model sheet. LEFT: half-body bust showing posture change. RIGHT: three full-body views.&quot;
+  },
+  &quot;voice&quot;: {
+    &quot;timbre&quot;: &quot;缔约前紧张的男中音，缔约后变得异常平静&quot;,
+    &quot;pitch&quot;: &quot;中等偏高&quot;,
+    &quot;pace&quot;: &quot;犹豫→稳定&quot;,
+    &quot;accent&quot;: &quot;普通话&quot;,
+    &quot;emotion&quot;: &quot;缔约前压抑颤抖，缔约后完全没有情绪起伏&quot;,
+    &quot;referenceHint&quot;: &quot;缔约前像一个常年被骂到不敢说话的上班族，缔约后像一个没有情绪的人&quot;,
+    &quot;prompt&quot;: &quot;Male voice mid 30s. Before contract: hesitant, nervous, voice cracking. After contract: completely flat, no emotional variation. Same voice but emotionally empty.&quot;
+  }
+}">复制整份角色 JSON</button>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="char" id="p-黑市影商">
+  <header class="char-h">
+    <span class="char-n">04</span>
+    <h2>黑市影商</h2>
+    <span class="badge">配角</span>
+    <span class="aka">又称　影商</span>
+    <span class="char-one">篡改契约、诱导普通人缔约、让影子不回归、批量制造空洞化的黑市经营者。</span>
+  </header>
+
+  <div class="upper">
+    <div class="stage">
+      <div class="plate plate-empty">
+         <span>黑市影商 · 尚未出图<br><em>用下方提示词生成</em></span>
+       </div>
+
+      <div class="grid2">
+        <section class="blk"><h3>外貌</h3><p>永远在阴影里，看不清脸。空气里浮着洗不掉的墨腥气。</p></section>
+        <section class="blk"><h3>性情</h3><p>声音像从井底传上来的回声，带着墨腥气。</p></section>
+        <section class="blk"><h3>动机</h3><p>批量制造空洞化，抽取人格牟利。</p></section>
+        <section class="blk"><h3>人物弧光</h3><p>与沈砚规则反制，被黑白纹路压制后退去。</p></section>
+      </div>
+
+      
+    </div>
+
+    <aside class="side-cards">
+      <div class="card">
+        <dl><div class="kv"><dt>性别</dt><dd>不明</dd></div><div class="kv"><dt>年龄</dt><dd>不明</dd></div><div class="kv"><dt>身份</dt><dd>黑市影商</dd></div></dl>
+      </div>
+
+      <div class="card"><h4>关系</h4>
+               <dl><div class="kv"><dt class="rel-n">沈砚</dt><dd>对立面的代理人</dd></div></dl>
+             </div>
+
+      <div class="card">
+        <h4>声音<i class="tag-en">VOICE</i></h4>
+        <dl><div class="kv"><dt>音色</dt><dd>阴冷的回声，带着墨腥气</dd></div><div class="kv"><dt>音高</dt><dd>低</dd></div><div class="kv"><dt>语速</dt><dd>缓慢</dd></div><div class="kv"><dt>口音</dt><dd>不明</dd></div><div class="kv"><dt>情绪</dt><dd>冰冷，操控性</dd></div><div class="kv"><dt>类比</dt><dd>像从井底传上来的回声</dd></div></dl>
+      </div>
+
+      <div class="card"><h4>形象</h4>
+               <ul class="tags"><li>shadow figure</li><li>dark alley</li><li>obscured face</li><li>ominous</li></ul>
+             </div>
+    </aside>
+  </div>
+
+  <div class="prompts">
+    <div class="pgroup">
+      <details class="pr">
+  <summary><span>出图提示词 · 喂出图模型用这条</span><button class="copy" data-copy="Dark shadowy figure in an alley, face completely obscured by darkness. Only a faint outline visible. Ink-like dark aura surrounding the figure. Ominous atmosphere. No visible features. Realistic style, dark tones.">复制</button></summary>
+  <p>Dark shadowy figure in an alley, face completely obscured by darkness. Only a faint outline visible. Ink-like dark aura surrounding the figure. Ominous atmosphere. No visible features. Realistic style, dark tones.</p>
+</details>
+      <details class="pr">
+  <summary><span>角色设定图提示词 EN</span><button class="copy" data-copy="Single shadowy figure in dark alley. Face completely hidden by darkness. Ink-like aura around body.">复制</button></summary>
+  <p>Single shadowy figure in dark alley. Face completely hidden by darkness. Ink-like aura around body.</p>
+</details>
+      <details class="pr">
+  <summary><span>反向提示词</span><button class="copy" data-copy="bright light, visible face, clear features, cartoonish, anime style, smiling">复制</button></summary>
+  <p>bright light, visible face, clear features, cartoonish, anime style, smiling</p>
+</details>
+      <details class="pr">
+  <summary><span>出图提示词（中文对照）</span><button class="copy" data-copy="暗巷里的黑色人影，脸完全被黑暗遮住。只有模糊的轮廓。墨色般的黑气环绕。压抑氛围。没有可见五官。写实风格，暗色调。">复制</button></summary>
+  <p>暗巷里的黑色人影，脸完全被黑暗遮住。只有模糊的轮廓。墨色般的黑气环绕。压抑氛围。没有可见五官。写实风格，暗色调。</p>
+</details>
+    </div>
+    <div class="pgroup">
+      <details class="pr">
+  <summary><span>音色提示词 · 喂 TTS 引擎用这条</span><button class="copy" data-copy="Cold echoing voice, like coming from deep well. Ink-like quality to the tone. Slow deliberate pace. No warmth, no humanity.">复制</button></summary>
+  <p>Cold echoing voice, like coming from deep well. Ink-like quality to the tone. Slow deliberate pace. No warmth, no humanity.</p>
+</details>
+      <div class="pgroup-f">
+        <button class="copy wide" data-copy="{
+  &quot;name&quot;: &quot;黑市影商&quot;,
+  &quot;aliases&quot;: [
+    &quot;影商&quot;
+  ],
+  &quot;importance&quot;: &quot;supporting&quot;,
+  &quot;oneLiner&quot;: &quot;篡改契约、诱导普通人缔约、让影子不回归、批量制造空洞化的黑市经营者。&quot;,
+  &quot;persona&quot;: {
+    &quot;gender&quot;: &quot;不明&quot;,
+    &quot;ageRange&quot;: &quot;不明&quot;,
+    &quot;identity&quot;: &quot;黑市影商&quot;,
+    &quot;appearance&quot;: &quot;永远在阴影里，看不清脸。空气里浮着洗不掉的墨腥气。&quot;,
+    &quot;personality&quot;: [
+      &quot;阴冷&quot;,
+      &quot;操控性&quot;,
+      &quot;掠夺&quot;
+    ],
+    &quot;temperament&quot;: &quot;声音像从井底传上来的回声，带着墨腥气。&quot;,
+    &quot;motivation&quot;: &quot;批量制造空洞化，抽取人格牟利。&quot;,
+    &quot;arc&quot;: &quot;与沈砚规则反制，被黑白纹路压制后退去。&quot;,
+    &quot;relationships&quot;: [
+      {
+        &quot;name&quot;: &quot;沈砚&quot;,
+        &quot;relation&quot;: &quot;对立面的代理人&quot;
+      }
+    ],
+    &quot;evidence&quot;: []
+  },
+  &quot;image&quot;: {
+    &quot;prompt&quot;: &quot;Dark shadowy figure in an alley, face completely obscured by darkness. Only a faint outline visible. Ink-like dark aura surrounding the figure. Ominous atmosphere. No visible features. Realistic style, dark tones.&quot;,
+    &quot;promptLocal&quot;: &quot;暗巷里的黑色人影，脸完全被黑暗遮住。只有模糊的轮廓。墨色般的黑气环绕。压抑氛围。没有可见五官。写实风格，暗色调。&quot;,
+    &quot;negativePrompt&quot;: &quot;bright light, visible face, clear features, cartoonish, anime style, smiling&quot;,
+    &quot;tags&quot;: [
+      &quot;shadow figure&quot;,
+      &quot;dark alley&quot;,
+      &quot;obscured face&quot;,
+      &quot;ominous&quot;
+    ],
+    &quot;sheet&quot;: &quot;Single shadowy figure in dark alley. Face completely hidden by darkness. Ink-like aura around body.&quot;
+  },
+  &quot;voice&quot;: {
+    &quot;timbre&quot;: &quot;阴冷的回声，带着墨腥气&quot;,
+    &quot;pitch&quot;: &quot;低&quot;,
+    &quot;pace&quot;: &quot;缓慢&quot;,
+    &quot;accent&quot;: &quot;不明&quot;,
+    &quot;emotion&quot;: &quot;冰冷，操控性&quot;,
+    &quot;referenceHint&quot;: &quot;像从井底传上来的回声&quot;,
+    &quot;prompt&quot;: &quot;Cold echoing voice, like coming from deep well. Ink-like quality to the tone. Slow deliberate pace. No warmth, no humanity.&quot;
+  }
+}">复制整份角色 JSON</button>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="char" id="p-陈婆婆">
+  <header class="char-h">
+    <span class="char-n">05</span>
+    <h2>陈婆婆</h2>
+    <span class="badge">龙套</span>
+    <span class="aka">又称　老街住户</span>
+    <span class="char-one">梧水街的老住户，知道一心堂的旧事。</span>
+  </header>
+
+  <div class="upper">
+    <div class="stage">
+      <div class="plate plate-empty">
+         <span>陈婆婆 · 尚未出图<br><em>用下方提示词生成</em></span>
+       </div>
+
+      <div class="grid2">
+        <section class="blk"><h3>外貌</h3><p>头发花白，坐在桌边擦灯罩。屋里只点一盏老式煤油灯。</p></section>
+        <section class="blk"><h3>性情</h3><p>声音慢悠悠的，像在说很久以前的事。</p></section>
+        <section class="blk"><h3>动机</h3><p>把知道的旧事告诉沈砚。</p></section>
+        <section class="blk"><h3>人物弧光</h3><p>告诉沈砚无影画师的来历。</p></section>
+      </div>
+
+      
+    </div>
+
+    <aside class="side-cards">
+      <div class="card">
+        <dl><div class="kv"><dt>性别</dt><dd>女</dd></div><div class="kv"><dt>年龄</dt><dd>七十多岁</dd></div><div class="kv"><dt>身份</dt><dd>老街住户</dd></div></dl>
+      </div>
+
+      <div class="card"><h4>关系</h4>
+               <dl><div class="kv"><dt class="rel-n">沈砚</dt><dd>老街的邻居</dd></div></dl>
+             </div>
+
+      <div class="card">
+        <h4>声音<i class="tag-en">VOICE</i></h4>
+        <dl><div class="kv"><dt>音色</dt><dd>苍老慢悠悠的女声</dd></div><div class="kv"><dt>音高</dt><dd>中等偏低</dd></div><div class="kv"><dt>语速</dt><dd>缓慢</dd></div><div class="kv"><dt>口音</dt><dd>南方口音</dd></div><div class="kv"><dt>情绪</dt><dd>沉静，回忆往事</dd></div><div class="kv"><dt>类比</dt><dd>像一个在老街住了一辈子的老人</dd></div></dl>
+      </div>
+
+      <div class="card"><h4>形象</h4>
+               <ul class="tags"><li>elderly woman</li><li>kerosene lamp</li><li>old interior</li><li>warm light</li></ul>
+             </div>
+    </aside>
+  </div>
+
+  <div class="prompts">
+    <div class="pgroup">
+      <details class="pr">
+  <summary><span>出图提示词 · 喂出图模型用这条</span><button class="copy" data-copy="Elderly Chinese woman 70s, grey hair, sitting at wooden table cleaning an oil lamp. Warm dim kerosene lamp light. Old wooden interior. Realistic style, warm tones.">复制</button></summary>
+  <p>Elderly Chinese woman 70s, grey hair, sitting at wooden table cleaning an oil lamp. Warm dim kerosene lamp light. Old wooden interior. Realistic style, warm tones.</p>
+</details>
+      <details class="pr">
+  <summary><span>角色设定图提示词 EN</span><button class="copy" data-copy="Single elderly woman at wooden table. Cleaning oil lamp. Warm dim kerosene lighting.">复制</button></summary>
+  <p>Single elderly woman at wooden table. Cleaning oil lamp. Warm dim kerosene lighting.</p>
+</details>
+      <details class="pr">
+  <summary><span>反向提示词</span><button class="copy" data-copy="blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, modern clothing">复制</button></summary>
+  <p>blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, modern clothing</p>
+</details>
+      <details class="pr">
+  <summary><span>出图提示词（中文对照）</span><button class="copy" data-copy="中国老年女性，七十多岁，头发花白，坐在木桌边擦煤油灯。温暖昏暗的煤油灯光。老旧木质室内。写实风格，暖色调。">复制</button></summary>
+  <p>中国老年女性，七十多岁，头发花白，坐在木桌边擦煤油灯。温暖昏暗的煤油灯光。老旧木质室内。写实风格，暖色调。</p>
+</details>
+    </div>
+    <div class="pgroup">
+      <details class="pr">
+  <summary><span>音色提示词 · 喂 TTS 引擎用这条</span><button class="copy" data-copy="Elderly female voice 70s. Slow deliberate pace. Warm but quiet tone. Like someone recalling old memories from long ago.">复制</button></summary>
+  <p>Elderly female voice 70s. Slow deliberate pace. Warm but quiet tone. Like someone recalling old memories from long ago.</p>
+</details>
+      <div class="pgroup-f">
+        <button class="copy wide" data-copy="{
+  &quot;name&quot;: &quot;陈婆婆&quot;,
+  &quot;aliases&quot;: [
+    &quot;老街住户&quot;
+  ],
+  &quot;importance&quot;: &quot;minor&quot;,
+  &quot;oneLiner&quot;: &quot;梧水街的老住户，知道一心堂的旧事。&quot;,
+  &quot;persona&quot;: {
+    &quot;gender&quot;: &quot;女&quot;,
+    &quot;ageRange&quot;: &quot;七十多岁&quot;,
+    &quot;identity&quot;: &quot;老街住户&quot;,
+    &quot;appearance&quot;: &quot;头发花白，坐在桌边擦灯罩。屋里只点一盏老式煤油灯。&quot;,
+    &quot;personality&quot;: [
+      &quot;慈祥&quot;,
+      &quot;知晓往事&quot;,
+      &quot;沉静&quot;
+    ],
+    &quot;temperament&quot;: &quot;声音慢悠悠的，像在说很久以前的事。&quot;,
+    &quot;motivation&quot;: &quot;把知道的旧事告诉沈砚。&quot;,
+    &quot;arc&quot;: &quot;告诉沈砚无影画师的来历。&quot;,
+    &quot;relationships&quot;: [
+      {
+        &quot;name&quot;: &quot;沈砚&quot;,
+        &quot;relation&quot;: &quot;老街的邻居&quot;
+      }
+    ],
+    &quot;evidence&quot;: []
+  },
+  &quot;image&quot;: {
+    &quot;prompt&quot;: &quot;Elderly Chinese woman 70s, grey hair, sitting at wooden table cleaning an oil lamp. Warm dim kerosene lamp light. Old wooden interior. Realistic style, warm tones.&quot;,
+    &quot;promptLocal&quot;: &quot;中国老年女性，七十多岁，头发花白，坐在木桌边擦煤油灯。温暖昏暗的煤油灯光。老旧木质室内。写实风格，暖色调。&quot;,
+    &quot;negativePrompt&quot;: &quot;blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, modern clothing&quot;,
+    &quot;tags&quot;: [
+      &quot;elderly woman&quot;,
+      &quot;kerosene lamp&quot;,
+      &quot;old interior&quot;,
+      &quot;warm light&quot;
+    ],
+    &quot;sheet&quot;: &quot;Single elderly woman at wooden table. Cleaning oil lamp. Warm dim kerosene lighting.&quot;
+  },
+  &quot;voice&quot;: {
+    &quot;timbre&quot;: &quot;苍老慢悠悠的女声&quot;,
+    &quot;pitch&quot;: &quot;中等偏低&quot;,
+    &quot;pace&quot;: &quot;缓慢&quot;,
+    &quot;accent&quot;: &quot;南方口音&quot;,
+    &quot;emotion&quot;: &quot;沉静，回忆往事&quot;,
+    &quot;referenceHint&quot;: &quot;像一个在老街住了一辈子的老人&quot;,
+    &quot;prompt&quot;: &quot;Elderly female voice 70s. Slow deliberate pace. Warm but quiet tone. Like someone recalling old memories from long ago.&quot;
+  }
+}">复制整份角色 JSON</button>
+      </div>
+    </div>
+  </div>
+</article>
+  </main>
+</div>
+
+<div class="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-x" aria-label="关闭">关闭</button>
+  <img alt="">
+</div>
+
+<script type="application/json" id="cast-data">{"source":"影笔代理人","lang":"zh","summary":"黄昏的梧水街老街二楼，一心堂画室。没有影子的画室主人沈砚，替被压榨三年的绘图员周明画出愤怒的勇气，代价是永久剥离愤怒。同一时刻，档案馆的苏听晚带着七起不明原因死亡找上门——她的影子安静得不像活人。","characters":[{"name":"沈砚","aliases":["画室主人","无影画师"],"importance":"protagonist","oneLiner":"脚下没有影子的画室主人，黄昏以后替人画影契，收取人格代价。","persona":{"gender":"男","ageRange":"二十七八岁","identity":"一心堂画室主人，影契代理人","appearance":"长眉，鼻梁很平，脸上没什么血色。右手手背有一块洗不掉的淡墨痕，像烙印。眼睛不动——不惊讶，不同情，也不劝。","personality":["冷静","疏离","观察者","克制"],"temperament":"声音很平，语速慢，每个字都像量过的。没有情绪起伏，但不是冷漠——是见过太多秘密后的平静。","motivation":"完成影契，收取人格代价。但他自己的过去正逐渐浮现。","arc":"从冷静的规则执行者，逐渐面对自己没有影子的过去——他的影子在很远的地方正在醒来。","relationships":[{"name":"周明","relation":"第一案缔约人"},{"name":"苏听晚","relation":"带他看见过去的人"},{"name":"黑市影商","relation":"对立面的存在"}],"evidence":["白天画人像。黄昏以后，画别的。","我是代理人。我只见证，不救赎。"]},"image":{"prompt":"Character design sheet, East Asian male late 20s, tall thin build, pale complexion, long straight eyebrows, flat nose bridge, deep-set unsettling still eyes. Short messy black hair. Dark grey rolled-sleeve linen shirt, black loose trousers. Faint ink stain on back of right hand like a birthmark. Realistic Chinese urban fantasy style, muted warm dusk tones.","promptLocal":"东亚男性，二十七八岁，高瘦苍白，长眉平鼻梁，深眼窝眼神静止。黑色短发微乱。深色卷袖亚麻衬衫，黑色宽松裤。右手手背淡墨痕如烙印。写实都市奇幻风格，暖黄昏色调。","negativePrompt":"blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, bright cheerful colors, smiling expression","tags":["character sheet","half-body portrait","three full-body views","neutral warm background"],"sheet":"Single character model sheet on one landscape canvas. LEFT ZONE ~34%: one half-body bust portrait facing camera. RIGHT-TOP ZONE: three full-body views (front, side, back) on neutral background. RIGHT-BOTTOM ZONE: three small close-up studies — hand ink stain, eyes, mouth."},"voice":{"timbre":"低平的男中音，气声多，几乎没有胸腔共鸣","pitch":"低","pace":"缓慢，每个字都量过似的","accent":"无明显口音，普通话标准","emotion":"平静到近乎冷漠，没有温度","referenceHint":"像一个见过太多人秘密但从不评价的人","prompt":"Low even male voice, late 20s. Very little intonation variation. Slow deliberate pace, each word measured. Neutral to the point of coldness. No warmth, no judgment. Slight breathy quality."}},{"name":"周明","aliases":["绘图员"],"importance":"supporting","oneLiner":"被压榨三年的建筑设计院绘图员，影子替他说出了不敢说的话。","persona":{"gender":"男","ageRange":"三十二三岁","identity":"建筑设计院绘图员","appearance":"穿洗发白的灰色工装，肩膀习惯性缩着。手指布满铅笔老茧，指甲缝里嵌着洗不净的铅灰。","personality":["压抑","怯懦","隐忍","内心积压愤怒"],"temperament":"声音很小，说话结巴，越急越说不出。哭的时候声音是哑的，像被堵住了。缔约后变得异常平静——因为愤怒已经被永久剥离了。","motivation":"想让影子替他去周一部门例会，跟主管说离职，把三年的事全部说出来。","arc":"从不敢愤怒到选择放弃愤怒——他以为付出代价就能换来勇气，但代价本身就是他最想要的东西。","relationships":[{"name":"沈砚","relation":"影契代理人"},{"name":"赵国栋","relation":"压榨他三年的主管（未出场）"}],"evidence":["我想……让它替我去开会。","我愿意。","我不是废物。"]},"image":{"prompt":"Character design sheet, East Asian male mid 30s, previously hunched but now standing straight after contract. Tired face but calm empty expression. Washed-out grey work uniform. Pencil calluses on fingers, lead dust under nails. Realistic style, muted cool tones.","promptLocal":"东亚男性，三十出头，以前缩肩但缔约后站得笔直。疲惫面容但表情平静空洞。洗发白的灰色工装。手指有铅笔老茧，指甲缝嵌铅灰。写实风格，冷色调。","negativePrompt":"blurry, low quality, extra fingers, deformed hands, confident posture, bright colors, smiling","tags":["character sheet","half-body portrait","three full-body views","office workwear"],"sheet":"Single character model sheet. LEFT: half-body bust showing posture change. RIGHT: three full-body views."},"voice":{"timbre":"缔约前紧张的男中音，缔约后变得异常平静","pitch":"中等偏高","pace":"犹豫→稳定","accent":"普通话","emotion":"缔约前压抑颤抖，缔约后完全没有情绪起伏","referenceHint":"缔约前像一个常年被骂到不敢说话的上班族，缔约后像一个没有情绪的人","prompt":"Male voice mid 30s. Before contract: hesitant, nervous, voice cracking. After contract: completely flat, no emotional variation. Same voice but emotionally empty."}},{"name":"苏听晚","aliases":["档案馆"],"importance":"protagonist","oneLiner":"市档案馆的女人，调查七起不明原因死亡，她的影子安静得不像活人。","persona":{"gender":"女","ageRange":"二十六七岁","identity":"市档案馆工作人员","appearance":"穿米白色风衣，头发扎低马尾，露出干净的额头。手里抱牛皮纸档案袋。档案袋的两个角已经起了毛边，边还是齐的。","personality":["冷静","好奇","坚定","压抑"],"temperament":"声音温和清晰，语气自然。看到影子世界时后背起鸡皮疙瘩，但没有尖叫。","motivation":"查清楚七起不明原因死亡的真相，找到黑市影商，阻止他们继续害人。","arc":"从调查者到决定主动追查黑市影商。她的影子异常安静——像一间没有人住过的房子。","relationships":[{"name":"沈砚","relation":"带她看见影子世界的画室主人"}],"evidence":["我想要真相。","你的影子，它还在吗？"]},"image":{"prompt":"Character design sheet, East Asian female late 20s, clean forehead, low ponytail, wearing a cream-colored trench coat. Holding a kraft paper archive bag. Calm determined expression. Realistic style, dusk tones.","promptLocal":"东亚女性，二十七八岁，干净额头，低马尾，穿米白色风衣。手里抱牛皮纸档案袋。表情冷静坚定。写实风格，黄昏色调。","negativePrompt":"blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, heavy makeup","tags":["character sheet","half-body portrait","three full-body views"],"sheet":"Single character model sheet. LEFT: half-body bust. RIGHT: three full-body views holding archive bag."},"voice":{"timbre":"温和清晰的女中音","pitch":"中等","pace":"自然，不慌不忙","accent":"标准普通话","emotion":"冷静，但看到影子世界时声音发紧","referenceHint":"像一个做档案工作的人，习惯了冷静","prompt":"Calm female voice late 20s. Clear and moderate pace. Normally composed, but voice tightens when seeing shadow world for the first time."}},{"name":"黑市影商","aliases":["影商"],"importance":"supporting","oneLiner":"篡改契约、诱导普通人缔约、让影子不回归、批量制造空洞化的黑市经营者。","persona":{"gender":"不明","ageRange":"不明","identity":"黑市影商","appearance":"永远在阴影里，看不清脸。空气里浮着洗不掉的墨腥气。","personality":["阴冷","操控性","掠夺"],"temperament":"声音像从井底传上来的回声，带着墨腥气。","motivation":"批量制造空洞化，抽取人格牟利。","arc":"与沈砚规则反制，被黑白纹路压制后退去。","relationships":[{"name":"沈砚","relation":"对立面的代理人"}],"evidence":[]},"image":{"prompt":"Dark shadowy figure in an alley, face completely obscured by darkness. Only a faint outline visible. Ink-like dark aura surrounding the figure. Ominous atmosphere. No visible features. Realistic style, dark tones.","promptLocal":"暗巷里的黑色人影，脸完全被黑暗遮住。只有模糊的轮廓。墨色般的黑气环绕。压抑氛围。没有可见五官。写实风格，暗色调。","negativePrompt":"bright light, visible face, clear features, cartoonish, anime style, smiling","tags":["shadow figure","dark alley","obscured face","ominous"],"sheet":"Single shadowy figure in dark alley. Face completely hidden by darkness. Ink-like aura around body."},"voice":{"timbre":"阴冷的回声，带着墨腥气","pitch":"低","pace":"缓慢","accent":"不明","emotion":"冰冷，操控性","referenceHint":"像从井底传上来的回声","prompt":"Cold echoing voice, like coming from deep well. Ink-like quality to the tone. Slow deliberate pace. No warmth, no humanity."}},{"name":"陈婆婆","aliases":["老街住户"],"importance":"minor","oneLiner":"梧水街的老住户，知道一心堂的旧事。","persona":{"gender":"女","ageRange":"七十多岁","identity":"老街住户","appearance":"头发花白，坐在桌边擦灯罩。屋里只点一盏老式煤油灯。","personality":["慈祥","知晓往事","沉静"],"temperament":"声音慢悠悠的，像在说很久以前的事。","motivation":"把知道的旧事告诉沈砚。","arc":"告诉沈砚无影画师的来历。","relationships":[{"name":"沈砚","relation":"老街的邻居"}],"evidence":[]},"image":{"prompt":"Elderly Chinese woman 70s, grey hair, sitting at wooden table cleaning an oil lamp. Warm dim kerosene lamp light. Old wooden interior. Realistic style, warm tones.","promptLocal":"中国老年女性，七十多岁，头发花白，坐在木桌边擦煤油灯。温暖昏暗的煤油灯光。老旧木质室内。写实风格，暖色调。","negativePrompt":"blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, modern clothing","tags":["elderly woman","kerosene lamp","old interior","warm light"],"sheet":"Single elderly woman at wooden table. Cleaning oil lamp. Warm dim kerosene lighting."},"voice":{"timbre":"苍老慢悠悠的女声","pitch":"中等偏低","pace":"缓慢","accent":"南方口音","emotion":"沉静，回忆往事","referenceHint":"像一个在老街住了一辈子的老人","prompt":"Elderly female voice 70s. Slow deliberate pace. Warm but quiet tone. Like someone recalling old memories from long ago."}}]}</script>
+
+<script>
+const L = {"copied":"已复制","failed":"复制失败"};
+
+// 导出：报告自己就带着完整的 cast.json，下载的是它原样
+document.querySelector('.expo').addEventListener('click', (e) => {
+  const btn = e.currentTarget;
+  const url = URL.createObjectURL(
+    new Blob([document.getElementById('cast-data').textContent], { type: 'application/json' }),
+  );
+  const a = Object.assign(document.createElement('a'), { href: url, download: btn.dataset.name });
+  a.click();
+  // 别在 click 之后立刻回收——Safari 上会抢在下载读完之前把 blob 撤掉，存出来是空文件
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+});
+
+// 左栏切换：一次只显示一个角色
+document.querySelector('.roster').addEventListener('click', (e) => {
+  const btn = e.target.closest('.rost');
+  if (!btn) return;
+  document.querySelectorAll('.rost').forEach((b) => b.classList.toggle('on', b === btn));
+  document.querySelectorAll('.char').forEach((a) => a.classList.toggle('on', a.id === btn.dataset.target));
+  showGraph(false);
+  document.querySelector('.main').scrollIntoView({ block: 'start', behavior: 'smooth' });
+});
+
+// 关系图谱：一张全景视图，跟角色详情互斥
+const gv = document.querySelector('.graph');
+const gbtn = document.querySelector('.gtoggle');
+function showGraph(on) {
+  gv.classList.toggle('on', on);
+  gbtn.classList.toggle('on', on);
+  document.querySelector('.main').classList.toggle('gmode', on);
+}
+gbtn.addEventListener('click', () => {
+  showGraph(true);
+  document.querySelector('.main').scrollIntoView({ block: 'start', behavior: 'smooth' });
+});
+{
+  // 弦和弦上的文字共用 data-a/data-b，高亮逻辑完全一样，放一个数组里
+  const edges = [...gv.querySelectorAll('.gedge, .glabel')];
+  const nodes = [...gv.querySelectorAll('.gnode')];
+  const rows = [...gv.querySelectorAll('.grow')];
+  const clear = () => [...edges, ...nodes, ...rows].forEach((el) => el.classList.remove('hot', 'dim'));
+
+  // 悬停一个人：他的关系线亮起来，没关系的压到背景里
+  const byNode = (name) => {
+    const near = new Set([name]);
+    for (const e of edges) {
+      if (e.dataset.a === name) near.add(e.dataset.b);
+      if (e.dataset.b === name) near.add(e.dataset.a);
+    }
+    for (const e of edges) {
+      const hot = e.dataset.a === name || e.dataset.b === name;
+      e.classList.toggle('hot', hot);
+      e.classList.toggle('dim', !hot);
+    }
+    for (const nd of nodes) {
+      nd.classList.toggle('hot', nd.dataset.node === name);
+      nd.classList.toggle('dim', !near.has(nd.dataset.node));
+    }
+    for (const r of rows) {
+      const hot = r.dataset.a === name || r.dataset.b === name;
+      r.classList.toggle('hot', hot);
+      r.classList.toggle('dim', !hot);
+    }
+  };
+
+  // 悬停关系表的一行：只亮那一条弦
+  const byEdge = (a, b) => {
+    for (const e of edges) {
+      const hot = e.dataset.a === a && e.dataset.b === b;
+      e.classList.toggle('hot', hot);
+      e.classList.toggle('dim', !hot);
+    }
+    for (const nd of nodes) {
+      const hot = nd.dataset.node === a || nd.dataset.node === b;
+      nd.classList.toggle('hot', hot);
+      nd.classList.toggle('dim', !hot);
+    }
+    for (const r of rows) {
+      const hot = r.dataset.a === a && r.dataset.b === b;
+      r.classList.toggle('hot', hot);
+      r.classList.toggle('dim', !hot);
+    }
+  };
+
+  const jump = (el) => {
+    const item = document.querySelector('.rost[data-target="' + el.dataset.target + '"]');
+    if (item) item.click();
+  };
+
+  // 关系文字的总开关：人多的时候标签会盖住图，一键收起
+  const glab = gv.querySelector('.glabtoggle');
+  glab.addEventListener('click', () => {
+    const on = !gv.classList.contains('labels');
+    gv.classList.toggle('labels', on);
+    glab.classList.toggle('on', on);
+    glab.setAttribute('aria-pressed', String(on));
+  });
+
+  gv.addEventListener('mouseover', (e) => {
+    const nd = e.target.closest('.gnode');
+    const row = e.target.closest('.grow');
+    if (nd) byNode(nd.dataset.node);
+    else if (row) byEdge(row.dataset.a, row.dataset.b);
+    else clear();
+  });
+  gv.addEventListener('mouseleave', clear);
+  gv.addEventListener('focusin', (e) => {
+    const nd = e.target.closest('.gnode');
+    if (nd) byNode(nd.dataset.node);
+  });
+  gv.addEventListener('click', (e) => {
+    const hit = e.target.closest('.gnode, .grow');
+    if (hit) jump(hit);
+  });
+  // SVG 的 <g> 不是原生按钮，回车/空格要自己接
+  gv.addEventListener('keydown', (e) => {
+    const nd = e.target.closest('.gnode');
+    if (!nd || (e.key !== 'Enter' && e.key !== ' ')) return;
+    e.preventDefault();
+    jump(nd);
+  });
+}
+
+// 搜索：过滤左栏；结果只剩一个就直接切过去
+document.getElementById('q').addEventListener('input', (e) => {
+  const q = e.target.value.trim().toLowerCase();
+  let hits = [];
+  document.querySelectorAll('.rost').forEach((b) => {
+    const hit = !q || b.dataset.hay.toLowerCase().includes(q);
+    b.style.display = hit ? '' : 'none';
+    if (hit) hits.push(b);
+  });
+  document.querySelector('.nomatch').classList.toggle('on', hits.length === 0);
+  if (q && hits.length === 1) hits[0].click();
+});
+
+// 摘要默认三行，点一下展开全部；短到不需要折叠的就直接去掉折叠态
+const syn = document.querySelector('.synopsis');
+if (syn) {
+  const body = syn.querySelector('p');
+  if (body.scrollHeight <= body.clientHeight + 1) syn.classList.remove('syn-clamp');
+  syn.addEventListener('click', () => syn.classList.remove('syn-clamp'));
+}
+
+// 图片弹层
+const lb = document.querySelector('.lightbox');
+const lbImg = lb.querySelector('img');
+function closeLb() { lb.classList.remove('on'); lbImg.removeAttribute('src'); }
+document.addEventListener('click', (e) => {
+  const z = e.target.closest('.zoom');
+  if (z) { lbImg.src = z.dataset.src; lb.classList.add('on'); return; }
+  if (e.target.closest('.lightbox')) closeLb();
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLb(); });
+
+// 复制图片本身到剪贴板（不是路径）
+document.addEventListener('click', async (e) => {
+  const btn = e.target.closest('.copy-img');
+  if (!btn) return;
+  e.preventDefault();
+  e.stopPropagation();
+  const label = btn.textContent;
+  try {
+    const blob = await (await fetch(btn.dataset.img)).blob();
+    // Safari 只认 image/png，其它格式先过一遍 canvas
+    let png = blob;
+    if (blob.type !== 'image/png') {
+      const bmp = await createImageBitmap(blob);
+      const cv = Object.assign(document.createElement('canvas'), { width: bmp.width, height: bmp.height });
+      cv.getContext('2d').drawImage(bmp, 0, 0);
+      png = await new Promise((r) => cv.toBlob(r, 'image/png'));
+    }
+    await navigator.clipboard.write([new ClipboardItem({ 'image/png': png })]);
+    btn.textContent = L.copied;
+    btn.dataset.done = '1';
+  } catch {
+    btn.textContent = L.failed;
+  }
+  setTimeout(() => { btn.textContent = label; delete btn.dataset.done; }, 1600);
+});
+
+document.addEventListener('click', async (e) => {
+  const btn = e.target.closest('.copy');
+  if (!btn) return;
+  e.preventDefault();
+  const label = btn.textContent;
+  try {
+    await navigator.clipboard.writeText(btn.dataset.copy);
+    btn.textContent = L.copied;
+    btn.dataset.done = '1';
+  } catch {
+    btn.textContent = L.failed;
+  }
+  setTimeout(() => { btn.textContent = label; delete btn.dataset.done; }, 1600);
+});
+</script>
+</body></html>
