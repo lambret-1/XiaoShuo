@@ -18,17 +18,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 8.10 秒处；图 4（来自镜头 4）对齐目标视频 11.40 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 8.10-second mark of the target video; Picture 4 (from Shot 4) aligns with the 11.40-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，黄昏木格窗，光一格一格铺在旧木地板上。；男人推门进来，目光先落在画室主人脚下——那块地板干干净净。
-[镜头 2] 于 00:05.000，镜头切至推， <d>[Chinese] 请问……这里是能画画的地方？</d>
-[镜头 3] 于 00:08.100，镜头切至固定， <d>[Chinese] 白天画人像。黄昏以后，画别的。</d>
-[镜头 4] 于 00:11.400，镜头切至左移，男人后退半步，低头看自己脚下那团影子。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the male client in the dim old-town setting <d>[Chinese] 请问……这里是能画画的地方？</d>
+[Shot 3] At 00:08.100, the camera cuts to static shot, the male painter in the dim old-town setting <d>[Chinese] 白天画人像。黄昏以后，画别的。</d>
+[Shot 4] At 00:11.400, the camera cuts to truck left, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -109,17 +109,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.90 秒处；图 3（来自镜头 3）对齐目标视频 5.30 秒处；图 4（来自镜头 4）对齐目标视频 7.80 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.90-second mark of the target video; Picture 3 (from Shot 3) aligns with the 5.30-second mark of the target video; Picture 4 (from Shot 4) aligns with the 7.80-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 我叫周明。设计院做绘图员。</d>
-[镜头 2] 于 00:02.900，镜头切至推， <d>[Chinese] 你想让影子替你做什么。</d>
-[镜头 3] 于 00:05.300，镜头切至固定，男人双手放在膝盖上，指尖抠工装裤缝线。
-[镜头 4] 于 00:07.800，镜头切至左移， <d>[Chinese] 周一例会。我要把三年的委屈，全说出来。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male client in the dim old-town setting <d>[Chinese] 我叫周明。设计院做绘图员。</d>
+[Shot 2] At 00:02.900, the camera cuts to push in, the male painter in the dim old-town setting <d>[Chinese] 你想让影子替你做什么。</d>
+[Shot 3] At 00:05.300, the camera cuts to static shot, the male painter in the dim old-town setting
+[Shot 4] At 00:07.800, the camera cuts to truck left, the male client in the dim old-town setting <d>[Chinese] 周一例会。我要把三年的委屈，全说出来。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -200,17 +200,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 4.40 秒处；图 3（来自镜头 3）对齐目标视频 9.40 秒处；图 4（来自镜头 4）对齐目标视频 11.40 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 4.40-second mark of the target video; Picture 3 (from Shot 3) aligns with the 9.40-second mark of the target video; Picture 4 (from Shot 4) aligns with the 11.40-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 代价是永久剥离一项人格。不是钱，不是命。</d>
-[镜头 2] 于 00:04.400，镜头切至推，画室主人提笔，在速写本上落下第一道照心纹。；纸上墨线游走，浮现一个缩在教室角落的男孩。
-[镜头 3] 于 00:09.400，镜头切至固定， <d>[Chinese] 我愿意。</d>
-[镜头 4] 于 00:11.400，镜头切至左移，三道纹在纸面交汇，纸边卷起碳化，飘下几粒影屑。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting <d>[Chinese] 代价是永久剥离一项人格。不是钱，不是命。</d>
+[Shot 2] At 00:04.400, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:09.400, the camera cuts to static shot, the male client in the dim old-town setting <d>[Chinese] 我愿意。</d>
+[Shot 4] At 00:11.400, the camera cuts to truck left, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -291,17 +291,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 7.50 秒处；图 4（来自镜头 4）对齐目标视频 10.20 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.50-second mark of the target video; Picture 4 (from Shot 4) aligns with the 10.20-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，男人的影子从地板上隆起，形成一个没有五官的黑色人形。；画室主人把速写本合上，用指节在封面上轻叩三下。
-[镜头 2] 于 00:05.000，镜头切至推，他低头看自己的右手，墨痕在路灯光下比刚才深了一分。
-[镜头 3] 于 00:07.500，镜头切至固定， <d>[Chinese] 周一例会结束，契约生效。</d>
-[镜头 4] 于 00:10.200，镜头切至左移，男人推开门走进老街的暮色里。他的影子跟在身后，指尖微微蜷缩了一下。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:07.500, the camera cuts to static shot, the male painter in the dim old-town setting <d>[Chinese] 周一例会结束，契约生效。</d>
+[Shot 4] At 00:10.200, the camera cuts to truck left, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -385,17 +385,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 4.50 秒处；图 4（来自镜头 4）对齐目标视频 9.50 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 4.50-second mark of the target video; Picture 4 (from Shot 4) aligns with the 9.50-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，长条会议桌坐满十二人。男上司敲着桌子。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 周明呢？又迟到？</d>
-[镜头 3] 于 00:04.500，镜头切至固定，门开。男人穿着洗发白的工装走进来，步伐稳得不像他自己。；他把一叠纸拍在桌上。
-[镜头 4] 于 00:09.500，镜头切至左移， <d>[Chinese] 三年，十一个项目，原始图纸。署名全是你。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male client in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the male supervisor in the dim old-town setting <d>[Chinese] 周明呢？又迟到？</d>
+[Shot 3] At 00:04.500, the camera cuts to static shot, the male client in the dim old-town setting
+[Shot 4] At 00:09.500, the camera cuts to truck left, the male client in the dim old-town setting <d>[Chinese] 三年，十一个项目，原始图纸。署名全是你。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -476,17 +476,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 7.60 秒处；图 4（来自镜头 4）对齐目标视频 9.60 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.60-second mark of the target video; Picture 4 (from Shot 4) aligns with the 9.60-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，男上司的脸色变了。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 一百四十七封邮件。你让我把源文件发你私人邮箱。</d>
-[镜头 3] 于 00:07.600，镜头切至固定， <d>[Chinese] 周明！你被开除了！</d>
-[镜头 4] 于 00:09.600，镜头切至左移， <d>[Chinese] 不用你开。这是我的离职申请。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male client in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the male client in the dim old-town setting <d>[Chinese] 一百四十七封邮件。你让我把源文件发你私人邮箱。</d>
+[Shot 3] At 00:07.600, the camera cuts to static shot, the male supervisor in the dim old-town setting <d>[Chinese] 周明！你被开除了！</d>
+[Shot 4] At 00:09.600, the camera cuts to truck left, the male client in the dim old-town setting <d>[Chinese] 不用你开。这是我的离职申请。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -566,16 +566,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 4.50 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 4.50-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，男人把最后一张纸放在桌上，看着男上司的眼睛。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 还有，我不是废物。</d>
-[镜头 3] 于 00:04.500，镜头切至固定，他转身走出会议室。门在身后关上。
+integrated_multimodal_description:
+[Shot 1] static shot, the male client in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the male client in the dim old-town setting <d>[Chinese] 还有，我不是废物。</d>
+[Shot 3] At 00:04.500, the camera cuts to static shot, the male client in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -643,17 +643,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 7.50 秒处；图 4（来自镜头 4）对齐目标视频 11.50 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.50-second mark of the target video; Picture 4 (from Shot 4) aligns with the 11.50-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，同一时刻，画室主人坐在画架前闭眼。；右手墨痕泛起温热的流动，像有什么东西顺着手背往里爬。
-[镜头 2] 于 00:05.000，镜头切至推，他睁开眼，翻开速写本，用铅笔写下两行字。
-[镜头 3] 于 00:07.500，镜头切至固定， <d>[Chinese] 远程感知，首次。共鸣增强，原因不明。</d>
-[镜头 4] 于 00:11.500，镜头切至左移，他合上本子，指节在封面上轻叩三下。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:07.500, the camera cuts to static shot, the male painter in the dim old-town setting <d>[Chinese] 远程感知，首次。共鸣增强，原因不明。</d>
+[Shot 4] At 00:11.500, the camera cuts to truck left, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -730,14 +730,14 @@
 **H3 视频提示词**
 
 ```text
-目标视频在 0.00 秒处完全参照图 1（来自镜头 1）。
+For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
 
-整体视听描述：
-[镜头 1] 固定，他站起来走到窗边，上午阳光很亮，他脚下依旧干干净净没有影子。；窗外老街的嘈杂声涌进来。他低头看右手，墨痕边缘隐约有极淡的纹路在皮肤下面蔓延。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -785,17 +785,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 5.20 秒处；图 4（来自镜头 4）对齐目标视频 7.70 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 5.20-second mark of the target video; Picture 4 (from Shot 4) aligns with the 7.70-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，女子抱着牛皮纸档案袋进门，目光扫过画室主人脚下。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 我叫苏听晚，市档案馆的。</d>
-[镜头 3] 于 00:05.200，镜头切至固定，她把七份复印件摊在桌上。
-[镜头 4] 于 00:07.700，镜头切至左移， <d>[Chinese] 七个人，不明原因死亡，都住梧水街三公里内。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the young woman archivist in the dim old-town setting <d>[Chinese] 我叫苏听晚，市档案馆的。</d>
+[Shot 3] At 00:05.200, the camera cuts to static shot, the male painter in the dim old-town setting
+[Shot 4] At 00:07.700, the camera cuts to truck left, the young woman archivist in the dim old-town setting <d>[Chinese] 七个人，不明原因死亡，都住梧水街三公里内。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -875,16 +875,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 3.10 秒处；图 3（来自镜头 3）对齐目标视频 5.60 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 3.10-second mark of the target video; Picture 3 (from Shot 3) aligns with the 5.60-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 我想知道，为什么你没有影子。</d>
-[镜头 2] 于 00:03.100，镜头切至推，画室主人走到她面前，提笔在她手腕内侧画下一道细墨线。
-[镜头 3] 于 00:05.600，镜头切至固定， <d>[Chinese] 黄昏的时候再来。我带你看真相。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the young woman archivist in the dim old-town setting <d>[Chinese] 我想知道，为什么你没有影子。</d>
+[Shot 2] At 00:03.100, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:05.600, the camera cuts to static shot, the male painter in the dim old-town setting <d>[Chinese] 黄昏的时候再来。我带你看真相。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -952,16 +952,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 9.40 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 9.40-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，黄昏老街。路灯把行人影子拉得很长。；女子愣住——她能听见每个影子在低声说话。
-[镜头 2] 于 00:05.000，镜头切至推， <d>[Chinese] 那个卖苹果的，他的影子在说少找了五块钱。</d>
-[镜头 3] 于 00:09.400，镜头切至固定，两人拐进暗巷。一个醉酒路人靠墙，手里捏着空酒瓶。；他的影子半悬浮在身后，一只黑手按在他头顶。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the young woman archivist in the dim old-town setting <d>[Chinese] 那个卖苹果的，他的影子在说少找了五块钱。</d>
+[Shot 3] At 00:09.400, the camera cuts to static shot, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -1030,17 +1030,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.40 秒处；图 3（来自镜头 3）对齐目标视频 5.70 秒处；图 4（来自镜头 4）对齐目标视频 8.20 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.40-second mark of the target video; Picture 3 (from Shot 3) aligns with the 5.70-second mark of the target video; Picture 4 (from Shot 4) aligns with the 8.20-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 他在干什么？他会死的！</d>
-[镜头 2] 于 00:02.400，镜头切至推， <d>[Chinese] 我是代理人。我只见证，不救赎。</d>
-[镜头 3] 于 00:05.700，镜头切至固定，两人走出暗巷。女子低头看自己脚下——影子安静得像剪纸。
-[镜头 4] 于 00:08.200，镜头切至左移， <d>[Chinese] 我的影子……是不是有什么不对？</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the young woman archivist in the dim old-town setting <d>[Chinese] 他在干什么？他会死的！</d>
+[Shot 2] At 00:02.400, the camera cuts to push in, the male painter in the dim old-town setting <d>[Chinese] 我是代理人。我只见证，不救赎。</d>
+[Shot 3] At 00:05.700, the camera cuts to static shot, the male painter in the dim old-town setting
+[Shot 4] At 00:08.200, the camera cuts to truck left, the young woman archivist in the dim old-town setting <d>[Chinese] 我的影子……是不是有什么不对？</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -1119,15 +1119,15 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.20 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 6.20-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 每个人的影子都不一样。你的安静，也许只是没有不敢说的话。</d>
-[镜头 2] 于 00:06.200，镜头切至推，女子把这个疑问压在心底。她抱着档案袋，跟在画室主人身后往画室走。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting <d>[Chinese] 每个人的影子都不一样。你的安静，也许只是没有不敢说的话。</d>
+[Shot 2] At 00:06.200, the camera cuts to push in, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -1186,16 +1186,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 7.60 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.60-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，周三下午。男人坐在画架对面，背比上次直了一些。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 离职办好了。可我老婆摔门骂我，我一点都不生气。</d>
-[镜头 3] 于 00:07.600，镜头切至固定， <d>[Chinese] 我甚至去厨房给她倒了杯水。这不对啊。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the male client in the dim old-town setting <d>[Chinese] 离职办好了。可我老婆摔门骂我，我一点都不生气。</d>
+[Shot 3] At 00:07.600, the camera cuts to static shot, the male client in the dim old-town setting <d>[Chinese] 我甚至去厨房给她倒了杯水。这不对啊。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -1264,17 +1264,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 3.80 秒处；图 3（来自镜头 3）对齐目标视频 6.30 秒处；图 4（来自镜头 4）对齐目标视频 9.40 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 3.80-second mark of the target video; Picture 3 (from Shot 3) aligns with the 6.30-second mark of the target video; Picture 4 (from Shot 4) aligns with the 9.40-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 代价生效了。永久剥离愤怒。不可逆。</d>
-[镜头 2] 于 00:03.800，镜头切至推，男人猛地站起来，椅子在地板上刮出刺耳声响。
-[镜头 3] 于 00:06.300，镜头切至固定， <d>[Chinese] 我要我的愤怒！你把它还给我！</d>
-[镜头 4] 于 00:09.400，镜头切至左移，他张了张嘴，心底却一片平静。；他慢慢坐回椅子，双手抱住头。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting <d>[Chinese] 代价生效了。永久剥离愤怒。不可逆。</d>
+[Shot 2] At 00:03.800, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:06.300, the camera cuts to static shot, the male client in the dim old-town setting <d>[Chinese] 我要我的愤怒！你把它还给我！</d>
+[Shot 4] At 00:09.400, the camera cuts to truck left, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -1355,17 +1355,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 3.30 秒处；图 3（来自镜头 3）对齐目标视频 8.30 秒处；图 4（来自镜头 4）对齐目标视频 11.20 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 3.30-second mark of the target video; Picture 3 (from Shot 3) aligns with the 8.30-second mark of the target video; Picture 4 (from Shot 4) aligns with the 11.20-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 没有愤怒，我还算个完整的人吗？</d>
-[镜头 2] 于 00:03.300，镜头切至推，画室主人看着他，右手墨痕忽然极淡地烫了一下。；他心底像被羽毛拂过——一种他活了二十七年从没感觉过的东西。
-[镜头 3] 于 00:08.300，镜头切至固定， <d>[Chinese] 你回去吧。时间会帮你适应。</d>
-[镜头 4] 于 00:11.200，镜头切至左移，男人走到门口，回头。
+integrated_multimodal_description:
+[Shot 1] static shot, the male client in the dim old-town setting <d>[Chinese] 没有愤怒，我还算个完整的人吗？</d>
+[Shot 2] At 00:03.300, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:08.300, the camera cuts to static shot, the male painter in the dim old-town setting <d>[Chinese] 你回去吧。时间会帮你适应。</d>
+[Shot 4] At 00:11.200, the camera cuts to truck left, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -1445,16 +1445,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 4.00 秒处；图 3（来自镜头 3）对齐目标视频 6.90 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 4.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 6.90-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 如果时间可以倒流，我不会签那个契约。</d>
-[镜头 2] 于 00:04.000，镜头切至推， <d>[Chinese] 每个委托人，最后都这么说。</d>
-[镜头 3] 于 00:06.900，镜头切至固定，画室主人翻开速写本，画了一个抱头的男人，脚下影子平得像剪纸。；他在画旁写了一行字，又合上本子，指节叩了三下。第三下多停了半息。
+integrated_multimodal_description:
+[Shot 1] static shot, the male client in the dim old-town setting <d>[Chinese] 如果时间可以倒流，我不会签那个契约。</d>
+[Shot 2] At 00:04.000, the camera cuts to push in, the male painter in the dim old-town setting <d>[Chinese] 每个委托人，最后都这么说。</d>
+[Shot 3] At 00:06.900, the camera cuts to static shot, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -1527,17 +1527,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 8.10 秒处；图 4（来自镜头 4）对齐目标视频 10.60 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 8.10-second mark of the target video; Picture 4 (from Shot 4) aligns with the 10.60-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，女子把一张梧水街地图铺在桌上，七个红点。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 七个人死前三个月，都去过茶香巷一家旧茶馆。归一盏。</d>
-[镜头 3] 于 00:08.100，镜头切至固定，画室主人的目光落在茶香巷方向，右手墨痕烫了一下。
-[镜头 4] 于 00:10.600，镜头切至左移， <d>[Chinese] 明天。我们去归一盏。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the young woman archivist in the dim old-town setting <d>[Chinese] 七个人死前三个月，都去过茶香巷一家旧茶馆。归一盏。</d>
+[Shot 3] At 00:08.100, the camera cuts to static shot, the male painter in the dim old-town setting
+[Shot 4] At 00:10.600, the camera cuts to truck left, the male painter in the dim old-town setting <d>[Chinese] 明天。我们去归一盏。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -1617,16 +1617,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 9.70 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 9.70-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，清晨薄雾。两人推门走进昏暗茶馆。；老板擦着粗陶茶杯，目光扫到画室主人脚下干净的地，顿了一瞬。
-[镜头 2] 于 00:05.000，镜头切至推， <d>[Chinese] 上一个脚下没影子的客人，四十多年没来过了。</d>
-[镜头 3] 于 00:09.700，镜头切至固定，画室主人径直走向柜台后那道颜色更深的木门。；两人推开后门，下到地下石厅。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the long-robed man in the dim old-town setting <d>[Chinese] 上一个脚下没影子的客人，四十多年没来过了。</d>
+[Shot 3] At 00:09.700, the camera cuts to static shot, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -1694,16 +1694,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 9.40 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 9.40-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，石桌前，长衫男人正给一个年轻女人画扭曲的伪契。；他转头，目光扫到女子脚下那团纯白影子。
-[镜头 2] 于 00:05.000，镜头切至推， <d>[Chinese] 纯白影子？不可能。世上没有没欲望的影子。</d>
-[镜头 3] 于 00:09.400，镜头切至固定，他抬手一道黑墨线直扑女子脚下。；纯白影子自行铺开一层光幕，墨线撞上瞬间消融。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the long-robed man in the dim old-town setting <d>[Chinese] 纯白影子？不可能。世上没有没欲望的影子。</d>
+[Shot 3] At 00:09.400, the camera cuts to static shot, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -1770,15 +1770,15 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.90 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 6.90-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 你护得了她一时，护不了她一世。等它醒过来，所有影子都得归一处。</d>
-[镜头 2] 于 00:06.900，镜头切至推，长衫男人挥袖，石桌伪契化黑末，人退入暗通道消失。
+integrated_multimodal_description:
+[Shot 1] static shot, the long-robed man in the dim old-town setting <d>[Chinese] 你护得了她一时，护不了她一世。等它醒过来，所有影子都得归一处。</d>
+[Shot 2] At 00:06.900, the camera cuts to push in, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -1838,16 +1838,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 9.40 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 9.40-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，老太太从里屋取出木匣，锈锁一撬就开。；她拿出一张焦黑的纸，边缘碳化，中间残留墨纹。
-[镜头 2] 于 00:05.000，镜头切至推， <d>[Chinese] 四十年前，他留下的。上一个没有影子的人。</d>
-[镜头 3] 于 00:09.400，镜头切至固定， <d>[Chinese] 他怎么了？</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the old landlady in the dim old-town setting <d>[Chinese] 四十年前，他留下的。上一个没有影子的人。</d>
+[Shot 3] At 00:09.400, the camera cuts to static shot, the male painter in the dim old-town setting <d>[Chinese] 他怎么了？</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -1914,15 +1914,15 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.30 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.30-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 他的影子没消失。一直在外面长。长够了，回来找他。</d>
-[镜头 2] 于 00:05.300，镜头切至推，画室主人右手墨痕剧烈烫了一下，眼前闪过一片黑暗，有声音叫他的名字。
+integrated_multimodal_description:
+[Shot 1] static shot, the old landlady in the dim old-town setting <d>[Chinese] 他的影子没消失。一直在外面长。长够了，回来找他。</d>
+[Shot 2] At 00:05.300, the camera cuts to push in, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -1978,16 +1978,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 10.10 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 10.10-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，女子在地下库房翻到一份1982年的手写笔录。；她翻开最后一页，背面夹着一张草图——偿价纹末端多一道极细支线。
-[镜头 2] 于 00:05.000，镜头切至推， <d>[Chinese] 他画的每一道契约，末端都有这道线。不是他画的。</d>
-[镜头 3] 于 00:10.100，镜头切至固定，女子的指尖顿住，把草图夹进档案袋。
+integrated_multimodal_description:
+[Shot 1] static shot, the young woman archivist in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the young woman archivist in the dim old-town setting <d>[Chinese] 他画的每一道契约，末端都有这道线。不是他画的。</d>
+[Shot 3] At 00:10.100, the camera cuts to static shot, the young woman archivist in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -2054,16 +2054,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 7.20 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.20-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，画室。两人把焦黑残片和草图并排摊在桌上——同一位置的支线，完全吻合。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 四十年前就有人在契约里动手脚。把人当养料。</d>
-[镜头 3] 于 00:07.200，镜头切至固定，画室主人翻开速写本男人那一页。；他停住——男人那团影子的指尖，多了一道他从没画过的淡墨线。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the young woman archivist in the dim old-town setting <d>[Chinese] 四十年前就有人在契约里动手脚。把人当养料。</d>
+[Shot 3] At 00:07.200, the camera cuts to static shot, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -2131,16 +2131,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 3.60 秒处；图 3（来自镜头 3）对齐目标视频 6.10 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 3.60-second mark of the target video; Picture 3 (from Shot 3) aligns with the 6.10-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 有人，在我的契约里，也动了手脚。</d>
-[镜头 2] 于 00:03.600，镜头切至推，他走到窗边，看着窗外已经完全暗下来的梧水街。
-[镜头 3] 于 00:06.100，镜头切至固定， <d>[Chinese] 先救周明。然后，我要知道我的影子到底是什么。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting <d>[Chinese] 有人，在我的契约里，也动了手脚。</d>
+[Shot 2] At 00:03.600, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:06.100, the camera cuts to static shot, the male painter in the dim old-town setting <d>[Chinese] 先救周明。然后，我要知道我的影子到底是什么。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -2211,16 +2211,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 7.80 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.80-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，男人开门。面色苍白，眼神死寂。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 我爱人带孩子回娘家了。她说跟我待在一个房间害怕。</d>
-[镜头 3] 于 00:07.800，镜头切至固定，客厅。男人坐在沙发边，影子上的黑线像藤蔓向内缠绕。；画室主人半蹲下身端详影子。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the male client in the dim old-town setting <d>[Chinese] 我爱人带孩子回娘家了。她说跟我待在一个房间害怕。</d>
+[Shot 3] At 00:07.800, the camera cuts to static shot, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -2288,16 +2288,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.10 秒处；图 3（来自镜头 3）对齐目标视频 10.10 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.10-second mark of the target video; Picture 3 (from Shot 3) aligns with the 10.10-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 暗纹已经和影子长在一起。一周内你会进第二阶段。</d>
-[镜头 2] 于 00:05.100，镜头切至推，女子上前一步，让纯白影子贴近男人的影子。；暗纹在微光下慢慢变淡。无数破碎记忆涌入她脑海。
-[镜头 3] 于 00:10.100，镜头切至固定， <d>[Chinese] 收下这份养料。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting <d>[Chinese] 暗纹已经和影子长在一起。一周内你会进第二阶段。</d>
+[Shot 2] At 00:05.100, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:10.100, the camera cuts to static shot, the male painter in the dim old-town setting <d>[Chinese] 收下这份养料。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -2366,18 +2366,18 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.30 秒处；图 3（来自镜头 3）对齐目标视频 7.80 秒处；图 4（来自镜头 4）对齐目标视频 9.80 秒处；图 5（来自镜头 5）对齐目标视频 12.30 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.30-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.80-second mark of the target video; Picture 4 (from Shot 4) aligns with the 9.80-second mark of the target video; Picture 5 (from Shot 5) aligns with the 12.30-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 我看见了。那晚他在路边直接对周明的影子植了墨线。</d>
-[镜头 2] 于 00:05.300，镜头切至推，女子低头。纯白影子里那道温柔低语第一次凝成一句话传入她耳中。
-[镜头 3] 于 00:07.800，镜头切至固定， <d>[Chinese] 他在找你。</d>
-[镜头 4] 于 00:09.800，镜头切至左移，女子指尖发凉，低头看自己的影子。
-[镜头 5] 于 00:12.300，镜头切至推， <d>[Chinese] 谁在找我？</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the young woman archivist in the dim old-town setting <d>[Chinese] 我看见了。那晚他在路边直接对周明的影子植了墨线。</d>
+[Shot 2] At 00:05.300, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:07.800, the camera cuts to static shot, the male painter in the dim old-town setting <d>[Chinese] 他在找你。</d>
+[Shot 4] At 00:09.800, the camera cuts to truck left, the male painter in the dim old-town setting
+[Shot 5] At 00:12.300, the camera cuts to push in, the young woman archivist in the dim old-town setting <d>[Chinese] 谁在找我？</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -2469,16 +2469,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 10.80 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 10.80-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，纯白影子微微晃动，没有再出声，微光调转方向静静朝向画室主人。；画室主人站起身，把男人影子上的最后一缕暗纹按回深处。
-[镜头 2] 于 00:05.000，镜头切至推， <d>[Chinese] 这段时间别独自走偏僻阴影。影子再躁动，立刻联系我们。</d>
-[镜头 3] 于 00:10.800，镜头切至固定， <d>[Chinese] 能保住意识，就够了。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the male painter in the dim old-town setting <d>[Chinese] 这段时间别独自走偏僻阴影。影子再躁动，立刻联系我们。</d>
+[Shot 3] At 00:10.800, the camera cuts to static shot, the male client in the dim old-town setting <d>[Chinese] 能保住意识，就够了。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -2546,16 +2546,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 4.50 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 4.50-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，两人辞别男人走出居民楼。夜色笼着梧水街，路灯把来往行人影子拉得很长。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 现在去哪里？</d>
-[镜头 3] 于 00:04.500，镜头切至固定， <d>[Chinese] 归一盏。那个植暗纹的人，一定会回茶馆。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the young woman archivist in the dim old-town setting <d>[Chinese] 现在去哪里？</d>
+[Shot 3] At 00:04.500, the camera cuts to static shot, the male painter in the dim old-town setting <d>[Chinese] 归一盏。那个植暗纹的人，一定会回茶馆。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -2628,17 +2628,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 7.50 秒处；图 4（来自镜头 4）对齐目标视频 12.40 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.50-second mark of the target video; Picture 4 (from Shot 4) aligns with the 12.40-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，夜深。两人守在归一盏对面的暗影里。；长衫男人叩门三下，闪身入内。
-[镜头 2] 于 00:05.000，镜头切至推，两人翻窗进后院，贴在窄门外偷听。
-[镜头 3] 于 00:07.500，镜头切至固定， <d>[Chinese] 缺的那味药引，就在梧水街。等它醒透，归一成。</d>
-[镜头 4] 于 00:12.400，镜头切至左移，长衫男人忽然停住，侧头扫向门缝。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:07.500, the camera cuts to static shot, the male painter in the dim old-town setting <d>[Chinese] 缺的那味药引，就在梧水街。等它醒透，归一成。</d>
+[Shot 4] At 00:12.400, the camera cuts to truck left, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -2715,14 +2715,14 @@
 **H3 视频提示词**
 
 ```text
-目标视频在 0.00 秒处完全参照图 1（来自镜头 1）。
+For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 既然来了，就出来吧。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the long-robed man in the dim old-town setting <d>[Chinese] 既然来了，就出来吧。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -2767,18 +2767,18 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 5.20 秒处；图 4（来自镜头 4）对齐目标视频 10.20 秒处；图 5（来自镜头 5）对齐目标视频 12.20 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 5.20-second mark of the target video; Picture 4 (from Shot 4) aligns with the 10.20-second mark of the target video; Picture 5 (from Shot 5) aligns with the 12.20-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，画室主人推门入内，女子跟上。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 果然是你。我找了你很久。</d>
-[镜头 3] 于 00:05.200，镜头切至固定，长衫男人脚下影子骤然扩大，黑潮覆满整个石厅地面。；画室主人右手抬起，指尖凝出墨线，在地上飞快画照心纹。
-[镜头 4] 于 00:10.200，镜头切至左移， <d>[Chinese] 走！</d>
-[镜头 5] 于 00:12.200，镜头切至推，照心纹亮起，黑潮被滞住。画室主人最后一笔在地面炸开。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the long-robed man in the dim old-town setting <d>[Chinese] 果然是你。我找了你很久。</d>
+[Shot 3] At 00:05.200, the camera cuts to static shot, the male painter in the dim old-town setting
+[Shot 4] At 00:10.200, the camera cuts to truck left, the male painter in the dim old-town setting <d>[Chinese] 走！</d>
+[Shot 5] At 00:12.200, the camera cuts to push in, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -2870,16 +2870,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 7.40 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.40-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，两人翻过后墙跳进巷子。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 归一不可阻挡。你护得了她一时，护不了她一世。</d>
-[镜头 3] 于 00:07.400，镜头切至固定，画室主人拉着女子沿茶香巷一路疾行，直到拐出巷口回到梧水街主街才停下。；夜风迎面吹。女子扶着墙喘息。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the male painter in the dim old-town setting <d>[Chinese] 归一不可阻挡。你护得了她一时，护不了她一世。</d>
+[Shot 3] At 00:07.400, the camera cuts to static shot, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -2946,16 +2946,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 4.00 秒处；图 3（来自镜头 3）对齐目标视频 10.00 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 4.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 10.00-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 他说我脚下这团影子，是它缺的那一味。</d>
-[镜头 2] 于 00:04.000，镜头切至推， <d>[Chinese] 他的话有一半是假的，有一半可能是真的。你不能往那边去。</d>
-[镜头 3] 于 00:10.000，镜头切至固定，女子抱紧怀里的档案袋，低头看自己的影子——纯白安静贴地，跟着脚步一步一步。
+integrated_multimodal_description:
+[Shot 1] static shot, the young woman archivist in the dim old-town setting <d>[Chinese] 他说我脚下这团影子，是它缺的那一味。</d>
+[Shot 2] At 00:04.000, the camera cuts to push in, the male painter in the dim old-town setting <d>[Chinese] 他的话有一半是假的，有一半可能是真的。你不能往那边去。</d>
+[Shot 3] At 00:10.000, the camera cuts to static shot, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -3027,16 +3027,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 7.40 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.40-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，老太太把铁盒推到画室主人面前。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 他当年，也是先拒绝的。然后就忘了为什么不归。</d>
-[镜头 3] 于 00:07.400，镜头切至固定，画室主人捏着那张半行残纸：找回……另一半……方可……
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the old landlady in the dim old-town setting <d>[Chinese] 他当年，也是先拒绝的。然后就忘了为什么不归。</d>
+[Shot 3] At 00:07.400, the camera cuts to static shot, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -3105,17 +3105,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 7.00 秒处；图 4（来自镜头 4）对齐目标视频 12.00 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.00-second mark of the target video; Picture 4 (from Shot 4) aligns with the 12.00-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，档案馆最深处。锈铁锁一碰就碎。两人推开铁门。；女子脚下纯白影子挣脱地面，悬起贴向铁门。
-[镜头 2] 于 00:05.000，镜头切至推， <d>[Chinese] 听晚。</d>
-[镜头 3] 于 00:07.000，镜头切至固定，密室中央石台上，放着一本无封旧册。；两人走近。册页自动翻开，最后一页一道墨色一道白色纹路纠缠。
-[镜头 4] 于 00:12.000，镜头切至左移，两道光从册页上浮起，悬在半空，即将相融。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the male painter in the dim old-town setting <d>[Chinese] 听晚。</d>
+[Shot 3] At 00:07.000, the camera cuts to static shot, the male painter in the dim old-town setting
+[Shot 4] At 00:12.000, the camera cuts to truck left, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -3194,16 +3194,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 8.10 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 8.10-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，画室主人抬手，硬生生隔开那两道光。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 宿命归宿命。人间的选择，不该由一本烧剩的册子定论。</d>
-[镜头 3] 于 00:08.100，镜头切至固定，黑白两道光悬在半空，谁也不肯先退。；影册自己合上，发出一声轻响：嗒。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the male painter in the dim old-town setting <d>[Chinese] 宿命归宿命。人间的选择，不该由一本烧剩的册子定论。</d>
+[Shot 3] At 00:08.100, the camera cuts to static shot, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -3272,18 +3272,18 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 4.50 秒处；图 4（来自镜头 4）对齐目标视频 6.50 秒处；图 5（来自镜头 5）对齐目标视频 11.50 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 4.50-second mark of the target video; Picture 4 (from Shot 4) aligns with the 6.50-second mark of the target video; Picture 5 (from Shot 5) aligns with the 11.50-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，黑白交织的微光一寸一寸暗下去，密室回到四壁空空的样子。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 它……睡了？</d>
-[镜头 3] 于 00:04.500，镜头切至固定， <d>[Chinese] 它在等。</d>
-[镜头 4] 于 00:06.500，镜头切至左移，女子弯腰把悬着的纯白按回脚下。；两人走出地下库房。夜风扑面，女子在台阶上深吸一口气。
-[镜头 5] 于 00:11.500，镜头切至推，画室主人站在档案馆的黑影里，目光沿街面扫了一圈。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the young woman archivist in the dim old-town setting <d>[Chinese] 它……睡了？</d>
+[Shot 3] At 00:04.500, the camera cuts to static shot, the male painter in the dim old-town setting <d>[Chinese] 它在等。</d>
+[Shot 4] At 00:06.500, the camera cuts to truck left, the male painter in the dim old-town setting
+[Shot 5] At 00:11.500, the camera cuts to push in, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -3373,14 +3373,14 @@
 **H3 视频提示词**
 
 ```text
-目标视频在 0.00 秒处完全参照图 1（来自镜头 1）。
+For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 有人跟着。别回头，往街那边走，慢一点。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting <d>[Chinese] 有人跟着。别回头，往街那边走，慢一点。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -3428,17 +3428,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 7.50 秒处；图 4（来自镜头 4）对齐目标视频 11.70 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.50-second mark of the target video; Picture 4 (from Shot 4) aligns with the 11.70-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，黄昏茶香巷口。画室主人倒垃圾，女子跟在身后。；巷中央空地上，一圈粗黑错纹——照心纹被改细、偿价纹被加粗。
-[镜头 2] 于 00:05.000，镜头切至推，长衫男人独立那圈伪契中央，双手拢袖。
-[镜头 3] 于 00:07.500，镜头切至固定， <d>[Chinese] 我想明白了。你退出来，是想自己走进去。</d>
-[镜头 4] 于 00:11.700，镜头切至左移，画室主人蹲下身，指尖凝出松烟墨色，在浮土上落正规照心纹。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:07.500, the camera cuts to static shot, the long-robed man in the dim old-town setting <d>[Chinese] 我想明白了。你退出来，是想自己走进去。</d>
+[Shot 4] At 00:11.700, the camera cuts to truck left, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -3519,17 +3519,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.10 秒处；图 3（来自镜头 3）对齐目标视频 7.10 秒处；图 4（来自镜头 4）对齐目标视频 12.10 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.10-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.10-second mark of the target video; Picture 4 (from Shot 4) aligns with the 12.10-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 照心纹一落，是照在场所有人的心。你我都在圈里。</d>
-[镜头 2] 于 00:05.100，镜头切至推， <d>[Chinese] 我知道。</d>
-[镜头 3] 于 00:07.100，镜头切至固定，照心纹斜斜压在那团粗黑偿价纹上。；被蒙骗了几十年的委托人真愿一个接一个从墨纹底下醒过来。
-[镜头 4] 于 00:12.100，镜头切至左移，伪契从内部碎裂成墨粉，被晚风吹散。
+integrated_multimodal_description:
+[Shot 1] static shot, the long-robed man in the dim old-town setting <d>[Chinese] 照心纹一落，是照在场所有人的心。你我都在圈里。</d>
+[Shot 2] At 00:05.100, the camera cuts to push in, the male painter in the dim old-town setting <d>[Chinese] 我知道。</d>
+[Shot 3] At 00:07.100, the camera cuts to static shot, the male painter in the dim old-town setting
+[Shot 4] At 00:12.100, the camera cuts to truck left, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -3609,16 +3609,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.30 秒处；图 3（来自镜头 3）对齐目标视频 10.30 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.30-second mark of the target video; Picture 3 (from Shot 3) aligns with the 10.30-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 你赢了这一城。可你拆不掉人心里那个不痛就好的愿。</d>
-[镜头 2] 于 00:05.300，镜头切至推，长衫男人退入暗巷，衣角一闪就没了。；女子脚下纯白影子边缘亮了一亮，又平平贴回去。
-[镜头 3] 于 00:10.300，镜头切至固定， <d>[Chinese] 他真的会走？</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the long-robed man in the dim old-town setting <d>[Chinese] 你赢了这一城。可你拆不掉人心里那个不痛就好的愿。</d>
+[Shot 2] At 00:05.300, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:10.300, the camera cuts to static shot, the young woman archivist in the dim old-town setting <d>[Chinese] 他真的会走？</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -3687,16 +3687,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 4.90 秒处；图 3（来自镜头 3）对齐目标视频 7.40 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 4.90-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.40-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 这一城的据点，会安静一阵。伪契散了，愿还在。</d>
-[镜头 2] 于 00:04.900，镜头切至推，画室主人弯腰拎起墙根的簸箕。
-[镜头 3] 于 00:07.400，镜头切至固定， <d>[Chinese] 你刚才……不怕他真放黑潮？</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting <d>[Chinese] 这一城的据点，会安静一阵。伪契散了，愿还在。</d>
+[Shot 2] At 00:04.900, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:07.400, the camera cuts to static shot, the young woman archivist in the dim old-town setting <d>[Chinese] 你刚才……不怕他真放黑潮？</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -3763,15 +3763,15 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.70 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 6.70-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 他在算我敢不敢真把照心纹压到他自己身上。算清楚了，他就走了。</d>
-[镜头 2] 于 00:06.700，镜头切至推，夜风穿巷而过。归一盏的门依旧关着，像真要熄一阵灯了。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting <d>[Chinese] 他在算我敢不敢真把照心纹压到他自己身上。算清楚了，他就走了。</d>
+[Shot 2] At 00:06.700, the camera cuts to push in, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -3831,17 +3831,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 8.70 秒处；图 4（来自镜头 4）对齐目标视频 11.60 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 8.70-second mark of the target video; Picture 4 (from Shot 4) aligns with the 11.60-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，白天。老太太坐在画架对面，由孙女搀着。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 我年轻时候不做梦。人这一辈子，白天压下去的夜里全跑出来。</d>
-[镜头 3] 于 00:08.700，镜头切至固定， <d>[Chinese] 你呢？你这么年轻，做梦不？</d>
-[镜头 4] 于 00:11.600，镜头切至左移， <d>[Chinese] 不做。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the old lady in the dim old-town setting <d>[Chinese] 我年轻时候不做梦。人这一辈子，白天压下去的夜里全跑出来。</d>
+[Shot 3] At 00:08.700, the camera cuts to static shot, the old lady in the dim old-town setting <d>[Chinese] 你呢？你这么年轻，做梦不？</d>
+[Shot 4] At 00:11.600, the camera cuts to truck left, the male painter in the dim old-town setting <d>[Chinese] 不做。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -3920,15 +3920,15 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.20 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.20-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 不做梦好。心里干净。</d>
-[镜头 2] 于 00:02.200，镜头切至推，画室主人低头继续画那颗眼角的痣。
+integrated_multimodal_description:
+[Shot 1] static shot, the old lady in the dim old-town setting <d>[Chinese] 不做梦好。心里干净。</d>
+[Shot 2] At 00:02.200, the camera cuts to push in, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -3986,18 +3986,18 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 7.50 秒处；图 4（来自镜头 4）对齐目标视频 9.50 秒处；图 5（来自镜头 5）对齐目标视频 12.00 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.50-second mark of the target video; Picture 4 (from Shot 4) aligns with the 9.50-second mark of the target video; Picture 5 (from Shot 5) aligns with the 12.00-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，后半夜。画室主人被右手墨痕烫醒。；他坐起身，借着路灯光看右手——墨痕在黑暗里一明一灭。
-[镜头 2] 于 00:05.000，镜头切至推，他从枕下摸出旧怀表，合在掌心。表壳凉的。
-[镜头 3] 于 00:07.500，镜头切至固定， <d>[Chinese] 沈砚。</d>
-[镜头 4] 于 00:09.500，镜头切至左移，画室主人整个人僵住。
-[镜头 5] 于 00:12.000，镜头切至推， <d>[Chinese] 沈砚。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:07.500, the camera cuts to static shot, the male painter in the dim old-town setting <d>[Chinese] 沈砚。</d>
+[Shot 4] At 00:09.500, the camera cuts to truck left, the male painter in the dim old-town setting
+[Shot 5] At 00:12.000, the camera cuts to push in, the male painter in the dim old-town setting <d>[Chinese] 沈砚。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -4089,17 +4089,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 7.40 秒处；图 4（来自镜头 4）对齐目标视频 12.40 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.40-second mark of the target video; Picture 4 (from Shot 4) aligns with the 12.40-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，烫意慢慢退下去。他把怀表揣回贴身口袋。；他躺下，睁着眼看天花板上那一小片窗格。
-[镜头 2] 于 00:05.000，镜头切至推， <d>[Chinese] 它在等他，再开一次门。</d>
-[镜头 3] 于 00:07.400，镜头切至固定，画室主人把怀表凑到眼前。指针还是停在那个时辰——十七岁那个雨夜。；他一直以为从那一刻起，就把身后那个东西整个甩掉了。
-[镜头 4] 于 00:12.400，镜头切至左移，今晚他才知道，门里门外从来不是一堵墙。它在门外那片黑里，替他把不肯再要的那一半，守了十年。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the male painter in the dim old-town setting <d>[Chinese] 它在等他，再开一次门。</d>
+[Shot 3] At 00:07.400, the camera cuts to static shot, the male painter in the dim old-town setting
+[Shot 4] At 00:12.400, the camera cuts to truck left, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -4177,15 +4177,15 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，他躺下。这一夜依旧没有做梦。；可他知道，即使不做梦，闭上眼也再回不到十年前那种干干净净的黑里了。
-[镜头 2] 于 00:05.000，镜头切至推，楼底下远远传来一声夜车的喇叭。梧水街还是那个梧水街。；他侧过身，把右手心那点余温压回枕下。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -4244,16 +4244,16 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 9.20 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 9.20-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，档案馆阅览席。女子面前摊着一份讣闻。；她把银书签从书页角抽出来，指尖捻着链条。
-[镜头 2] 于 00:05.000，镜头切至推， <d>[Chinese] 影商走了。可他留在人身上的契，还在走。</d>
-[镜头 3] 于 00:09.200，镜头切至固定，她合上卷宗，把书签别回领口。
+integrated_multimodal_description:
+[Shot 1] static shot, the young woman archivist in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the young woman archivist in the dim old-town setting <d>[Chinese] 影商走了。可他留在人身上的契，还在走。</d>
+[Shot 3] At 00:09.200, the camera cuts to static shot, the young woman archivist in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -4318,14 +4318,14 @@
 **H3 视频提示词**
 
 ```text
-目标视频在 0.00 秒处完全参照图 1（来自镜头 1）。
+For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
 
-整体视听描述：
-[镜头 1] 固定， <d>[Chinese] 我不再只翻旧档了。我要去找他们。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the young woman archivist in the dim old-town setting <d>[Chinese] 我不再只翻旧档了。我要去找他们。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -4369,17 +4369,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处；图 3（来自镜头 3）对齐目标视频 10.00 秒处；图 4（来自镜头 4）对齐目标视频 12.50 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 10.00-second mark of the target video; Picture 4 (from Shot 4) aligns with the 12.50-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，黄昏画室。画室主人摊开速写本等委托人。；楼下木梯传来很慢、很犹豫的脚步声。
-[镜头 2] 于 00:05.000，镜头切至推，门被推开一条缝。一只攥得死紧的手先探进来。；十六七岁的年轻女子挤进门，缩着肩。
-[镜头 3] 于 00:10.000，镜头切至固定，她目光先落在画室主人脚下——那块地板干干净净。
-[镜头 4] 于 00:12.500，镜头切至左移， <d>[Chinese] 坐。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the male painter in the dim old-town setting
+[Shot 3] At 00:10.000, the camera cuts to static shot, the male painter in the dim old-town setting
+[Shot 4] At 00:12.500, the camera cuts to truck left, the male painter in the dim old-town setting <d>[Chinese] 坐。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -4459,17 +4459,17 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 2.50 秒处；图 3（来自镜头 3）对齐目标视频 7.60 秒处；图 4（来自镜头 4）对齐目标视频 10.10 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.60-second mark of the target video; Picture 4 (from Shot 4) aligns with the 10.10-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，年轻女子没敢坐，揪着校服下摆。
-[镜头 2] 于 00:02.500，镜头切至推， <d>[Chinese] 听说这里……能让人替我做一件我自己做不到的事。</d>
-[镜头 3] 于 00:07.600，镜头切至固定，窗外最后一线夕阳沉下，木格窗的光淡了。
-[镜头 4] 于 00:10.100，镜头切至左移， <d>[Chinese] 我想让影子，替我去台上。</d>
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:02.500, the camera cuts to push in, the young student in the dim old-town setting <d>[Chinese] 听说这里……能让人替我做一件我自己做不到的事。</d>
+[Shot 3] At 00:07.600, the camera cuts to static shot, the male painter in the dim old-town setting
+[Shot 4] At 00:10.100, the camera cuts to truck left, the young student in the dim old-town setting <d>[Chinese] 我想让影子，替我去台上。</d>
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
@@ -4548,15 +4548,15 @@
 **H3 视频提示词**
 
 ```text
-参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 5.00 秒处。
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video.
 
-整体视听描述：
-[镜头 1] 固定，梧桐叶在窗外被晚风翻动，沙沙地响。；画室主人看着这个攥着书包带、和男人当年同一个缩法的孩子。
-[镜头 2] 于 00:05.000，镜头切至推，他没有立刻接话。他在心里把那三个字——后悔吗——又过了一遍。；黄昏，正要彻底黑下去。
+integrated_multimodal_description:
+[Shot 1] static shot, the male painter in the dim old-town setting
+[Shot 2] At 00:05.000, the camera cuts to push in, the male painter in the dim old-town setting
 
-整体音景：老木地板轻微响动，远处老街人声与晚风
+overall_soundscape: old wooden floor creaks, distant old-town murmur and evening breeze.
 
-非叙事配乐：无
+non_diegetic_music: N/A
 ```
 
 **Seedance 视频提示词**
