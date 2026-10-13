@@ -21,9 +21,9 @@
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 8.10-second mark of the target video; Picture 4 (from Shot 4) aligns with the 11.40-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior; pushes the door open and steps into the room
-[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the figure holds still (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 请问……这里是能画画的地方？</d>
-[Shot 3] At 00:08.100, the camera cuts to static shot on <Picture 3> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 白天画人像。黄昏以后，画别的。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — pushes the door open and steps into the room
+[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the client sits with both hands on his knees, lips moving (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 请问……这里是能画画的地方？</d>
+[Shot 3] At 00:08.100, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 白天画人像。黄昏以后，画别的。</d>
 [Shot 4] At 00:11.400, the camera cuts to truck left on <Picture 4> — steps back half a pace
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
@@ -47,7 +47,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，黄昏木格窗，光一格一格铺在旧木地板上。；男人推门进来，目光先落在the painter脚下——那块地板干干净净。
+画面：固定，黄昏木格窗，光一格一格铺在旧木地板上。；男人推门进来，目光先落在画室男子脚下——那块地板干干净净。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -59,7 +59,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，工装男人双手放在膝上，嘴唇微动
 台词：{请问……这里是能画画的地方？}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -71,7 +71,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{白天画人像。黄昏以后，画别的。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -112,10 +112,10 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.90-second mark of the target video; Picture 3 (from Shot 3) aligns with the 5.30-second mark of the target video; Picture 4 (from Shot 4) aligns with the 7.80-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 我叫周明。设计院做绘图员。</d>
-[Shot 2] At 00:02.900, the camera cuts to push in on <Picture 2> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 你想让影子替你做什么。</d>
-[Shot 3] At 00:05.300, the camera cuts to static shot on <Picture 3> — the scene unfolds quietly in the dim old-town interior
-[Shot 4] At 00:07.800, the camera cuts to truck left on <Picture 4> — the figure holds still (S5) says: <d>[Chinese] 周一例会。我要把三年的委屈，全说出来。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the client sits with both hands on his knees, lips moving (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 我叫周明。设计院做绘图员。</d>
+[Shot 2] At 00:02.900, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 你想让影子替你做什么。</d>
+[Shot 3] At 00:05.300, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 4] At 00:07.800, the camera cuts to truck left on <Picture 4> — the client sits with both hands on his knees, lips moving (S5) says: <d>[Chinese] 周一例会。我要把三年的委屈，全说出来。</d>
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -138,7 +138,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，工装男人双手放在膝上，嘴唇微动
 台词：{我叫周明。设计院做绘图员。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -150,7 +150,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，画室男子停下笔，抬眼看向对面
 台词：{你想让影子替你做什么。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -162,7 +162,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，the client双手放在膝盖上，指尖抠工装裤缝线。
+画面：固定，工装男人双手放在膝盖上，指尖抠工装裤缝线。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -174,7 +174,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，
+画面：左移，工装男人双手放在膝上，嘴唇微动
 台词：{周一例会。我要把三年的委屈，全说出来。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -203,9 +203,9 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 4.40-second mark of the target video; Picture 3 (from Shot 3) aligns with the 9.40-second mark of the target video; Picture 4 (from Shot 4) aligns with the 11.40-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 代价是永久剥离一项人格。不是钱，不是命。</d>
-[Shot 2] At 00:04.400, the camera cuts to push in on <Picture 2> — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
-[Shot 3] At 00:09.400, the camera cuts to static shot on <Picture 3> — the figure holds still (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 我愿意。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 代价是永久剥离一项人格。不是钱，不是命。</d>
+[Shot 2] At 00:04.400, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 3] At 00:09.400, the camera cuts to static shot on <Picture 3> — the client sits with both hands on his knees, lips moving (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 我愿意。</d>
 [Shot 4] At 00:11.400, the camera cuts to truck left on <Picture 4> — takes out a charred paper, edges burnt black, residual ink patterns in the middle
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
@@ -229,7 +229,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{代价是永久剥离一项人格。不是钱，不是命。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -241,7 +241,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，the painter提笔，在速写本上落下第一道照心纹。；纸上墨线游走，浮现一个缩在教室角落的男孩。
+画面：推，画室男子提笔，在速写本上落下第一道照心纹。；纸上墨线游走，浮现一个缩在教室角落的男孩。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -253,7 +253,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，工装男人双手放在膝上，嘴唇微动
 台词：{我愿意。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -296,7 +296,7 @@ How the reference pictures align with the target video — Picture 1 (from Shot 
 integrated_multimodal_description:
 [Shot 1] static shot, <Picture 1> anchors the composition — a faceless black human figure rises from the shadow on the floor; his knuckles tap the cover three times
 [Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — looks down at his own shadow on the floor
-[Shot 3] At 00:07.500, the camera cuts to static shot on <Picture 3> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 周一例会结束，契约生效。</d>
+[Shot 3] At 00:07.500, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 周一例会结束，契约生效。</d>
 [Shot 4] At 00:10.200, the camera cuts to truck left on <Picture 4> — pushes the door open and steps into the room
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
@@ -319,7 +319,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，the client的影子从地板上隆起，形成一个没有五官的黑色人形。；the painter把速写本合上，用指节在封面上轻叩三下。
+画面：固定，工装男人的影子从地板上隆起，形成一个没有五官的黑色人形。；画室男子把速写本合上，用指节在封面上轻叩三下。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -343,7 +343,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{周一例会结束，契约生效。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -355,7 +355,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，the client推开门走进老街的暮色里。他的影子跟在身后，指尖微微蜷缩了一下。
+画面：左移，工装男人推开门走进老街的暮色里。他的影子跟在身后，指尖微微蜷缩了一下。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -388,10 +388,10 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 4.50-second mark of the target video; Picture 4 (from Shot 4) aligns with the 9.50-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S7, rough middle-aged male voice, sharp) says: <d>[Chinese] 周明呢？又迟到？</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the client sits with both hands on his knees, lips moving
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the supervisor slaps the folder on the desk, looking up sharply (S7, rough middle-aged male voice, sharp) says: <d>[Chinese] 周明呢？又迟到？</d>
 [Shot 3] At 00:04.500, the camera cuts to static shot on <Picture 3> — pushes the door open and steps into the room; slaps a stack of papers onto the wooden desk
-[Shot 4] At 00:09.500, the camera cuts to truck left on <Picture 4> — the figure holds still (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 三年，十一个项目，原始图纸。署名全是你。</d>
+[Shot 4] At 00:09.500, the camera cuts to truck left on <Picture 4> — the client sits with both hands on his knees, lips moving (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 三年，十一个项目，原始图纸。署名全是你。</d>
 
 overall_soundscape: office air-conditioner hum, distant phone ring, papers shuffling on the conference table
 
@@ -414,7 +414,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，长条会议桌坐满十二人。the supervisor敲着桌子。
+画面：固定，长条会议桌坐满十二人。中年男人敲着桌子。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -426,7 +426,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，中年男人把文件拍在桌上，抬眼
 台词：{周明呢？又迟到？}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -438,7 +438,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，门开。the client穿着洗发白的工装走进来，步伐稳得不像他自己。；他把一叠纸拍在桌上。
+画面：固定，门开。工装男人穿着洗发白的工装走进来，步伐稳得不像他自己。；他把一叠纸拍在桌上。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -450,7 +450,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，
+画面：左移，工装男人双手放在膝上，嘴唇微动
 台词：{三年，十一个项目，原始图纸。署名全是你。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -479,10 +479,10 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.60-second mark of the target video; Picture 4 (from Shot 4) aligns with the 9.60-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 一百四十七封邮件。你让我把源文件发你私人邮箱。</d>
-[Shot 3] At 00:07.600, the camera cuts to static shot on <Picture 3> — the figure holds still (S7, rough middle-aged male voice, sharp) says: <d>[Chinese] 周明！你被开除了！</d>
-[Shot 4] At 00:09.600, the camera cuts to truck left on <Picture 4> — the figure holds still (S5) says: <d>[Chinese] 不用你开。这是我的离职申请。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the client sits with both hands on his knees, lips moving
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the client sits with both hands on his knees, lips moving (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 一百四十七封邮件。你让我把源文件发你私人邮箱。</d>
+[Shot 3] At 00:07.600, the camera cuts to static shot on <Picture 3> — the supervisor slaps the folder on the desk, looking up sharply (S7, rough middle-aged male voice, sharp) says: <d>[Chinese] 周明！你被开除了！</d>
+[Shot 4] At 00:09.600, the camera cuts to truck left on <Picture 4> — the client sits with both hands on his knees, lips moving (S5) says: <d>[Chinese] 不用你开。这是我的离职申请。</d>
 
 overall_soundscape: office air-conditioner hum, distant phone ring, papers shuffling on the conference table
 
@@ -505,7 +505,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，the supervisor的脸色变了。
+画面：固定，中年男人的脸色变了。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -517,7 +517,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，工装男人双手放在膝上，嘴唇微动
 台词：{一百四十七封邮件。你让我把源文件发你私人邮箱。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -529,7 +529,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，中年男人把文件拍在桌上，抬眼
 台词：{周明！你被开除了！}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -541,7 +541,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，
+画面：左移，工装男人双手放在膝上，嘴唇微动
 台词：{不用你开。这是我的离职申请。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -569,8 +569,8 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 4.50-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 还有，我不是废物。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the client sits with both hands on his knees, lips moving
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the client sits with both hands on his knees, lips moving (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 还有，我不是废物。</d>
 [Shot 3] At 00:04.500, the camera cuts to static shot on <Picture 3> — turns his head sharply
 
 overall_soundscape: office air-conditioner hum, distant phone ring, papers shuffling on the conference table
@@ -593,7 +593,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，the client把最后一张纸放在桌上，看着the supervisor的眼睛。
+画面：固定，工装男人把最后一张纸放在桌上，看着中年男人的眼睛。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -605,7 +605,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，工装男人双手放在膝上，嘴唇微动
 台词：{还有，我不是废物。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -648,7 +648,7 @@ How the reference pictures align with the target video — Picture 1 (from Shot 
 integrated_multimodal_description:
 [Shot 1] static shot, <Picture 1> anchors the composition — sits down on the old wooden chair; the ink mark on his right hand glows faintly, pulsing under the streetlight
 [Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — opens the worn hardcover sketchbook on the desk
-[Shot 3] At 00:07.500, the camera cuts to static shot on <Picture 3> — the figure holds still (off-screen voiceover, lips closed): <d>[Chinese] 远程感知，首次。共鸣增强，原因不明。</d>
+[Shot 3] At 00:07.500, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk (off-screen voiceover, lips closed): <d>[Chinese] 远程感知，首次。共鸣增强，原因不明。</d>
 [Shot 4] At 00:11.500, the camera cuts to truck left on <Picture 4> — closes the sketchbook
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
@@ -671,7 +671,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，同一时刻，the painter坐在画架前闭眼。；右手墨痕泛起温热的流动，像有什么东西顺着手背往里爬。
+画面：固定，同一时刻，画室男子坐在画架前闭眼。；右手墨痕泛起温热的流动，像有什么东西顺着手背往里爬。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -695,7 +695,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：以画外音说{远程感知，首次。共鸣增强，原因不明。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -788,10 +788,10 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 5.20-second mark of the target video; Picture 4 (from Shot 4) aligns with the 7.70-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 我叫苏听晚，市档案馆的。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the archivist closes the file, looking up (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 我叫苏听晚，市档案馆的。</d>
 [Shot 3] At 00:05.200, the camera cuts to static shot on <Picture 3> — slaps a stack of papers onto the wooden desk
-[Shot 4] At 00:07.700, the camera cuts to truck left on <Picture 4> — the figure holds still (S2) says: <d>[Chinese] 七个人，不明原因死亡，都住梧水街三公里内。</d>
+[Shot 4] At 00:07.700, the camera cuts to truck left on <Picture 4> — the archivist closes the file, looking up (S2) says: <d>[Chinese] 七个人，不明原因死亡，都住梧水街三公里内。</d>
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -814,7 +814,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，the archivist抱着牛皮纸档案袋进门，目光扫过the painter脚下。
+画面：固定，年轻女子抱着牛皮纸档案袋进门，目光扫过画室男子脚下。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -826,7 +826,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，年轻女子合上书页，抬眼
 台词：{我叫苏听晚，市档案馆的。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -850,7 +850,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，
+画面：左移，年轻女子合上书页，抬眼
 台词：{七个人，不明原因死亡，都住梧水街三公里内。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -878,9 +878,9 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 3.10-second mark of the target video; Picture 3 (from Shot 3) aligns with the 5.60-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 我想知道，为什么你没有影子。</d>
-[Shot 2] At 00:03.100, the camera cuts to push in on <Picture 2> — the scene unfolds quietly in the dim old-town interior
-[Shot 3] At 00:05.600, the camera cuts to static shot on <Picture 3> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 黄昏的时候再来。我带你看真相。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the archivist closes the file, looking up (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 我想知道，为什么你没有影子。</d>
+[Shot 2] At 00:03.100, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 3] At 00:05.600, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 黄昏的时候再来。我带你看真相。</d>
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -903,7 +903,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，年轻女子合上书页，抬眼
 台词：{我想知道，为什么你没有影子。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -915,7 +915,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，the painter走到她面前，提笔在她手腕内侧画下一道细墨线。
+画面：推，画室男子走到她面前，提笔在她手腕内侧画下一道细墨线。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -927,7 +927,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{黄昏的时候再来。我带你看真相。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -955,8 +955,8 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 9.40-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the figure holds still (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 那个卖苹果的，他的影子在说少找了五块钱。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the archivist closes the file, looking up (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 那个卖苹果的，他的影子在说少找了五块钱。</d>
 [Shot 3] At 00:09.400, the camera cuts to static shot on <Picture 3> — turns into the narrow dark alley; his shadow floats half off the ground, a black hand resting on his crown
 
 overall_soundscape: night wind through the narrow lane, distant bicycle bell, leaves skittering on stone pavement
@@ -980,7 +980,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，黄昏老街。路灯把行人影子拉得很长。；the archivist愣住——她能听见每个影子在低声说话。
+画面：固定，黄昏老街。路灯把行人影子拉得很长。；年轻女子愣住——她能听见每个影子在低声说话。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -992,7 +992,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，年轻女子合上书页，抬眼
 台词：{那个卖苹果的，他的影子在说少找了五块钱。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1004,7 +1004,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，两人拐进暗巷。一个the drunk靠墙，手里捏着空酒瓶。；他的影子半悬浮在身后，一只黑手按在他头顶。
+画面：固定，两人拐进暗巷。一个醉酒路人靠墙，手里捏着空酒瓶。；他的影子半悬浮在身后，一只黑手按在他头顶。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1033,10 +1033,10 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.40-second mark of the target video; Picture 3 (from Shot 3) aligns with the 5.70-second mark of the target video; Picture 4 (from Shot 4) aligns with the 8.20-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 他在干什么？他会死的！</d>
-[Shot 2] At 00:02.400, the camera cuts to push in on <Picture 2> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 我是代理人。我只见证，不救赎。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the archivist closes the file, looking up (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 他在干什么？他会死的！</d>
+[Shot 2] At 00:02.400, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 我是代理人。我只见证，不救赎。</d>
 [Shot 3] At 00:05.700, the camera cuts to static shot on <Picture 3> — looks down at his own shadow on the floor
-[Shot 4] At 00:08.200, the camera cuts to truck left on <Picture 4> — the figure holds still (S2) says: <d>[Chinese] 我的影子……是不是有什么不对？</d>
+[Shot 4] At 00:08.200, the camera cuts to truck left on <Picture 4> — the archivist closes the file, looking up (S2) says: <d>[Chinese] 我的影子……是不是有什么不对？</d>
 
 overall_soundscape: night wind through the narrow lane, distant bicycle bell, leaves skittering on stone pavement
 
@@ -1059,7 +1059,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，年轻女子合上书页，抬眼
 台词：{他在干什么？他会死的！}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1071,7 +1071,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，画室男子停下笔，抬眼看向对面
 台词：{我是代理人。我只见证，不救赎。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1083,7 +1083,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，两人走出暗巷。the archivist低头看自己脚下——影子安静得像剪纸。
+画面：固定，两人走出暗巷。年轻女子低头看自己脚下——影子安静得像剪纸。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1095,7 +1095,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，
+画面：左移，年轻女子合上书页，抬眼
 台词：{我的影子……是不是有什么不对？}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1122,8 +1122,8 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 6.20-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 每个人的影子都不一样。你的安静，也许只是没有不敢说的话。</d>
-[Shot 2] At 00:06.200, the camera cuts to push in on <Picture 2> — the scene unfolds quietly in the dim old-town interior
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 每个人的影子都不一样。你的安静，也许只是没有不敢说的话。</d>
+[Shot 2] At 00:06.200, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk
 
 overall_soundscape: night wind through the narrow lane, distant bicycle bell, leaves skittering on stone pavement
 
@@ -1145,7 +1145,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{每个人的影子都不一样。你的安静，也许只是没有不敢说的话。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1157,7 +1157,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，the archivist把这个疑问压在心底。她抱着档案袋，跟在the painter身后往画室走。
+画面：推，年轻女子把这个疑问压在心底。她抱着档案袋，跟在画室男子身后往画室走。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1190,8 +1190,8 @@ How the reference pictures align with the target video — Picture 1 (from Shot 
 
 integrated_multimodal_description:
 [Shot 1] static shot, <Picture 1> anchors the composition — sits down on the old wooden chair
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 离职办好了。可我老婆摔门骂我，我一点都不生气。</d>
-[Shot 3] At 00:07.600, the camera cuts to static shot on <Picture 3> — the figure holds still (S5) says: <d>[Chinese] 我甚至去厨房给她倒了杯水。这不对啊。</d>
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the client sits with both hands on his knees, lips moving (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 离职办好了。可我老婆摔门骂我，我一点都不生气。</d>
+[Shot 3] At 00:07.600, the camera cuts to static shot on <Picture 3> — the client sits with both hands on his knees, lips moving (S5) says: <d>[Chinese] 我甚至去厨房给她倒了杯水。这不对啊。</d>
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -1214,7 +1214,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，周三下午。the client坐在画架对面，背比上次直了一些。
+画面：固定，周三下午。工装男人坐在画架对面，背比上次直了一些。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1226,7 +1226,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，工装男人双手放在膝上，嘴唇微动
 台词：{离职办好了。可我老婆摔门骂我，我一点都不生气。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1238,7 +1238,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，工装男人双手放在膝上，嘴唇微动
 台词：{我甚至去厨房给她倒了杯水。这不对啊。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1267,10 +1267,10 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 3.80-second mark of the target video; Picture 3 (from Shot 3) aligns with the 6.30-second mark of the target video; Picture 4 (from Shot 4) aligns with the 9.40-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 代价生效了。永久剥离愤怒。不可逆。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 代价生效了。永久剥离愤怒。不可逆。</d>
 [Shot 2] At 00:03.800, the camera cuts to push in on <Picture 2> — stands up abruptly, the chair scraping the floor
-[Shot 3] At 00:06.300, the camera cuts to static shot on <Picture 3> — the figure holds still (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 我要我的愤怒！你把它还给我！</d>
-[Shot 4] At 00:09.400, the camera cuts to truck left on <Picture 4> — the scene unfolds quietly in the dim old-town interior; sits down on the old wooden chair
+[Shot 3] At 00:06.300, the camera cuts to static shot on <Picture 3> — the client sits with both hands on his knees, lips moving (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 我要我的愤怒！你把它还给我！</d>
+[Shot 4] At 00:09.400, the camera cuts to truck left on <Picture 4> — sits down on the old wooden chair
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -1293,7 +1293,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{代价生效了。永久剥离愤怒。不可逆。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1305,7 +1305,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，the client猛地站起来，椅子在地板上刮出刺耳声响。
+画面：推，工装男人猛地站起来，椅子在地板上刮出刺耳声响。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1317,7 +1317,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，工装男人双手放在膝上，嘴唇微动
 台词：{我要我的愤怒！你把它还给我！}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1358,10 +1358,10 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 3.30-second mark of the target video; Picture 3 (from Shot 3) aligns with the 8.30-second mark of the target video; Picture 4 (from Shot 4) aligns with the 11.20-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 没有愤怒，我还算个完整的人吗？</d>
-[Shot 2] At 00:03.300, the camera cuts to push in on <Picture 2> — the ink mark on his right hand glows faintly, pulsing under the streetlight; the scene unfolds quietly in the dim old-town interior
-[Shot 3] At 00:08.300, the camera cuts to static shot on <Picture 3> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 你回去吧。时间会帮你适应。</d>
-[Shot 4] At 00:11.200, the camera cuts to truck left on <Picture 4> — the scene unfolds quietly in the dim old-town interior
+[Shot 1] static shot, <Picture 1> anchors the composition — the client sits with both hands on his knees, lips moving (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 没有愤怒，我还算个完整的人吗？</d>
+[Shot 2] At 00:03.300, the camera cuts to push in on <Picture 2> — the ink mark on his right hand glows faintly, pulsing under the streetlight
+[Shot 3] At 00:08.300, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 你回去吧。时间会帮你适应。</d>
+[Shot 4] At 00:11.200, the camera cuts to truck left on <Picture 4> — the painter pauses, lifting his eyes toward the client across the desk
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -1384,7 +1384,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，工装男人双手放在膝上，嘴唇微动
 台词：{没有愤怒，我还算个完整的人吗？}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1396,7 +1396,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，the painter看着他，右手墨痕忽然极淡地烫了一下。；他心底像被羽毛拂过——一种他活了二十七年从没感觉过的东西。
+画面：推，画室男子看着他，右手墨痕忽然极淡地烫了一下。；他心底像被羽毛拂过——一种他活了二十七年从没感觉过的东西。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1408,7 +1408,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{你回去吧。时间会帮你适应。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1420,7 +1420,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，the client走到门口，回头。
+画面：左移，工装男人走到门口，回头。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1448,8 +1448,8 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 4.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 6.90-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 如果时间可以倒流，我不会签那个契约。</d>
-[Shot 2] At 00:04.000, the camera cuts to push in on <Picture 2> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 每个委托人，最后都这么说。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the client sits with both hands on his knees, lips moving (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 如果时间可以倒流，我不会签那个契约。</d>
+[Shot 2] At 00:04.000, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 每个委托人，最后都这么说。</d>
 [Shot 3] At 00:06.900, the camera cuts to static shot on <Picture 3> — opens the worn hardcover sketchbook on the desk; closes the sketchbook
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
@@ -1473,7 +1473,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，工装男人双手放在膝上，嘴唇微动
 台词：{如果时间可以倒流，我不会签那个契约。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1485,7 +1485,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，画室男子停下笔，抬眼看向对面
 台词：{每个委托人，最后都这么说。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1497,7 +1497,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，the painter翻开速写本，画了一个抱头的男人，脚下影子平得像剪纸。；他在画旁写了一行字，又合上本子，指节叩了三下。第三下多停了半息。
+画面：固定，画室男子翻开速写本，画了一个抱头的男人，脚下影子平得像剪纸。；他在画旁写了一行字，又合上本子，指节叩了三下。第三下多停了半息。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1530,10 +1530,10 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 8.10-second mark of the target video; Picture 4 (from Shot 4) aligns with the 10.60-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 七个人死前三个月，都去过茶香巷一家旧茶馆。归一盏。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the archivist closes the file, looking up (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 七个人死前三个月，都去过茶香巷一家旧茶馆。归一盏。</d>
 [Shot 3] At 00:08.100, the camera cuts to static shot on <Picture 3> — lifts his eyes, gaze settling on the figure across the room
-[Shot 4] At 00:10.600, the camera cuts to truck left on <Picture 4> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 明天。我们去归一盏。</d>
+[Shot 4] At 00:10.600, the camera cuts to truck left on <Picture 4> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 明天。我们去归一盏。</d>
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -1556,7 +1556,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，the archivist把一张梧水街地图铺在桌上，七个红点。
+画面：固定，年轻女子把一张梧水街地图铺在桌上，七个红点。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1568,7 +1568,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，年轻女子合上书页，抬眼
 台词：{七个人死前三个月，都去过茶香巷一家旧茶馆。归一盏。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1580,7 +1580,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，the painter的目光落在茶香巷方向，右手墨痕烫了一下。
+画面：固定，画室男子的目光落在茶香巷方向，右手墨痕烫了一下。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1592,7 +1592,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，
+画面：左移，画室男子停下笔，抬眼看向对面
 台词：{明天。我们去归一盏。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1620,9 +1620,9 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 9.70-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the figure holds still (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 上一个脚下没影子的客人，四十多年没来过了。</d>
-[Shot 3] At 00:09.700, the camera cuts to static shot on <Picture 3> — the scene unfolds quietly in the dim old-town interior; pushes open the back door and descends into the stone chamber below
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the long-robed man gives a slight nod, lowering his voice (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 上一个脚下没影子的客人，四十多年没来过了。</d>
+[Shot 3] At 00:09.700, the camera cuts to static shot on <Picture 3> — pushes open the back door and descends into the stone chamber below
 
 overall_soundscape: teacup clinks on worn wood, low murmur of an empty teahouse, kettle simmering faintly
 
@@ -1645,7 +1645,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，清晨薄雾。两人推门走进昏暗茶馆。；老板擦着粗陶茶杯，目光扫到the painter脚下干净的地，顿了一瞬。
+画面：固定，清晨薄雾。两人推门走进昏暗茶馆。；老板擦着粗陶茶杯，目光扫到画室男子脚下干净的地，顿了一瞬。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1657,7 +1657,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，长衫男子微微颔首，声音压低
 台词：{上一个脚下没影子的客人，四十多年没来过了。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1669,7 +1669,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，the painter径直走向柜台后那道颜色更深的木门。；两人推开后门，下到地下石厅。
+画面：固定，画室男子径直走向柜台后那道颜色更深的木门。；两人推开后门，下到地下石厅。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1698,8 +1698,8 @@ How the reference pictures align with the target video — Picture 1 (from Shot 
 
 integrated_multimodal_description:
 [Shot 1] static shot, <Picture 1> anchors the composition — a circle of coarse black distorted talisman marks stains the empty lot; turns his head sharply
-[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the figure holds still (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 纯白影子？不可能。世上没有没欲望的影子。</d>
-[Shot 3] At 00:09.400, the camera cuts to static shot on <Picture 3> — raises his hand, a black ink line shoots toward the figure across the room; the scene unfolds quietly in the dim old-town interior
+[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the long-robed man gives a slight nod, lowering his voice (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 纯白影子？不可能。世上没有没欲望的影子。</d>
+[Shot 3] At 00:09.400, the camera cuts to static shot on <Picture 3> — raises his hand, a black ink line shoots toward the figure across the room
 
 overall_soundscape: damp stone chamber, water dripping in the dark, breath echoing off stone walls
 
@@ -1722,7 +1722,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，石桌前，the long-robed man正给一个年轻女人画扭曲的伪契。；他转头，目光扫到the archivist脚下那团纯白影子。
+画面：固定，石桌前，长衫男子正给一个年轻女人画扭曲的伪契。；他转头，目光扫到年轻女子脚下那团纯白影子。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1734,7 +1734,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，长衫男子微微颔首，声音压低
 台词：{纯白影子？不可能。世上没有没欲望的影子。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1746,7 +1746,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，他抬手一道黑墨线直扑the archivist脚下。；纯白影子自行铺开一层光幕，墨线撞上瞬间消融。
+画面：固定，他抬手一道黑墨线直扑年轻女子脚下。；纯白影子自行铺开一层光幕，墨线撞上瞬间消融。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1773,7 +1773,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 6.90-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 你护得了她一时，护不了她一世。等它醒过来，所有影子都得归一处。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the long-robed man gives a slight nod, lowering his voice (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 你护得了她一时，护不了她一世。等它醒过来，所有影子都得归一处。</d>
 [Shot 2] At 00:06.900, the camera cuts to push in on <Picture 2> — a circle of coarse black distorted talisman marks stains the empty lot
 
 overall_soundscape: damp stone chamber, water dripping in the dark, breath echoing off stone walls
@@ -1797,7 +1797,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，长衫男子微微颔首，声音压低
 台词：{你护得了她一时，护不了她一世。等它醒过来，所有影子都得归一处。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1809,7 +1809,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，the long-robed man挥袖，石桌伪契化黑末，人退入暗通道消失。
+画面：推，长衫男子挥袖，石桌伪契化黑末，人退入暗通道消失。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1841,9 +1841,9 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 9.40-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior; takes out a charred paper, edges burnt black, residual ink patterns in the middle
-[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the figure holds still (S3, hoarse elderly female voice, unhurried) says: <d>[Chinese] 四十年前，他留下的。上一个没有影子的人。</d>
-[Shot 3] At 00:09.400, the camera cuts to static shot on <Picture 3> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 他怎么了？</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — takes out a charred paper, edges burnt black, residual ink patterns in the middle
+[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the old landlady raises her head in the lamplight (S3, hoarse elderly female voice, unhurried) says: <d>[Chinese] 四十年前，他留下的。上一个没有影子的人。</d>
+[Shot 3] At 00:09.400, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 他怎么了？</d>
 
 overall_soundscape: oil lamp flickering, old floorboards creaking, crickets outside the cottage window
 
@@ -1866,7 +1866,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，the old landlady从里屋取出木匣，锈锁一撬就开。；她拿出一张焦黑的纸，边缘碳化，中间残留墨纹。
+画面：固定，老年妇人从里屋取出木匣，锈锁一撬就开。；她拿出一张焦黑的纸，边缘碳化，中间残留墨纹。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1878,7 +1878,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，老年妇人在灯影里抬起头
 台词：{四十年前，他留下的。上一个没有影子的人。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1890,7 +1890,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{他怎么了？}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1917,7 +1917,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.30-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S3, hoarse elderly female voice, unhurried) says: <d>[Chinese] 他的影子没消失。一直在外面长。长够了，回来找他。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the old landlady raises her head in the lamplight (S3, hoarse elderly female voice, unhurried) says: <d>[Chinese] 他的影子没消失。一直在外面长。长够了，回来找他。</d>
 [Shot 2] At 00:05.300, the camera cuts to push in on <Picture 2> — the ink mark on his right hand glows faintly, pulsing under the streetlight
 
 overall_soundscape: oil lamp flickering, old floorboards creaking, crickets outside the cottage window
@@ -1941,7 +1941,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，老年妇人在灯影里抬起头
 台词：{他的影子没消失。一直在外面长。长够了，回来找他。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1953,7 +1953,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，the painter右手墨痕剧烈烫了一下，眼前闪过一片黑暗，有声音叫他的名字。
+画面：推，画室男子右手墨痕剧烈烫了一下，眼前闪过一片黑暗，有声音叫他的名字。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -1981,9 +1981,9 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 10.10-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the figure holds still (off-screen voiceover, lips closed): <d>[Chinese] 他画的每一道契约，末端都有这道线。不是他画的。</d>
-[Shot 3] At 00:10.100, the camera cuts to static shot on <Picture 3> — the scene unfolds quietly in the dim old-town interior
+[Shot 1] static shot, <Picture 1> anchors the composition — the archivist closes the file, looking up
+[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the archivist closes the file, looking up (off-screen voiceover, lips closed): <d>[Chinese] 他画的每一道契约，末端都有这道线。不是他画的。</d>
+[Shot 3] At 00:10.100, the camera cuts to static shot on <Picture 3> — the archivist closes the file, looking up
 
 overall_soundscape: paper pages rustling, dust motes in cold fluorescent light, distant archive elevator hum
 
@@ -2005,7 +2005,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，the archivist在地下库房翻到一份1982年的手写笔录。；她翻开最后一页，背面夹着一张草图——偿价纹末端多一道极细支线。
+画面：固定，年轻女子在地下库房翻到一份1982年的手写笔录。；她翻开最后一页，背面夹着一张草图——偿价纹末端多一道极细支线。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2017,7 +2017,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，年轻女子合上书页，抬眼
 台词：以画外音说{他画的每一道契约，末端都有这道线。不是他画的。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2029,7 +2029,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，the archivist的指尖顿住，把草图夹进档案袋。
+画面：固定，年轻女子的指尖顿住，把草图夹进档案袋。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2058,8 +2058,8 @@ How the reference pictures align with the target video — Picture 1 (from Shot 
 
 integrated_multimodal_description:
 [Shot 1] static shot, <Picture 1> anchors the composition — slaps a stack of papers onto the wooden desk
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 四十年前就有人在契约里动手脚。把人当养料。</d>
-[Shot 3] At 00:07.200, the camera cuts to static shot on <Picture 3> — opens the worn hardcover sketchbook on the desk; the scene unfolds quietly in the dim old-town interior
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the archivist closes the file, looking up (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 四十年前就有人在契约里动手脚。把人当养料。</d>
+[Shot 3] At 00:07.200, the camera cuts to static shot on <Picture 3> — opens the worn hardcover sketchbook on the desk
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -2094,7 +2094,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，年轻女子合上书页，抬眼
 台词：{四十年前就有人在契约里动手脚。把人当养料。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2106,7 +2106,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，the painter翻开速写本the client那一页。；他停住——the client那团影子的指尖，多了一道他从没画过的淡墨线。
+画面：固定，画室男子翻开速写本工装男人那一页。；他停住——工装男人那团影子的指尖，多了一道他从没画过的淡墨线。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2134,9 +2134,9 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 3.60-second mark of the target video; Picture 3 (from Shot 3) aligns with the 6.10-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 有人，在我的契约里，也动了手脚。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 有人，在我的契约里，也动了手脚。</d>
 [Shot 2] At 00:03.600, the camera cuts to push in on <Picture 2> — walks over to the lattice window and stares out
-[Shot 3] At 00:06.100, the camera cuts to static shot on <Picture 3> — the figure holds still (S1) says: <d>[Chinese] 先救周明。然后，我要知道我的影子到底是什么。</d>
+[Shot 3] At 00:06.100, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk (S1) says: <d>[Chinese] 先救周明。然后，我要知道我的影子到底是什么。</d>
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -2158,7 +2158,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{有人，在我的契约里，也动了手脚。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2182,7 +2182,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{先救周明。然后，我要知道我的影子到底是什么。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2214,9 +2214,9 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.80-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 我爱人带孩子回娘家了。她说跟我待在一个房间害怕。</d>
-[Shot 3] At 00:07.800, the camera cuts to static shot on <Picture 3> — sits down on the old wooden chair; the scene unfolds quietly in the dim old-town interior
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the client sits with both hands on his knees, lips moving (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 我爱人带孩子回娘家了。她说跟我待在一个房间害怕。</d>
+[Shot 3] At 00:07.800, the camera cuts to static shot on <Picture 3> — sits down on the old wooden chair
 
 overall_soundscape: neighbor TV through the wall, sofa springs creaking, distant elevator ding
 
@@ -2239,7 +2239,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，the client开门。面色苍白，眼神死寂。
+画面：固定，工装男人开门。面色苍白，眼神死寂。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2251,7 +2251,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，工装男人双手放在膝上，嘴唇微动
 台词：{我爱人带孩子回娘家了。她说跟我待在一个房间害怕。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2263,7 +2263,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，客厅。the client坐在沙发边，影子上的黑线像藤蔓向内缠绕。；the painter半蹲下身端详影子。
+画面：固定，客厅。工装男人坐在沙发边，影子上的黑线像藤蔓向内缠绕。；画室男子半蹲下身端详影子。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2291,9 +2291,9 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.10-second mark of the target video; Picture 3 (from Shot 3) aligns with the 10.10-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 暗纹已经和影子长在一起。一周内你会进第二阶段。</d>
-[Shot 2] At 00:05.100, the camera cuts to push in on <Picture 2> — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
-[Shot 3] At 00:10.100, the camera cuts to static shot on <Picture 3> — the figure holds still (off-screen voiceover, lips closed): <d>[Chinese] 收下这份养料。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 暗纹已经和影子长在一起。一周内你会进第二阶段。</d>
+[Shot 2] At 00:05.100, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 3] At 00:10.100, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk (off-screen voiceover, lips closed): <d>[Chinese] 收下这份养料。</d>
 
 overall_soundscape: neighbor TV through the wall, sofa springs creaking, distant elevator ding
 
@@ -2315,7 +2315,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{暗纹已经和影子长在一起。一周内你会进第二阶段。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2327,7 +2327,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，the archivist上前一步，让纯白影子贴近the client的影子。；暗纹在微光下慢慢变淡。无数破碎记忆涌入她脑海。
+画面：推，年轻女子上前一步，让纯白影子贴近工装男人的影子。；暗纹在微光下慢慢变淡。无数破碎记忆涌入她脑海。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2339,7 +2339,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：以画外音说{收下这份养料。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2369,11 +2369,11 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.30-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.80-second mark of the target video; Picture 4 (from Shot 4) aligns with the 9.80-second mark of the target video; Picture 5 (from Shot 5) aligns with the 12.30-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 我看见了。那晚他在路边直接对周明的影子植了墨线。</d>
-[Shot 2] At 00:05.300, the camera cuts to push in on <Picture 2> — the scene unfolds quietly in the dim old-town interior
-[Shot 3] At 00:07.800, the camera cuts to static shot on <Picture 3> — the figure holds still (off-screen voiceover, lips closed): <d>[Chinese] 他在找你。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the archivist closes the file, looking up (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 我看见了。那晚他在路边直接对周明的影子植了墨线。</d>
+[Shot 2] At 00:05.300, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 3] At 00:07.800, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk (off-screen voiceover, lips closed): <d>[Chinese] 他在找你。</d>
 [Shot 4] At 00:09.800, the camera cuts to truck left on <Picture 4> — looks down at his own shadow on the floor
-[Shot 5] At 00:12.300, the camera cuts to push in on <Picture 5> — the figure holds still (S2) says: <d>[Chinese] 谁在找我？</d>
+[Shot 5] At 00:12.300, the camera cuts to push in on <Picture 5> — the archivist closes the file, looking up (S2) says: <d>[Chinese] 谁在找我？</d>
 
 overall_soundscape: neighbor TV through the wall, sofa springs creaking, distant elevator ding
 
@@ -2396,7 +2396,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，年轻女子合上书页，抬眼
 台词：{我看见了。那晚他在路边直接对周明的影子植了墨线。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2408,7 +2408,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，the archivist低头。纯白影子里那道温柔低语第一次凝成一句话传入她耳中。
+画面：推，年轻女子低头。纯白影子里那道温柔低语第一次凝成一句话传入她耳中。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2420,7 +2420,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：以画外音说{他在找你。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2432,7 +2432,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，the archivist指尖发凉，低头看自己的影子。
+画面：左移，年轻女子指尖发凉，低头看自己的影子。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2444,7 +2444,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，年轻女子合上书页，抬眼
 台词：{谁在找我？}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2472,9 +2472,9 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 10.80-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 这段时间别独自走偏僻阴影。影子再躁动，立刻联系我们。</d>
-[Shot 3] At 00:10.800, the camera cuts to static shot on <Picture 3> — the figure holds still (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 能保住意识，就够了。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 这段时间别独自走偏僻阴影。影子再躁动，立刻联系我们。</d>
+[Shot 3] At 00:10.800, the camera cuts to static shot on <Picture 3> — the client sits with both hands on his knees, lips moving (S5, nervous young male voice, slightly trembling) says: <d>[Chinese] 能保住意识，就够了。</d>
 
 overall_soundscape: neighbor TV through the wall, sofa springs creaking, distant elevator ding
 
@@ -2497,7 +2497,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，纯白影子微微晃动，没有再出声，微光调转方向静静朝向the painter。；the painter站起身，把the client影子上的最后一缕暗纹按回深处。
+画面：固定，纯白影子微微晃动，没有再出声，微光调转方向静静朝向画室男子。；画室男子站起身，把工装男人影子上的最后一缕暗纹按回深处。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2509,7 +2509,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，画室男子停下笔，抬眼看向对面
 台词：{这段时间别独自走偏僻阴影。影子再躁动，立刻联系我们。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2521,7 +2521,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，工装男人双手放在膝上，嘴唇微动
 台词：{能保住意识，就够了。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2550,8 +2550,8 @@ How the reference pictures align with the target video — Picture 1 (from Shot 
 
 integrated_multimodal_description:
 [Shot 1] static shot, <Picture 1> anchors the composition — walks out into the fading streetlight
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 现在去哪里？</d>
-[Shot 3] At 00:04.500, the camera cuts to static shot on <Picture 3> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 归一盏。那个植暗纹的人，一定会回茶馆。</d>
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the archivist closes the file, looking up (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 现在去哪里？</d>
+[Shot 3] At 00:04.500, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 归一盏。那个植暗纹的人，一定会回茶馆。</d>
 
 overall_soundscape: neighbor TV through the wall, sofa springs creaking, distant elevator ding
 
@@ -2574,7 +2574,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，两人辞别the client走出居民楼。夜色笼着梧水街，路灯把来往行人影子拉得很长。
+画面：固定，两人辞别工装男人走出居民楼。夜色笼着梧水街，路灯把来往行人影子拉得很长。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2586,7 +2586,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，年轻女子合上书页，抬眼
 台词：{现在去哪里？}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2598,7 +2598,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{归一盏。那个植暗纹的人，一定会回茶馆。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2631,10 +2631,10 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.50-second mark of the target video; Picture 4 (from Shot 4) aligns with the 12.40-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — sits silently in the shadow opposite the dim teahouse lamp; the scene unfolds quietly in the dim old-town interior
+[Shot 1] static shot, <Picture 1> anchors the composition — sits silently in the shadow opposite the dim teahouse lamp
 [Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — climbs through the back window into the courtyard
-[Shot 3] At 00:07.500, the camera cuts to static shot on <Picture 3> — the figure holds still (off-screen voiceover, lips closed): <d>[Chinese] 缺的那味药引，就在梧水街。等它醒透，归一成。</d>
-[Shot 4] At 00:12.400, the camera cuts to truck left on <Picture 4> — the scene unfolds quietly in the dim old-town interior
+[Shot 3] At 00:07.500, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk (off-screen voiceover, lips closed): <d>[Chinese] 缺的那味药引，就在梧水街。等它醒透，归一成。</d>
+[Shot 4] At 00:12.400, the camera cuts to truck left on <Picture 4> — the painter pauses, lifting his eyes toward the client across the desk
 
 overall_soundscape: night wind through the narrow lane, distant bicycle bell, leaves skittering on stone pavement
 
@@ -2656,7 +2656,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，夜深。两人守在归一盏对面的暗影里。；the long-robed man叩门三下，闪身入内。
+画面：固定，夜深。两人守在归一盏对面的暗影里。；长衫男子叩门三下，闪身入内。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2680,7 +2680,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：以画外音说{缺的那味药引，就在梧水街。等它醒透，归一成。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2692,7 +2692,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，the long-robed man忽然停住，侧头扫向门缝。
+画面：左移，长衫男子忽然停住，侧头扫向门缝。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2718,7 +2718,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 既然来了，就出来吧。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the long-robed man gives a slight nod, lowering his voice (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 既然来了，就出来吧。</d>
 
 overall_soundscape: night wind through the narrow lane, distant bicycle bell, leaves skittering on stone pavement
 
@@ -2740,7 +2740,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，长衫男子微微颔首，声音压低
 台词：{既然来了，就出来吧。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2770,11 +2770,11 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 5.20-second mark of the target video; Picture 4 (from Shot 4) aligns with the 10.20-second mark of the target video; Picture 5 (from Shot 5) aligns with the 12.20-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 果然是你。我找了你很久。</d>
-[Shot 3] At 00:05.200, the camera cuts to static shot on <Picture 3> — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
-[Shot 4] At 00:10.200, the camera cuts to truck left on <Picture 4> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 走！</d>
-[Shot 5] At 00:12.200, the camera cuts to push in on <Picture 5> — the scene unfolds quietly in the dim old-town interior
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the long-robed man gives a slight nod, lowering his voice (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 果然是你。我找了你很久。</d>
+[Shot 3] At 00:05.200, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 4] At 00:10.200, the camera cuts to truck left on <Picture 4> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 走！</d>
+[Shot 5] At 00:12.200, the camera cuts to push in on <Picture 5> — the painter pauses, lifting his eyes toward the client across the desk
 
 overall_soundscape: damp stone chamber, water dripping in the dark, breath echoing off stone walls
 
@@ -2797,7 +2797,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，the painter推门入内，the archivist跟上。
+画面：固定，画室男子推门入内，年轻女子跟上。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2809,7 +2809,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，长衫男子微微颔首，声音压低
 台词：{果然是你。我找了你很久。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2821,7 +2821,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，the long-robed man脚下影子骤然扩大，黑潮覆满整个石厅地面。；the painter右手抬起，指尖凝出墨线，在地上飞快画照心纹。
+画面：固定，长衫男子脚下影子骤然扩大，黑潮覆满整个石厅地面。；画室男子右手抬起，指尖凝出墨线，在地上飞快画照心纹。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2833,7 +2833,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，
+画面：左移，画室男子停下笔，抬眼看向对面
 台词：{走！}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2845,7 +2845,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，照心纹亮起，黑潮被滞住。the painter最后一笔在地面炸开。
+画面：推，照心纹亮起，黑潮被滞住。画室男子最后一笔在地面炸开。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2874,8 +2874,8 @@ How the reference pictures align with the target video — Picture 1 (from Shot 
 
 integrated_multimodal_description:
 [Shot 1] static shot, <Picture 1> anchors the composition — climbs through the back window into the courtyard
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (off-screen voiceover, lips closed): <d>[Chinese] 归一不可阻挡。你护得了她一时，护不了她一世。</d>
-[Shot 3] At 00:07.400, the camera cuts to static shot on <Picture 3> — the scene unfolds quietly in the dim old-town interior; catches his breath, leaning against the wall
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk (off-screen voiceover, lips closed): <d>[Chinese] 归一不可阻挡。你护得了她一时，护不了她一世。</d>
+[Shot 3] At 00:07.400, the camera cuts to static shot on <Picture 3> — catches his breath, leaning against the wall
 
 overall_soundscape: damp stone chamber, water dripping in the dark, breath echoing off stone walls
 
@@ -2909,7 +2909,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，画室男子停下笔，抬眼看向对面
 台词：以画外音说{归一不可阻挡。你护得了她一时，护不了她一世。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2921,7 +2921,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，the painter拉着the archivist沿茶香巷一路疾行，直到拐出巷口回到梧水街主街才停下。；夜风迎面吹。the archivist扶着墙喘息。
+画面：固定，画室男子拉着年轻女子沿茶香巷一路疾行，直到拐出巷口回到梧水街主街才停下。；夜风迎面吹。年轻女子扶着墙喘息。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2949,8 +2949,8 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 4.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 10.00-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 他说我脚下这团影子，是它缺的那一味。</d>
-[Shot 2] At 00:04.000, the camera cuts to push in on <Picture 2> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 他的话有一半是假的，有一半可能是真的。你不能往那边去。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the archivist closes the file, looking up (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 他说我脚下这团影子，是它缺的那一味。</d>
+[Shot 2] At 00:04.000, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 他的话有一半是假的，有一半可能是真的。你不能往那边去。</d>
 [Shot 3] At 00:10.000, the camera cuts to static shot on <Picture 3> — looks down at his own shadow on the floor
 
 overall_soundscape: damp stone chamber, water dripping in the dark, breath echoing off stone walls
@@ -2974,7 +2974,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，年轻女子合上书页，抬眼
 台词：{他说我脚下这团影子，是它缺的那一味。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2986,7 +2986,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，画室男子停下笔，抬眼看向对面
 台词：{他的话有一半是假的，有一半可能是真的。你不能往那边去。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -2998,7 +2998,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，the archivist抱紧怀里的档案袋，低头看自己的影子——纯白安静贴地，跟着脚步一步一步。
+画面：固定，年轻女子抱紧怀里的档案袋，低头看自己的影子——纯白安静贴地，跟着脚步一步一步。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3030,9 +3030,9 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.40-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S3, hoarse elderly female voice, unhurried) says: <d>[Chinese] 他当年，也是先拒绝的。然后就忘了为什么不归。</d>
-[Shot 3] At 00:07.400, the camera cuts to static shot on <Picture 3> — the scene unfolds quietly in the dim old-town interior
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the old landlady raises her head in the lamplight (S3, hoarse elderly female voice, unhurried) says: <d>[Chinese] 他当年，也是先拒绝的。然后就忘了为什么不归。</d>
+[Shot 3] At 00:07.400, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk
 
 overall_soundscape: oil lamp flickering, old floorboards creaking, crickets outside the cottage window
 
@@ -3055,7 +3055,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，the old landlady把铁盒推到the painter面前。
+画面：固定，老年妇人把铁盒推到画室男子面前。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3067,7 +3067,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，老年妇人在灯影里抬起头
 台词：{他当年，也是先拒绝的。然后就忘了为什么不归。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3079,7 +3079,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，the painter捏着那张半行残纸：找回……另一半……方可……
+画面：固定，画室男子捏着那张半行残纸：找回……另一半……方可……
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3108,8 +3108,8 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.00-second mark of the target video; Picture 4 (from Shot 4) aligns with the 12.00-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the figure holds still (off-screen voiceover, lips closed): <d>[Chinese] 听晚。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk (off-screen voiceover, lips closed): <d>[Chinese] 听晚。</d>
 [Shot 3] At 00:07.000, the camera cuts to static shot on <Picture 3> — the unbound old book opens by itself on the stone platform; two glowing ink lines float up from the open book and hover midair
 [Shot 4] At 00:12.000, the camera cuts to truck left on <Picture 4> — two glowing ink lines float up from the open book and hover midair
 
@@ -3133,7 +3133,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，档案馆最深处。锈铁锁一碰就碎。两人推开铁门。；the archivist脚下纯白影子挣脱地面，悬起贴向铁门。
+画面：固定，档案馆最深处。锈铁锁一碰就碎。两人推开铁门。；年轻女子脚下纯白影子挣脱地面，悬起贴向铁门。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3145,7 +3145,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，画室男子停下笔，抬眼看向对面
 台词：以画外音说{听晚。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3198,8 +3198,8 @@ How the reference pictures align with the target video — Picture 1 (from Shot 
 
 integrated_multimodal_description:
 [Shot 1] static shot, <Picture 1> anchors the composition — two glowing ink lines float up from the open book and hover midair
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 宿命归宿命。人间的选择，不该由一本烧剩的册子定论。</d>
-[Shot 3] At 00:08.100, the camera cuts to static shot on <Picture 3> — two glowing ink lines float up from the open book and hover midair; the scene unfolds quietly in the dim old-town interior
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 宿命归宿命。人间的选择，不该由一本烧剩的册子定论。</d>
+[Shot 3] At 00:08.100, the camera cuts to static shot on <Picture 3> — two glowing ink lines float up from the open book and hover midair
 
 overall_soundscape: paper pages rustling, dust motes in cold fluorescent light, distant archive elevator hum
 
@@ -3221,7 +3221,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，the painter抬手，硬生生隔开那两道光。
+画面：固定，画室男子抬手，硬生生隔开那两道光。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3233,7 +3233,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，画室男子停下笔，抬眼看向对面
 台词：{宿命归宿命。人间的选择，不该由一本烧剩的册子定论。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3275,11 +3275,11 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.50-second mark of the target video; Picture 3 (from Shot 3) aligns with the 4.50-second mark of the target video; Picture 4 (from Shot 4) aligns with the 6.50-second mark of the target video; Picture 5 (from Shot 5) aligns with the 11.50-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 它……睡了？</d>
-[Shot 3] At 00:04.500, the camera cuts to static shot on <Picture 3> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 它在等。</d>
-[Shot 4] At 00:06.500, the camera cuts to truck left on <Picture 4> — the scene unfolds quietly in the dim old-town interior; catches his breath, leaning against the wall
-[Shot 5] At 00:11.500, the camera cuts to push in on <Picture 5> — the scene unfolds quietly in the dim old-town interior
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the archivist closes the file, looking up (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 它……睡了？</d>
+[Shot 3] At 00:04.500, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 它在等。</d>
+[Shot 4] At 00:06.500, the camera cuts to truck left on <Picture 4> — catches his breath, leaning against the wall
+[Shot 5] At 00:11.500, the camera cuts to push in on <Picture 5> — the painter pauses, lifting his eyes toward the client across the desk
 
 overall_soundscape: paper pages rustling, dust motes in cold fluorescent light, distant archive elevator hum
 
@@ -3314,7 +3314,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，年轻女子合上书页，抬眼
 台词：{它……睡了？}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3326,7 +3326,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{它在等。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3338,7 +3338,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，the archivist弯腰把悬着的纯白按回脚下。；两人走出地下库房。夜风扑面，the archivist在台阶上深吸一口气。
+画面：左移，年轻女子弯腰把悬着的纯白按回脚下。；两人走出地下库房。夜风扑面，年轻女子在台阶上深吸一口气。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3350,7 +3350,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，the painter站在档案馆的黑影里，目光沿街面扫了一圈。
+画面：推，画室男子站在档案馆的黑影里，目光沿街面扫了一圈。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3376,7 +3376,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 有人跟着。别回头，往街那边走，慢一点。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 有人跟着。别回头，往街那边走，慢一点。</d>
 
 overall_soundscape: paper pages rustling, dust motes in cold fluorescent light, distant archive elevator hum
 
@@ -3398,7 +3398,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{有人跟着。别回头，往街那边走，慢一点。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3431,10 +3431,10 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.50-second mark of the target video; Picture 4 (from Shot 4) aligns with the 11.70-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior; a circle of coarse black distorted talisman marks stains the empty lot
+[Shot 1] static shot, <Picture 1> anchors the composition — a circle of coarse black distorted talisman marks stains the empty lot
 [Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — a circle of coarse black distorted talisman marks stains the empty lot
-[Shot 3] At 00:07.500, the camera cuts to static shot on <Picture 3> — the figure holds still (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 我想明白了。你退出来，是想自己走进去。</d>
-[Shot 4] At 00:11.700, the camera cuts to truck left on <Picture 4> — the scene unfolds quietly in the dim old-town interior
+[Shot 3] At 00:07.500, the camera cuts to static shot on <Picture 3> — the long-robed man gives a slight nod, lowering his voice (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 我想明白了。你退出来，是想自己走进去。</d>
+[Shot 4] At 00:11.700, the camera cuts to truck left on <Picture 4> — the painter pauses, lifting his eyes toward the client across the desk
 
 overall_soundscape: wind tearing through the empty lot, paper scraps tumbling, distant traffic on the main road
 
@@ -3457,7 +3457,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，黄昏茶香巷口。the painter倒垃圾，the archivist跟在身后。；巷中央空地上，一圈粗黑错纹——照心纹被改细、偿价纹被加粗。
+画面：固定，黄昏茶香巷口。画室男子倒垃圾，年轻女子跟在身后。；巷中央空地上，一圈粗黑错纹——照心纹被改细、偿价纹被加粗。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3469,7 +3469,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，the long-robed man独立那圈伪契中央，双手拢袖。
+画面：推，长衫男子独立那圈伪契中央，双手拢袖。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3481,7 +3481,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，长衫男子微微颔首，声音压低
 台词：{我想明白了。你退出来，是想自己走进去。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3493,7 +3493,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，the painter蹲下身，指尖凝出松烟墨色，在浮土上落正规照心纹。
+画面：左移，画室男子蹲下身，指尖凝出松烟墨色，在浮土上落正规照心纹。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3522,9 +3522,9 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.10-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.10-second mark of the target video; Picture 4 (from Shot 4) aligns with the 12.10-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 照心纹一落，是照在场所有人的心。你我都在圈里。</d>
-[Shot 2] At 00:05.100, the camera cuts to push in on <Picture 2> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 我知道。</d>
-[Shot 3] At 00:07.100, the camera cuts to static shot on <Picture 3> — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
+[Shot 1] static shot, <Picture 1> anchors the composition — the long-robed man gives a slight nod, lowering his voice (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 照心纹一落，是照在场所有人的心。你我都在圈里。</d>
+[Shot 2] At 00:05.100, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 我知道。</d>
+[Shot 3] At 00:07.100, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk
 [Shot 4] At 00:12.100, the camera cuts to truck left on <Picture 4> — the false talisman shatters into black dust, scattered by the night wind
 
 overall_soundscape: wind tearing through the empty lot, paper scraps tumbling, distant traffic on the main road
@@ -3548,7 +3548,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，长衫男子微微颔首，声音压低
 台词：{照心纹一落，是照在场所有人的心。你我都在圈里。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3560,7 +3560,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，画室男子停下笔，抬眼看向对面
 台词：{我知道。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3612,9 +3612,9 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.30-second mark of the target video; Picture 3 (from Shot 3) aligns with the 10.30-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 你赢了这一城。可你拆不掉人心里那个不痛就好的愿。</d>
-[Shot 2] At 00:05.300, the camera cuts to push in on <Picture 2> — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
-[Shot 3] At 00:10.300, the camera cuts to static shot on <Picture 3> — the figure holds still (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 他真的会走？</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the long-robed man gives a slight nod, lowering his voice (S4, low cold male voice, menacing and smooth) says: <d>[Chinese] 你赢了这一城。可你拆不掉人心里那个不痛就好的愿。</d>
+[Shot 2] At 00:05.300, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 3] At 00:10.300, the camera cuts to static shot on <Picture 3> — the archivist closes the file, looking up (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 他真的会走？</d>
 
 overall_soundscape: wind tearing through the empty lot, paper scraps tumbling, distant traffic on the main road
 
@@ -3638,7 +3638,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，长衫男子微微颔首，声音压低
 台词：{你赢了这一城。可你拆不掉人心里那个不痛就好的愿。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3650,7 +3650,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，the long-robed man退入暗巷，衣角一闪就没了。；the archivist脚下纯白影子边缘亮了一亮，又平平贴回去。
+画面：推，长衫男子退入暗巷，衣角一闪就没了。；年轻女子脚下纯白影子边缘亮了一亮，又平平贴回去。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3662,7 +3662,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，年轻女子合上书页，抬眼
 台词：{他真的会走？}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3690,9 +3690,9 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 4.90-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.40-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 这一城的据点，会安静一阵。伪契散了，愿还在。</d>
-[Shot 2] At 00:04.900, the camera cuts to push in on <Picture 2> — the scene unfolds quietly in the dim old-town interior
-[Shot 3] At 00:07.400, the camera cuts to static shot on <Picture 3> — the figure holds still (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 你刚才……不怕他真放黑潮？</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 这一城的据点，会安静一阵。伪契散了，愿还在。</d>
+[Shot 2] At 00:04.900, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 3] At 00:07.400, the camera cuts to static shot on <Picture 3> — the archivist closes the file, looking up (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 你刚才……不怕他真放黑潮？</d>
 
 overall_soundscape: wind tearing through the empty lot, paper scraps tumbling, distant traffic on the main road
 
@@ -3715,7 +3715,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{这一城的据点，会安静一阵。伪契散了，愿还在。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3727,7 +3727,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，the painter弯腰拎起墙根的簸箕。
+画面：推，画室男子弯腰拎起墙根的簸箕。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3739,7 +3739,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，年轻女子合上书页，抬眼
 台词：{你刚才……不怕他真放黑潮？}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3766,7 +3766,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 6.70-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 他在算我敢不敢真把照心纹压到他自己身上。算清楚了，他就走了。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 他在算我敢不敢真把照心纹压到他自己身上。算清楚了，他就走了。</d>
 [Shot 2] At 00:06.700, the camera cuts to push in on <Picture 2> — night wind cuts through the alley, lifting dust off the wooden floor
 
 overall_soundscape: wind tearing through the empty lot, paper scraps tumbling, distant traffic on the main road
@@ -3789,7 +3789,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：{他在算我敢不敢真把照心纹压到他自己身上。算清楚了，他就走了。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3835,9 +3835,9 @@ How the reference pictures align with the target video — Picture 1 (from Shot 
 
 integrated_multimodal_description:
 [Shot 1] static shot, <Picture 1> anchors the composition — sits down on the old wooden chair
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S9, quavering elderly female voice) says: <d>[Chinese] 我年轻时候不做梦。人这一辈子，白天压下去的夜里全跑出来。</d>
-[Shot 3] At 00:08.700, the camera cuts to static shot on <Picture 3> — the figure holds still (S9) says: <d>[Chinese] 你呢？你这么年轻，做梦不？</d>
-[Shot 4] At 00:11.600, the camera cuts to truck left on <Picture 4> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 不做。</d>
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the old lady waves a trembling hand (S9, quavering elderly female voice) says: <d>[Chinese] 我年轻时候不做梦。人这一辈子，白天压下去的夜里全跑出来。</d>
+[Shot 3] At 00:08.700, the camera cuts to static shot on <Picture 3> — the old lady waves a trembling hand (S9) says: <d>[Chinese] 你呢？你这么年轻，做梦不？</d>
+[Shot 4] At 00:11.600, the camera cuts to truck left on <Picture 4> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 不做。</d>
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -3860,7 +3860,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，白天。the old lady坐在画架对面，由孙女搀着。
+画面：固定，白天。老太太坐在画架对面，由孙女搀着。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3872,7 +3872,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，老太太颤巍巍抬了抬手
 台词：{我年轻时候不做梦。人这一辈子，白天压下去的夜里全跑出来。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3884,7 +3884,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，老太太颤巍巍抬了抬手
 台词：{你呢？你这么年轻，做梦不？}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3896,7 +3896,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，
+画面：左移，画室男子停下笔，抬眼看向对面
 台词：{不做。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3923,8 +3923,8 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 2.20-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S9, quavering elderly female voice) says: <d>[Chinese] 不做梦好。心里干净。</d>
-[Shot 2] At 00:02.200, the camera cuts to push in on <Picture 2> — the scene unfolds quietly in the dim old-town interior
+[Shot 1] static shot, <Picture 1> anchors the composition — the old lady waves a trembling hand (S9, quavering elderly female voice) says: <d>[Chinese] 不做梦好。心里干净。</d>
+[Shot 2] At 00:02.200, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -3947,7 +3947,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，老太太颤巍巍抬了抬手
 台词：{不做梦好。心里干净。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3959,7 +3959,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，the painter低头继续画那颗眼角的痣。
+画面：推，画室男子低头继续画那颗眼角的痣。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -3991,9 +3991,9 @@ How the reference pictures align with the target video — Picture 1 (from Shot 
 integrated_multimodal_description:
 [Shot 1] static shot, <Picture 1> anchors the composition — the ink mark on his right hand glows faintly, pulsing under the streetlight; lies back down on the wooden bed
 [Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — pulls an old pocket watch from under the pillow and closes it in his palm
-[Shot 3] At 00:07.500, the camera cuts to static shot on <Picture 3> — the figure holds still (off-screen voiceover, lips closed): <d>[Chinese] 沈砚。</d>
-[Shot 4] At 00:09.500, the camera cuts to truck left on <Picture 4> — the scene unfolds quietly in the dim old-town interior
-[Shot 5] At 00:12.000, the camera cuts to push in on <Picture 5> — the figure holds still (off-screen voiceover, lips closed): <d>[Chinese] 沈砚。</d>
+[Shot 3] At 00:07.500, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk (off-screen voiceover, lips closed): <d>[Chinese] 沈砚。</d>
+[Shot 4] At 00:09.500, the camera cuts to truck left on <Picture 4> — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 5] At 00:12.000, the camera cuts to push in on <Picture 5> — the painter pauses, lifting his eyes toward the client across the desk (off-screen voiceover, lips closed): <d>[Chinese] 沈砚。</d>
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -4015,7 +4015,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，后半夜。the painter被右手墨痕烫醒。；他坐起身，借着路灯光看右手——墨痕在黑暗里一明一灭。
+画面：固定，后半夜。画室男子被右手墨痕烫醒。；他坐起身，借着路灯光看右手——墨痕在黑暗里一明一灭。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4039,7 +4039,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，
+画面：固定，画室男子停下笔，抬眼看向对面
 台词：以画外音说{沈砚。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4051,7 +4051,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，the painter整个人僵住。
+画面：左移，画室男子整个人僵住。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4063,7 +4063,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，画室男子停下笔，抬眼看向对面
 台词：以画外音说{沈砚。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4092,10 +4092,10 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 7.40-second mark of the target video; Picture 4 (from Shot 4) aligns with the 12.40-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior; lies back down on the wooden bed
-[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the figure holds still (off-screen voiceover, lips closed): <d>[Chinese] 它在等他，再开一次门。</d>
-[Shot 3] At 00:07.400, the camera cuts to static shot on <Picture 3> — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
-[Shot 4] At 00:12.400, the camera cuts to truck left on <Picture 4> — the scene unfolds quietly in the dim old-town interior
+[Shot 1] static shot, <Picture 1> anchors the composition — lies back down on the wooden bed
+[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk (off-screen voiceover, lips closed): <d>[Chinese] 它在等他，再开一次门。</d>
+[Shot 3] At 00:07.400, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 4] At 00:12.400, the camera cuts to truck left on <Picture 4> — the painter pauses, lifting his eyes toward the client across the desk
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -4129,7 +4129,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，画室男子停下笔，抬眼看向对面
 台词：以画外音说{它在等他，再开一次门。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4141,7 +4141,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，the painter把怀表凑到眼前。指针还是停在那个时辰——十七岁那个雨夜。；他一直以为从那一刻起，就把身后那个东西整个甩掉了。
+画面：固定，画室男子把怀表凑到眼前。指针还是停在那个时辰——十七岁那个雨夜。；他一直以为从那一刻起，就把身后那个东西整个甩掉了。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4181,7 +4181,7 @@ How the reference pictures align with the target video — Picture 1 (from Shot 
 
 integrated_multimodal_description:
 [Shot 1] static shot, <Picture 1> anchors the composition — lies back down on the wooden bed; closes his eyes, then opens them slowly
-[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
+[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -4247,8 +4247,8 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 9.20-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior; draws a silver bookmark from the page corner, twisting the chain between her fingers
-[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the figure holds still (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 影商走了。可他留在人身上的契，还在走。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — draws a silver bookmark from the page corner, twisting the chain between her fingers
+[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the archivist closes the file, looking up (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 影商走了。可他留在人身上的契，还在走。</d>
 [Shot 3] At 00:09.200, the camera cuts to static shot on <Picture 3> — closes the case file and tucks a silver bookmark into her collar
 
 overall_soundscape: paper pages rustling, dust motes in cold fluorescent light, distant archive elevator hum
@@ -4271,7 +4271,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，档案馆阅览席。the archivist面前摊着一份讣闻。；她把银书签从书页角抽出来，指尖捻着链条。
+画面：固定，档案馆阅览席。年轻女子面前摊着一份讣闻。；她把银书签从书页角抽出来，指尖捻着链条。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4283,7 +4283,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，年轻女子合上书页，抬眼
 台词：{影商走了。可他留在人身上的契，还在走。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4321,7 +4321,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the figure holds still (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 我不再只翻旧档了。我要去找他们。</d>
+[Shot 1] static shot, <Picture 1> anchors the composition — the archivist closes the file, looking up (S2, soft young female voice, restrained and clear) says: <d>[Chinese] 我不再只翻旧档了。我要去找他们。</d>
 
 overall_soundscape: paper pages rustling, dust motes in cold fluorescent light, distant archive elevator hum
 
@@ -4343,7 +4343,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，
+画面：固定，年轻女子合上书页，抬眼
 台词：{我不再只翻旧档了。我要去找他们。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4372,10 +4372,10 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video; Picture 3 (from Shot 3) aligns with the 10.00-second mark of the target video; Picture 4 (from Shot 4) aligns with the 12.50-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the scene unfolds quietly in the dim old-town interior; a thin teenage girl squeezes through the door, hunching her shoulders
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — a thin teenage girl squeezes through the door, hunching her shoulders
 [Shot 3] At 00:10.000, the camera cuts to static shot on <Picture 3> — lifts his eyes, gaze settling on the figure across the room
-[Shot 4] At 00:12.500, the camera cuts to truck left on <Picture 4> — the figure holds still (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 坐。</d>
+[Shot 4] At 00:12.500, the camera cuts to truck left on <Picture 4> — the painter pauses, lifting his eyes toward the client across the desk (S1, calm middle-aged male voice, slow measured pace) says: <d>[Chinese] 坐。</d>
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -4397,7 +4397,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，黄昏画室。the painter摊开速写本等委托人。；楼下木梯传来很慢、很犹豫的脚步声。
+画面：固定，黄昏画室。画室男子摊开速写本等委托人。；楼下木梯传来很慢、很犹豫的脚步声。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4409,7 +4409,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，门被推开一条缝。一只攥得死紧的手先探进来。；十六七岁的the young student挤进门，缩着肩。
+画面：推，门被推开一条缝。一只攥得死紧的手先探进来。；十六七岁的高中女孩挤进门，缩着肩。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4421,7 +4421,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：特写
-画面：固定，她目光先落在the painter脚下——那块地板干干净净。
+画面：固定，她目光先落在画室男子脚下——那块地板干干净净。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4433,7 +4433,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，
+画面：左移，画室男子停下笔，抬眼看向对面
 台词：{坐。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4463,9 +4463,9 @@ How the reference pictures align with the target video — Picture 1 (from Shot 
 
 integrated_multimodal_description:
 [Shot 1] static shot, <Picture 1> anchors the composition — stands without sitting, twisting the hem of her school uniform
-[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the figure holds still (S6, thin young female voice, hesitant) says: <d>[Chinese] 听说这里……能让人替我做一件我自己做不到的事。</d>
-[Shot 3] At 00:07.600, the camera cuts to static shot on <Picture 3> — the scene unfolds quietly in the dim old-town interior
-[Shot 4] At 00:10.100, the camera cuts to truck left on <Picture 4> — the figure holds still (S6) says: <d>[Chinese] 我想让影子，替我去台上。</d>
+[Shot 2] At 00:02.500, the camera cuts to push in on <Picture 2> — the young student twists her hem, speaking hesitantly (S6, thin young female voice, hesitant) says: <d>[Chinese] 听说这里……能让人替我做一件我自己做不到的事。</d>
+[Shot 3] At 00:07.600, the camera cuts to static shot on <Picture 3> — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 4] At 00:10.100, the camera cuts to truck left on <Picture 4> — the young student twists her hem, speaking hesitantly (S6) says: <d>[Chinese] 我想让影子，替我去台上。</d>
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -4488,7 +4488,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，the young student没敢坐，揪着校服下摆。
+画面：固定，高中女孩没敢坐，揪着校服下摆。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4500,7 +4500,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：推镜
 景别：中景
-画面：推，
+画面：推，高中女孩揪着衣角，怯声开口
 台词：{听说这里……能让人替我做一件我自己做不到的事。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4524,7 +4524,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：左移
 景别：全景
-画面：左移，
+画面：左移，高中女孩揪着衣角，怯声开口
 台词：{我想让影子，替我去台上。}
 视线落点：对方面部
 焦点：锁定主体上半身
@@ -4551,8 +4551,8 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the 5.00-second mark of the target video.
 
 integrated_multimodal_description:
-[Shot 1] static shot, <Picture 1> anchors the composition — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
-[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the scene unfolds quietly in the dim old-town interior; the scene unfolds quietly in the dim old-town interior
+[Shot 1] static shot, <Picture 1> anchors the composition — the painter pauses, lifting his eyes toward the client across the desk
+[Shot 2] At 00:05.000, the camera cuts to push in on <Picture 2> — the painter pauses, lifting his eyes toward the client across the desk
 
 overall_soundscape: old wooden floor creaks underfoot, faint charcoal dust settling, distant street murmur through the lattice window
 
@@ -4574,7 +4574,7 @@ non_diegetic_music: Sparse low strings at a very slow tempo, barely above silenc
 构图：三分法
 运镜：固定镜头
 景别：中景
-画面：固定，梧桐叶在窗外被晚风翻动，沙沙地响。；the painter看着这个攥着书包带、和the client当年同一个缩法的孩子。
+画面：固定，梧桐叶在窗外被晚风翻动，沙沙地响。；画室男子看着这个攥着书包带、和工装男人当年同一个缩法的孩子。
 台词：{}
 视线落点：对方面部
 焦点：锁定主体上半身
