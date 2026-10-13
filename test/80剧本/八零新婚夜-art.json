@@ -1,0 +1,218 @@
+{
+  "source": "八零新婚夜，空间囤货养崽暴富",
+  "lang": "zh",
+  "scenes": [
+    {
+      "id": "S01",
+      "name": "苏家土屋（内）",
+      "primary": true,
+      "summary": "1980年北方农村土屋，黄泥墙皮斑驳，土炕占半间，煤油灯照明，灶台在角落，简陋但干净",
+      "sheetImage": "",
+      "anchors": [
+        {
+          "name": "土炕",
+          "desc": "占半间屋的破旧土炕，炕席磨得发亮，打补丁粗布被褥"
+        },
+        {
+          "name": "煤油木桌",
+          "desc": "墙角八十年代老旧木桌，上面一盏煤油灯和半块红薯"
+        },
+        {
+          "name": "灶台",
+          "desc": "厨房冷锅冷灶，案板上半块粗粮窝头和一碟咸菜"
+        },
+        {
+          "name": "糊窗旧报纸",
+          "desc": "窗棂糊着旧报纸，北风从缝里吹进来"
+        }
+      ],
+      "lighting": [
+        {
+          "state": "白天室内",
+          "prompt": "dim natural daylight through paper-pasted window, cold grey winter light, 1980s rural mud room"
+        },
+        {
+          "state": "傍晚煤油灯",
+          "prompt": "warm kerosene lamp glow, amber light on mud-brick walls, cold blue window contrast, intimate dim interior"
+        },
+        {
+          "state": "入夜",
+          "prompt": "dark room lit only by moonlight through window, faint kerosene lamp residual glow, shadowy corners"
+        }
+      ],
+      "image": {
+        "prompt": "1980s Chinese rural mud-brick interior, adobe walls peeling, large mud kang bed taking half the room, patched coarse cotton bedding, old wooden table in corner with kerosene lamp and half a sweet potato, cold stove, paper-pasted window letting in cold grey light, cinematic realistic style, wide angle establishing shot",
+        "negativePrompt": "modern furniture, electricity, city apartment, clean walls, bright lighting, people, hands, faces",
+        "tags": [
+          "rural-interior",
+          "1980s",
+          "mud-room",
+          "kang-bed",
+          "kerosene",
+          "cold-winter"
+        ],
+        "sheet": "Environment reference sheet, 1980s Chinese rural mud room interior, 3 views: wide establishing, corner detail of kang bed, stove close-up, plus lighting strip showing day/evening/night variants, plain muted palette, realistic period-accurate props"
+      }
+    },
+    {
+      "id": "S02",
+      "name": "苏家院子",
+      "primary": true,
+      "summary": "北方农村小院，土坯院墙，木门，院角柴堆，冬天地面有残雪",
+      "sheetImage": "",
+      "anchors": [
+        {
+          "name": "院门",
+          "desc": "老旧木门，推门时吱呀响"
+        },
+        {
+          "name": "门框",
+          "desc": "苏晚常靠在门框上冷笑"
+        },
+        {
+          "name": "柴堆",
+          "desc": "院角陆野砍柴回来堆的柴火"
+        },
+        {
+          "name": "对面邻居门口",
+          "desc": "围观邻居探头的位置"
+        }
+      ],
+      "lighting": [
+        {
+          "state": "白天雪后",
+          "prompt": "overcast winter daylight, grey sky, residual snow on ground, flat cold light, 1980s village courtyard"
+        },
+        {
+          "state": "傍晚",
+          "prompt": "dim winter dusk, cold blue-grey light, breath visible in air, village courtyard"
+        }
+      ],
+      "image": {
+        "prompt": "1980s Chinese rural village courtyard, mud-brick walls, old wooden gate, firewood pile in corner, residual snow on packed dirt ground, overcast grey winter sky, bare tree branches, cinematic realistic style, wide establishing shot",
+        "negativePrompt": "modern house, concrete, paved road, cars, people, hands, faces, green foliage, summer",
+        "tags": [
+          "rural-exterior",
+          "1980s",
+          "courtyard",
+          "winter",
+          "snow",
+          "mud-wall"
+        ],
+        "sheet": "Environment reference sheet, 1980s Chinese rural courtyard, 3 views: gate exterior, wall detail, firewood corner, plus lighting strip showing overcast day/dusk variants, muted winter palette, period-accurate architecture"
+      }
+    }
+  ],
+  "props": [
+    {
+      "id": "P01",
+      "name": "粗瓷碗烤红薯",
+      "scale": "桌面级",
+      "relatedScenes": [
+        "S01"
+      ],
+      "summary": "陆野端进来的粗瓷碗，两个烤焦黑的红薯，热气腾腾",
+      "sheetImage": "",
+      "anchors": [
+        {
+          "name": "粗瓷碗",
+          "desc": "黑粗瓷大碗，碗边有使用痕迹"
+        },
+        {
+          "name": "焦黑红薯",
+          "desc": "两个烤得皮焦黑、瓤金黄的红薯"
+        },
+        {
+          "name": "热气",
+          "desc": "刚烤好的红薯冒白气"
+        },
+        {
+          "name": "炕沿放置",
+          "desc": "陆野把碗放在炕沿上"
+        }
+      ],
+      "states": [
+        {
+          "state": "热气腾腾",
+          "prompt": "rustic coarse ceramic bowl with two charred baked sweet potatoes, steam rising, amber kerosene lamp light, tabletop scale"
+        },
+        {
+          "state": "摔碎",
+          "prompt": "broken coarse ceramic bowl on mud floor, sweet potato spilled, cracked pieces, tabletop scale"
+        }
+      ],
+      "usage": {
+        "episodes": [
+          1
+        ],
+        "beats": []
+      },
+      "image": {
+        "prompt": "rustic coarse black ceramic bowl on wooden surface, two baked sweet potatoes with charred skin and golden flesh, steam rising, warm kerosene light, tabletop scale, 1980s rural China, tabletop scale, cinematic close-up",
+        "negativePrompt": "modern dish, porcelain, china, people, hands, faces, modern kitchen, studio",
+        "tags": [
+          "prop",
+          "food",
+          "tabletop-scale",
+          "sweet-potato",
+          "ceramic-bowl"
+        ],
+        "sheet": "tabletop scale, Prop reference sheet, coarse ceramic bowl with baked sweet potatoes, 3 angles: top-down, side, close-up of charred skin, on pure white background, consistent object design"
+      }
+    },
+    {
+      "id": "P02",
+      "name": "空间白面与腊肉",
+      "scale": "桌面级",
+      "relatedScenes": [
+        "S01"
+      ],
+      "summary": "系统附赠的启动物资：白面一袋、腊肉一块、菜油一小罐、盐一小包",
+      "sheetImage": "",
+      "anchors": [
+        {
+          "name": "面袋",
+          "desc": "粗布面袋，约二十斤白面"
+        },
+        {
+          "name": "腊肉",
+          "desc": "一块熏腊肉，约两斤"
+        },
+        {
+          "name": "油盐",
+          "desc": "小陶罐菜油，小包粗盐"
+        }
+      ],
+      "states": [
+        {
+          "state": "完整存放",
+          "prompt": "coarse cloth sack of white flour, chunk of cured meat, small clay jar of oil, small packet of salt, on dark earth floor, tabletop scale"
+        },
+        {
+          "state": "取出使用",
+          "prompt": "half kilo flour portion on wooden board, thin slices of cured meat, oil in small bowl, in dim kitchen, tabletop scale"
+        }
+      ],
+      "usage": {
+        "episodes": [
+          4,
+          5
+        ],
+        "beats": []
+      },
+      "image": {
+        "prompt": "1980s rural Chinese food supplies: coarse cloth flour sack, chunk of cured smoked meat, small clay oil jar, salt packet, arranged on old wooden surface, warm dim kitchen light, tabletop scale, tabletop scale, cinematic close-up",
+        "negativePrompt": "modern packaging, plastic, supermarket, people, hands, faces, modern kitchen",
+        "tags": [
+          "prop",
+          "food",
+          "tabletop-scale",
+          "flour",
+          "cured-meat",
+          "supplies"
+        ],
+        "sheet": "tabletop scale, Prop reference sheet, 1980s rural food supplies, 3 angles: sack of flour, cured meat chunk, oil jar and salt, on pure white background, period-accurate rustic packaging"
+      }
+    }
+  ]
+}
