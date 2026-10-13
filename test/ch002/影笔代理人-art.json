@@ -1,0 +1,75 @@
+{
+  "source": "影笔代理人",
+  "dynasty": "当代",
+  "scenes": [
+    {
+      "id": "S01",
+      "name": "设计院第三会议室",
+      "primary": true,
+      "summary": "设计意图：长条形会议室，日光灯，十二个人围坐，主位在一端。要的是职场的压抑感和当众打脸的戏剧性。",
+      "anchors": [
+        { "name": "长条形会议桌", "desc": "坐了十二个人，桌面摊着项目进度表" },
+        { "name": "主位", "desc": "主管坐的位置，居高临下" },
+        { "name": "日光灯", "desc": "冷白色，照得每个人脸都很白" },
+        { "name": "文件夹证据", "desc": "周明放在桌上的一叠纸" }
+      ],
+      "lighting": [
+        { "state": "日光灯上午", "prompt": "Interior of modern corporate conference room. Long rectangular table seating 12 people. Cold white fluorescent ceiling lights. Head of table on the far end. Window blinds half closed. No people. Realistic office style, cold tones." }
+      ],
+      "image": {
+        "prompt": "Empty modern corporate conference room, long rectangular table, 12 office chairs around it. Cold white fluorescent lighting. Project schedule papers on table. No people, no shadows. Wide establishing shot.",
+        "negativePrompt": "people, person, human, face, hands, character, animated, cartoon, anime",
+        "sheet": "Single scene reference sheet. Wide shot of conference room interior. Shows long table, chairs, fluorescent lights, head of table position. Cold tones.",
+        "tags": ["conference room", "office interior", "fluorescent light", "cold tones"]
+      },
+      "usage": { "episodes": [1], "beats": ["打脸", "情感爆点"] }
+    },
+    {
+      "id": "S02",
+      "name": "一心堂画室",
+      "primary": false,
+      "summary": "设计意图：复用第1集画室场景，本集是上午阳光直射，与黄昏形成对比。",
+      "anchors": [
+        { "name": "木格窗", "desc": "上午阳光直直照进来" },
+        { "name": "画架速写本", "desc": "沈砚在速写本上记远程感知" },
+        { "name": "老旧木地板", "desc": "上午阳光照亮地板，沈砚脚下依旧没有影子" }
+      ],
+      "lighting": [
+        { "state": "上午阳光", "prompt": "Same artist studio interior but morning sunlight streaming directly through wooden lattice window. Bright warm light on old wooden floor. Easel and sketchbook on desk. No people. Warm golden morning light." }
+      ],
+      "image": {
+        "prompt": "Empty artist studio interior, morning sunlight streaming through wooden lattice window. Bright warm light on old wooden floor. Easel, sketchbook, ink tools on desk. No people. Golden morning tones.",
+        "negativePrompt": "people, person, human, face, hands, character, animated, cartoon, anime, shadow of person",
+        "sheet": "Single scene reference sheet. Morning light version of the studio. Shows bright sunlight through window, empty floor, easel.",
+        "tags": ["artist studio", "morning light", "warm tones", "wooden interior"]
+      },
+      "variantOf": "S01",
+      "changes": "换时段：黄昏→上午阳光",
+      "usage": { "episodes": [1], "beats": ["悬念钩", "结尾悬念"] }
+    }
+  ],
+  "props": [
+    {
+      "id": "P01",
+      "name": "离职申请与证据文件",
+      "scale": "桌面级",
+      "summary": "戏剧功能：周明当众揭露的物证——11个项目图纸、147封邮件记录、离职申请。",
+      "anchors": [
+        { "name": "一叠纸", "desc": "放在会议桌上，最上面是离职申请" },
+        { "name": "文件夹", "desc": "灰色文件夹，周明攥在手里" }
+      ],
+      "states": [
+        { "state": "放在桌上", "prompt": "A stack of papers on a conference room table, top sheet is a resignation letter. Black ink documents. Pure white background, no hands, no people. Desktop size product shot." }
+      ],
+      "relatedScenes": ["S01"],
+      "carriedBy": ["周明"],
+      "image": {
+        "prompt": "Stack of printed documents on pure white background. Top sheet is a Chinese resignation letter. Below are project drawings and email records. Desktop size. No hands, no people.",
+        "negativePrompt": "hands, person, people, human, fingers, cartoon, anime, blurry",
+        "sheet": "Single product reference on pure white background. Top-down view of document stack. Desktop size scale reference. No hands.",
+        "tags": ["documents", "resignation letter", "white background", "product shot"]
+      },
+      "usage": { "episodes": [1], "beats": ["打脸"] }
+    }
+  ]
+}

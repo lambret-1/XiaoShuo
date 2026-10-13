@@ -1,0 +1,40 @@
+{
+  "source": "影笔代理人",
+  "lang": "zh",
+  "params": { "episodes": 1, "minutesPerEpisode": 1, "genre": "都市奇幻", "adaptMode": "抽核", "preferences": [] },
+  "adaptation": {
+    "core": "周明在部门例会上当众揭露主管三年压榨，说出三年不敢说的「我不是废物」——同一时刻，画室里的沈砚通过影契远程感知到了这一切。",
+    "keep": [
+      { "what": "周明当众拿出11个项目图纸和147封邮件，揭露主管赵国栋", "why": "这是代行纹生效的核心事件" },
+      { "what": "沈砚通过影契远程感知，墨痕发烫", "why": "建立代理人与缔约人的连接机制" }
+    ],
+    "cut": [
+      { "what": "苏听晚调查的七起死亡案件详情", "why": "第3集展开，本集只做钩子" }
+    ],
+    "merge": [],
+    "risks": [
+      { "what": "会议室群像", "plan": "聚焦周明和赵国栋两人，其他人做背景" }
+    ]
+  },
+  "characters": [
+    { "id": "C01", "name": "沈砚", "role": "画室主人，影契代理人", "tier": "lead", "arc": "远程感知首次出现，墨痕加深", "from": ["原著"] },
+    { "id": "C02", "name": "周明", "role": "缔约人，被压榨三年的绘图员", "tier": "lead", "arc": "从不敢说话到当众说出我不是废物", "from": ["原著"] },
+    { "id": "C03", "name": "赵国栋", "role": "主管，压榨周明三年", "tier": "support", "arc": "从不耐烦到震惊到暴怒", "from": ["原著"] }
+  ],
+  "scenes": [
+    { "id": "S01", "name": "设计院第三会议室", "primary": true, "reusePlan": "长条形会议桌，主位在一端，日光灯" },
+    { "id": "S02", "name": "一心堂画室", "primary": false, "reusePlan": "复用第1集场景" }
+  ],
+  "props": [
+    { "id": "P01", "name": "离职申请与证据文件", "function": "周明当众揭露的物证", "beatIds": ["B02"] }
+  ],
+  "beats": [
+    { "id": "B01", "type": "悬念钩", "weight": "major", "episode": 1, "setup": "周明迟到，但步伐稳得不像他", "payoff": "他站起来，把文件放在桌上" },
+    { "id": "B02", "type": "打脸", "weight": "major", "episode": 1, "setup": "主管当众骂周明废物三年", "payoff": "周明拿出11个项目图纸和147封邮件，当众揭露" },
+    { "id": "B03", "type": "情感爆点", "weight": "major", "episode": 1, "setup": "周明三年不敢说", "payoff": "我不是废物" },
+    { "id": "B04", "type": "结尾悬念", "weight": "major", "episode": 1, "setup": "沈砚闭着眼，墨痕发烫", "payoff": "他「看见」了会议室里发生的一切——远程感知，首次" }
+  ],
+  "episodes": [
+    { "ep": 1, "synopsis": "周明在部门例会上当众揭露主管三年压榨，说出我不是废物。同一时刻，沈砚通过影契远程感知到了这一切。", "hook": "周明迟到五分钟，但步伐稳得不像他平时的样子", "suspense": "沈砚远程感知首次出现，墨痕比昨天又深了一分", "sceneIds": ["S01", "S02"], "characterIds": ["C01", "C02", "C03"], "propIds": ["P01"], "crowdPlan": "会议室12人做背景", "warnings": [] }
+  ]
+}

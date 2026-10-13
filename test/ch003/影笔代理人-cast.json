@@ -1,0 +1,119 @@
+{
+  "source": "影笔代理人",
+  "lang": "zh",
+  "summary": "黄昏的梧水街，沈砚给苏听晚手腕画了一道临时照心纹。她第一次看见影子——满街的影子都在低语，暗巷里有一个被影子抽干的男人。但最让她不安的是，只有她自己的影子，安静得不像一个活人的。",
+  "characters": [
+    {
+      "name": "沈砚",
+      "aliases": ["画室主人"],
+      "importance": "protagonist",
+      "oneLiner": "带苏听晚看见影子的画室主人，脚下没有影子。",
+      "persona": {
+        "gender": "男",
+        "ageRange": "二十七八岁",
+        "identity": "一心堂画室主人，影契代理人",
+        "appearance": "长眉，鼻梁很平，脸上没什么血色。右手手背淡墨痕。",
+        "personality": ["冷静", "观察者", "克制"],
+        "temperament": "声音很平，解释影子世界时像在说常识。",
+        "motivation": "让苏听晚看见真相，但不替她做选择。",
+        "arc": "被问到你的影子还在吗时，身体微微僵了一下。",
+        "relationships": [
+          { "name": "苏听晚", "relation": "本集带她看见影子的人" }
+        ],
+        "evidence": [
+          "影子说的，是主人不敢说出口的话。",
+          "我是代理人。我只见证，不救赎。"
+        ]
+      },
+      "image": {
+        "prompt": "East Asian male late 20s, tall thin, pale complexion, long straight eyebrows, flat nose bridge, unsettling still eyes. Short messy black hair. Dark grey rolled-sleeve linen shirt. Realistic Chinese urban fantasy style, dusk tones.",
+        "promptLocal": "东亚男性，二十七八岁，高瘦苍白，长眉平鼻梁，深眼窝眼神静止。黑色短发微乱。深色卷袖亚麻衬衫。写实都市奇幻风格，黄昏色调。",
+        "negativePrompt": "blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, smiling",
+        "tags": ["character sheet", "half-body portrait", "three full-body views"],
+        "sheet": "Single character model sheet. LEFT: half-body bust. RIGHT: three full-body views. Bottom: hand ink mark close-up."
+      },
+      "voice": {
+        "timbre": "低平的男中音，气声多",
+        "pitch": "低",
+        "pace": "缓慢，每个字都量过",
+        "accent": "标准普通话",
+        "emotion": "平静到冷漠",
+        "referenceHint": "像一个解释规则的人",
+        "prompt": "Low even male voice, late 20s. Very little intonation variation. Slow deliberate pace. Neutral tone."
+      }
+    },
+    {
+      "name": "苏听晚",
+      "aliases": ["档案馆"],
+      "importance": "major",
+      "oneLiner": "市档案馆的女人，调查七起不明原因死亡，第一次看见影子世界。",
+      "persona": {
+        "gender": "女",
+        "ageRange": "二十六七岁",
+        "identity": "市档案馆工作人员",
+        "appearance": "穿米白色风衣，头发扎低马尾，露出干净的额头。手里抱牛皮纸档案袋。",
+        "personality": ["冷静", "好奇", "坚定", "压抑"],
+        "temperament": "声音温和清晰，语气自然。看到影子世界时后背起鸡皮疙瘩，但没有尖叫。",
+        "motivation": "查清楚七起不明原因死亡的真相，找到黑市影商。",
+        "arc": "从调查者到决定要主动追查黑市影商。她的影子异常安静——像一间没有人住过的房子。",
+        "relationships": [
+          { "name": "沈砚", "relation": "带她看见影子的画室主人" }
+        ],
+        "evidence": [
+          "我想要真相。",
+          "你的影子，它还在吗？"
+        ]
+      },
+      "image": {
+        "prompt": "East Asian female late 20s, clean forehead, low ponytail, wearing a cream-colored trench coat. Holding a kraft paper archive bag. Calm determined expression. Realistic style, dusk tones.",
+        "promptLocal": "东亚女性，二十七八岁，干净额头，低马尾，穿米白色风衣。手里抱牛皮纸档案袋。表情冷静坚定。写实风格，黄昏色调。",
+        "negativePrompt": "blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, heavy makeup",
+        "tags": ["character sheet", "half-body portrait", "three full-body views"],
+        "sheet": "Single character model sheet. LEFT: half-body bust. RIGHT: three full-body views holding archive bag."
+      },
+      "voice": {
+        "timbre": "温和清晰的女中音",
+        "pitch": "中等",
+        "pace": "自然，不慌不忙",
+        "accent": "标准普通话",
+        "emotion": "冷静，但看到影子世界时声音发紧",
+        "referenceHint": "像一个做档案工作的人，习惯了冷静",
+        "prompt": "Calm female voice late 20s. Clear and moderate pace. Normally composed, but voice tightens when seeing shadow world for the first time."
+      }
+    },
+    {
+      "name": "空洞化男人",
+      "aliases": ["暗巷路人"],
+      "importance": "supporting",
+      "oneLiner": "暗巷里靠墙喝酒的男人，影子已经半悬浮在抽他的人格。",
+      "persona": {
+        "gender": "男",
+        "ageRange": "三十多岁",
+        "identity": "暗巷路人",
+        "appearance": "衣服很脏，头发很乱，靠在墙上，手里捏空酒瓶。眼神空洞。",
+        "personality": ["空洞", "麻木", "被影子控制"],
+        "temperament": "没有声音，机械地灌酒。",
+        "motivation": "被影子驱动，不停喝酒麻痹自己。",
+        "arc": "第二阶段空洞化——影子半悬浮，持续抽取人格。",
+        "relationships": [],
+        "evidence": []
+      },
+      "image": {
+        "prompt": "East Asian male 30s, messy clothes and hair, leaning against wall in dark alley. Holding an empty liquor bottle. Empty vacant eyes. Dark gritty atmosphere. Realistic style.",
+        "promptLocal": "东亚男性，三十多岁，衣服脏头发乱，靠在暗巷墙上。手里捏空酒瓶。眼神空洞。黑暗 gritty 氛围。写实风格。",
+        "negativePrompt": "blurry, low quality, extra fingers, deformed hands, cartoonish, anime style, healthy appearance",
+        "tags": ["character sheet", "half-body portrait", "dark alley"],
+        "sheet": "Single character model sheet. Leaning against dark wall. Empty eyes. Holding liquor bottle."
+      },
+      "voice": {
+        "timbre": "没有声音——已经空洞了",
+        "pitch": "无",
+        "pace": "机械",
+        "accent": "无",
+        "emotion": "无",
+        "referenceHint": "像一个被掏空的人",
+        "prompt": "No dialogue. Mechanical drinking motion only. Empty vacant expression."
+      }
+    }
+  ]
+}
