@@ -1,0 +1,1582 @@
+{
+  "source": "八零新婚夜，空间囤货养崽暴富",
+  "lang": "zh",
+  "promptLang": "zh",
+  "params": {
+    "maxSegmentSeconds": 15,
+    "minCutSeconds": 2.0,
+    "maxCutSeconds": 9.0,
+    "maxOnScreen": 3,
+    "tolerance": 0.15
+  },
+  "episodes": [
+    {
+      "ep": 1,
+      "segments": [
+        {
+          "id": "E01-01",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                1,
+                2
+              ],
+              "seconds": 6.5,
+              "size": "extreme-wide",
+              "camera": "Tilt Down",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "大远景：雪夜桥洞，女人缩在破草席里，冷蓝色调",
+              "shot": "雪夜桥洞，女人缩在破草席里，冷蓝色调",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                3,
+                4
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：woman猛地睁眼，黄泥土屋，煤油灯暖光",
+              "shot": "woman猛地睁眼，黄泥土屋，煤油灯暖光",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "北风从窗缝呼啸，煤油灯轻微噼啪，孩子压抑哭声",
+          "music": "低沉钢琴单音，悲凉转坚定",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 俯摇，雪夜桥洞，女人缩在破草席里，冷蓝色调\n[镜头 2] 于 00:06.500，固定，woman猛地睁眼，黄泥土屋，煤油灯暖光 <d>[Chinese]妈妈……饿……</d>\n\n整体音景：北风从窗缝呼啸，煤油灯轻微噼啪，孩子压抑哭声\n\n非叙事配乐：低沉钢琴单音，悲凉转坚定"
+        },
+        {
+          "id": "E01-02",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                5,
+                5
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Push In",
+              "characters": [
+                "C01",
+                "C06"
+              ],
+              "props": [],
+              "frame": "特写：woman偏头看炕角缩成一团的girl，眼泪砸下来",
+              "shot": "woman偏头看炕角缩成一团的girl，眼泪砸下来",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                6,
+                7
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Push In",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：woman闭眼凝神，金色空间浮现——黑土地清泉",
+              "shot": "woman闭眼凝神，金色空间浮现——黑土地清泉",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "北风从窗缝呼啸，煤油灯轻微噼啪，孩子压抑哭声",
+          "music": "低沉钢琴单音，悲凉转坚定",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 推，woman偏头看炕角缩成一团的girl，眼泪砸下来\n[镜头 2] 于 00:06.500，推，woman闭眼凝神，金色空间浮现——黑土地清泉 <d>[Chinese]这一世，谁也别想再欺负我的孩子。</d>\n\n整体音景：北风从窗缝呼啸，煤油灯轻微噼啪，孩子压抑哭声\n\n非叙事配乐：低沉钢琴单音，悲凉转坚定"
+        },
+        {
+          "id": "E01-03",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                8,
+                10
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：woman睁眼，眼神从脆弱变冷冽坚定",
+              "shot": "woman睁眼，眼神从脆弱变冷冽坚定",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                11,
+                12
+              ],
+              "seconds": 6.5,
+              "size": "wide",
+              "camera": "Static Shot",
+              "characters": [
+                "C02"
+              ],
+              "props": [],
+              "frame": "全景：门吱呀推开，man端粗瓷碗进来，肩上落雪",
+              "shot": "门吱呀推开，man端粗瓷碗进来，肩上落雪",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "北风从窗缝呼啸，煤油灯轻微噼啪，孩子压抑哭声",
+          "music": "低沉钢琴单音，悲凉转坚定",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，woman睁眼，眼神从脆弱变冷冽坚定 <d>[Chinese]醒了？冷不冷？红薯在锅里温着。</d> <d>[Chinese]……放这儿吧，我饿了。</d>\n[镜头 2] 于 00:06.500，固定，门吱呀推开，man端粗瓷碗进来，肩上落雪\n\n整体音景：北风从窗缝呼啸，煤油灯轻微噼啪，孩子压抑哭声\n\n非叙事配乐：低沉钢琴单音，悲凉转坚定"
+        },
+        {
+          "id": "E01-04",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                13,
+                15
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C01",
+                "C02"
+              ],
+              "props": [],
+              "frame": "特写：woman看着man布满老茧的大手，压着哽咽",
+              "shot": "woman看着man布满老茧的大手，压着哽咽",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                16,
+                17
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01",
+                "C02"
+              ],
+              "props": [],
+              "frame": "中景：woman轻声说放这儿吧我饿了，man愣住",
+              "shot": "woman轻声说放这儿吧我饿了，man愣住",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "北风从窗缝呼啸，煤油灯轻微噼啪，孩子压抑哭声",
+          "music": "低沉钢琴单音，悲凉转坚定",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，woman看着man布满老茧的大手，压着哽咽\n[镜头 2] 于 00:06.500，固定，woman轻声说放这儿吧我饿了，man愣住\n\n整体音景：北风从窗缝呼啸，煤油灯轻微噼啪，孩子压抑哭声\n\n非叙事配乐：低沉钢琴单音，悲凉转坚定"
+        },
+        {
+          "id": "E01-05",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                18,
+                19
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01",
+                "C06"
+              ],
+              "props": [],
+              "frame": "中景：woman掰红薯递到girl嘴边，girl一口咬住",
+              "shot": "woman掰红薯递到girl嘴边，girl一口咬住",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                20,
+                21
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Push In",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：woman眼泪无声落下，看着炕上儿女和冒热气的红薯",
+              "shot": "woman眼泪无声落下，看着炕上儿女和冒热气的红薯",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "室内安静，室外风声",
+          "music": "无",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，woman掰红薯递到girl嘴边，girl一口咬住\n[镜头 2] 于 00:06.500，推，woman眼泪无声落下，看着炕上儿女和冒热气的红薯\n\n整体音景：室内安静，室外风声\n\n非叙事配乐：无"
+        }
+      ]
+    },
+    {
+      "ep": 2,
+      "segments": [
+        {
+          "id": "E02-01",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                1,
+                2
+              ],
+              "seconds": 6.5,
+              "size": "wide",
+              "camera": "Static Shot",
+              "characters": [
+                "C03",
+                "C04"
+              ],
+              "props": [],
+              "frame": "全景：院门外old woman叉腰站着，身后跟着younger woman",
+              "shot": "院门外old woman叉腰站着，身后跟着younger woman",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                3,
+                3
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C03"
+              ],
+              "props": [],
+              "frame": "特写：old woman三角眼一眯，嗓门尖利",
+              "shot": "old woman三角眼一眯，嗓门尖利",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "冬天院子寒风，远处狗叫，坐地哭嚎声",
+          "music": "紧张弦乐",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，院门外old woman叉腰站着，身后跟着younger woman <d>[Chinese]苏晚！你给我出来！</d>\n[镜头 2] 于 00:06.500，固定，old woman三角眼一眯，嗓门尖利\n\n整体音景：冬天院子寒风，远处狗叫，坐地哭嚎声\n\n非叙事配乐：紧张弦乐"
+        },
+        {
+          "id": "E02-02",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                4,
+                4
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：woman靠在门框上，面无表情",
+              "shot": "woman靠在门框上，面无表情",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                5,
+                6
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C04"
+              ],
+              "props": [],
+              "frame": "中景：younger woman堆笑开口要钱",
+              "shot": "younger woman堆笑开口要钱",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "冬天院子寒风，远处狗叫，坐地哭嚎声",
+          "music": "紧张弦乐",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，woman靠在门框上，面无表情 <d>[Chinese]妹子，妈说哥翻新房，先挪二十块钱出来？</d>\n[镜头 2] 于 00:06.500，固定，younger woman堆笑开口要钱 <d>[Chinese]没钱。</d> <d>[Chinese]你说啥？我养你这么大，要二十块你敢说没有？</d>\n\n整体音景：冬天院子寒风，远处狗叫，坐地哭嚎声\n\n非叙事配乐：紧张弦乐"
+        },
+        {
+          "id": "E02-03",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                7,
+                7
+              ],
+              "seconds": 8.1,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：woman冷冷说没钱",
+              "shot": "woman冷冷说没钱",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                8,
+                10
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C03",
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：old woman嗓门拔高骂，woman平静翻旧账",
+              "shot": "old woman嗓门拔高骂，woman平静翻旧账",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "冬天院子寒风，远处狗叫，坐地哭嚎声",
+          "music": "紧张弦乐",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 8.10 秒处。\n\n整体视听描述：\n[镜头 1] 固定，woman冷冷说没钱 <d>[Chinese]彩礼十八块你全给了苏建军，医药费我们出的，棉花被我抱过去了。钱，没有。</d>\n[镜头 2] 于 00:08.100，固定，old woman嗓门拔高骂，woman平静翻旧账 <d>[Chinese]张婶李叔都来评评理！我哥翻修房，我妈带大嫂上门要二十块！</d>\n\n整体音景：冬天院子寒风，远处狗叫，坐地哭嚎声\n\n非叙事配乐：紧张弦乐"
+        },
+        {
+          "id": "E02-04",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                11,
+                12
+              ],
+              "seconds": 6.5,
+              "size": "wide",
+              "camera": "Static Shot",
+              "characters": [
+                "C04",
+                "C03"
+              ],
+              "props": [],
+              "frame": "全景：younger woman坐地拍腿哭嚎，old woman跟着坐地拍膝",
+              "shot": "younger woman坐地拍腿哭嚎，old woman跟着坐地拍膝",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                13,
+                13
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Push In",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：woman扯开嗓子喊邻居来评理",
+              "shot": "woman扯开嗓子喊邻居来评理",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "冬天院子寒风，远处狗叫，坐地哭嚎声",
+          "music": "紧张弦乐",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，younger woman坐地拍腿哭嚎，old woman跟着坐地拍膝 <d>[Chinese]行，苏晚，你翅膀硬了。这事没完！</d>\n[镜头 2] 于 00:06.500，推，woman扯开嗓子喊邻居来评理 <d>[Chinese]以后他们再来要钱，你别给。我们的钱要留着给孩子花。</d>\n\n整体音景：冬天院子寒风，远处狗叫，坐地哭嚎声\n\n非叙事配乐：紧张弦乐"
+        },
+        {
+          "id": "E02-05",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                14,
+                14
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Push In",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：woman扯开嗓子喊邻居来评理",
+              "shot": "woman扯开嗓子喊邻居来评理",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                15,
+                16
+              ],
+              "seconds": 6.5,
+              "size": "wide",
+              "camera": "Static Shot",
+              "characters": [
+                "C02",
+                "C01"
+              ],
+              "props": [],
+              "frame": "全景：man扛锄回来，走到woman身边站定",
+              "shot": "man扛锄回来，走到woman身边站定",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "室内安静，室外风声",
+          "music": "无",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 推，woman扯开嗓子喊邻居来评理 <d>[Chinese]……好。</d>\n[镜头 2] 于 00:06.500，固定，man扛锄回来，走到woman身边站定\n\n整体音景：室内安静，室外风声\n\n非叙事配乐：无"
+        }
+      ]
+    },
+    {
+      "ep": 3,
+      "segments": [
+        {
+          "id": "E03-01",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                1,
+                2
+              ],
+              "seconds": 6.5,
+              "size": "wide",
+              "camera": "Static Shot",
+              "characters": [
+                "C03",
+                "C04",
+                "C07"
+              ],
+              "props": [],
+              "frame": "全景：old woman带一行人站在院子，穿最旧褂子装委屈",
+              "shot": "old woman带一行人站在院子，穿最旧褂子装委屈",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                3,
+                3
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C03"
+              ],
+              "props": [],
+              "frame": "中景：old woman红着眼圈拿手帕擦",
+              "shot": "old woman红着眼圈拿手帕擦",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "邻居窃窃私语，院子安静",
+          "music": "紧张弦乐转温暖",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，old woman带一行人站在院子，穿最旧褂子装委屈 <d>[Chinese]各位乡亲评评理！我拉扯大的女儿，嫁过来一年就不认爹妈了！</d>\n[镜头 2] 于 00:06.500，固定，old woman红着眼圈拿手帕擦\n\n整体音景：邻居窃窃私语，院子安静\n\n非叙事配乐：紧张弦乐转温暖"
+        },
+        {
+          "id": "E03-02",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                4,
+                4
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：woman说：说完了？院子安静",
+              "shot": "woman说：说完了？院子安静",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                5,
+                5
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：woman逐条翻旧账，目光扫过邻居",
+              "shot": "woman逐条翻旧账，目光扫过邻居",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "邻居窃窃私语，院子安静",
+          "music": "紧张弦乐转温暖",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，woman说：说完了？院子安静 <d>[Chinese]说完了？</d>\n[镜头 2] 于 00:06.500，固定，woman逐条翻旧账，目光扫过邻居 <d>[Chinese]彩礼十八块你一分嫁妆没给，全给苏建军娶媳妇。</d>\n\n整体音景：邻居窃窃私语，院子安静\n\n非叙事配乐：紧张弦乐转温暖"
+        },
+        {
+          "id": "E03-03",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                6,
+                6
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：woman逐条翻旧账，目光扫过邻居",
+              "shot": "woman逐条翻旧账，目光扫过邻居",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                7,
+                7
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：woman逐条翻旧账，目光扫过邻居",
+              "shot": "woman逐条翻旧账，目光扫过邻居",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "邻居窃窃私语，院子安静",
+          "music": "紧张弦乐转温暖",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，woman逐条翻旧账，目光扫过邻居 <d>[Chinese]前年你病了，陆野扛你走十里山路，医药费三块二我们出的。</d>\n[镜头 2] 于 00:06.500，固定，woman逐条翻旧账，目光扫过邻居 <d>[Chinese]上个月我把陪嫁棉花被抱给你，我自己都没盖过。</d>\n\n整体音景：邻居窃窃私语，院子安静\n\n非叙事配乐：紧张弦乐转温暖"
+        },
+        {
+          "id": "E03-04",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                8,
+                8
+              ],
+              "seconds": 6.7,
+              "size": "close",
+              "camera": "Push In",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：woman声音冷下来",
+              "shot": "woman声音冷下来",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                9,
+                10
+              ],
+              "seconds": 7.8,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C04",
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：woman反问younger woman，younger woman脸红说不出话",
+              "shot": "woman反问younger woman，younger woman脸红说不出话",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "邻居窃窃私语，院子安静",
+          "music": "紧张弦乐转温暖",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.70 秒处。\n\n整体视听描述：\n[镜头 1] 推，woman声音冷下来 <d>[Chinese]我家两个孩子冬天连棉鞋都没有，二十块是我们全家三个月口粮。</d>\n[镜头 2] 于 00:06.700，固定，woman反问younger woman，younger woman脸红说不出话 <d>[Chinese]大嫂，你嫁进苏家三年，给你娘家花过多少？你哥翻房你怎么不回娘家要？</d>\n\n整体音景：邻居窃窃私语，院子安静\n\n非叙事配乐：紧张弦乐转温暖"
+        },
+        {
+          "id": "E03-05",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                11,
+                11
+              ],
+              "seconds": 4.5,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C03"
+              ],
+              "props": [],
+              "frame": "特写：old woman脸一阵红一阵白，咬牙走",
+              "shot": "old woman脸一阵红一阵白，咬牙走",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                12,
+                13
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01",
+                "C05"
+              ],
+              "props": [],
+              "frame": "中景：woman关门蹲下，boy仰脸问",
+              "shot": "woman关门蹲下，boy仰脸问",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "室内安静，室外风声",
+          "music": "无",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 4.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，old woman脸一阵红一阵白，咬牙走\n[镜头 2] 于 00:04.500，固定，woman关门蹲下，boy仰脸问 <d>[Chinese]你翅膀硬了，我管不了你了。这事没完！</d>\n\n整体音景：室内安静，室外风声\n\n非叙事配乐：无"
+        },
+        {
+          "id": "E03-06",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                14,
+                15
+              ],
+              "seconds": 4.5,
+              "size": "close",
+              "camera": "Push In",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：woman摸boy的头说：来，但妈妈不怕",
+              "shot": "woman摸boy的头说：来，但妈妈不怕",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "室内安静，室外风声",
+          "music": "无",
+          "h3Prompt": "目标视频在 0.00 秒处完全参照图 1（来自镜头 1）。\n\n整体视听描述：\n[镜头 1] 推，woman摸boy的头说：来，但妈妈不怕 <d>[Chinese]妈妈，外婆以后还来吗？</d> <d>[Chinese]来。但妈妈不怕。</d>\n\n整体音景：室内安静，室外风声\n\n非叙事配乐：无"
+        }
+      ]
+    },
+    {
+      "ep": 4,
+      "segments": [
+        {
+          "id": "E04-01",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                1,
+                2
+              ],
+              "seconds": 6.5,
+              "size": "wide",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "全景：厨房冷锅冷灶，案板上半块窝头",
+              "shot": "厨房冷锅冷灶，案板上半块窝头",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                3,
+                4
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Push In",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：woman闭眼凝神，金色空间浮现",
+              "shot": "woman闭眼凝神，金色空间浮现",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "柴火噼啪，水翻滚，小孩吸溜面汤声",
+          "music": "空灵钢琴转温暖催泪",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，厨房冷锅冷灶，案板上半块窝头\n[镜头 2] 于 00:06.500，推，woman闭眼凝神，金色空间浮现 <d>[Chinese]有了。</d>\n\n整体音景：柴火噼啪，水翻滚，小孩吸溜面汤声\n\n非叙事配乐：空灵钢琴转温暖催泪"
+        },
+        {
+          "id": "E04-02",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                5,
+                6
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：空间仓库里白面腊肉菜油盐",
+              "shot": "空间仓库里白面腊肉菜油盐",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                7,
+                8
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：woman生火架锅，水开面糊淋入",
+              "shot": "woman生火架锅，水开面糊淋入",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "柴火噼啪，水翻滚，小孩吸溜面汤声",
+          "music": "空灵钢琴转温暖催泪",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，空间仓库里白面腊肉菜油盐\n[镜头 2] 于 00:06.500，固定，woman生火架锅，水开面糊淋入 <d>[Chinese]妈妈，这是什么？</d>\n\n整体音景：柴火噼啪，水翻滚，小孩吸溜面汤声\n\n非叙事配乐：空灵钢琴转温暖催泪"
+        },
+        {
+          "id": "E04-03",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                9,
+                10
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：肉香炸开，woman赶紧压小火",
+              "shot": "肉香炸开，woman赶紧压小火",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                11,
+                12
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01",
+                "C05",
+                "C06"
+              ],
+              "props": [],
+              "frame": "中景：woman盛小半碗吹凉端到炕上",
+              "shot": "woman盛小半碗吹凉端到炕上",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "柴火噼啪，水翻滚，小孩吸溜面汤声",
+          "music": "空灵钢琴转温暖催泪",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，肉香炸开，woman赶紧压小火 <d>[Chinese]面汤。快吃，凉了不好吃。</d>\n[镜头 2] 于 00:06.500，固定，woman盛小半碗吹凉端到炕上 <d>[Chinese]妈妈也吃。你不吃，我也不吃。</d>\n\n整体音景：柴火噼啪，水翻滚，小孩吸溜面汤声\n\n非叙事配乐：空灵钢琴转温暖催泪"
+        },
+        {
+          "id": "E04-04",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                13,
+                14
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C06"
+              ],
+              "props": [],
+              "frame": "特写：girl瞪圆眼睛问这是什么",
+              "shot": "girl瞪圆眼睛问这是什么",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                15,
+                16
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C05"
+              ],
+              "props": [],
+              "frame": "特写：boy喝到一半把碗递回给妈妈",
+              "shot": "boy喝到一半把碗递回给妈妈",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "室内安静，室外风声",
+          "music": "无",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，girl瞪圆眼睛问这是什么\n[镜头 2] 于 00:06.500，固定，boy喝到一半把碗递回给妈妈\n\n整体音景：室内安静，室外风声\n\n非叙事配乐：无"
+        },
+        {
+          "id": "E04-05",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                17,
+                18
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Push In",
+              "characters": [
+                "C01",
+                "C05"
+              ],
+              "props": [],
+              "frame": "特写：woman眼泪掉下来，接过碗喝一口",
+              "shot": "woman眼泪掉下来，接过碗喝一口",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                19,
+                22
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：woman把剩余物资收回空间",
+              "shot": "woman把剩余物资收回空间",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "室内安静，室外风声",
+          "music": "无",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 推，woman眼泪掉下来，接过碗喝一口\n[镜头 2] 于 00:06.500，固定，woman把剩余物资收回空间\n\n整体音景：室内安静，室外风声\n\n非叙事配乐：无"
+        }
+      ]
+    },
+    {
+      "ep": 5,
+      "segments": [
+        {
+          "id": "E05-01",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                1,
+                2
+              ],
+              "seconds": 6.5,
+              "size": "wide",
+              "camera": "Static Shot",
+              "characters": [
+                "C02"
+              ],
+              "props": [],
+              "frame": "全景：傍晚man扛柴回来，肩上落霜",
+              "shot": "傍晚man扛柴回来，肩上落霜",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                3,
+                4
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C02"
+              ],
+              "props": [],
+              "frame": "中景：man推门进厨房，鼻子动了动",
+              "shot": "man推门进厨房，鼻子动了动",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "脚步沉重，柴火放下，厨房寂静",
+          "music": "悬疑低音",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，傍晚man扛柴回来，肩上落霜\n[镜头 2] 于 00:06.500，固定，man推门进厨房，鼻子动了动\n\n整体音景：脚步沉重，柴火放下，厨房寂静\n\n非叙事配乐：悬疑低音"
+        },
+        {
+          "id": "E05-02",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                5,
+                6
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C02"
+              ],
+              "props": [],
+              "frame": "特写：man眉头皱起，目光扫灶台锅",
+              "shot": "man眉头皱起，目光扫灶台锅",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                7,
+                8
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Push In",
+              "characters": [
+                "C02",
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：man目光最后落在woman脸上",
+              "shot": "man目光最后落在woman脸上",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "脚步沉重，柴火放下，厨房寂静",
+          "music": "悬疑低音",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，man眉头皱起，目光扫灶台锅\n[镜头 2] 于 00:06.500，推，man目光最后落在woman脸上 <d>[Chinese]……刚才煮什么了？</d>\n\n整体音景：脚步沉重，柴火放下，厨房寂静\n\n非叙事配乐：悬疑低音"
+        },
+        {
+          "id": "E05-03",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                9,
+                10
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C02"
+              ],
+              "props": [],
+              "frame": "特写：man压低声音问刚才煮什么了",
+              "shot": "man压低声音问刚才煮什么了",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                11,
+                12
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：woman心里咯噔，尽量平静回答",
+              "shot": "woman心里咯噔，尽量平静回答",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "脚步沉重，柴火放下，厨房寂静",
+          "music": "悬疑低音",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，man压低声音问刚才煮什么了 <d>[Chinese]煮了点红薯粥。你回来晚了，我和孩子先吃了。</d>\n[镜头 2] 于 00:06.500，固定，woman心里咯噔，尽量平静回答 <d>[Chinese]……哦。</d>\n\n整体音景：脚步沉重，柴火放下，厨房寂静\n\n非叙事配乐：悬疑低音"
+        },
+        {
+          "id": "E05-04",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                13,
+                14
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C02",
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：man目光在灶台停两秒，转身出去",
+              "shot": "man目光在灶台停两秒，转身出去",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                15,
+                16
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Push In",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：woman靠在灶台边，手心全是汗",
+              "shot": "woman靠在灶台边，手心全是汗",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "室内安静，室外风声",
+          "music": "无",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，man目光在灶台停两秒，转身出去\n[镜头 2] 于 00:06.500，推，woman靠在灶台边，手心全是汗\n\n整体音景：室内安静，室外风声\n\n非叙事配乐：无"
+        },
+        {
+          "id": "E05-05",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                17,
+                21
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：院门外风灌进来，煤油灯火苗晃",
+              "shot": "院门外风灌进来，煤油灯火苗晃",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "室内安静，室外风声",
+          "music": "无",
+          "h3Prompt": "目标视频在 0.00 秒处完全参照图 1（来自镜头 1）。\n\n整体视听描述：\n[镜头 1] 固定，院门外风灌进来，煤油灯火苗晃\n\n整体音景：室内安静，室外风声\n\n非叙事配乐：无"
+        }
+      ]
+    },
+    {
+      "ep": 6,
+      "segments": [
+        {
+          "id": "E06-01",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                1,
+                2
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：张婶缩着脖子溜进门，压低声音",
+              "shot": "张婶缩着脖子溜进门，压低声音",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                3,
+                4
+              ],
+              "seconds": 7.6,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：张婶左右看，说old woman回村到处造谣",
+              "shot": "张婶左右看，说old woman回村到处造谣",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "压低说话声，关门声，北风呼啸",
+          "music": "紧张低音转坚定钢琴",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，张婶缩着脖子溜进门，压低声音 <d>[Chinese]张婶，怎么了？</d>\n[镜头 2] 于 00:06.500，固定，张婶左右看，说old woman回村到处造谣 <d>[Chinese]晚啊，你妈回村到处说你不孝，说你嫁了人不认爹妈……她说明天还要来。</d>\n\n整体音景：压低说话声，关门声，北风呼啸\n\n非叙事配乐：紧张低音转坚定钢琴"
+        },
+        {
+          "id": "E06-02",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                5,
+                5
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：woman笑了笑，说来就来",
+              "shot": "woman笑了笑，说来就来",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                6,
+                7
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：张婶走后woman关上门，背靠门板站",
+              "shot": "张婶走后woman关上门，背靠门板站",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "压低说话声，关门声，北风呼啸",
+          "music": "紧张低音转坚定钢琴",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，woman笑了笑，说来就来 <d>[Chinese]来就来。我等着呢。</d>\n[镜头 2] 于 00:06.500，固定，张婶走后woman关上门，背靠门板站\n\n整体音景：压低说话声，关门声，北风呼啸\n\n非叙事配乐：紧张低音转坚定钢琴"
+        },
+        {
+          "id": "E06-03",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                8,
+                9
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01",
+                "C05",
+                "C06"
+              ],
+              "props": [],
+              "frame": "中景：woman走到炕边蹲下，摸boy捏girl",
+              "shot": "woman走到炕边蹲下，摸boy捏girl",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                10,
+                11
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Static Shot",
+              "characters": [
+                "C01",
+                "C05"
+              ],
+              "props": [],
+              "frame": "特写：woman轻声说妈妈保护你们，boy问真的",
+              "shot": "woman轻声说妈妈保护你们，boy问真的",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "压低说话声，关门声，北风呼啸",
+          "music": "紧张低音转坚定钢琴",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，woman走到炕边蹲下，摸boy捏girl <d>[Chinese]以后妈妈保护你们，没人能欺负你们。</d> <d>[Chinese]真的？</d>\n[镜头 2] 于 00:06.500，固定，woman轻声说妈妈保护你们，boy问真的 <d>[Chinese]真的。</d>\n\n整体音景：压低说话声，关门声，北风呼啸\n\n非叙事配乐：紧张低音转坚定钢琴"
+        },
+        {
+          "id": "E06-04",
+          "sceneIndex": 1,
+          "cuts": [
+            {
+              "beats": [
+                12,
+                13
+              ],
+              "seconds": 6.5,
+              "size": "medium",
+              "camera": "Static Shot",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "中景：窗外北风刮，糊窗旧报纸簌簌响",
+              "shot": "窗外北风刮，糊窗旧报纸簌簌响",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            },
+            {
+              "beats": [
+                14,
+                20
+              ],
+              "seconds": 6.5,
+              "size": "close",
+              "camera": "Push In",
+              "characters": [
+                "C01"
+              ],
+              "props": [],
+              "frame": "特写：woman站窗边，眼神从脆弱变坚定",
+              "shot": "woman站窗边，眼神从脆弱变坚定",
+              "lens": "50mm 标准，中浅景深",
+              "cameraPosition": "双人 + 平视",
+              "composition": "三分法",
+              "eyeline": "对方面部",
+              "focus": "锁定上半身",
+              "stability": "stable"
+            }
+          ],
+          "blocking": "女人在画面左侧，对手在右侧",
+          "soundscape": "室内安静，室外风声",
+          "music": "无",
+          "h3Prompt": "参考图与目标视频的对齐——图 1（来自镜头 1）对齐目标视频 0.00 秒处；图 2（来自镜头 2）对齐目标视频 6.50 秒处。\n\n整体视听描述：\n[镜头 1] 固定，窗外北风刮，糊窗旧报纸簌簌响\n[镜头 2] 于 00:06.500，推，woman站窗边，眼神从脆弱变坚定\n\n整体音景：室内安静，室外风声\n\n非叙事配乐：无"
+        }
+      ]
+    }
+  ]
+}
