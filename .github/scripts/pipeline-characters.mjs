@@ -167,7 +167,6 @@ function assembleCast(workDir, outputDir, bookName, skillDir, lang) {
 function manualAssemble(workDir, outputDir, bookName, characterList, lang) {
   logger.info('使用手动方式合成 cast.json...');
   const cards = [];
-  const fs = await import('node:fs');
 
   for (const char of characterList) {
     const slug = slugify(char.name) || char.id;
