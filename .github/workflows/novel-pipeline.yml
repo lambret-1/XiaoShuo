@@ -199,14 +199,15 @@ jobs:
             echo "没有新的产物需要提交"
           else
             TS=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S CST')
-            git commit -m "feat: 漫剧流水线产物 - $TS
-
-作品: ${{ github.event.inputs.book_name }}
-集数: ${{ github.event.inputs.episodes }} 集
-单集时长: ${{ github.event.inputs.duration }} 分钟
-题材: ${{ github.event.inputs.genre }}
-起始阶段: ${{ github.event.inputs.start_stage }}
-触发者: ${{ github.triggering_actor }}" || echo "提交失败或无变更"
+            COMMIT_MSG=$(printf "feat: 漫剧流水线产物 - %s\n\n作品: %s\n集数: %s 集\n单集时长: %s 分钟\n题材: %s\n起始阶段: %s\n触发者: %s" \
+              "$TS" \
+              "${{ github.event.inputs.book_name }}" \
+              "${{ github.event.inputs.episodes }}" \
+              "${{ github.event.inputs.duration }}" \
+              "${{ github.event.inputs.genre }}" \
+              "${{ github.event.inputs.start_stage }}" \
+              "${{ github.triggering_actor }}")
+            git commit -m "$COMMIT_MSG" || echo "提交失败或无变更"
             git push || echo "推送失败"
           fi
 
