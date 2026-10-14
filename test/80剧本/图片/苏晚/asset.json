@@ -1,0 +1,80 @@
+{
+  "name": "苏晚",
+  "source": "《八零新婚夜，空间囤货养崽暴富》女主",
+  "lang": "zh",
+  "layers": {
+    "identity": {
+      "age": 22,
+      "gender": "female",
+      "en": "A slender twenty-two-year-old Chinese peasant woman, early 1980s rural northern China",
+      "text": "22 岁北方农村新媳妇，1980 年代初",
+      "source": "stated"
+    },
+    "face": {
+      "en": "Thin oval face with slightly sallow skin from malnutrition, but large bright determined dark eyes, straight thin eyebrows, pale lips, faint tiredness yet resolute gaze",
+      "text": "瘦长脸，脸色偏黄营养不良，但一双眼睛亮而有神，眼神冷静坚定",
+      "source": "inferred"
+    },
+    "hair": {
+      "en": "Black hair pulled back into a single simple thick braid over one shoulder, centre-parted, no ornaments",
+      "text": "黑发中分，简单扎成一根粗麻花辫垂在胸前，无任何头饰",
+      "source": "inferred"
+    }
+  },
+  "outfits": {
+    "default": {
+      "label": "新婚夜常态",
+      "top": {
+        "en": "A faded indigo-blue homespun cotton padded jacket, front-buttoned with traditional cloth knot buttons, patched at elbow and shoulder with contrasting scrap cloth, collar slightly frayed",
+        "text": "洗得发白的靛蓝色粗布对襟棉袄，盘扣，肘肩处打了几块不同色的补丁，领口磨旧",
+        "source": "stated"
+      },
+      "bottom": {
+        "en": "Dark grey coarse cotton padded trousers, cuffs tied, worn black cloth shoes with thick soles",
+        "text": "深灰色粗布棉裤，裤脚扎起，穿旧的黑布千层底棉鞋",
+        "source": "inferred"
+      },
+      "details": [
+        {
+          "slot": "hair",
+          "en": "The thick black braid hanging over her shoulder, its end tied with a frayed piece of red cotton string",
+          "text": "垂在胸前的粗黑麻花辫，辫梢系一截磨毛的红头绳",
+          "source": "inferred"
+        },
+        {
+          "slot": "neck",
+          "en": "The frayed indigo collar and the hand-stitched cloth knot buttons of the padded jacket",
+          "text": "磨旧的靛蓝立领与手工盘扣",
+          "source": "inferred"
+        },
+        {
+          "slot": "sleeve",
+          "en": "The elbow patch of contrasting faded brown cloth sewn onto the indigo cotton sleeve",
+          "text": "靛蓝袖子肘部一块打补丁的褪色棕布",
+          "source": "stated"
+        },
+        {
+          "slot": "feet",
+          "en": "Thick-soled worn black cloth shoes with patched toe caps, over grey cotton ankle wraps",
+          "text": "旧黑布鞋千层底，鞋头有补丁，配灰棉袜/绑腿",
+          "source": "inferred"
+        }
+      ],
+      "overrides": {},
+      "look": {
+        "id": "realistic-photo",
+        "label": {
+          "zh": "写实照片",
+          "en": "Realistic photo",
+          "ja": "写実写真"
+        },
+        "medium": "photo",
+        "style": "A real photograph, not a render: shot on a full-frame digital camera with an 85mm portrait lens at f/5.6, natural true-to-life colors and white balance. Natural skin texture with the pores and fine lines the person's age calls for, a no-makeup look, no retouching, no beauty filter. Real fabric with natural creases. Subtle film grain.",
+        "clean": "White seamless paper backdrop lit to pure white. A soft directional key light from the front-left with a weaker fill, so the face and clothes have gentle natural shadows and volume. Exactly one person, empty hands, no props, no text, no watermark.",
+        "neg": "CGI, 3D render, digital painting, illustration, anime, airbrushed skin, smooth plastic skin, waxy skin, doll face, beauty filter, overly symmetrical face, oversharpened, HDR, glossy, over-saturated, flat lighting, porcelain skin, big anime eyes"
+      },
+      "views": {},
+      "upgrades": []
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "name": "大宝",
+  "source": "《八零新婚夜，空间囤货养崽暴富》苏晚长子",
+  "lang": "zh",
+  "layers": {
+    "identity": {
+      "age": 3,
+      "gender": "male",
+      "en": "A thin three-year-old Chinese toddler boy, early 1980s rural northern China",
+      "text": "3 岁北方农村瘦小男孩，1980 年代初",
+      "source": "stated"
+    },
+    "face": {
+      "en": "Small thin face, big bright dark eyes, delicate features, slightly pale cheeks",
+      "text": "小脸瘦，大眼睛亮而有神，五官清秀，脸颊略白",
+      "source": "stated"
+    },
+    "hair": {
+      "en": "Short black hair cropped close, a little tuft on top",
+      "text": "黑色短寸，头顶一小撮",
+      "source": "inferred"
+    }
+  },
+  "outfits": {
+    "default": {
+      "label": "常态",
+      "top": {
+        "en": "A tiny faded indigo padded jacket patched at the knees and elbows, way too big on him",
+        "text": "小小的洗旧靛蓝补丁小棉袄，穿在身上偏大",
+        "source": "stated"
+      },
+      "bottom": {
+        "en": "Dark grey baggy padded trousers rolled at the ankle, small worn cloth shoes",
+        "text": "深灰肥大棉裤裤脚卷起，旧小布鞋",
+        "source": "inferred"
+      },
+      "details": [
+        {
+          "slot": "hair",
+          "en": "The small tuft on top of the boy's short cropped head",
+          "text": "男孩短寸头顶的一小撮",
+          "source": "inferred"
+        },
+        {
+          "slot": "neck",
+          "en": "The too-big collar of the tiny indigo padded jacket",
+          "text": "小靛蓝棉袄偏大的领口",
+          "source": "inferred"
+        },
+        {
+          "slot": "sleeve",
+          "en": "Sleeves rolled up twice on the oversized tiny jacket",
+          "text": "偏大棉袄袖子卷了两折",
+          "source": "inferred"
+        },
+        {
+          "slot": "feet",
+          "en": "Oversized small cloth shoes",
+          "text": "偏大的小布鞋",
+          "source": "inferred"
+        }
+      ],
+      "overrides": {},
+      "look": {
+        "id": "realistic-photo",
+        "label": {
+          "zh": "写实照片",
+          "en": "Realistic photo",
+          "ja": "写実写真"
+        },
+        "medium": "photo",
+        "style": "A real photograph, not a render: shot on a full-frame digital camera with an 85mm portrait lens at f/5.6, natural true-to-life colors and white balance. Natural skin texture with the pores and fine lines the person's age calls for, a no-makeup look, no retouching, no beauty filter. Real fabric with natural creases. Subtle film grain.",
+        "clean": "White seamless paper backdrop lit to pure white. A soft directional key light from the front-left with a weaker fill, so the face and clothes have gentle natural shadows and volume. Exactly one person, empty hands, no props, no text, no watermark.",
+        "neg": "CGI, 3D render, digital painting, illustration, anime, airbrushed skin, smooth plastic skin, waxy skin, doll face, beauty filter, overly symmetrical face, oversharpened, HDR, glossy, over-saturated, flat lighting, porcelain skin, big anime eyes"
+      },
+      "views": {},
+      "upgrades": []
+    }
+  }
+}

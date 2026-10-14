@@ -1,0 +1,80 @@
+{
+  "name": "小宝",
+  "source": "《八零新婚夜，空间囤货养崽暴富》苏晚女儿",
+  "lang": "zh",
+  "layers": {
+    "identity": {
+      "age": 3,
+      "gender": "female",
+      "en": "A skinny kitten-like three-year-old Chinese toddler girl, early 1980s rural northern China",
+      "text": "3 岁瘦得像小猫的北方农村小女孩，1980 年代初",
+      "source": "stated"
+    },
+    "face": {
+      "en": "Petite thin face, large shy dark eyes, small delicate nose, pale cheeks, timid expression",
+      "text": "小瘦脸，大眼睛怯生生，小鼻子秀气，脸颊苍白，神情怯生",
+      "source": "stated"
+    },
+    "hair": {
+      "en": "Tiny black hair tied into two small tufts on top, each tied with a short red string",
+      "text": "黑发扎成头顶两个小揪揪，各系一截短红头绳",
+      "source": "inferred"
+    }
+  },
+  "outfits": {
+    "default": {
+      "label": "常态",
+      "top": {
+        "en": "A tiny faded brick-red padded jacket patched at the elbows, too big on her small frame",
+        "text": "小小的洗旧砖红补丁小棉袄，穿在瘦小身上偏大",
+        "source": "stated"
+      },
+      "bottom": {
+        "en": "Dark grey baggy padded trousers, small worn cloth shoes",
+        "text": "深灰肥大棉裤，旧小布鞋",
+        "source": "inferred"
+      },
+      "details": [
+        {
+          "slot": "hair",
+          "en": "Two tiny top tufts tied with short red strings",
+          "text": "两个系短红头绳的头顶小揪揪",
+          "source": "inferred"
+        },
+        {
+          "slot": "neck",
+          "en": "The too-big collar of the tiny brick-red padded jacket",
+          "text": "小砖红棉袄偏大的领口",
+          "source": "inferred"
+        },
+        {
+          "slot": "sleeve",
+          "en": "Sleeves rolled up on the oversized tiny jacket",
+          "text": "偏大棉袄卷起的袖子",
+          "source": "inferred"
+        },
+        {
+          "slot": "feet",
+          "en": "Tiny worn cloth shoes",
+          "text": "旧小布鞋",
+          "source": "inferred"
+        }
+      ],
+      "overrides": {},
+      "look": {
+        "id": "realistic-photo",
+        "label": {
+          "zh": "写实照片",
+          "en": "Realistic photo",
+          "ja": "写実写真"
+        },
+        "medium": "photo",
+        "style": "A real photograph, not a render: shot on a full-frame digital camera with an 85mm portrait lens at f/5.6, natural true-to-life colors and white balance. Natural skin texture with the pores and fine lines the person's age calls for, a no-makeup look, no retouching, no beauty filter. Real fabric with natural creases. Subtle film grain.",
+        "clean": "White seamless paper backdrop lit to pure white. A soft directional key light from the front-left with a weaker fill, so the face and clothes have gentle natural shadows and volume. Exactly one person, empty hands, no props, no text, no watermark.",
+        "neg": "CGI, 3D render, digital painting, illustration, anime, airbrushed skin, smooth plastic skin, waxy skin, doll face, beauty filter, overly symmetrical face, oversharpened, HDR, glossy, over-saturated, flat lighting, porcelain skin, big anime eyes"
+      },
+      "views": {},
+      "upgrades": []
+    }
+  }
+}

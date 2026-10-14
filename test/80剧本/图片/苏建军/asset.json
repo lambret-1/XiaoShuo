@@ -1,0 +1,80 @@
+{
+  "name": "苏建军",
+  "source": "《八零新婚夜，空间囤货养崽暴富》苏晚亲哥",
+  "lang": "zh",
+  "layers": {
+    "identity": {
+      "age": 28,
+      "gender": "male",
+      "en": "A thin-built twenty-eight-year-old Chinese peasant man, early 1980s rural northern China",
+      "text": "28 岁北方农村瘦个子男青年，1980 年代初",
+      "source": "stated"
+    },
+    "face": {
+      "en": "Thin narrow face, small darting eyes, weak chin, nervous sheepish expression",
+      "text": "瘦长脸，小眼睛躲闪，下巴单薄，神情局促畏缩",
+      "source": "inferred"
+    },
+    "hair": {
+      "en": "Short black hair, slightly greasy, combed flat",
+      "text": "黑色短发，略油，贴头皮",
+      "source": "inferred"
+    }
+  },
+  "outfits": {
+    "default": {
+      "label": "常态",
+      "top": {
+        "en": "A faded blue-grey cotton padded jacket, slightly baggy, hands habitually rubbing together in front",
+        "text": "洗发蓝灰色粗布对襟棉袄，略肥，双手习惯性在身前搓动",
+        "source": "inferred"
+      },
+      "bottom": {
+        "en": "Dark grey coarse cotton trousers, worn black cloth shoes",
+        "text": "深灰粗布裤，旧黑布鞋",
+        "source": "inferred"
+      },
+      "details": [
+        {
+          "slot": "hair",
+          "en": "Slightly greasy flat short black hair",
+          "text": "略油的黑色贴头皮短发",
+          "source": "inferred"
+        },
+        {
+          "slot": "neck",
+          "en": "The loose blue-grey padded jacket collar",
+          "text": "蓝灰松垮的棉袄领口",
+          "source": "inferred"
+        },
+        {
+          "slot": "sleeve",
+          "en": "Hands rubbing each other nervously in front of the jacket",
+          "text": "在棉袄前不安搓动的双手",
+          "source": "stated"
+        },
+        {
+          "slot": "feet",
+          "en": "Worn plain black cloth shoes",
+          "text": "普通旧黑布鞋",
+          "source": "inferred"
+        }
+      ],
+      "overrides": {},
+      "look": {
+        "id": "realistic-photo",
+        "label": {
+          "zh": "写实照片",
+          "en": "Realistic photo",
+          "ja": "写実写真"
+        },
+        "medium": "photo",
+        "style": "A real photograph, not a render: shot on a full-frame digital camera with an 85mm portrait lens at f/5.6, natural true-to-life colors and white balance. Natural skin texture with the pores and fine lines the person's age calls for, a no-makeup look, no retouching, no beauty filter. Real fabric with natural creases. Subtle film grain.",
+        "clean": "White seamless paper backdrop lit to pure white. A soft directional key light from the front-left with a weaker fill, so the face and clothes have gentle natural shadows and volume. Exactly one person, empty hands, no props, no text, no watermark.",
+        "neg": "CGI, 3D render, digital painting, illustration, anime, airbrushed skin, smooth plastic skin, waxy skin, doll face, beauty filter, overly symmetrical face, oversharpened, HDR, glossy, over-saturated, flat lighting, porcelain skin, big anime eyes"
+      },
+      "views": {},
+      "upgrades": []
+    }
+  }
+}

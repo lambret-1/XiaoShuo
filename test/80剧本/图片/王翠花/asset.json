@@ -1,0 +1,80 @@
+{
+  "name": "王翠花",
+  "source": "《八零新婚夜，空间囤货养崽暴富》大嫂",
+  "lang": "zh",
+  "layers": {
+    "identity": {
+      "age": 28,
+      "gender": "female",
+      "en": "A plump twenty-eight-year-old Chinese peasant woman, early 1980s rural northern China",
+      "text": "28 岁北方农村大嫂，1980 年代初",
+      "source": "stated"
+    },
+    "face": {
+      "en": "Round full face, thick lips, small shrewd eyes, plump cheeks, ruddy complexion",
+      "text": "圆脸饱满，厚嘴唇，小而精明的眼睛，脸颊肉实，肤色红润",
+      "source": "stated"
+    },
+    "hair": {
+      "en": "Black hair permed into messy coarse waves, clipped at the side with a bright red plastic hair clip",
+      "text": "黑色毛躁烫发，侧边别一只鲜艳红色塑料发卡",
+      "source": "stated"
+    }
+  },
+  "outfits": {
+    "default": {
+      "label": "常态",
+      "top": {
+        "en": "A faded brick-red floral cotton padded jacket, front-buttoned, slightly newer than others but still worn at the cuffs",
+        "text": "洗旧砖红色碎花粗布对襟棉袄，比别人的略新但袖口仍磨旧",
+        "source": "inferred"
+      },
+      "bottom": {
+        "en": "Dark indigo coarse cotton trousers, black cloth shoes",
+        "text": "深靛蓝粗布裤，黑布鞋",
+        "source": "inferred"
+      },
+      "details": [
+        {
+          "slot": "hair",
+          "en": "The bright red plastic hair clip pinned on permed black hair",
+          "text": "烫发上别着的鲜红塑料发卡",
+          "source": "stated"
+        },
+        {
+          "slot": "neck",
+          "en": "The brick-red floral padded jacket collar",
+          "text": "砖红碎花棉袄领口",
+          "source": "inferred"
+        },
+        {
+          "slot": "sleeve",
+          "en": "The frayed cuff of the brick-red floral jacket",
+          "text": "砖红碎花棉袄磨旧的袖口",
+          "source": "inferred"
+        },
+        {
+          "slot": "feet",
+          "en": "Plain black cloth shoes",
+          "text": "普通黑布鞋",
+          "source": "inferred"
+        }
+      ],
+      "overrides": {},
+      "look": {
+        "id": "realistic-photo",
+        "label": {
+          "zh": "写实照片",
+          "en": "Realistic photo",
+          "ja": "写実写真"
+        },
+        "medium": "photo",
+        "style": "A real photograph, not a render: shot on a full-frame digital camera with an 85mm portrait lens at f/5.6, natural true-to-life colors and white balance. Natural skin texture with the pores and fine lines the person's age calls for, a no-makeup look, no retouching, no beauty filter. Real fabric with natural creases. Subtle film grain.",
+        "clean": "White seamless paper backdrop lit to pure white. A soft directional key light from the front-left with a weaker fill, so the face and clothes have gentle natural shadows and volume. Exactly one person, empty hands, no props, no text, no watermark.",
+        "neg": "CGI, 3D render, digital painting, illustration, anime, airbrushed skin, smooth plastic skin, waxy skin, doll face, beauty filter, overly symmetrical face, oversharpened, HDR, glossy, over-saturated, flat lighting, porcelain skin, big anime eyes"
+      },
+      "views": {},
+      "upgrades": []
+    }
+  }
+}

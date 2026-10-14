@@ -1,0 +1,80 @@
+{
+  "name": "陆野",
+  "source": "《八零新婚夜，空间囤货养崽暴富》男主",
+  "lang": "zh",
+  "layers": {
+    "identity": {
+      "age": 25,
+      "gender": "male",
+      "en": "A tall broad-shouldered twenty-five-year-old Chinese peasant man, early 1980s rural northern China",
+      "text": "25 岁北方农村壮劳力，1980 年代初",
+      "source": "stated"
+    },
+    "face": {
+      "en": "Square strong jaw, thick dark straight brows like blade strokes, narrow phoenix eyes with deep black pupils, a two-centimeter old scar at the tail of his left eyebrow, weathered tan skin, tight-lipped resolute expression",
+      "text": "国字脸硬朗，浓黑粗眉像刀，狭长丹凤眼深黑瞳，左眉尾两厘米旧疤，黝黑皮肤，唇紧抿",
+      "source": "stated"
+    },
+    "hair": {
+      "en": "Short black buzz-cut, hairline slightly rough, no styling",
+      "text": "黑色短寸平头，发际线略粗，无造型",
+      "source": "inferred"
+    }
+  },
+  "outfits": {
+    "default": {
+      "label": "常态",
+      "top": {
+        "en": "A faded washed-out army green cotton padded jacket, front-buttoned, cuffs worn and frayed, shoulders broad, sleeves tight on muscular arms",
+        "text": "洗发白的军绿色粗布对襟棉袄，袖口磨旧，肩宽背厚袖子绷在结实手臂上",
+        "source": "stated"
+      },
+      "bottom": {
+        "en": "Dark grey coarse cotton padded trousers, work-worn, thick-soled black cloth shoes caked with mud",
+        "text": "深灰色粗布棉裤，干活磨旧，沾泥的黑布千层底鞋",
+        "source": "inferred"
+      },
+      "details": [
+        {
+          "slot": "hair",
+          "en": "The short black buzz-cut hairline and strong jaw",
+          "text": "黑色短寸发际线与硬朗下颌",
+          "source": "inferred"
+        },
+        {
+          "slot": "neck",
+          "en": "The frayed army green collar and rough cloth knot button",
+          "text": "磨旧的军绿立领与盘扣",
+          "source": "inferred"
+        },
+        {
+          "slot": "sleeve",
+          "en": "The thick calloused hand emerging from the frayed army green cuff",
+          "text": "从军绿磨旧袖口伸出的厚茧大手",
+          "source": "stated"
+        },
+        {
+          "slot": "feet",
+          "en": "Mud-caked thick-soled black cloth shoes",
+          "text": "沾泥的黑布千层底鞋",
+          "source": "inferred"
+        }
+      ],
+      "overrides": {},
+      "look": {
+        "id": "realistic-photo",
+        "label": {
+          "zh": "写实照片",
+          "en": "Realistic photo",
+          "ja": "写実写真"
+        },
+        "medium": "photo",
+        "style": "A real photograph, not a render: shot on a full-frame digital camera with an 85mm portrait lens at f/5.6, natural true-to-life colors and white balance. Natural skin texture with the pores and fine lines the person's age calls for, a no-makeup look, no retouching, no beauty filter. Real fabric with natural creases. Subtle film grain.",
+        "clean": "White seamless paper backdrop lit to pure white. A soft directional key light from the front-left with a weaker fill, so the face and clothes have gentle natural shadows and volume. Exactly one person, empty hands, no props, no text, no watermark.",
+        "neg": "CGI, 3D render, digital painting, illustration, anime, airbrushed skin, smooth plastic skin, waxy skin, doll face, beauty filter, overly symmetrical face, oversharpened, HDR, glossy, over-saturated, flat lighting, porcelain skin, big anime eyes"
+      },
+      "views": {},
+      "upgrades": []
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "name": "苏母",
+  "source": "《八零新婚夜，空间囤货养崽暴富》苏晚母亲",
+  "lang": "zh",
+  "layers": {
+    "identity": {
+      "age": 50,
+      "gender": "female",
+      "en": "A fifty-year-old Chinese peasant woman, early 1980s rural northern China",
+      "text": "50 岁北方农村老太太，1980 年代初",
+      "source": "stated"
+    },
+    "face": {
+      "en": "Round wrinkled face, triangular eyes with downturned corners, thin lips pressed downward, sun-tanned skin, deep wrinkles on forehead and around mouth, weary disapproving expression",
+      "text": "满脸皱纹的圆脸，三角眼嘴角下撇，薄唇下压，黝黑皮肤，额头和嘴角皱纹深，神情疲惫不忿",
+      "source": "stated"
+    },
+    "hair": {
+      "en": "Grey-black hair pulled back into a tight bun at the nape, covered with a black hairnet, a few loose strands at the temples",
+      "text": "灰白头发在后脑勺挽成发髻，罩黑网兜，鬓角散落几缕",
+      "source": "stated"
+    }
+  },
+  "outfits": {
+    "default": {
+      "label": "常态",
+      "top": {
+        "en": "A faded black homespun cotton crossed-collar tunic (dajin gua), cloth knot buttons along the right side, worn and thin at the elbows",
+        "text": "洗发黑粗布大襟褂子，右侧盘扣，肘部磨薄",
+        "source": "stated"
+      },
+      "bottom": {
+        "en": "Dark indigo coarse cotton trousers, grey cloth shoes with thin soles",
+        "text": "深靛蓝粗布裤，灰布鞋薄底",
+        "source": "inferred"
+      },
+      "details": [
+        {
+          "slot": "hair",
+          "en": "The grey bun held by a black hairnet, loose strands at the temples",
+          "text": "黑网兜罩着的灰白发髻，鬓角散发",
+          "source": "stated"
+        },
+        {
+          "slot": "neck",
+          "en": "The worn black crossed collar and cloth knot button",
+          "text": "磨旧黑大襟领口与盘扣",
+          "source": "inferred"
+        },
+        {
+          "slot": "sleeve",
+          "en": "The thin worn black elbow patch",
+          "text": "磨薄的黑色肘部补丁",
+          "source": "inferred"
+        },
+        {
+          "slot": "feet",
+          "en": "Thin-soled grey cloth shoes",
+          "text": "薄底灰布鞋",
+          "source": "inferred"
+        }
+      ],
+      "overrides": {},
+      "look": {
+        "id": "realistic-photo",
+        "label": {
+          "zh": "写实照片",
+          "en": "Realistic photo",
+          "ja": "写実写真"
+        },
+        "medium": "photo",
+        "style": "A real photograph, not a render: shot on a full-frame digital camera with an 85mm portrait lens at f/5.6, natural true-to-life colors and white balance. Natural skin texture with the pores and fine lines the person's age calls for, a no-makeup look, no retouching, no beauty filter. Real fabric with natural creases. Subtle film grain.",
+        "clean": "White seamless paper backdrop lit to pure white. A soft directional key light from the front-left with a weaker fill, so the face and clothes have gentle natural shadows and volume. Exactly one person, empty hands, no props, no text, no watermark.",
+        "neg": "CGI, 3D render, digital painting, illustration, anime, airbrushed skin, smooth plastic skin, waxy skin, doll face, beauty filter, overly symmetrical face, oversharpened, HDR, glossy, over-saturated, flat lighting, porcelain skin, big anime eyes"
+      },
+      "views": {},
+      "upgrades": []
+    }
+  }
+}
