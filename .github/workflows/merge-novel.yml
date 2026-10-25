@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       folder_path:
-        description: '📁 请填写存放 MD 章节的文件夹路径（例如：./小说原文 或 .）'
+        description: '📁 存放 MD 章节的文件夹路径（如：影笔代理人/正文）'
         required: true
         default: '.'
       chapters_per_volume:
-        description: '🔢 每多少章合并为一卷（填数字，例如：10）'
+        description: '🔢 每多少章合并为一卷（填数字，如：10）'
         required: true
         default: '10'
 
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write # 允许 Action 提交代码回仓库
+      contents: write
 
     steps:
     - name: 检出代码
@@ -25,30 +25,38 @@ jobs:
 
     - name: 执行合并逻辑
       env:
-        FOLDER: ${{ github.event.inputs.folder_path }}
+        RAW_FOLDER: ${{ github.event.inputs.folder_path }}
         VOL_SIZE: ${{ github.event.inputs.chapters_per_volume }}
       run: |
+        # 1. 智能清理路径：去空格、去开头的 ./、去开头的 .
+        FOLDER=$(echo "$RAW_FOLDER" | sed 's/^[[:space:]]*//' | sed 's/[[:space:]]*$//' | sed 's|^\./||' | sed 's|^\.||')
+        
         echo "======================================="
         echo "开始处理..."
-        echo "目标文件夹: $FOLDER"
+        echo "你输入的原始路径: [$RAW_FOLDER]"
+        echo "自动清理后的路径: [$FOLDER]"
         echo "分卷大小: 每 $VOL_SIZE 章为一卷"
         echo "======================================="
 
-        # 检查文件夹是否存在
+        # 2. 检查文件夹是否存在
         if [ ! -d "$FOLDER" ]; then
-          echo "❌ 错误：找不到文件夹 $FOLDER"
+          echo "❌ 错误：找不到文件夹 [$FOLDER]"
+          echo "💡 提示：GitHub 仓库区分大小写，请仔细核对文件夹名字（不要带多余的点或斜杠）。"
+          echo "---------------------------------------"
+          echo "下面是当前仓库里真实存在的所有文件夹结构，请从中挑选："
+          find . -maxdepth 3 -type d -not -path '*/.*' | sed 's|^\./||' | sort
+          echo "---------------------------------------"
           exit 1
         fi
 
-        # 进入目标文件夹
-        cd "$FOLDER"
+        # 3. 进入目标文件夹
+        cd "$FOLDER" || exit 1
 
-        # 寻找所有 md 文件并按章节数字自然排序
-        # sort -V (Version sort) 可以完美解决 第1章, 第2章, 第10章 的顺序问题
+        # 4. 寻找所有 md 文件并按章节数字自然排序（如 第1章, 第2章, 第10章）
         FILES=$(ls *.md 2>/dev/null | sort -V)
 
         if [ -z "$FILES" ]; then
-          echo "❌ 错误：在该文件夹下没有找到任何 .md 文件。"
+          echo "❌ 错误：在 [$FOLDER] 文件夹下没有找到任何 .md 文件。"
           exit 0
         fi
 
@@ -57,17 +65,14 @@ jobs:
         OUT_FILE=""
 
         for FILE in $FILES; do
-          # 如果是新的一卷，创建文件（如果存在则先清空）
           if [ "$CHAPTER_COUNT" -eq 0 ]; then
             OUT_FILE="卷${VOL_IDX}.txt"
             if [ -f "$OUT_FILE" ]; then rm "$OUT_FILE"; fi
             echo "📦 正在创建 $OUT_FILE ..."
           fi
 
-          # 提取不带 .md 后缀的文件名作为章节名
           BASENAME="${FILE%.md}"
 
-          # 写入分割线、标题和正文（使用 Linux 原生 echo 避免 Windows 换行符问题）
           echo -e "\n==================================================" >> "$OUT_FILE"
           echo -e "【${BASENAME}】" >> "$OUT_FILE"
           echo -e "==================================================\n" >> "$OUT_FILE"
@@ -75,7 +80,6 @@ jobs:
 
           CHAPTER_COUNT=$((CHAPTER_COUNT + 1))
 
-          # 达到每卷上限，重置计数器，准备进入下一卷
           if [ "$CHAPTER_COUNT" -ge "$VOL_SIZE" ]; then
             CHAPTER_COUNT=0
             VOL_IDX=$((VOL_IDX + 1))
