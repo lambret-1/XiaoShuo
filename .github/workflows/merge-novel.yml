@@ -28,54 +28,54 @@ jobs:
           RAW_FOLDER: ${{ github.event.inputs.folder_path }}
           VOL_SIZE: ${{ github.event.inputs.chapters_per_volume }}
         run: |
-          # 1. 清理输入的空格
           INPUT_PATH=$(echo "$RAW_FOLDER" | sed 's/^[[:space:]]*//' | sed 's/[[:space:]]*$//')
           
           echo "======================================="
           echo "你输入的搜索词: [$INPUT_PATH]"
           
-          # 2. 智能模糊匹配文件夹
           FOLDER=""
           if [ -d "$INPUT_PATH" ]; then
             FOLDER="$INPUT_PATH"
-            echo "✅ 精确匹配到路径: [$FOLDER]"
           else
-            echo "未找到完全一致的路径，启动模糊搜索..."
             MATCHES=$(find . -maxdepth 3 -type d -name "*$INPUT_PATH*" -not -path '*/.*' 2>/dev/null)
             MATCH_COUNT=$(echo "$MATCHES" | grep -c .)
             
             if [ "$MATCH_COUNT" -eq 1 ]; then
               FOLDER=$(echo "$MATCHES" | sed 's|^\./||')
-              echo "✅ 自动匹配到唯一文件夹: [$FOLDER]"
-            elif [ "$MATCH_COUNT" -gt 1 ]; then
-              echo "❌ 找到多个匹配的文件夹，请提供更完整、精确的路径："
-              echo "$MATCHES"
-              exit 1
             else
-              echo "❌ 错误：根本找不到包含 [$INPUT_PATH] 的文件夹。"
-              echo "当前仓库结构如下："
-              find . -maxdepth 2 -type d -not -path '*/.*' | sed 's|^\./||' | sort
+              echo "❌ 错误：找不到唯一匹配的文件夹。"
+              echo "当前仓库结构："
+              find . -maxdepth 3 -type d -not -path '*/.*' | sed 's|^\./||' | sort
               exit 1
             fi
           fi
 
-          # 3. 进入目标文件夹
-          cd "$FOLDER" || exit 1
+          echo "✅ 确定目标文件夹: [$FOLDER]"
+          cd "$FOLDER" || { echo "❌ 无法进入目录"; exit 1; }
 
-          # 4. 精准排序逻辑
-          echo "正在扫描并按数字排序文件..."
-          ls *.md 2>/dev/null | sed -E 's/^第0*([0-9]+)章.*/\1 &/; t; s/^/99999 /' | sort -n | sed -E 's/^[0-9]+ //' > /tmp/sorted_files.txt
+          # 核心排错：强制输出找到的所有 MD 文件
+          echo "---------------------------------------"
+          echo "正在扫描的 MD 文件列表："
+          ls -1 *.md
+          echo "---------------------------------------"
 
+          # 使用更严谨的排序，提取数字（提取不出来数字的排在最后）
+          ls *.md 2>/dev/null | sed -E 's/^.*第0*([0-9]+)章.*/\1 &/; t; s/^/99999 /' | sort -n | sed -E 's/^[0-9]+ //' > /tmp/sorted_files.txt
+
+          # 排错关键：如果文件为空，直接报错变红，不许默默退出
           if [ ! -s /tmp/sorted_files.txt ]; then
-            echo "❌ 错误：在 [$FOLDER] 文件夹下没有找到任何 .md 文件。"
-            exit 0
+            echo "❌ 致命错误：没有提取到任何 .md 文件！"
+            exit 1
           fi
+
+          echo "排序后的文件顺序如下："
+          cat /tmp/sorted_files.txt
+          echo "---------------------------------------"
 
           VOL_IDX=1
           CHAPTER_COUNT=0
           OUT_FILE=""
 
-          # 5. 开始合并 (完美处理带空格的文件名)
           while IFS= read -r FILE; do
             if [ "$CHAPTER_COUNT" -eq 0 ]; then
               OUT_FILE="卷${VOL_IDX}.txt"
@@ -101,13 +101,20 @@ jobs:
           rm /tmp/sorted_files.txt
 
           echo "======================================="
-          echo "✅ 合并完成！共生成 $((VOL_IDX - 1)) 卷。"
-          echo "生成的文件如下："
+          echo "✅ 合并完成！生成了以下文件："
           ls -lh 卷*.txt
-          echo "======================================="
+          
+          # 如果生成的 txt 是空的，强行报错
+          if [ ! -f "卷1.txt" ]; then
+            echo "❌ 错误：没有生成 卷1.txt！"
+            exit 1
+          fi
 
       - name: 提交并推送生成的 TXT 文件
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit:_message: "Auto-generated: 更新合并后的分卷 TXT [skip ci]"
-          file_pattern: '**/卷*.txt'
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git add **/卷*.txt
+          # 防止因为没有变更导致报错
+          git commit -m "Auto-generated: 更新合并后的分卷 TXT [skip ci]" || echo "没有需要提交的更改"
+          git push
